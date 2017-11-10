@@ -1,0 +1,109 @@
+% -*- mode: noweb; noweb-default-code-mode: R-mode; -*-
+\documentclass[nojss]{jss}
+\usepackage{dsfont}
+\usepackage{bbm}
+\usepackage{amsfonts}
+\usepackage{wasysym}
+\usepackage{xypic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% declarations for jss.cls %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% just as usual
+\author{Robin K. S. Hankin\\Auckland University of Technology}
+\title{Black holes: a set of mathematically precise diagrams}
+%\VignetteIndexEntry{Black holes in R}
+
+%% for pretty printing and a nice hypersummary also set:
+\Plainauthor{Robin K. S. Hankin}
+\Plaintitle{Black holes in R}
+\Shorttitle{Black holes in \proglang{R}}
+
+%% an abstract and keywords
+\Abstract{This short paper presents some \proglang{R} code that
+  produces camera-ready diagrams of black holes, shown using different
+  sets of coordinates.}
+
+\Keywords{Black holes, general relativity, Schwarzschild metric,
+  Eddington coordinates Lemaitre coordinates, Gullstrand coordinates,
+  \proglang{R}}
+
+\Plainkeywords{Black holes, general relativity, Schwarzschild metric,
+  Eddington coordinates Lemaitre coordinates, Gullstrand coordinates,
+  R}
+
+
+
+%% publication information
+%% NOTE: This needs to filled out ONLY IF THE PAPER WAS ACCEPTED.
+%% If it was not (yet) accepted, leave them commented.
+%% \Volume{13}
+%% \Issue{9}
+%% \Month{September}
+%% \Year{2004}
+%% \Submitdate{2004-09-29}
+%% \Acceptdate{2004-09-29}
+
+%% The address of (at least) one author should be given
+%% in the following format:
+\Address{
+  Robin K. S. Hankin\\
+  Auckland University of Technology\\
+  2-14 Wakefield Street\\
+  Auckland, New Zealand\\
+  E-mail: \email{hankin.robin@gmail.com}\\
+}
+
+%% It is also possible to add a telephone and fax number
+%% before the e-mail in the following format:
+%% Telephone: +43/1/31336-5053
+%% Fax: +43/1/31336-734
+
+%% for those who use Sweave please include the following line (with % symbols):
+%% need no \usepackage{Sweave.sty}
+
+%% end of declarations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newsymbol\leqslant 1336
+\SweaveOpts{echo=FALSE}
+\begin{document}
+<<load.library,echo=FALSE,print=FALSE>>=
+<<results=hide>>=
+require(schwarzschild)
+@ 
+
+\section{Introduction}
+
+The \pkg{schwarzschild} package creates high-quality PDFs that
+illustrate different aspects of physics near a spherically symmetric
+black hole.
+
+\begin{figure}[htbp]
+  \begin{center}
+<<schwarzschild,fig=TRUE,height=9,width=9>>=
+schwarzschild()
+@
+\caption{Space near a black hole, using\label{schwarzschild} standard
+  Schwarzschild coordinates}
+  \end{center}
+\end{figure}
+
+
+\begin{figure}[htbp]
+  \begin{center}
+<<schwarzschild,fig=TRUE,height=9,width=9>>=
+schwarzschild(draw_infalling_drop_worldlines = TRUE)
+@
+\caption{Space near a black hole, using\label{schwarzschild2} standard
+  Schwarzschild coordinates, with worldines of freely falling drops
+  shown as dotted lines}
+  \end{center}
+\end{figure}
+
+
+
+\end{document}
+
+

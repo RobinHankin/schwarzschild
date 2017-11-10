@@ -1,0 +1,10 @@
+exportPattern("^[[:alpha:]]+")
+
+importFrom("graphics", "abline", "arrows", "axis", "clip", "legend",
+             "par", "plot", "points", "polygon", "segments", "text")
+
+importFrom("stats", "plogis", "pnorm", "qlogis", "qnorm")
+
+importFrom("gsl", "lambert_W0")
+
+importFrom("deSolve", "ode")
