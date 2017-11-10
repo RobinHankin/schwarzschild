@@ -21,6 +21,8 @@ Standard colours for spacetime diagrams
 This file specifies colours for the various diagrams of the package.
 The idea is to create a standard look-and-feel for all the diagrams in a
 customisable way.
+
+Not all the colours are used by all the plotting routines.
 }
 \usage{data("standard_colours")}
 \format{
