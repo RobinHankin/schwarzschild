@@ -1,4 +1,4 @@
-GW <- function(plus=0.03, cross=0, lattice=TRUE, frames=20, n=11, center=c(0,0)){
+`GW` <- function(plus=0.03, cross=0, lattice=TRUE, frames=20, n=11, center=c(0,0)){
     
     jj <- seq(from= -1,to= 1,len=n)
 
@@ -10,7 +10,7 @@ GW <- function(plus=0.03, cross=0, lattice=TRUE, frames=20, n=11, center=c(0,0))
     }
     
     par(pty="m") # forces a square plot
-    ani.record(reset = TRUE)  # clear history before recording
+    animation::ani.record(reset = TRUE)  # clear history before recording
     
     for(time in seq(from=0,to=2*pi*(1-1/frames),len=frames)){
         
@@ -33,10 +33,10 @@ GW <- function(plus=0.03, cross=0, lattice=TRUE, frames=20, n=11, center=c(0,0))
         points(p+Re(plus_perturb + cross_perturb), type='p')
     } #  plot commands end
         
-        ani.record()  # record the current frame
+        animation::ani.record()  # record the current frame
     }  # time loop closes
     
-    oopts <- ani.options(interval = 0.05)
-    while(TRUE){ani.replay()}
+    oopts <- animation::ani.options(interval = 0.05)
+    while(TRUE){animation::ani.replay()}
     
 } # function definition closes
