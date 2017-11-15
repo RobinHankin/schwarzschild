@@ -6,8 +6,9 @@ Date: 2017-10-24
 Author: Robin K. S. Hankin
 Maintainer: <hankin.robin@gmail.com>
 Description: Diagrams of various spacetimes including black holes.
-Depends: gsl,deSolve
+Depends: gsl,deSolve,animation
 License: GPL (>= 2)
 Suggests: knitr, rmarkdown
 LazyLoad: yes
 VignetteBuilder: knitr
+
