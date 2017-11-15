@@ -32,11 +32,15 @@ GW()  # default gravitational wave with the plus polarization
 GW(plus=0, cross=0.03)  # cross polarization
 
 GW(plus=0.03,cross=0.03)  # both together
+GW(plus=0.03,cross=0.06)  # both together
 
-GW(plus=0.03,cross=0.03i) # circular polarization (note 'i')
+GW(plus=0.05,cross=0.05i) # circular polarization (note 'i')
+GW(plus=0.02-0.01i,cross=0.03+0.02i) # complicated
+
 
 GW(lattice=FALSE)
 GW(plus=0.03,cross=0.03i, lattice=FALSE)
+
 
 GW()
 GW(center=c(10,10))
