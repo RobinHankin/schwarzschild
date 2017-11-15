@@ -20,7 +20,8 @@ GW(plus = 0.03, cross = 0, lattice = TRUE, frames = 20, n = 11, center = c(0, 0)
 }
 \details{
   Does what it says on the tin, basically.  Creates a looped animation of
-  a gravitational wave passing.  See the examples.
+  a gravitational wave passing.  The animation continues until interrupted.
+  See the examples.
 }
 \author{Robin K. S. Hankin}
 \examples{
