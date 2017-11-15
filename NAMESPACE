@@ -8,3 +8,5 @@ importFrom("stats", "plogis", "pnorm", "qlogis", "qnorm")
 importFrom("gsl", "lambert_W0")
 
 importFrom("deSolve", "ode")
+
+importFrom("animation","ani.record","ani.options","ani.replay")
