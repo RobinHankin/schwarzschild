@@ -44,7 +44,7 @@ kruskal_with_throw()
 eddington()
 eddington_outgoing()
 
-lemaitre()
+\dontrun{lemaitre()}
 
 gullstrand()
 
