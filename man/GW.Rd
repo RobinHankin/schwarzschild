@@ -44,7 +44,7 @@ GW(plus=0.03,cross=0.03i, lattice=FALSE)
 
 
 GW()
-GW(center=c(10,10))
+GW(center=c(1,1))
 
 }
 
