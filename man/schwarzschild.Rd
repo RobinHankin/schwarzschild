@@ -11,7 +11,7 @@
 \title{Black hole diagrams using Schwarzschild coordinates}
 \description{Black hole in Schwarzschild coordinates}
 \usage{
-schwarzschild(draw_infalling_drop_worldlines = FALSE, colours=standard_colours, ...)
+schwarzschild(draw_infalling_drops = FALSE, colours=standard_colours, ...)
 gullstrand(draw_infalling_drop_worldlines = FALSE, colours=standard_colours, ...)
 eddington(colours=standard_colours, ...)
 eddington_outgoing(colours=standard_colours, ...)
@@ -22,11 +22,11 @@ kruskal_inverted(colours=standard_colours, ...)
 lemaitre(draw_schwarzschild=FALSE, colours=standard_colours, ...)
 }
 \arguments{
-  \item{draw_infalling_drop_worldlines, draw_constant_schwarzschild,
+  \item{draw_infalling_drops, draw_constant_schwarzschild,
     label_curves, draw_schwarzschild}{Boolean, with \code{TRUE}
     meaning to plot the thing, and default
     \code{FALSE} meaning to omit the lines (resulting in a tidier and
-    less cluttered diagram)}
+    less cluttered diagram).  }
   \item{colours}{List of colours}
   \item{...}{Further arguments, currently ignored}
 }

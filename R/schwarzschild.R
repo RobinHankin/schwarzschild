@@ -1,4 +1,4 @@
-schwarzschild <- function(draw_infalling_drop_worldlines=FALSE, colours=standard_colours,...){
+schwarzschild <- function(draw_infalling_drops=FALSE, colours=standard_colours,...){
 
 n <- 4  # size of plot
 
@@ -56,7 +56,7 @@ r_inside <- seq(from=0.0001,to=0.999,len=1000)
 r_outside <- seq(from=1.0001,to=n,len=1000)
 
 
-if(draw_infalling_drop_worldlines){
+if(draw_infalling_drops){
 
   for(i in offset){points(r_inside  ,raindrop(r_inside)+i, type='l',lty=2) }
   for(i in offset){points(r_outside ,raindrop(r_outside)-raindrop(2)+i, type='l',lty=2) }
@@ -106,7 +106,7 @@ polygon(x=c(0,0,n+1,n+1),y=c(n,n+1,n+1,n),border=NA,lwd=7,col='white')
 #  points(r_outgoing_outside,t_outgoing_outside+i+0.5, type='l',col=colours$outgoing_light,lwd=0.3)
 
 par(xpd=TRUE)
-if(draw_infalling_drop_worldlines){
+if(draw_infalling_drops){
   legend(x=2.5,y=n+0.6,lty=c(1,1,2),
          col=c(colours$r, colours$t, colours$raindrop),
          legend=c("lines of constant r",
