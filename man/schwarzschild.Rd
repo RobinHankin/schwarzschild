@@ -8,8 +8,9 @@
 \alias{kruskal_inverted}
 \alias{kruskal_with_throw}
 \alias{lemaitre}
-\title{Black hole diagrams using Schwarzschild coordinates}
-\description{Black hole in Schwarzschild coordinates}
+\title{Black hole diagrams}
+\description{Black hole diagrams using different coordinate systems,
+  including Schwarzschild coordinates}
 \usage{
 schwarzschild(draw_infalling_drops = FALSE, colours=standard_colours, ...)
 gullstrand(draw_infalling_drop_worldlines = FALSE, colours=standard_colours, ...)
