@@ -4,7 +4,7 @@ Title: Black hole diagrams
 Version: 1.0
 Date: 2017-10-24
 Author: Robin K. S. Hankin
-Maintainer: <hankin.robin@gmail.com>
+Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
 Description: Diagrams of various spacetimes including black holes.
 Depends: gsl,deSolve,animation
 License: GPL (>= 2)
