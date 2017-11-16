@@ -85,7 +85,7 @@ text(3.7,3.77,expression('t'['s']==3),col=colours$t,srt=jjang)
 par(xpd=TRUE)
 
 legend(x=0,y=n+0.6,lty=1,col=c(colours$ingoing_light,colours$outgoing_light),legend=c("ingoing NULL geodesics","outgoing NULL geodesics"))
-if(draw_infalling_drop_worldlines){
+if(draw_infalling_drops){
   legend(x=2,y=n+0.6,lty=c(1,1,2),
          col=c(colours$r,colours$t,colours$raindrop),
          legend=c("lines of constant Schwarzschild r",
