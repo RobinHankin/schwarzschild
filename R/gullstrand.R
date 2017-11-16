@@ -1,4 +1,4 @@
-gullstrand <- function(draw_infalling_drop_worldlines = FALSE, colours=standard_colours, ...){
+gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, ...){
 
 cone_function <- function(x,y=1){cone(x,y,-atan(-1-sqrt(1/x)),atan(+1-sqrt(1/x)))}
 n <- 4  # size of plot
@@ -49,7 +49,7 @@ for(i in time){
   points(jj,type='l',lwd=1/2,col=colours$t)
 
   ## raindrops:
-  if(draw_infalling_drop_worldlines){
+  if(draw_infalling_drops){
     jj <- cbind(c(rin,rout),i-2/3*c(rin,rout)^(3/2))
     points(jj,type='l',lty=2,col=colours$raindrop)
   }
