@@ -86,3 +86,29 @@ dev.off()
 svg(file="penrose_BH_extended.svg", height=9, width=9)
 penrose_BH_extended()
 dev.off()
+
+
+svg(file="thrower.svg",width=9,height=9)
+thrower('','topright')
+dev.off()
+
+svg(file="thrower_x.svg",width=9,height=9)
+thrower('x')
+dev.off()
+
+svg(file="thrower_y.svg",width=9,height=9)
+thrower('y','bottomright')
+dev.off()
+
+svg(file="thrower_xy.svg",width=9,height=9)
+thrower('xy')
+dev.off()
+
+svg(file="thrower_asp1.svg",width=9,height=9)
+thrower_asp1(xlab='', ylab='')
+par(xpd=TRUE)
+text(5,-1.2,'Schwarzschild r')
+text(-1,7.5,'Schwarzschild t',srt=90)
+dev.off()
+
+

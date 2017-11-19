@@ -86,3 +86,28 @@ dev.off()
 pdf(file="penrose_BH_extended.pdf", height=9, width=9)
 penrose_BH_extended()
 dev.off()
+
+
+pdf(file="thrower.pdf",width=9,height=9)
+thrower('','topright')
+dev.off()
+
+pdf(file="thrower_x.pdf",width=9,height=9)
+thrower('x')
+dev.off()
+
+pdf(file="thrower_y.pdf",width=9,height=9)
+thrower('y','bottomright')
+dev.off()
+
+pdf(file="thrower_xy.pdf",width=9,height=9)
+thrower('xy')
+dev.off()
+
+pdf(file="thrower_asp1.pdf",width=9,height=9)
+thrower_asp1(xlab='', ylab='')
+par(xpd=TRUE)
+text(5,-1.2,'Schwarzschild r')
+text(-1,7.5,'Schwarzschild t',srt=90)
+dev.off()
+
