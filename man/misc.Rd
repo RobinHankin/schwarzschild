@@ -73,8 +73,14 @@ at infinity.  Note that functions \code{gullstrand()} and
 internal code to do so.
 
 Function \code{penrose_transform()} returns one of several Penrose
-transformations.  The forward transform maps the real line to
-\eqn{(-1,1)} and the backward transform is the inverse of this.
+transformations.  The forward transform maps the real line to the
+interval \eqn{(-1,1)} and the backward transform is the inverse of this.
+Argument \code{choice} specifies a statistical distribution.  The
+forward transform uses the distribution's cumulative distribution
+function (CDF) \eqn{F(\cdot)}{F(.)}, but because the CDF maps to
+\eqn{(0,1)} rather than the desired \eqn{(-1,1)} it maps \eqn{x} to
+\eqn{2F(x)-1}.  The backward transform uses the distribution's quantile
+function \eqn{Q(\cdot)}{Q(.)}, mapping \eqn{x} to \eqn{Q((x+1)/2)}.
 
 Functions \code{ingoing()} and \code{outgoing()} give the ingoing or
 outgoing light curve passing through event (\code{rzero},\code{tzero}).
