@@ -3,7 +3,7 @@ exportPattern("^[[:alpha:]]+")
 importFrom("graphics", "abline", "arrows", "axis", "clip", "legend",
              "par", "plot", "points", "polygon", "segments", "text")
 
-importFrom("stats", "plogis", "pnorm", "qlogis", "qnorm")
+importFrom("stats", "plogis", "pnorm", "qlogis", "qnorm")  # used for Penrose transform
 
 importFrom("gsl", "lambert_W0")
 
