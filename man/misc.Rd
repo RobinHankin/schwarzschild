@@ -30,7 +30,7 @@ RT(TX)
 TX(rt,exterior)
 cone(x, y, leftangle, rightangle, size = 0.2, colours=standard_colours, ...)
 lightcone(x, y, size, colours = standard_colours) 
-raindrop(r)  # sdfsf
+raindrop(r)  
 raindrop_arrow(r,delta,offset=0, ...)
 penrose_transform(choice, forward)
 ingoing(r,rzero,tzero=0)
@@ -62,37 +62,42 @@ outgoing(r,rzero,tzero=0)
     arrow}
 }
 \details{
+  \itemize{
+    
+    \item Function \code{lightcone()} plots a nice little light cone on
+    a plot.  It is more user-friendly than the lower-level function
+    \code{cone()}.
+    
+    \item Functions \code{raindrop()} and \code{raindrop_arrow()} are
+    used in \code{schwarzschild()} to draw worldlines of particles
+    falling from rest at infinity.  Note that functions
+    \code{gullstrand()} and \code{lemaitre()} have options to plot
+    raindrops but use unrelated internal code to do so.
 
-Function \code{lightcone()} plots a nice little light cone on a plot.
-It is more user-friendly than the lower-level function \code{cone()}.
+    \item Function \code{penrose_transform()} returns one of several
+    Penrose transformations.  The forward transform maps the real line
+    to the interval \eqn{(-1,1)} and the backward transform is the
+    inverse of this.  Argument \code{choice} specifies a statistical
+    distribution.  The forward transform uses the distribution's
+    cumulative distribution function (CDF) \eqn{F(\cdot)}{F(.)}, but
+    because the CDF maps to \eqn{(0,1)} rather than the desired
+    \eqn{(-1,1)} it maps \eqn{x} to \eqn{2F(x)-1}.  The backward
+    transform uses the distribution's quantile function
+    \eqn{Q(\cdot)}{Q(.)}, mapping \eqn{x} to \eqn{Q((x+1)/2)}.
 
-Functions \code{raindrop()} and \code{raindrop_arrow()} are used in
-\code{schwarzschild()} to draw worldlines of particles falling from rest
-at infinity.  Note that functions \code{gullstrand()} and
-\code{lemaitre()} have options to plot raindrops but use unrelated
-internal code to do so.
+    \item Functions \code{ingoing()} and \code{outgoing()} give the
+    ingoing or outgoing light curve passing through event
+    (\code{rzero},\code{tzero}).  They take (Schwarzschild) radial
+    coordinate \eqn{r} and return (Schwarzschild) \eqn{t}.  Note that,
+    in Schwarzschild coordinates, radial null geodesics are either
+    always inside, or always outside, \eqn{r=1} (this applies to both
+    ingoing and outgoing light).
 
-Function \code{penrose_transform()} returns one of several Penrose
-transformations.  The forward transform maps the real line to the
-interval \eqn{(-1,1)} and the backward transform is the inverse of this.
-Argument \code{choice} specifies a statistical distribution.  The
-forward transform uses the distribution's cumulative distribution
-function (CDF) \eqn{F(\cdot)}{F(.)}, but because the CDF maps to
-\eqn{(0,1)} rather than the desired \eqn{(-1,1)} it maps \eqn{x} to
-\eqn{2F(x)-1}.  The backward transform uses the distribution's quantile
-function \eqn{Q(\cdot)}{Q(.)}, mapping \eqn{x} to \eqn{Q((x+1)/2)}.
-
-Functions \code{ingoing()} and \code{outgoing()} give the ingoing or
-outgoing light curve passing through event (\code{rzero},\code{tzero}).
-They take (Schwarzschild) radial coordinate \eqn{r} and return
-(Schwarzschild) \eqn{t}.  Note that, in Schwarzschild coordinates,
-radial null geodesics are either always inside, or always outside,
-\eqn{r=1} (this applies to both ingoing and outgoing light).
-
-Functions \code{ingoing_lambert()} and \code{outgoing_lambert9()} do the
-same physics but take (Schwarzschild) time \eqn{t} as an input and
-return (Schwarzschild) radius \eqn{r}.
-
+    \item Functions \code{ingoing_lambert()} and
+    \code{outgoing_lambert()} do the same physics as \code{ingoing()}
+    and \code{outgoiong()}, but take (Schwarzschild) time \eqn{t} as an
+    input and return (Schwarzschild) radius \eqn{r}.
+  }
 
 }
 \author{Robin K. S. Hankin}
