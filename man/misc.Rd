@@ -30,9 +30,11 @@ RT(TX)
 TX(rt,exterior)
 cone(x, y, leftangle, rightangle, size = 0.2, colours=standard_colours, ...)
 lightcone(x, y, size, colours = standard_colours) 
-raindrop(r)
+raindrop(r)  # sdfsf
 raindrop_arrow(r,delta,offset=0, ...)
 penrose_transform(choice, forward)
+ingoing(r,rzero,tzero=0)
+outgoing(r,rzero,tzero=0)
 }
 \arguments{
   \item{TX,rt}{Two-column matrix giving time and space}
@@ -48,10 +50,16 @@ penrose_transform(choice, forward)
     Argument \code{forward} is Boolean (no default) with \code{TRUE}
     meaning to return the forward transformation and \code{FALSE}
     meaning to return the backward transformation.}
-    \item{t,rzero,tzero}{In functions \code{ingoing() and \code{outgoing()},
-    \code{t} is (Schwarzschild) time, and \code{tzero} and \code{rzero} specify an even      through which the null geodesic passes}
-    
-    
+  \item{r,t,rzero,tzero}{In functions \code{ingoing()} and
+    \code{outgoing()}, \code{r} is the (Schwarzschild) radial
+    coordinate, and \code{tzero} and \code{rzero} specify an event
+    through which the null geodesic passes.  These functions return
+    (Schartzschild) \code{t}.  Functions
+    \code{ingoing_lambert()} and \code{outgoing_lambert()} take
+    (Schwarzschild) \code{t} and return \code{r}.}
+  \item{r,delta,offset}{In functions \code{raindrop()} and
+    \code{raindrop_arrow()}, details of the position of the line and the
+    arrow}
 }
 \details{
 
@@ -68,17 +76,16 @@ Function \code{penrose_transform()} returns one of several Penrose
 transformations.  The forward transform maps the real line to
 \eqn{(-1,1)} and the backward transform is the inverse of this.
 
-Function \code{ingoing()} specifies ingoing light curves, as a function
-of (Schwarzschild) t, passing through event (\code{rzero},\code{tzero}).
-The difficult bit is dealing with the qualitatively different behaviour
-inside and outside the Schwarzschild radius (note that this function, as
-do all the black hole functions, use units in which \eqn{2GM/c^2=1}).
-The first argument of this function is (Schwarzschild) time \eqn{t}.
-Note that, in Schwarzschild coordinates, ingoing null geodesics are
-either always inside, or always outside, \eqn{r=1}.
+Functions \code{ingoing()} and \code{outgoing()} give the ingoing or
+outgoing light curve passing through event (\code{rzero},\code{tzero}).
+They take (Schwarzschild) radial coordinate \eqn{r} and return
+(Schwarzschild) \eqn{t}.  Note that, in Schwarzschild coordinates,
+radial null geodesics are either always inside, or always outside,
+\eqn{r=1} (this applies to both ingoing and outgoing light).
 
-Function \code{outgoing()} is the same but for outgoing null geodesics.
-
+Functions \code{ingoing_lambert()} and \code{outgoing_lambert9()} do the
+same physics but take (Schwarzschild) time \eqn{t} as an input and
+return (Schwarzschild) radius \eqn{r}.
 
 
 }

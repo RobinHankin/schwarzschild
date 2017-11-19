@@ -20,40 +20,19 @@ for(i in 0:3){
 }
 
 par(xpd=FALSE)
-tee <- seq(from=-10, to=10, len=10000)
 
-jj <- ingoing(tee,0,0)
-wanted <- !is.na(jj)
-t_ingoing_inside <- c(0,tee[wanted])
-r_ingoing_inside <- c(0,jj[wanted])
+    r_inside <- seq(from=0.0001,to=0.999,len=1000)
+    r_outside <- seq(from=1.0001,to=n,len=1000)
 
-jj <- ingoing(tee,2,0)
-t_ingoing_outside <- tee
-r_ingoing_outside <- jj
-
-
-jj <- outgoing(tee,2,0)
-t_outgoing_outside <- tee
-r_outgoing_outside <- jj
-
-jj <- outgoing(tee,0,0)
-
-wanted <- !is.na(jj)
-## NB these lines go backwards, so zero is at the end (not at the
-## beginning as it was for t_ingoing_inside):
-t_outgoing_inside <- c(tee[wanted],0) 
-r_outgoing_inside <- c(jj[wanted],0)
-
+    ## ingoing outside, then outgoing outside, then ingoing inside, then outgoing inside:
+    for(tz in  0:14){points(r_outside, ingoing(r_outside,rzero=2,tzero=tz),type='l',col=colours$ingoing_light )}
+    for(tz in -3:14){points(r_outside,outgoing(r_outside,rzero=2,tzero=tz),type='l',col=colours$outgoing_light)}
+    for(tz in  0:12){points(r_inside,  ingoing(r_inside ,rzero=2,tzero=tz),type='l',col=colours$ingoing_light )}
+    for(tz in  0:10){points(r_inside, outgoing(r_inside ,rzero=2,tzero=tz),type='l',col=colours$outgoing_light)}
+    
+    
 offset <- -6:9
 
-for(i in offset){ points(r_ingoing_outside,t_ingoing_outside+i, type='l',col=colours$ingoing_light) }
-for(i in offset){ points(r_outgoing_outside,t_outgoing_outside+i, type='l',col=colours$outgoing_light) }
-for(i in offset){ points(r_ingoing_inside ,t_ingoing_inside +i, type='l',col=colours$ingoing_light) }
-for(i in offset){ points(r_outgoing_inside ,t_outgoing_inside +i, type='l',col=colours$outgoing_light) }
-
-
-r_inside <- seq(from=0.0001,to=0.999,len=1000)
-r_outside <- seq(from=1.0001,to=n,len=1000)
 
 
 if(draw_infalling_drops){

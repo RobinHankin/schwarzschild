@@ -1,4 +1,12 @@
-`ingoing` <- function(t,rzero,tzero=0){    # ingoing light curves, as a function of (Schwarzschild) t, passing through event (rzero,tzero)
+`ingoing` <- function(r,rzero, tzero=0){    # ingoing light curves, as a function of (Schwarzschild) r, passing through event (rzero,tzero)
+    -(r + log(abs(r-1))) + tzero-rzero-log(abs(rzero-1))
+}
+
+`outgoing` <- function(r, rzero, tzero=0){    # ingoing light curves, as a function of (Schwarzschild) r, passing through event (rzero,tzero)
+    +(r + log(abs(r-1))) + tzero-rzero-log(abs(rzero-1))
+}
+
+`ingoing_lambert` <- function(t,rzero,tzero=0){    # ingoing light curves, as a function of (Schwarzschild) t, passing through event (rzero,tzero)
   if(rzero>1){
     C <- tzero + rzero + log(rzero-1)
     return(1+lambert_W0(exp(C-1-t)))
@@ -8,7 +16,7 @@
   }
 }
 
-`outgoing` <- function(t,rzero,tzero=0){  # same as ingoing() but for outgoing light curves
+`outgoing_lambert` <- function(t,rzero,tzero=0){  # same as ingoing() but for outgoing light curves
   if(rzero>1){
     C <- -tzero + rzero + log(rzero-1)
     return(1+lambert_W0(exp(C-1+t)))
