@@ -50,8 +50,9 @@ penrose_transform(choice, forward)
     meaning to return the backward transformation.}
 }
 \details{
-Function \code{lightcone()} is more user-friendly than the  lower-level
-function \code{cone()}.
+
+Function \code{lightcone()} plots a nice little light cone on a plot.
+It is more user-friendly than the lower-level function \code{cone()}.
 
 Functions \code{raindrop()} and \code{raindrop_arrow()} are used in
 \code{schwarzschild()} to draw worldlines of particles falling from rest
@@ -59,10 +60,21 @@ at infinity.  Note that functions \code{gullstrand()} and
 \code{lemaitre()} have options to plot raindrops but use unrelated
 internal code to do so.
 
-
 Function \code{penrose_transform()} returns one of several Penrose
 transformations.  The forward transform maps the real line to
 \eqn{(-1,1)} and the backward transform is the inverse of this.
+
+Function \code{ingoing()} specifies ingoing light curves, as a function
+of (Schwarzschild) t, passing through event (\code{rzero},\code{tzero}).
+The difficult bit is dealing with the qualitatively different behaviour
+inside and outside the Schwarzschild radius (note that this function, as
+do all the black hole functions, use units in which \eqn{2GM/c^2=1}).
+The first argument of this function is (Schwarzschild) time \eqn{t}.
+Note that, in Schwarzschild coordinates, ingoing null geodesics are
+either always inside, or always outside, \eqn{r=1}.
+
+Function \code{outgoing()} is the same but for outgoing null geodesics.
+
 
 
 }
