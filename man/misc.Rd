@@ -48,6 +48,10 @@ penrose_transform(choice, forward)
     Argument \code{forward} is Boolean (no default) with \code{TRUE}
     meaning to return the forward transformation and \code{FALSE}
     meaning to return the backward transformation.}
+    \item{t,rzero,tzero}{In functions \code{ingoing() and \code{outgoing()},
+    \code{t} is (Schwarzschild) time, and \code{tzero} and \code{rzero} specify an even      through which the null geodesic passes}
+    
+    
 }
 \details{
 
