@@ -20,8 +20,6 @@
 \alias{penrose_transform}
 \alias{raindrop}
 \alias{raindrop_arrow}
-\alias{thrower}
-\alias{thrower_asp1}
 \alias{trajectory}
 \title{Miscellaneous helper functions}
 \description{
