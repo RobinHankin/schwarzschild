@@ -8,6 +8,7 @@
 \alias{kruskal_inverted}
 \alias{kruskal_with_throw}
 \alias{lemaitre}
+\alias{thrower}
 \title{Black hole diagrams}
 \description{Black hole diagrams using different coordinate systems,
   including Schwarzschild coordinates}
@@ -21,6 +22,7 @@ kruskal_with_throw(draw_constant_schwarzschild = FALSE, label_curves = FALSE, co
 kruskal_extended(colours=standard_colours, ...)
 kruskal_inverted(colours=standard_colours, ...)
 lemaitre(draw_schwarzschild=FALSE, colours=standard_colours, ...)
+thrower(logaxes,legpos="topleft", colours=standard_colours, ...)
 }
 \arguments{
   \item{draw_infalling_drops, draw_constant_schwarzschild,
@@ -29,7 +31,9 @@ lemaitre(draw_schwarzschild=FALSE, colours=standard_colours, ...)
     \code{FALSE} meaning to omit the lines (resulting in a tidier and
     less cluttered diagram).  }
   \item{colours}{List of colours}
-  \item{...}{Further arguments, currently ignored}
+  \item{logaxes,legpos}{Arguments passed to \code{thrower()} specifying
+    which axes (if any) are logarithmic, and the position of the legend}
+  \item{...}{Further arguments, generally passed to \code{plot()}}
 }
 \author{Robin K. S. Hankin}
 \seealso{\code{\link{penrose}}}
