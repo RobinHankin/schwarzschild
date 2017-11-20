@@ -4,10 +4,10 @@
 ## thrower_asp1()
 
 
-`thrower` <- function(logaxes,legpos="topleft",xlab='Schwarzschild r',ylab='Schwarzschild t', colours=standard_colours, ...){
+`thrower` <- function(logaxes,legpos="topleft", colours=standard_colours, ...){
     plot(c(0,4),c(0.01,40),
          type='n',xlim=c(0.1,10),ylim=c(0.5,50),
-         log=logaxes, xlab=xlab,ylab=ylab,...)
+         log=logaxes, xlab='Schwarzschild r',ylab='Schwarzschild t', ...)
 
 r_start_outside <- 2
 r_start_inside <- 0.9
