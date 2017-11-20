@@ -98,7 +98,5 @@ outgoing_lambert(t,rzero,tzero=0)
     Functions \code{ingoing_lambert()} and \code{outgoing_lambert()} use
     Lambert W function (of the \pkg{gsl} package) to take \code{t} and
     return \code{r}}
-  }
-
 }
 \author{Robin K. S. Hankin}
