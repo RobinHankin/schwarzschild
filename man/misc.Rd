@@ -7,12 +7,14 @@
 \alias{cone}
 \alias{lightcone}
 \alias{ingoing}
-\alias{ingoing_light}
+\alias{outgoing}
+\alias{ingoing_lambert}
+\alias{outgoing_lambert}
 \alias{ingoing_null_arrow}
 \alias{ingoing_trajectory}
 \alias{inward_trajectory}
+\alias{ingoing_light}
 \alias{null_geodesics}
-\alias{outgoing}
 \alias{outgoing_null_arrow}
 \alias{outward_inside_trajectory}
 \alias{penrose_transform}
@@ -35,6 +37,8 @@ raindrop_arrow(r,delta,offset=0, ...)
 penrose_transform(choice, forward)
 ingoing(r,rzero,tzero=0)
 outgoing(r,rzero,tzero=0)
+ingoing_lambert(t,rzero,tzero=0)
+outgoing_lambert(t,rzero,tzero=0)
 }
 \arguments{
   \item{TX,rt}{Two-column matrix giving time and space}
@@ -50,14 +54,15 @@ outgoing(r,rzero,tzero=0)
     Argument \code{forward} is Boolean (no default) with \code{TRUE}
     meaning to return the forward transformation and \code{FALSE}
     meaning to return the backward transformation.}
-  \item{r,t,rzero,tzero}{In functions \code{ingoing()} and
-    \code{outgoing()}, \code{r} is the (Schwarzschild) radial
-    coordinate, and \code{tzero} and \code{rzero} specify an event
-    through which the null geodesic passes.  These functions return
-    (Schartzschild) \code{t}.  Functions
-    \code{ingoing_lambert()} and \code{outgoing_lambert()} take
-    (Schwarzschild) \code{t} and return \code{r}.}
-  \item{r,delta,offset}{In functions \code{raindrop()} and
+  \item{r,t}{Schwarzschild radius and Schwarzschild time}
+  \item{rzero,tzero}{In functions \code{ingoing()} and
+    \code{outgoing()}, arguments \code{tzero} and \code{rzero} specify
+    an event through which the null geodesic passes.  These functions
+    return \code{t} as a function of \code{r}.  Functions
+    \code{ingoing_lambert()} and \code{outgoing_lambert()} use Lambert W
+    function (of the \pkg{gsl} package) to take \code{t} and return
+    \code{r}}
+  \item{delta,offset}{In functions \code{raindrop()} and
     \code{raindrop_arrow()}, details of the position of the line and the
     arrow}
 }
@@ -95,7 +100,7 @@ outgoing(r,rzero,tzero=0)
 
     \item Functions \code{ingoing_lambert()} and
     \code{outgoing_lambert()} do the same physics as \code{ingoing()}
-    and \code{outgoiong()}, but take (Schwarzschild) time \eqn{t} as an
+    and \code{outgoing()}, but take (Schwarzschild) time \eqn{t} as an
     input and return (Schwarzschild) radius \eqn{r}.
   }
 
