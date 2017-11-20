@@ -57,11 +57,7 @@ outgoing_lambert(t,rzero,tzero=0)
   \item{r,t}{Schwarzschild radius and Schwarzschild time}
   \item{rzero,tzero}{In functions \code{ingoing()} and
     \code{outgoing()}, arguments \code{tzero} and \code{rzero} specify
-    an event through which the null geodesic passes.  These functions
-    return \code{t} as a function of \code{r}.  Functions
-    \code{ingoing_lambert()} and \code{outgoing_lambert()} use Lambert W
-    function (of the \pkg{gsl} package) to take \code{t} and return
-    \code{r}}
+    an event through which the null geodesic passes}
   \item{delta,offset}{In functions \code{raindrop()} and
     \code{raindrop_arrow()}, details of the position of the line and the
     arrow}
@@ -93,15 +89,15 @@ outgoing_lambert(t,rzero,tzero=0)
     \item Functions \code{ingoing()} and \code{outgoing()} give the
     ingoing or outgoing light curve passing through event
     (\code{rzero},\code{tzero}).  They take (Schwarzschild) radial
-    coordinate \eqn{r} and return (Schwarzschild) \eqn{t}.  Note that,
-    in Schwarzschild coordinates, radial null geodesics are either
+    coordinate \eqn{r} and return (Schwarzschild) time \eqn{t}.  Note
+    that, in Schwarzschild coordinates, radial null geodesics are either
     always inside, or always outside, \eqn{r=1} (this applies to both
     ingoing and outgoing light).
 
-    \item Functions \code{ingoing_lambert()} and
-    \code{outgoing_lambert()} do the same physics as \code{ingoing()}
-    and \code{outgoing()}, but take (Schwarzschild) time \eqn{t} as an
-    input and return (Schwarzschild) radius \eqn{r}.
+    These functions return \code{t} as a function of \code{r}.
+    Functions \code{ingoing_lambert()} and \code{outgoing_lambert()} use
+    Lambert W function (of the \pkg{gsl} package) to take \code{t} and
+    return \code{r}}
   }
 
 }
