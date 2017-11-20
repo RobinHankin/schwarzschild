@@ -6,7 +6,7 @@ n <- 4  # size of plot
 par(xpd=TRUE)
 clip(0,n,0,n)
 
-plot(0:n,0:n,xlim=c(0,n),ylim=c(0,n),asp=1,type='n',xlab='',ylab='',axes=FALSE)
+plot(0:n,0:n,xlim=c(0,n),ylim=c(0,n),asp=1,type='n',xlab='',ylab='',axes=FALSE, ...)
 axis(1,pos=0,at=0:n)
 axis(2,pos=0,at=0:n)
 
