@@ -23,7 +23,7 @@ kruskal_extended(colours=standard_colours, ...)
 kruskal_inverted(colours=standard_colours, ...)
 lemaitre(draw_schwarzschild=FALSE, colours=standard_colours, ...)
 thrower(logaxes,legpos="topleft", colours=standard_colours, ...)
-thrower_asp1(colours=standard_colours, ...){
+thrower_asp1(colours=standard_colours, ...)
 }
 \arguments{
   \item{draw_infalling_drops, draw_constant_schwarzschild,
