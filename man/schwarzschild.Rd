@@ -23,6 +23,7 @@ kruskal_extended(colours=standard_colours, ...)
 kruskal_inverted(colours=standard_colours, ...)
 lemaitre(draw_schwarzschild=FALSE, colours=standard_colours, ...)
 thrower(logaxes,legpos="topleft", colours=standard_colours, ...)
+thrower_asp1(colours=standard_colours, ...){
 }
 \arguments{
   \item{draw_infalling_drops, draw_constant_schwarzschild,
@@ -31,8 +32,10 @@ thrower(logaxes,legpos="topleft", colours=standard_colours, ...)
     \code{FALSE} meaning to omit the lines (resulting in a tidier and
     less cluttered diagram).  }
   \item{colours}{List of colours}
-  \item{logaxes,legpos}{Arguments passed to \code{thrower()} specifying
-    which axes (if any) are logarithmic, and the position of the legend}
+  \item{legpos}{Passed to \code{thrower()} and \code{thrower_asp1()}
+    specifying the position of the legend}
+\item{logaxes}{Passed to \code{thrower()} specifying which axes (if any)
+    are logarithmic}
   \item{...}{Further arguments, generally passed to \code{plot()}}
 }
 \author{Robin K. S. Hankin}

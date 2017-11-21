@@ -47,10 +47,12 @@ legend(legpos,lty=1,lwd=c(rep(lthick,6),6),
                 "interior inward","interior outward","event horizon"))
 }
 
-`thrower_asp1`  <- function(xlab='Schwarzschild r',ylab='Schwarzschild t', colours=standard_colours, ...){
+`thrower_asp1`  <- function(colours=standard_colours, ...){
     plot(c(0,4),c(0.01,40),
-         type='n',xlim=c(0,5),ylim=c(0,15),asp=1,axes=FALSE, xlab=xlab,ylab=ylab,...)
-
+         type='n',xlim=c(0,5),ylim=c(0,15),asp=1,axes=FALSE,
+         xlab='Schwarzschild r',ylab='Schwarzschild t', ...)
+    
+    
     axis(1,pos=0,at=c(0,5,10))
     axis(2,pos=0)
 
