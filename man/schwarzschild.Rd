@@ -9,6 +9,7 @@
 \alias{kruskal_with_throw}
 \alias{lemaitre}
 \alias{thrower}
+\alias{thrower_asp1}
 \title{Black hole diagrams}
 \description{Black hole diagrams using different coordinate systems,
   including Schwarzschild coordinates}
