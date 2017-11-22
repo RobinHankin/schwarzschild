@@ -15,9 +15,9 @@
   including Schwarzschild coordinates}
 \usage{
 schwarzschild(draw_infalling_drops = FALSE, colours=standard_colours, ...)
-gullstrand(draw_infalling_drops = FALSE, colours=standard_colours, ...)
 eddington(colours=standard_colours, ...)
 eddington_outgoing(colours=standard_colours, ...)
+gullstrand(draw_infalling_drops = FALSE, colours=standard_colours, ...)
 kruskal(colours=standard_colours, ...)
 kruskal_with_throw(draw_constant_schwarzschild = FALSE, label_curves = FALSE, colours=standard_colours)
 kruskal_extended(colours=standard_colours, ...)
