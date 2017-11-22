@@ -1,4 +1,12 @@
-## creates all the svg files
+## creates all the svg files; type
+##
+##   R CMD BATCH svg_maker.R
+##
+## at the command line, or in an R session, type
+##
+##  source("svg_maker.R")
+##
+##  See also pdf_maker.R
 
 library(schwarzschild)
 
