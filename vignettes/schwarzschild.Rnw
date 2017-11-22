@@ -88,10 +88,24 @@ black hole.
 <<schwarzschild,fig=TRUE,height=9,width=9>>=
 schwarzschild()
 @
-\caption{Space near a black hole, using\label{schwarzschild} standard
-  Schwarzschild coordinates}
+\caption[Black hole, Schwarzschild coordinates]{Space near a black
+  hole, using\label{schwarzschild} standard Schwarzschild coordinates}
   \end{center}
 \end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<schwarzschild_drops,fig=TRUE,height=9,width=9>>=
+schwarzschild(draw_falling_drops=TRUE)
+@
+\caption[Black hole, Schwarzschild coordinates, with infalling drops shown
+         as dotted lines]{Space near a black hole,
+           using\label{schwarzschild_drops} standard Schwarzschild
+           coordinates, with worldlines of infalling drops shown as
+           dotted lines}
+  \end{center}
+\end{figure}
+
 
 \begin{figure}[p]
   \begin{center}
@@ -198,6 +212,51 @@ thrower(logaxes='',legpos='topright')
 \caption[Schwarzschild coordinates, with throw]{Space near a black hole,
   using\label{schwarzshild_throw} Schwarzschild coordinates, together with worldlines of thrown
   objects} 
+\end{center}
+\end{figure}
+
+
+\begin{figure}[p]
+  \begin{center}
+<<penrose_norm,fig=TRUE,height=9,width=9>>=
+penrose_norm()
+@
+\caption[Penrose diagram, Gaussian transform]{The universe in compact
+  presentation using a \label{penrose_norm} Gaussian Penrose transform}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<penrose_cauchy,fig=TRUE,height=9,width=9>>=
+penrose_cauchy()
+@
+\caption[Penrose diagram, Cauchy transform]{The universe in compact
+  presentation using a \label{penrose_norm} Cauchy Penrose transform}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<penrose_BH_cauchy,fig=TRUE,height=9,width=9>>=
+penrose_BH_cauchy()
+@
+\caption[Penrose diagram of universe with a black hole, Cauchy
+         transform]{The universe including a black hole in compact
+           presentation using a \label{penrose_BH_cauchy} Cauchy
+           transform}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<penrose_BH_extended,fig=TRUE,height=9,width=9>>=
+penrose_BH_extended()
+@
+\caption[Extended Penrose diagram of the universe with a black hole,
+         Cauchy transform]{The extended universe, with a black hole,
+           in compact presentation using a \label{penrose_BH_extended}
+           Cauchy transform}
 \end{center}
 \end{figure}
 
