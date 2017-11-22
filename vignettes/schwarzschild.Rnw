@@ -74,13 +74,16 @@
 require(schwarzschild)
 @ 
 
+
+\listoffigures
+\newpage
 \section{Introduction}
 
 The \pkg{schwarzschild} package creates high-quality PDFs that
 illustrate different aspects of physics near a spherically symmetric
 black hole.
 
-\begin{figure}[htbp]
+\begin{figure}[p]
   \begin{center}
 <<schwarzschild,fig=TRUE,height=9,width=9>>=
 schwarzschild()
@@ -90,18 +93,113 @@ schwarzschild()
   \end{center}
 \end{figure}
 
-
-\begin{figure}[htbp]
+\begin{figure}[p]
   \begin{center}
-<<schwarzschild,fig=TRUE,height=9,width=9>>=
-schwarzschild(draw_infalling_drop_worldlines = TRUE)
+<<eddington,fig=TRUE,height=9,width=9>>=
+eddington()
 @
-\caption{Space near a black hole, using\label{schwarzschild2} standard
-  Schwarzschild coordinates, with worldines of freely falling drops
-  shown as dotted lines}
-  \end{center}
+\caption[Eddington-Finkelstein ingoing]{Space near a black hole,
+  using\label{eddington} Eddington-Finkelstein ingoing coordinates}
+\end{center}
 \end{figure}
 
+\begin{figure}[p]
+  \begin{center}
+<<eddington_outgoing,fig=TRUE,height=9,width=9>>=
+eddington_outgoing()
+@
+\caption[Eddington-Finkelstein outgoing]{Space near a black hole,
+  using\label{eddington} Eddington-Finkelstein outgoing coordinates}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[p]
+  \begin{center}
+<<gullstrand_painleve,fig=TRUE,height=9,width=9>>=
+gullstrand()
+@
+\caption[Gullstrand-Painleve coordinates]{Space near a black hole,
+  using\label{gullstrand_painleve} Gullstrand-Painleve coordinates}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<gullstrand_painleve_plus,fig=TRUE,height=9,width=9>>=
+gullstrand(draw_infalling_drops=TRUE)
+@
+\caption[Gullstrand-Painleve coordinates]{Space near a black hole,
+  using\label{gullstrand_painleve} Gullstrand-Painleve coordinates, with infalling
+  raindrops shown as dotted lines}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<kruskal,fig=TRUE,height=9,width=9>>=
+kruskal()
+@
+\caption[Kruskal-Szekeres coordinates]{Space near a black hole,
+  using\label{kruskal_szekeres} Kruskal-Szekeres coordinates}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<kruskal_with_throw,fig=TRUE,height=9,width=9>>=
+kruskal_with_throw()
+@
+\caption[Kruskal-Szekeres coordinates with throw]{Space near a black hole,
+  using\label{kruskal_szekeres} Kruskal-Szekeres coordinates, together with a thrown
+  object}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[p]
+  \begin{center}
+<<kruskal_with_throw_plus,fig=TRUE,height=9,width=9>>=
+kruskal_with_throw(draw_constant_schwarzschild=TRUE)
+@
+\caption[Kruskal-Szekeres coordinates with throw plus lines of  constant Schwarzschild~$t$
+ and~$r$]{Space near a black hole,  using\label{kruskal_szekeres} Kruskal-Szekeres coordinates,
+   together with a thrown object and including lines of constant Schwarzschild~$t$ and~$r$}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<kruskal,fig=TRUE,height=9,width=9>>=
+kruskal_extended()
+@
+\caption[Kruskal-Szekeres extended coordinates]{Space near a black hole,
+  using\label{kruskal_szekeres} Kruskal-Szekeres coordinates with extension to
+  white hole and antiuniverse}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<lemaitre,fig=TRUE,height=9,width=9>>=
+lemaitre()
+@
+\caption[Lema\^{i}tre coordinates]{Space near a black hole,
+  using\label{lemaitre} Lema\^{i}tre coordinates}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[p]
+  \begin{center}
+<<schwarzschild_with_throw,fig=TRUE,height=9,width=9>>=
+thrower(logaxes='',legpos='topright')
+@
+\caption[Schwarzschild coordinates, with throw]{Space near a black hole,
+  using\label{schwarzshild_throw} Schwarzschild coordinates, together with worldlines of thrown
+  objects} 
+\end{center}
+\end{figure}
 
 
 \end{document}
