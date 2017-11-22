@@ -106,7 +106,6 @@ schwarzschild(draw_falling_drops=TRUE)
   \end{center}
 \end{figure}
 
-
 \begin{figure}[p]
   \begin{center}
 <<eddington,fig=TRUE,height=9,width=9>>=
@@ -170,7 +169,6 @@ kruskal_with_throw()
 \end{center}
 \end{figure}
 
-
 \begin{figure}[p]
   \begin{center}
 <<kruskal_with_throw_plus,fig=TRUE,height=9,width=9>>=
@@ -184,7 +182,7 @@ kruskal_with_throw(draw_constant_schwarzschild=TRUE)
 
 \begin{figure}[p]
   \begin{center}
-<<kruskal,fig=TRUE,height=9,width=9>>=
+<<kruskal_extended,fig=TRUE,height=9,width=9>>=
 kruskal_extended()
 @
 \caption[Kruskal-Szekeres extended coordinates]{Space near a black hole,
