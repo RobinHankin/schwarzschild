@@ -1,4 +1,4 @@
-kruskal_with_throw <- function(draw_constant_schwarzschild = FALSE, label_curves = FALSE, colours=standard_colours){
+kruskal_with_throw <- function(draw_schwarzschild = FALSE, label_curves = FALSE, colours=standard_colours){
 
 
 ## set the two arguments to TRUE to give more detail (but these give a
@@ -29,7 +29,7 @@ clip(-2,2,-2,2)
 par(xpd=FALSE)
 
 
-if(draw_constant_schwarzschild){
+if(draw_schwarzschild){
  ## First spacelike curves, exterior:
 rt_ext <- as.matrix(expand.grid(
     r = c(NA,seq(from=1,to=40,len=100)),   # the NA is so we can just use plot(...,type='l')
