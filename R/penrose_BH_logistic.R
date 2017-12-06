@@ -8,7 +8,7 @@ penrose_BH_logistic <- function(colours=standard_colours, ...){
 ## good.
 
 
-forward <- penrose_transform("logistic",forward=TRUE)
+penrose <- penrose_transform("logistic")
 
 constant_r_exterior <- colours$r
 constant_t_exterior <- colours$t
@@ -30,7 +30,7 @@ rt_ext <- as.matrix(expand.grid(
 ))
 
  ## plot curves of constant Schwarzschild t [ie spacelike curves] on the exterior:
-jj <- forward(TX(rt_ext,exterior=TRUE))
+jj <- penrose(TX(rt_ext,exterior=TRUE))
 points(jj,type='l',lty=1,lwd=0.5,col=colours$t)  # spacelike
 
 
@@ -42,7 +42,7 @@ rt_int <- as.matrix(expand.grid(
     t = seq(from=-4,to=4,len=9)
 ))
 
-points(forward(TX(rt_int,exterior=FALSE)),type='l',lty=1,lwd=0.5,col=colours$t)
+points(penrose(TX(rt_int,exterior=FALSE)),type='l',lty=1,lwd=0.5,col=colours$t)
 
 
 r_values <- c(1.05, 1.1, 1.2, 1.3, 1.5, 1.8, 2.3)
@@ -52,7 +52,7 @@ rt_exterior <- as.matrix(expand.grid(
     r = r_values
 ))[,2:1]
 
-points(forward(TX(rt_exterior,exterior=TRUE)),type='l',lty=1,lwd=0.5,col=constant_t_interior)
+points(penrose(TX(rt_exterior,exterior=TRUE)),type='l',lty=1,lwd=0.5,col=constant_t_interior)
 
 r_values_inside <- c(0.95, 0.8, 0.6, 0.4, 0.1, 0.01, 0)
  ## plot curves of constant Schwarzschild r on the interior:
@@ -62,10 +62,10 @@ rt_int <- as.matrix(expand.grid(
     r = r_values_inside 
 ))[,2:1]
 
-points(forward(TX(rt_int,exterior=FALSE)),type='l',lty=1,lwd=0.5,col=constant_t_interior)
+points(penrose(TX(rt_int,exterior=FALSE)),type='l',lty=1,lwd=0.5,col=constant_t_interior)
 
 ## leftward pointing light curves:
-jj <- forward(TX(cbind(r_values,0),exterior=TRUE))[,1]
+jj <- penrose(TX(cbind(r_values,0),exterior=TRUE))[,1]
 
 
 ## Each leftward pointing light curve ends on the singularity;
@@ -93,7 +93,7 @@ points(cbind(jj,0),pch=16)
 ## draw the singularity
 last <- max(which(is.na(rowSums(rt_int))))
 jj <- rt_int[(last+1):nrow(rt_int),]
-points(forward(TX(jj,exterior=FALSE)),type='l',lty=1,lwd=5,col=colours$singularity)
+points(penrose(TX(jj,exterior=FALSE)),type='l',lty=1,lwd=5,col=colours$singularity)
 
 
 

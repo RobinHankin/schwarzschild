@@ -2,7 +2,7 @@ penrose_norm <- function(colours=standard_colours, ...){
 
 ## plots a Penrose diagram of the whole universe.  We can choose colours
 
-forward <- penrose_transform("norm",forward=TRUE)
+penrose <- penrose_transform("norm")
 
 ## NB: norm looks good and tan sucks; cf penrose_black_hole
 
@@ -47,11 +47,11 @@ thingvec <- seq(from=-18,to=18,by=1)
 for(i in thingvec){
   ## first timelike vectors:
   xt <- cbind(x=i,t=jj)
-  points(forward(xt),type='l',col=colours$timelike_curve)
+  points(penrose(xt),type='l',col=colours$timelike_curve)
 
   ## now spacelike vectors
   xt <- cbind(x=jj,t=i)
-  points(forward(xt),type='l',col=colours$spacelike_curve)
+  points(penrose(xt),type='l',col=colours$spacelike_curve)
 }
 
 if(FALSE){
@@ -61,7 +61,7 @@ start_time <- -2
 end_time <- 100
 
 for(i in thingvec){
-  points( forward(
+  points( penrose(
       cbind(x=c(i,i+end_time),
             t=c(start_time,  start_time + end_time)
             )
@@ -77,7 +77,7 @@ start_x <- -2
 end_time <- 100
 
 for(i in thingvec){
-  points(forward(
+  points(penrose(
       cbind(x=c(start_x,start_x+end_time),
             t=c(i, i+end_time)
             )

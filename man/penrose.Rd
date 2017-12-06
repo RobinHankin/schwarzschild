@@ -11,6 +11,10 @@
 \alias{penrose_BH_norm}
 \alias{penrose_BH_extended}
 \alias{penrose_transform}
+\alias{penrose_transform_backward}
+\alias{penrose_transform_forward}
+\alias{penrose_transform_inverse}
+\alias{penrose_transform_inverted}
 \title{
 Penrose transforms of the universe to a compact diagram.
 }
@@ -19,7 +23,6 @@ Penrose transforms of the universe to a compact diagram.  The
 \dQuote{BH} forms include a black hole.
 }
 \usage{
-penrose_transform(choice, forward)
 penrose_cauchy(colours=standard_colours, ...)
 penrose_laplace(colours=standard_colours, ...)
 penrose_logistic(colours=standard_colours, ...)
@@ -29,17 +32,16 @@ penrose_BH_laplace(colours=standard_colours, ...)
 penrose_BH_logistic(colours=standard_colours, ...)
 penrose_BH_norm(colours=standard_colours, ...)
 penrose_BH_extended(colours=standard_colours, ...)
+penrose_transform(choice)
+penrose_transform_backward(choice)
 }
 \arguments{
   \item{colours}{colours argument, a list}
-  \item{choice,forward}{In function \code{penrose_transform()}, argument
+  \item{choice}{In function \code{penrose_transform()}, argument
     \code{choice} is a string specifying the name of the statistical
     distribution used to define the transform.  Current choices are
-    Cauchy, normal (Gaussian), logistic, laplace; see details section.
-    Argument \code{forward} is Boolean (no default) with \code{TRUE}
-    meaning to return the forward transformation and \code{FALSE}
-    meaning to return the backward transformation}
-  \item{\dots}{Further arguments, currently ignored}
+    Cauchy, normal (Gaussian), logistic, laplace; see details section}
+    \item{\dots}{Further arguments, currently ignored}
 }
 \details{
 A Penrose transform uses a map from the real line to the interval

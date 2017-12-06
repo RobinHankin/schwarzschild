@@ -3,7 +3,7 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
 ## This file creates penrose_BH_extended.pdf
 ## plots a Penrose diagram of the whole universe, including a black hole
 
-forward <- penrose_transform("cauchy",forward=TRUE)
+penrose <- penrose_transform("cauchy")
 
 
 constant_r_exterior <- colours$r
@@ -24,7 +24,7 @@ rt_ext <- as.matrix(expand.grid(
 ))
 
  ## plot curves of constant Schwarzschild t [ie spacelike curves] on the exterior:
-jj <- forward(TX(rt_ext,exterior=TRUE))   # forward() defined in ../penrose_transform_chooser.R
+jj <- penrose(TX(rt_ext,exterior=TRUE))   # penrose() defined in ../penrose_transform_chooser.R
 points(jj,type='l',lty=1,lwd=0.5,col=colours$t)  # spacelike
 jj[,1] <- -jj[,1]
 points(jj,type='l',lty=1,lwd=0.5,col=colours$t)  # spacelike
@@ -38,7 +38,7 @@ rt_int <- as.matrix(expand.grid(
     t = seq(from=-4,to=4,len=9)
 ))
 
-jj <- forward(TX(rt_int,exterior=FALSE))
+jj <- penrose(TX(rt_int,exterior=FALSE))
 points(jj,type='l',lty=1,lwd=0.5,col=colours$t)
 jj[,2] <- -jj[,2]
 points(jj,type='l',lty=1,lwd=0.5,col=colours$t)
@@ -50,7 +50,7 @@ rt_exterior <- as.matrix(expand.grid(
     r = r_values
 ))[,2:1]
 
-jj <- forward(TX(rt_exterior,exterior=TRUE))
+jj <- penrose(TX(rt_exterior,exterior=TRUE))
 points(jj,type='l',lty=1,lwd=0.5,col=constant_t_interior)
 jj[,1] <- -jj[,1]
 points(jj,type='l',lty=1,lwd=0.5,col=constant_t_interior)
@@ -63,7 +63,7 @@ rt_int <- as.matrix(expand.grid(
     r = r_values_inside 
 ))[,2:1]
 
-jj <- forward(TX(rt_int,exterior=FALSE))
+jj <- penrose(TX(rt_int,exterior=FALSE))
 points(jj,type='l',lty=1,lwd=0.5,col=constant_t_interior)
 
 jj[,2] <- -jj[,2]
