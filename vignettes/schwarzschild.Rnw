@@ -96,7 +96,7 @@ schwarzschild()
 \begin{figure}[p]
   \begin{center}
 <<schwarzschild_drops,fig=TRUE,height=9,width=9>>=
-schwarzschild(draw_falling_drops=TRUE)
+schwarzschild(draw_infalling_drops=TRUE)
 @
 \caption[Black hole, Schwarzschild coordinates, with infalling drops shown
          as dotted lines]{Space near a black hole,
@@ -172,7 +172,7 @@ kruskal_with_throw()
 \begin{figure}[p]
   \begin{center}
 <<kruskal_with_throw_plus,fig=TRUE,height=9,width=9>>=
-kruskal_with_throw(draw_constant_schwarzschild=TRUE)
+kruskal_with_throw(draw_schwarzschild=TRUE)
 @
 \caption[Kruskal-Szekeres coordinates with throw plus lines of  constant Schwarzschild~$t$
  and~$r$]{Space near a black hole,  using\label{kruskal_szekeres} Kruskal-Szekeres coordinates,
