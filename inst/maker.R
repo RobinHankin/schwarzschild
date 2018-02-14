@@ -8,9 +8,13 @@
 
 
 
+## Function do() is just a convenience wrapper to create both a .pdf
+## and a .svg file from the same set of commands.  
+
+
 library(schwarzschild)
 
-do <- function(basename, command){
+`do` <- function(basename, command){
     pdf(file=paste(basename,"pdf",sep="."), height=9,width=9)
     eval(parse(text=command))
     dev.off()
