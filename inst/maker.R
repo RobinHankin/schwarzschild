@@ -21,7 +21,7 @@ do <- function(basename, command){
 }
 
 do("schwarzschild", "schwarzschild()")
-do("schwarzschild2.svg", "schwarzschild(draw_infalling_drops = TRUE)")
+do("schwarzschild2", "schwarzschild(draw_infalling_drops = TRUE)")
 do("gullstrand", "gullstrand(draw_infalling_drops = FALSE)")
 do("gullstrand2", "gullstrand(draw_infalling_drops = TRUE)")
 do("eddington", "eddington()")
