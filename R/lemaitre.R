@@ -69,11 +69,14 @@ if(draw_schwarzschild){
     legend(x= -1.5, y=1.5,
            col = c(
                colours$ingoing_light, colours$outgoing_light, colours$raindrop,
-               colours$r,colours$t, colours$horizon, colours$singularity),
+               colours$r, colours$t,
+               colours$horizon, colours$singularity),
            legend = c(
                "ingoing light","outgoing light","raindrop worldline",
+               "constant Schwarzschild r","constant Schwartzschild t",
                "event horizon", "singularity"),
            lty=c(1,1,2,1,1,1,1),
+           lwd=c(1,1,1,1,1,1,5),
            bg='white')
 } else {
     legend(x= -1.5, y=1.5,
