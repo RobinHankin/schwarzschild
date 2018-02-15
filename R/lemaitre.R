@@ -37,7 +37,7 @@ if(draw_schwarzschild){
     }
     
     text(+2.2,+0.78,'Schwarzschild t=0, r>1',srt=28,col=colours$t)
-    text(-0.8,-1.10,'Schwarzschild t=0, r<1',srt=50,col=colours$r)
+    text(-0.8,-1.10,'Schwarzschild t=0, r<1',srt=50,col=colours$t)
 }
 
 ## world lines of freely falling raindrops:
