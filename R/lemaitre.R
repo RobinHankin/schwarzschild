@@ -43,7 +43,7 @@ if(draw_schwarzschild){
 ## world lines of freely falling raindrops:
 for(i in seq(from=-2,to=3,by=1)){
     segments(x0=i, y0=-n, y1=i, lty=2)
-    }
+}
 
 ## null geodesics, outside event horizon:
 for(jj in -1:5){ null_geodesics(jj,-2)}
