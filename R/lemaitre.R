@@ -36,8 +36,8 @@ if(draw_schwarzschild){
         abline(-i,1,col=colours$r)
     }
     
-    text(+2.2,+0.78,'Schwarzschild t=0, r>1',srt=28,col=colours$t)
-    text(-0.8,-1.10,'Schwarzschild t=0, r<1',srt=50,col=colours$t)
+    text(+1.2,-0.10,'Schwarzschild t=0, r>1',srt=36,col=colours$t)
+    text(-0.75,-1.13,'Schwarzschild t=0, r<1',srt=50,col=colours$t)
 }
 
 ## world lines of freely falling raindrops:
@@ -66,7 +66,7 @@ segments(-2,-2,2,2,lwd=5,col=colours$singularity)
 text(0,0.15,'singularity',srt=45)
 
 if(draw_schwarzschild){
-    legend(x= -1.5, y=1.5,
+    legend(x= -1.8, y=1.8,
            col = c(
                colours$ingoing_light, colours$outgoing_light, colours$raindrop,
                colours$r, colours$t,
