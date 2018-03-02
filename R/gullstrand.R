@@ -5,7 +5,7 @@ n <- 4  # size of plot
 
 
 # plot commands start
-plot(NULL,xlim=c(0,n),ylim=c(0,n),ylab=expression(t[d]),xlab='Schwarzschild r',axes=FALSE,asp=1)
+plot(NULL,xlim=c(0,n),ylim=c(0,n),ylab=expression(t[d]),xlab='Schwarzschild r',axes=FALSE,asp=1,main='Gullstrand coordinates')
 
 axis(1,pos=0)
 axis(2,pos=0)
@@ -84,18 +84,24 @@ text(3.7,3.77,expression('t'['s']==3),col=colours$t,srt=jjang)
 
 par(xpd=TRUE)
 
-legend(x=0,y=n+0.6,lty=1,col=c(colours$ingoing_light,colours$outgoing_light),legend=c("ingoing NULL geodesics","outgoing NULL geodesics"))
+
 if(draw_infalling_drops){
-  legend(x=2,y=n+0.6,lty=c(1,1,2),
-         col=c(colours$r,colours$t,colours$raindrop),
-         legend=c("lines of constant Schwarzschild r",
+  legend(x=2,y=n-0.3,lty=c(1,1,1,1,2),bg="white",
+         col=c(colours$ingoing_light,colours$outgoing_light,
+               colours$r,colours$t,colours$raindrop),
+         legend=c("ingoing NULL geodesics",
+                  "outgoing NULL geodesics",
+                  "lines of constant Schwarzschild r",
                   "lines of constant Schwarzschild t",
                   "world lines of infalling drops"
                   ))
 } else {
-  legend(x=2,y=n+0.6,lty=c(1,1),
-         col=c(colours$r,colours$t),
-         legend=c("lines of constant Schwarzschild r",
+  legend(x=2,y=n-0.4,lty=1,bg="white",
+         col=c(colours$ingoing_light,colours$outgoing_light,
+               colours$r,colours$t),
+         legend=c("ingoing NULL geodesics",
+                  "outgoing NULL geodesics",
+                  "lines of constant Schwarzschild r",
                   "lines of constant Schwarzschild t"
                   ))
 }
