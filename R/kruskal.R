@@ -14,7 +14,7 @@ r_emitting <-  seq(from=1.05,len=4,to=2)
 
 size <- 2
 par(pty='s')
-plot(NULL,type='n',asp=1,xlim=c(-size,size),ylim=c(-size,size),axes=FALSE,xlab="",ylab="")
+plot(NULL,type='n',asp=1,xlim=c(-size,size),ylim=c(-size,size),axes=FALSE,xlab="",ylab="",main="Kruskal-Szekeres coordinates")
 clip(-2,2,-2,2)
 
 par(xpd=FALSE)

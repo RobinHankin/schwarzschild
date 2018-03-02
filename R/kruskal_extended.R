@@ -22,7 +22,7 @@ par(pty='m')
 
 
 ## plot commands start
-plot(NULL,type='n',asp=1,xlim=c(-size,size),ylim=c(-size,size),axes=FALSE,xlab="",ylab="")
+plot(NULL,type='n',asp=1,xlim=c(-size,size),ylim=c(-size,size),axes=FALSE,xlab="",ylab="",main="Extended Kruskal=Szekeres coordinates")
 clip(-2,2,-2,2)
 par(xpd=FALSE)
 

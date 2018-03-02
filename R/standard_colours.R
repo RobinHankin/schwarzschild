@@ -19,5 +19,8 @@ standard_colours <-
       
       captured        = "red",  # used in kruskal_with_throw.R
       escaping        = "blue",
-      critical        = "green"
+      critical        = "green",
+
+      kruskal_X       = "steelblue1",
+      kruskal_T       = "sienna3"
   )
