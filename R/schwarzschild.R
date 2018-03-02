@@ -6,7 +6,7 @@ n <- 4  # size of plot
 par(xpd=TRUE)
 clip(0,n,0,n)
 
-plot(0:n,0:n,xlim=c(0,n),ylim=c(0,n),asp=1,type='n',xlab='',ylab='',axes=FALSE, ...)
+plot(0:n,0:n,xlim=c(0,n),ylim=c(0,n),asp=1,type='n',xlab='',ylab='',axes=FALSE, main='Schwarzschild coordinates', ...)
 axis(1,pos=0,at=0:n)
 axis(2,pos=0,at=0:n)
 
@@ -85,24 +85,28 @@ polygon(x=c(0,0,n+1,n+1),y=c(n,n+1,n+1,n),border=NA,lwd=7,col='white')
 #  points(r_outgoing_outside,t_outgoing_outside+i+0.5, type='l',col=colours$outgoing_light,lwd=0.3)
 
 par(xpd=TRUE)
-if(draw_infalling_drops){
-  legend(x=2.5,y=n+0.6,lty=c(1,1,2),
-         col=c(colours$r, colours$t, colours$raindrop),
-         legend=c("lines of constant r",
-                  "lines of constant t",
-                  "world lines of objects in freefall"
-                  ))
-} else {
-    legend(x=2.5, y=n+0.6, lty=1,
-           col=c(colours$r,colours$t),
-           legend=c("lines of constant r","lines of constant t")
+
+  if(draw_infalling_drops){
+        legend(x=2.2, y=n-0.1, lty=c(1,1,1,1,2), bg='white',
+           col=c(colours$ingoing_light,colours$outgoing_light, colours$r,colours$t,'black'),
+           legend=c(
+               "ingoing NULL geodesics",
+               "outgoing NULL geodesics",
+               "lines of constant r",
+               "lines of constant t",
+               "world lines of objects in freefall")
+           )
+  } else {
+    legend(x=2.2, y=n-0.1, lty=1, bg='white',
+           col=c(colours$ingoing_light,colours$outgoing_light, colours$r,colours$t),
+           legend=c(
+               "ingoing NULL geodesics",
+               "outgoing NULL geodesics",
+               "lines of constant r",
+               "lines of constant t")
            )
 }
-
-    legend(x=0,y=n+0.6,lty=1,
-           col=c(colours$ingoing_light,colours$outgoing_light),
-           legend=c("ingoing NULL geodesics","outgoing NULL geodesics"))
-
+  
 lightcone(3.0,1,size=0.1)
 lightcone(2.0,1,size=0.1)
 lightcone(1.5,1,size=0.1)
@@ -113,3 +117,4 @@ lightcone(0.2,1,size=0.1)
 points(cbind(2,offset),pch=16)
 
 }
+
