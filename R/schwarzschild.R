@@ -74,7 +74,7 @@ ingoing_null_arrow(3.76,8,colours=colours)
 
 
 par(xpd=FALSE)
-abline(v=1,lwd=4,col=colours$horizon)
+abline(v=1,lwd=4,col=colours$horizon,par(lend=1))
 
 polygon(x=c(0,0,n+1,n+1),y=c(n,n+1,n+1,n),border=NA,lwd=7,col='white')
 
@@ -84,6 +84,8 @@ polygon(x=c(0,0,n+1,n+1),y=c(n,n+1,n+1,n),border=NA,lwd=7,col='white')
 #  points(r_outgoing_inside ,t_outgoing_inside +i+0.5, type='l',col=colours$outgoing_light,lwd=0.3)
 #  points(r_outgoing_outside,t_outgoing_outside+i+0.5, type='l',col=colours$outgoing_light,lwd=0.3)
 
+segments(x0=0,y0=0,y1=n, col=colours$singularity,lwd=5)
+    
 par(xpd=TRUE)
 
   if(draw_infalling_drops){
