@@ -1,16 +1,22 @@
 kruskal_inverted <- function(colours=standard_colours, ...){
 
-plot(NULL,xlim=c(0,4),ylim=c(0,4),asp=1,
+
+  n <- 4 # size of plot
+  par(xpd=FALSE)
+  clip(0,n,0,n)
+plot(NULL,xlim=c(0,n),ylim=c(0,n),asp=1,type="n",axes=FALSE,
      xlab='Schwarzschild r',ylab='Schwarzschild t',main="Inverted Kruskal-Szekeres coordinates")
 
+axis(1,pos=0,at=0:n)
+axis(2,pos=0,at=0:n)
 
+  for(i in 0:4){ segments(x0=0,x1=n+1,y0=i,col=colours$t)}
+  for(i in 0:4){ segments(x0=i,y0=0,y1=n+1,col=colours$r)}
 
-  abline(h=0:4,col=colours$t)
-  abline(v=0:4,col=colours$r)
  ## Tval and Xval are Kruskal X,T.
 
 Tval <- seq(from=-33,to=33,len=10000)
-Xval <- c(0,0.5,1,2,4,8,16,32,33)
+Xval <- c(0,0.5,1,2,4,8,16,32)
 
 
 ## first, lines of constant X
@@ -22,7 +28,7 @@ abline(v=0)
 abline(v=1)
 
 
-Tval <- c(0,0.5,1,2,4,8,16,17)
+Tval <- c(0,0.5,1,2,4,8,16)
 Xval <- seq(from=-33,to=33,len=10000)
 
 
