@@ -86,7 +86,7 @@ par(xpd=TRUE)
 
 
 if(draw_infalling_drops){
-  legend(x=2,y=n-0.3,lty=c(1,1,1,1,2),bg="white",
+  legend(x=2,y=n-0.35,lty=c(1,1,1,1,2),bg="white",
          col=c(colours$ingoing_light,colours$outgoing_light,
                colours$r,colours$t,colours$raindrop),
          legend=c("ingoing NULL geodesics",
