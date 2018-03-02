@@ -1,7 +1,7 @@
 eddington <- function(colours=standard_colours, ...){
 n <- 4  # size of plot
 
-plot(NULL,xlim=c(0,n),ylim=c(0,n),ylab='',xlab='',axes=FALSE,asp=1)
+plot(NULL,xlim=c(0,n),ylim=c(0,n),ylab='',xlab='',axes=FALSE,asp=1,main='Eddington-Finkelstein coordinates')
 
 axis(1,pos=0,at=0:4)
 axis(2,pos=0)
@@ -68,9 +68,15 @@ text(3.5,2.85,expression('t'['s']==2),col=colours$t,srt=jjang)
 text(3.5,3.85,expression('t'['s']==3),col=colours$t,srt=jjang)
 
 par(xpd=TRUE)
-legend(x=0,y=n+0.6,lty=1,col=c(colours$ingoing_light,colours$outgoing_light),legend=c("ingoing NULL geodesics","outgoing NULL geodesics"))
-legend(x=2,y=n+0.6,lty=1,col=c(colours$r,colours$t),legend=c("lines of constant Schwarzschild r","lines of constant Schwarzschild t"))
-## plot commands end
-
+legend(
+    x=2.1,y=n-0.3,lty=1,bg='white',
+    col = c(colours$ingoing_light,colours$outgoing_light),
+    legend=c(
+        "ingoing NULL geodesics",
+        "outgoing NULL geodesics",
+        "lines of constant Schwarzschild r",
+        "lines of constant Schwarzschild t")
+)
 
 }
+
