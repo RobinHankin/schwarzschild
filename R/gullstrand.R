@@ -57,8 +57,9 @@ for(i in time){
 
 #points(cbind(2,0:5),pch=16)  # not right for Gullstrand coords
 abline(v=1,lwd=5,col=colours$horizon)
-abline(v=0,lwd=5,col=colours$singularity)
-
+par(xpd=NA)
+segments(x0=0,y0=0,y1=n,lwd=5,col=colours$singularity)
+par(xpd=TRUE)
 cone_function <- function(x,y=1){cone(x,y,-atan(-1-sqrt(1/x)),atan(+1-sqrt(1/x)))}
 cone_function(1.001)
 cone_function(1.22)
