@@ -21,6 +21,6 @@ standard_colours <-
       escaping        = "blue",
       critical        = "green",
 
-      kruskal_X       = "steelblue1",
+      kruskal_X       = "steelblue1",   # used in krusal_szekeres_inverted.R
       kruskal_T       = "sienna3"
   )
