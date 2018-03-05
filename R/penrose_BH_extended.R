@@ -43,9 +43,14 @@ points(jj,type='l',lty=1,lwd=0.5,col=colours$t)
 jj[,2] <- -jj[,2]
 points(jj,type='l',lty=1,lwd=0.5,col=colours$t)
 
-r_values <- c(1.05,1.2,1.27+NA,1.5,2,3)
+  r_values <- c(1.05,1.2,1+lambert_W0(exp(-1))+NA,1.5,2,3)
 
-rt_exterior <- as.matrix(expand.grid(
+ ## NB: the third value of r_values gives a perfectly vertical line;
+ ## we add NA to suppress the plotting of it (because it makes the
+ ## graphic look cluttered).
+
+
+  rt_exterior <- as.matrix(expand.grid(
     t = c(NA,seq(from=-10,to=10,len=1000)),
     r = r_values
 ))[,2:1]
