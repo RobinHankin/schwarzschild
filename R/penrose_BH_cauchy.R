@@ -47,7 +47,7 @@ rt_int <- as.matrix(expand.grid(
 points(penrose(TX(rt_int,exterior=FALSE)),type='l',lty=1,lwd=0.5,col=colours$t)
 
 
-r_values <- c(1.05,1.2,1+lambert_W0(exp(-1)),1.5,2:5)  #  r_values[3]~=1.278465 is  chosen so the line is exactly vertical
+r_values <- c(1.05,1.15,1+lambert_W0(exp(-1)),1.5,2:5)  #  r_values[3]~=1.278465 is  chosen so the line is exactly vertical
 
 rt_exterior <- as.matrix(expand.grid(
     t = c(NA,seq(from=-10,to=10,len=1000)),
@@ -103,7 +103,7 @@ cone(-0.2,0.4,pi/4,pi/4,0.05)
 
 ## label some constant-r [timelike] curves on the exterior
 text(0.33,-0.22,labels=paste("r = ",r_values[1],sep=""),col=colours$r,srt=-60)
-text(0.45,-0.32,labels=paste("r = ",r_values[2],sep=""),col=colours$r,srt=-80)
+text(0.45,-0.27,labels=paste("r = ",r_values[2],sep=""),col=colours$r,srt=-77)
 text(0.53,-0.35,labels=paste("r = ",r_values[4],sep=""),col=colours$r,srt=70)
 text(0.64,-0.28,labels=paste("r = ",r_values[5],sep=""),col=colours$r,srt=54)
 text(0.83,-0.10,labels=paste("r = ",r_values[6],sep=""),col=colours$r,srt=54)
