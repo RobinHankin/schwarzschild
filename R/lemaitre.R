@@ -36,26 +36,26 @@ lemaitre <- function(draw_schwarzschild=FALSE, colours=standard_colours, ...){
             abline(-i,1,col=colours$r)
         }
         
-        text(+1.2,-0.10,'Schwarzschild t=0, r>1',srt=36,col=colours$t)
-        text(-0.75,-1.13,'Schwarzschild t=0, r<1',srt=50,col=colours$t)
+        text(+1.20,-0.10, 'Schwarzschild t=0, r>1',srt=36,col=colours$t)
+        text(-0.75,-1.13, 'Schwarzschild t=0, r<1',srt=50,col=colours$t)
     }
 
     ## world lines of freely falling raindrops:
     for(i in seq(from=-2,to=3,by=1)){
-        segments(x0=i, y0=-n, y1=i, lty=2)
+        segments(x0=i, y0=-n, y1=i, lty=2, col=colours$raindrop)
     }
 
-    ## null geodesics, outside event horizon:
-    for(jj in -1:5){ null_geodesics(jj,-2)}   # null_geodesics() defined in lemaitre_functions.R
-
+    ## null geodesics, originating outside event horizon at tau=-2:
+    for(jj in -1:5){ null_geodesics(jj,-2,TRUE,TRUE)} # null_geodesics() defined in lemaitre_functions.R
+    points(cbind(-1:2,-2),pch=16)
+    
     ## outgoing nulls inside 
     null_geodesics(-1.30,-2,FALSE,TRUE) # just barely escapes
     null_geodesics(-1.35,-2,FALSE,TRUE) # just barely trapped
     null_geodesics(-1.50,-2,FALSE,TRUE) # well trapped
 
-    ## lone inward null:
-
-    null_geodesics(2.50,0,TRUE,FALSE)  # well trapped
+    ## lone inward null (this one is on its own, top right):
+    null_geodesics(2.50,0,TRUE,FALSE)
 
     ## singularity:
     segments(-2,-2,2,2,lwd=5,col=colours$singularity)
