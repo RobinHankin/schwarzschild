@@ -1,4 +1,4 @@
-penrose_BH_extended <- function(colours = standard_colours, ...){
+penrose_BH_extended <- function(light=FALSE, colours = standard_colours, ...){
     
     ## This file creates penrose_BH_extended.pdf
     ## plots a Penrose diagram of the whole universe, including a black hole
@@ -13,8 +13,7 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
     constant_t_interior <- colours$r
 
     ## set up axes
-
-    plot(c(-1,1),c(-0.5,0.5),asp=1,type='n',axes=FALSE,xlab='',ylab='')
+    plot(c(-1,1),c(-0.5,0.5),asp=1,type='n',axes=FALSE,xlab='',ylab='',main='Maximally extended Penrose diagram of a black hole')
 
 
     ## First curves of constant Schwarzschild t, exterior
@@ -30,7 +29,7 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
     points(jj,type='l',lty=1,lwd=0.5,col=colours$t)  # spacelike
 
 
-    ## Now curves of constant t (which are spacelike (sic!)) curves on the
+    ## Now curves of constant t (which are timelike (sic!)) curves on the
     ## interior:
 
     rt_int <- as.matrix(expand.grid(
@@ -39,8 +38,13 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
     ))
 
     jj <- penrose(TX(rt_int,exterior=FALSE))
+
+
+    ## lines of constant t (timelike curves [sic]) inside the white hole:
     points(jj,type='l',lty=1,lwd=0.5,col=colours$t)
     jj[,2] <- -jj[,2]
+
+    ## lines of constant t (timelike curves [sic]) inside the white hole:
     points(jj,type='l',lty=1,lwd=0.5,col=colours$t)
 
     r_values <- c(1.05,1.2,1+lambert_W0(exp(-1))+NA,1.5,2,3)
@@ -50,31 +54,41 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
     ## graphic look cluttered).
 
 
+
+    ## Now plot lines in the antiuniverse:
     rt_exterior <- as.matrix(expand.grid(
         t = c(NA,seq(from=-10,to=10,len=1000)),
         r = r_values
     ))[,2:1]
 
     jj <- penrose(TX(rt_exterior,exterior=TRUE))
+
+    # lines of constant r (timelike curves) in the universe:
     points(jj,type='l',lty=1,lwd=0.5,col=constant_t_interior)
     jj[,1] <- -jj[,1]
+
+    ##  lines of constant r (timelike curves) in the antiuniverse:
     points(jj,type='l',lty=1,lwd=0.5,col=constant_t_interior)
 
+  
+    ## plot curves of constant Schwarzschild r inside the EH.
+
     r_values_inside <- c(0.95, 0.8, 0.6, 0.4,0.1)
-    ## plot curves of constant Schwarzschild r on the interior:
-    ## Now timelike curves, interior
     rt_int <- as.matrix(expand.grid(
         t = c(NA,seq(from=-10,to=10,len=1000)),
         r = r_values_inside 
     ))[,2:1]
 
+    ## lines of constant r (spacelike curves, interior of the black hole):
     jj <- penrose(TX(rt_int,exterior=FALSE))
     points(jj,type='l',lty=1,lwd=0.5,col=constant_t_interior)
 
+    ## lines of constant r (spacelike curves, interior of the white hole):
     jj[,2] <- -jj[,2]
     points(jj,type='l',lty=1,lwd=0.5,col=constant_t_interior)
 
 
+    ## plot the singularity:
     segments(x0=-0.5,y0=0.5,x1=0.5,lwd=5,col=colours$singularity)
     segments(x0=-0.5,y0=-0.5,x1=0.5,lwd=5,col=colours$singularity)
 
