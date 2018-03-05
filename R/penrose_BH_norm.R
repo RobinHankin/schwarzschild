@@ -129,8 +129,9 @@ text(0.82,-0.07,labels=paste("r = ",r_values[5],sep=""),col=colours$r,srt=-90)
 ## label some constant-t [spacelike] curves on the exterior
 text(0.52,-0.024,labels="t=0" ,col=colours$t,srt=0)
 text(0.66,-0.200,labels="t=-1",col=colours$t,srt=0)
-text(0.53,-0.250,labels="t=-3",col=colours$t,srt=9)
+text(0.40,-0.260,labels="t=-2",col=colours$t,srt=-30)
 
+text(0.69,+0.200,labels="t=+1",col=colours$t,srt=-6)
 
 ## now some constant t [spacelike] curves on the interior
 #text(0.02,0.12,labels="t=0",col=colours$r,srt=-90)
