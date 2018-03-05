@@ -23,10 +23,6 @@ kruskal_inverted <- function(colours=standard_colours, ...){
         points(RT(cbind(i,Tval)),type='l',col=colours$kruskal_X)
     }
     
-    abline(v=0)
-    abline(v=1)
-    
-    
     Tval <- c(0,0.5,1,2,4,8,16)
     Xval <- seq(from=-33,to=33,len=10000)
     
