@@ -47,7 +47,7 @@ rt_int <- as.matrix(expand.grid(
 points(penrose(TX(rt_int,exterior=FALSE)),type='l',lty=1,lwd=0.5,col=colours$t)
 
 
-r_values <- c(1.05,1.2,1.2785,1.5,2:5)
+r_values <- c(1.05,1.2,1+lambert_W0(exp(-1)),1.5,2:5)  #  r_values[3]~=1.278465 is  chosen so the line is exactly vertical
 
 rt_exterior <- as.matrix(expand.grid(
     t = c(NA,seq(from=-10,to=10,len=1000)),
