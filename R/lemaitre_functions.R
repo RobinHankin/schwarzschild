@@ -29,12 +29,12 @@ ingoing_light <- function(x0,y0,outward=FALSE){
   cbind(X[X>Y],Y[X>Y])
 }
 
-null_geodesics <- function(x0,y0,ingoing=TRUE,outgoing=TRUE, colours=standard_colours){
+null_geodesics <- function(x0,y0,ingoing=TRUE,outgoing=TRUE, colours=standard_colours, ...){
   if(ingoing){
-    points(ingoing_light(x0,y0,outward=FALSE),type='l',col=colours$ingoing_light )
+    points(ingoing_light(x0,y0,outward=FALSE),type='l',col=colours$ingoing_light, ... )
   }
 
   if(outgoing){
-    points(ingoing_light(x0,y0,outward=TRUE ),type='l',col=colours$outgoing_light)
+    points(ingoing_light(x0,y0,outward=TRUE ),type='l',col=colours$outgoing_light, ...)
   }
 }
