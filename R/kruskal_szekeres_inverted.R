@@ -25,8 +25,7 @@ kruskal_inverted <- function(colours=standard_colours, ...){
     
     Tval <- c(0,0.5,1,2,4,8,16)
     Xval <- seq(from=-33,to=33,len=10000)
-    
-    
+      
     ## second, lines of constant T
     for(i in Tval){
         points(RT(cbind(Xval,i)),type='l',col=colours$kruskal_T)
@@ -46,8 +45,9 @@ kruskal_inverted <- function(colours=standard_colours, ...){
                colours$kruskal_T
            )
            )
-    
-    abline(v=0,lwd=5,col=colours$singularity)
-    abline(v=1,lwd=5,col=colours$horizon)
+
+    ## horizon and singularity last:
+    segments(x0=0,y0=0,y1=5,lwd=5,lend=1,col=colours$singularity)
+    segments(x0=1,y0=0,y1=5,lwd=5,lend=1,col=colours$horizon)
     
 }
