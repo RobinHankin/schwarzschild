@@ -85,10 +85,6 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
     segments(x0=-0.5,y0=-0.5,x1=-1,y1=0,lwd=1,col=colours$singularity)
     segments(x0=-1,y0=0,x1=-0.5,y1=0.5,lwd=1,col=colours$singularity)
 
-
-    ## last thing, draw the horizons
-
-    size <- 33
     ## do the horizons last:
     segments(x0=-0.5,y0=0.5,x1=0.5,y1=-0.5, col=colours$horizon,lwd=5)
     segments(x0=-0.5,y0=-0.5,x1=0.5,y1=0.5, col=colours$horizon,lwd=5)
