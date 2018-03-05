@@ -15,10 +15,9 @@ penrose_BH_extended <- function(light=FALSE, colours = standard_colours, ...){
     ## set up axes
     plot(c(-1,1),c(-0.5,0.5),asp=1,type='n',axes=FALSE,xlab='',ylab='',main='Maximally extended Penrose diagram of a black hole')
 
-
     ## First curves of constant Schwarzschild t, exterior
     rt_ext <- as.matrix(expand.grid(
-        r = c(NA,seq(from=1,to=40,len=1000)),   # the NA is so we can just use plot(...,type='l')
+        r = c(NA,seq(from=1,to=40,len=5000)),   # the NA is so we can just use plot(...,type='l')
         t = seq(from=-4,to=4,len=9)
     ))
 
@@ -99,6 +98,8 @@ penrose_BH_extended <- function(light=FALSE, colours = standard_colours, ...){
     segments(x0=-0.5,y0=-0.5,x1=-1,y1=0,lwd=1,col=colours$singularity)
     segments(x0=-1,y0=0,x1=-0.5,y1=0.5,lwd=1,col=colours$singularity)
 
+
+  
     ## do the horizons last:
     segments(x0=-0.5,y0=0.5,x1=0.5,y1=-0.5, col=colours$horizon,lwd=5)
     segments(x0=-0.5,y0=-0.5,x1=0.5,y1=0.5, col=colours$horizon,lwd=5)
