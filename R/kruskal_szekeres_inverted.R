@@ -51,7 +51,7 @@ kruskal_inverted <- function(colours=standard_colours, ...){
            )
            )
     
-    abline(v=0,lwd=5)
+    abline(v=0,lwd=5,col=colours$singularity)
     abline(v=1,lwd=5,col=colours$horizon)
     
 }
