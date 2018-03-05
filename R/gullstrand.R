@@ -3,8 +3,6 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
     cone_function <- function(x,y=1){cone(x,y,-atan(-1-sqrt(1/x)),atan(+1-sqrt(1/x)))}
     n <- 4  # size of plot
 
-
-                                        # plot commands start
     plot(NULL,xlim=c(0,n),ylim=c(0,n),ylab=expression(t[d]),xlab='Schwarzschild r',axes=FALSE,asp=1,main='Gullstrand coordinates')
 
     axis(1,pos=0)
@@ -22,7 +20,7 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
 
     time <- -20:26
 
-    gullstrand    <- function(r,i){
+    gullstrand <- function(r,i){
         y <- sqrt(r)
         i - (-2*y + log(abs((y+1)/(y-1))))
     }
@@ -53,9 +51,8 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
             jj <- cbind(c(rin,rout),i-2/3*c(rin,rout)^(3/2))
             points(jj,type='l',lty=2,col=colours$raindrop)
         }
-    }
+    } # for(i in time) loop closes
 
-                                        #points(cbind(2,0:5),pch=16)  # not right for Gullstrand coords
     abline(v=1,lwd=5,col=colours$horizon)
     par(xpd=NA)
     segments(x0=0,y0=0,y1=n,lwd=5,col=colours$singularity)
@@ -80,11 +77,7 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
     text(3.7,2.77,expression('t'['s']==2),col=colours$t,srt=jjang)
     text(3.7,3.77,expression('t'['s']==3),col=colours$t,srt=jjang)
 
-
-
-
     par(xpd=TRUE)
-
 
     if(draw_infalling_drops){
         legend(x=2,y=n-0.35,lty=c(1,1,1,1,2),bg="white",
