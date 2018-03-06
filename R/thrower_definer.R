@@ -1,7 +1,5 @@
 ## This file defines thrower() and thrower_asp1(), which is almost the
-## same but makes a plot with unit aspect ratio.  This file is sourced
-## by thrower_caller.R, which also executes thrower() and
-## thrower_asp1()
+## same but makes a plot with unit aspect ratio.  
 
 
 `thrower` <- function(logaxes,legpos="topleft", colours=standard_colours, ...){
