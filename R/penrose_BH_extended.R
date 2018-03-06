@@ -14,7 +14,6 @@ penrose_BH_extended <- function(light=FALSE, colours = standard_colours, ...){
 
     ## set up axes
     plot(c(-1,1),c(-0.5,0.5),asp=1,type='n',axes=FALSE,xlab='',ylab='',main='Maximally extended Penrose diagram of a black hole')
-
     ## First curves of constant Schwarzschild t, exterior
     rt_ext <- as.matrix(expand.grid(
         r = c(NA,seq(from=1,to=40,len=5000)),   # the NA is so we can just use plot(...,type='l')
@@ -99,7 +98,44 @@ penrose_BH_extended <- function(light=FALSE, colours = standard_colours, ...){
     segments(x0=-1,y0=0,x1=-0.5,y1=0.5,lwd=1,col=colours$singularity)
 
 
-  
+    if(light){  # draw light paths; functions are named for the origin of the light
+      universe <- function(x,y,left=TRUE,right=TRUE, ...){
+        if(right){segments(x0=x, y0=y, x1=(1+x-y)/2, y1=(1-x+y)/2,col=colours$outgoing_light, ...)}
+        if(left){segments(x0=x, y0=y, x1=(-0.5+x+y), y1=1/2,col=colours$ingoing_light, ...)}
+        points(x,y,pch=16)
+      }
+
+      antiuniverse <- function(x,y,left=TRUE,right=TRUE, ...){
+        if(right){segments(x0=x, y0=y, x1=x-y+1/2, y1=1/2,col=colours$outgoing_light, ...)}
+        if(left){segments(x0=x, y0=y, x1=(x+y-1)/2, y1=(x+y+1)/2,col=colours$ingoing_light, ...)}
+        points(x,y,pch=16)
+      }
+
+      blackhole <- function(x,y,left=TRUE,right=TRUE, ...){
+        if(right){segments(x0=x, y0=y, x1=x-y+1/2, y1=1/2,col=colours$outgoing_light, ...)}
+        if(left) {segments(x0=x, y0=y, x1=x+y-1/2, y1=1/2,col=colours$ingoing_light, ...)}
+        points(x,y,pch=16)
+      }
+
+      whitehole <- function(x,y,left=TRUE,right=TRUE, ...){
+        if(right){segments(x0=x, y0=y, x1=(1+x-y)/2, y1=(1-x+y)/2,col=colours$outgoing_light, ...)}
+        if(left){segments(x0=x, y0=y, x1=(x+y-1)/2, y1=(x+y+1)/2,col=colours$ingoing_light, ...)}
+        points(x,y,pch=16)
+      }
+
+      universe(0.3,0.15)
+      antiuniverse(-0.7,-0.2)
+      blackhole(-0.15,0.3)
+      whitehole(0.3,-0.4)
+    }
+
+    ## Label the areas
+    text(0.5,0.1,"universe")
+    text(-0.7,0.1,"antiuniverse")
+    text(0,0.3,"black hole")
+    text(0,-0.3,"white hole")
+
+
     ## do the horizons last:
     segments(x0=-0.5,y0=0.5,x1=0.5,y1=-0.5, col=colours$horizon,lwd=5)
     segments(x0=-0.5,y0=-0.5,x1=0.5,y1=0.5, col=colours$horizon,lwd=5)
