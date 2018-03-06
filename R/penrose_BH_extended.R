@@ -135,6 +135,39 @@ penrose_BH_extended <- function(light=FALSE, colours = standard_colours, ...){
     text(0,0.3,"black hole")
     text(0,-0.3,"white hole")
 
+    if(light){
+      legend("topleft", lty=1, lwd=c(1,1,1,1,5,5),
+             col = c(
+                 colours$ingoing_light,
+                 colours$outgoing_light,
+                 colours$r,
+                 colours$t,
+                 colours$singularity,
+                 colours$horizon
+             ),
+             legend = c(
+                 "leftward light",
+                 "rightward light",
+                 "lines of constant Schwarzschild r",
+                 "lines of constant Schwarzschild t",
+                 "singularity",
+                 "horizon"
+             ))
+    }  else {
+      legend("topleft", lty=1, lwd=c(1,1,5,5),
+             col = c(
+                 colours$r,
+                 colours$t,
+                 colours$singularity,
+                 colours$horizon
+             ),
+             legend = c(
+                 "lines of constant Schwarzschild r",
+                 "lines of constant Schwarzschild t",
+                 "singularity",
+                 "horizon"
+             ))
+    }
 
     ## do the horizons last:
     segments(x0=-0.5,y0=0.5,x1=0.5,y1=-0.5, col=colours$horizon,lwd=5)
