@@ -1,24 +1,29 @@
-## some functionality for geodesic motion in the vicinity of a black
-## hole.  The challenging part is making sure that the ODE solver 
+## Some functionality for geodesic motion in the vicinity of a black
+## hole.  The challenging part is making sure that the ODE solver
+## works consistently for bounded and unbounded trajectories, and (for
+## bounded trajectories) inward and outward motion.  Note that a
+## bounded outward trajectory turns into an inward trajectory after a
+## finite time, when it starts falling towards the black hole.
 
 ## This is all radial motion.
 
-## in the work below, epsilon corresponds to 'energy' which is a
+## In the work below, epsilon corresponds to 'energy' which is a
 ## conserved quantity in this case; epsilon=1 corresponds to an object
 ## with zero kinetic energy at infinity.
 
-## part of the problem is that Schwarzschild t behaves badly at r=1
-## and peculiarly at r<1.
+## Part of the problem is that Schwarzschild coordinates behave badly
+## at r=1 and peculiarly if r<1.
 
 
-## below, t0 and r0 represent the Schwarzschild t and r for the
+## Below, t0 and r0 represent the Schwarzschild t and r for the
 ## 'start' of the trajectory.  Boolean argument 'sign' says whether
 ## the initial trajectory is inward or outward (although this gloss is
 ## a bit weird for r<0).
 
 ## Function trajectory() is the user-friendly version which dispatches
-## to one of the more specialized routines
-## (bounded_outward_trajectory() etc) depending on the value of its arguments.
+## to one of the more specialized routines (such as
+## bounded_outward_trajectory() etc) depending on the value of its
+## arguments.
 
 ## The specialized routines use Euler's method which is, I know, inefficient.  
 
