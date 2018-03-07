@@ -16,20 +16,20 @@
 
     lthick <- 2
     
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.82,sign=-1),type='l',lwd=lthick,col='red')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.82,sign=1),type='l',lwd=lthick,col='orange')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.89,sign=1,n=1000),type='l',lwd=lthick,col='orange')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.88,sign=1,n=1000),type='l',lwd=lthick,col='orange')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.87,sign=1,n=1000),type='l',lwd=lthick,col='orange')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.91,sign=1,n=1000),type='l',lwd=lthick,col='orange')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 1.00,sign=1,n=1000),type='l',lwd=lthick,col='yellow')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 1.89,sign=1),type='l',lwd=lthick,col='green')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 189,sign=1),type='l',lwd=lthick,col='green')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.82,sign=-1)       ,type='l',lwd=lthick,col='red'   )
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.82,sign=+1)       ,type='l',lwd=lthick,col='orange')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.89,sign=+1,n=1000),type='l',lwd=lthick,col='orange')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.88,sign=+1,n=1000),type='l',lwd=lthick,col='orange')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.87,sign=+1,n=1000),type='l',lwd=lthick,col='orange')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.91,sign=+1,n=1000),type='l',lwd=lthick,col='orange')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 1.00,sign=+1,n=1000),type='l',lwd=lthick,col='yellow')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 1.89,sign=+1)       ,type='l',lwd=lthick,col='green' )
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 189 ,sign=+1)       ,type='l',lwd=lthick,col='green' )
 
-    points(trajectory(t0=t_start_inside,r0=r_start_inside,0.3,sign= +1,n=1000),type='l',lwd=lthick,col='blue')
+    points(trajectory(t0=t_start_inside,r0=r_start_inside,0.30,sign= +1,n=1000),type='l',lwd=lthick,col='blue')
     points(trajectory(t0=t_start_inside,r0=r_start_inside,0.91,sign= +1,n=1000),type='l',lwd=lthick,col='blue')
 
-    points(trajectory(t0=t_start_inside,r0=r_start_inside,0.3,sign= -1,n=1000),type='l',lwd=lthick,col='purple')
+    points(trajectory(t0=t_start_inside,r0=r_start_inside,0.30,sign= -1,n=1000),type='l',lwd=lthick,col='purple')
     points(trajectory(t0=t_start_inside,r0=r_start_inside,0.91,sign= -1,n=1000),type='l',lwd=lthick,col='purple')
 
     
@@ -38,7 +38,7 @@
 
     ## source of throwing:
     points(r_start_outside,t_start_outside,pch=16)
-    points(r_start_inside,t_start_inside,pch=16)
+    points(r_start_inside ,t_start_inside ,pch=16)
 
     legend(legpos,lty=1,lwd=c(rep(lthick,6),6),
            col=c("red","orange","yellow","green","blue","purple",colours$horizon),
@@ -63,20 +63,20 @@
 
     lthick <- 2
     
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.82,sign=-1),type='l',lwd=lthick,col='red')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.82,sign=1),type='l',lwd=lthick,col='orange')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.89,sign=1,n=1000),type='l',lwd=lthick,col='orange')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.88,sign=1,n=1000),type='l',lwd=lthick,col='orange')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.87,sign=1,n=1000),type='l',lwd=lthick,col='orange')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.91,sign=1,n=1000),type='l',lwd=lthick,col='orange')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 1.00,sign=1,n=1000),type='l',lwd=lthick,col='yellow')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 1.89,sign=1),type='l',lwd=lthick,col='green')
-    points(trajectory(t0=t_start_outside, r0=r_start_outside, 189,sign=1),type='l',lwd=lthick,col='green')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.82,sign=-1)       ,type='l',lwd=lthick,col='red'   )
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.82,sign=+1)       ,type='l',lwd=lthick,col='orange')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.89,sign=+1,n=1000),type='l',lwd=lthick,col='orange')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.88,sign=+1,n=1000),type='l',lwd=lthick,col='orange')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.87,sign=+1,n=1000),type='l',lwd=lthick,col='orange')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.91,sign=+1,n=1000),type='l',lwd=lthick,col='orange')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 1.00,sign=+1,n=1000),type='l',lwd=lthick,col='yellow')
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 1.89,sign=+1)       ,type='l',lwd=lthick,col='green' )
+    points(trajectory(t0=t_start_outside, r0=r_start_outside, 189 ,sign=+1)       ,type='l',lwd=lthick,col='green' )
 
-    points(trajectory(t0=t_start_inside,r0=r_start_inside,0.3,sign= +1,n=1000),type='l',lwd=lthick,col='blue')
+    points(trajectory(t0=t_start_inside,r0=r_start_inside,0.30,sign= +1,n=1000),type='l',lwd=lthick,col='blue')
     points(trajectory(t0=t_start_inside,r0=r_start_inside,0.91,sign= +1,n=1000),type='l',lwd=lthick,col='blue')
 
-    points(trajectory(t0=t_start_inside,r0=r_start_inside,0.3,sign= -1,n=1000),type='l',lwd=lthick,col='purple')
+    points(trajectory(t0=t_start_inside,r0=r_start_inside,0.30,sign= -1,n=1000),type='l',lwd=lthick,col='purple')
     points(trajectory(t0=t_start_inside,r0=r_start_inside,0.91,sign= -1,n=1000),type='l',lwd=lthick,col='purple')
 
     ## event horizon:
@@ -84,7 +84,7 @@
 
     ## source of throwing:
     points(r_start_outside,t_start_outside,pch=16)
-    points(r_start_inside,t_start_inside,pch=16)
+    points(r_start_inside, t_start_inside ,pch=16)
 
     legend(x=5,y=4,lty=1,lwd=c(rep(lthick,6),6),
            col=c("red","orange","yellow","green","blue","purple",colours$horizon),
