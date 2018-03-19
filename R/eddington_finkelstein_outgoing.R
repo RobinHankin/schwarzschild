@@ -81,8 +81,8 @@ legend(
     x=2.1,y=3.9,lty=1,bg='white',
     col = c(colours$ingoing_light,colours$outgoing_light,colours$r,colours$t),
     legend=c(
-        "ingoing NULL geodesics",
-        "outgoing NULL geodesics",
+        "ingoing light",
+        "outgoing light",
         "lines of constant Schwarzschild r",
         "lines of constant Schwarzschild t")
 )

@@ -83,8 +83,8 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
         legend(x=2,y=n-0.35,lty=c(1,1,1,1,2),bg="white",
                col=c(colours$ingoing_light,colours$outgoing_light,
                      colours$r,colours$t,colours$raindrop),
-               legend=c("ingoing NULL geodesics",
-                        "outgoing NULL geodesics",
+               legend=c("ingoing light",
+                        "outgoing light",
                         "lines of constant Schwarzschild r",
                         "lines of constant Schwarzschild t",
                         "world lines of infalling drops"
@@ -93,8 +93,8 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
         legend(x=2,y=n-0.4,lty=1,bg="white",
                col=c(colours$ingoing_light,colours$outgoing_light,
                      colours$r,colours$t),
-               legend=c("ingoing NULL geodesics",
-                        "outgoing NULL geodesics",
+               legend=c("ingoing light",
+                        "outgoing light",
                         "lines of constant Schwarzschild r",
                         "lines of constant Schwarzschild t"
                         ))

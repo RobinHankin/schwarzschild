@@ -92,8 +92,8 @@ par(xpd=TRUE)
         legend(x=2.2, y=n-0.1, lty=c(1,1,1,1,2), bg='white',
            col=c(colours$ingoing_light,colours$outgoing_light, colours$r,colours$t,'black'),
            legend=c(
-               "ingoing NULL geodesics",
-               "outgoing NULL geodesics",
+               "ingoing light",
+               "outgoing light",
                "lines of constant r",
                "lines of constant t",
                "world lines of objects in freefall")
@@ -102,8 +102,8 @@ par(xpd=TRUE)
     legend(x=2.2, y=n-0.1, lty=1, bg='white',
            col=c(colours$ingoing_light,colours$outgoing_light, colours$r,colours$t),
            legend=c(
-               "ingoing NULL geodesics",
-               "outgoing NULL geodesics",
+               "ingoing light",
+               "outgoing light",
                "lines of constant r",
                "lines of constant t")
            )
