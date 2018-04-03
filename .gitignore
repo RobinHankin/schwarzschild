@@ -23,9 +23,11 @@ vignettes/*.pdf
 vignettes/*.tex
 vignettes/*.bbl
 vignettes/*.aux
+vignettes/*.lof
 vignettes/*.log
 vignettes/*.out
 vignettes/*.R
+vignettes/*.Rout
 
 vignettes/jss.bst
 vignettes/jss.cls
