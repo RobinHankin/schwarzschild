@@ -36,6 +36,11 @@
     ## event horizon:
     abline(v=1,lwd=6,col=colours$horizon)
 
+    ## singularity:
+    if(!isTRUE(grep('x',logaxes))){
+      abline(v=0,lwd=4,col=colours$singularity)
+    }
+    
     ## source of throwing:
     points(r_start_outside,t_start_outside,pch=16)
     points(r_start_inside ,t_start_inside ,pch=16)
@@ -81,6 +86,9 @@
 
     ## event horizon:
     abline(v=1,lwd=6,col=colours$horizon)
+
+    ## singularity:
+    abline(v=0,lwd=4,col=colours$singularity)
 
     ## source of throwing:
     points(r_start_outside,t_start_outside,pch=16)
