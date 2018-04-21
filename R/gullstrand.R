@@ -20,7 +20,7 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
 
     time <- -20:26
 
-    gullstrand <- function(r,i){
+    togullstrand <- function(r,i){
         y <- sqrt(r)
         i - (-2*y + log(abs((y+1)/(y-1))))
     }
@@ -39,11 +39,11 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
         points(jj,type='l',lwd=1/2,col=colours$ingoing_light)
 
         ## constant Schwarzschild t, outside:
-        jj <- cbind(r=rout,t=gullstrand(rout,i))
+        jj <- cbind(r=rout,t=togullstrand(rout,i))
         points(jj,type='l',lwd=1/2,col=colours$t)
 
         ## constant Schwarzschild t, inside:
-        jj <- cbind(r=rin,t=gullstrand(rin,i))
+        jj <- cbind(r=rin,t=togullstrand(rin,i))
         points(jj,type='l',lwd=1/2,col=colours$t)
 
         ## raindrops:
