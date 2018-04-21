@@ -88,9 +88,14 @@ segments(x0=0,y0=0,y1=n, col=colours$singularity,lwd=5)
     
 par(xpd=TRUE)
 
-  if(draw_infalling_drops){
-        legend(x=2.2, y=n-0.1, lty=c(1,1,1,1,2), bg='white',
-           col=c(colours$ingoing_light,colours$outgoing_light, colours$r,colours$t,'black'),
+if(draw_infalling_drops){
+    legend(x=2.2, y=n-0.1, lty=c(1,1,1,1,2), bg='white',
+           col=c(
+               colours$ingoing_light,
+               colours$outgoing_light,
+               colours$r,
+               colours$t,
+               'black'),
            legend=c(
                "ingoing light",
                "outgoing light",
@@ -100,7 +105,11 @@ par(xpd=TRUE)
            )
   } else {
     legend(x=2.2, y=n-0.1, lty=1, bg='white',
-           col=c(colours$ingoing_light,colours$outgoing_light, colours$r,colours$t),
+           col=c(
+               colours$ingoing_light,
+               colours$outgoing_light,
+               colours$r,
+               colours$t),
            legend=c(
                "ingoing light",
                "outgoing light",
