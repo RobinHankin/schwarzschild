@@ -74,7 +74,7 @@ ingoing_null_arrow(3.76,8,colours=colours)
 
 
 par(xpd=FALSE)
-abline(v=1,lwd=4,col=colours$horizon,par(lend=1))
+abline(v=1,lwd=5,col=colours$horizon,par(lend=1))
 
 polygon(x=c(0,0,n+1,n+1),y=c(n,n+1,n+1,n),border=NA,lwd=7,col='white')
 
@@ -88,6 +88,13 @@ segments(x0=0,y0=0,y1=n, col=colours$singularity,lwd=5)
     
 par(xpd=TRUE)
 
+legend(
+    x=2.2, y=n-1.1,
+    bg='white',
+    lwd=5, col=c(colours$singularity,colours$horizon),
+    legend=c("singularity","horizon")
+)
+      
 if(draw_infalling_drops){
     legend(x=2.2, y=n-0.1, lty=c(1,1,1,1,2), bg='white',
            col=c(
@@ -101,7 +108,7 @@ if(draw_infalling_drops){
                "outgoing light",
                "lines of constant r",
                "lines of constant t",
-               "world lines of objects in freefall")
+               "raindrops")
            )
   } else {
     legend(x=2.2, y=n-0.1, lty=1, bg='white',
