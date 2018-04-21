@@ -78,8 +78,8 @@
       y0 = r + log(abs(r-1)) + offset,   # t
       y1 = r + log(abs(r-1)) + offset +delta*(1/abs(r-1)+sign(r-1)),
       angle = 15,
-      col = colours$outgoing_light,
       length = 0.15,
+      col = colours$outgoing_light,
       ...)
 }
 
@@ -89,8 +89,9 @@
       x1 = r - delta,
       y0 = -r - log(abs(r-1)) + offset,   # t
       y1 = -r - log(abs(r-1)) + offset - delta*(-1-sign(r-1)/abs(r-1)),
-      angle = 15, col=colours$ingoing_light,
+      angle = 15, 
       length=0.15,
+      col=colours$ingoing_light,
       ...)
 }
 
