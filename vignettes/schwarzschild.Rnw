@@ -81,7 +81,12 @@ require(schwarzschild)
 
 The \pkg{schwarzschild} package creates high-quality PDFs that
 illustrate different aspects of physics near a spherically symmetric
-black hole.
+black hole.  Although the {\em raison d'\^{e}tre} of the package is
+the PDF images themselves, this vignette presents a discussion of the
+physics underlying the Schwarzschild black hole, as illustrated by the
+various diagrams.
+
+\section{Schwarzschild coordinates}
 
 \begin{figure}[p]
   \begin{center}
@@ -92,6 +97,19 @@ schwarzschild()
   hole, using\label{schwarzschild} standard Schwarzschild coordinates}
   \end{center}
 \end{figure}
+
+The full Schwarzschild metric is
+
+\begin{equation}
+  ds^2 = -\left(1-1/r\right)dt^2 + \frac{dr^2}{1-1/r} + r^2d\theta^2+ r^2\sin^2\theta d\phi^2
+  \end{equation}
+
+\noindent and here we consider only the radial line corresponding
+to~$\theta=0$, giving
+
+\begin{equation}
+  ds^2 = -\left(1-1/r\right)dt^2 + \frac{dr^2}{1-1/r}
+  \end{equation}
 
 \begin{figure}[p]
   \begin{center}
