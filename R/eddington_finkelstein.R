@@ -68,7 +68,7 @@ eddington <- function(colours=standard_colours, ...){
     text(3.5,3.85,expression('t'['s']==3),col=colours$t,srt=jjang)
 
     par(xpd=TRUE)
-
+    par(lend=1)
     legend(
         x=2.1, y=n-1.1,
         bg='white',

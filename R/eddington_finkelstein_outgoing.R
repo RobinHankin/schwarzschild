@@ -77,7 +77,7 @@ text(3.5,3.17,expression('t'['s']==3),col=colours$t,srt=jjang)
 
 
   par(xpd=TRUE)
-
+  par(lend=1)
       legend(
         x=2.1, y=n-0.9,
         bg='white',
