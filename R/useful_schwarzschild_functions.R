@@ -70,7 +70,7 @@
       angle=15, length=0.15, ...)
 }
 
-`outgoing_null_arrow` <- function(r,offset,delta=0.001, colours=standard_colours, ...){
+`outgoing_null_arrow_schwarz` <- function(r,offset,delta=0.001, colours=standard_colours, ...){
 
   arrows(
       x0 = r,
@@ -83,7 +83,7 @@
       ...)
 }
 
-`ingoing_null_arrow` <- function(r,offset,delta=0.001, colours=standard_colours, ...){
+`ingoing_null_arrow_schwarz` <- function(r,offset,delta=0.001, colours=standard_colours, ...){
   arrows(
       x0 = r,
       x1 = r - delta,

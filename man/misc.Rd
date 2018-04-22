@@ -10,12 +10,12 @@
 \alias{outgoing}
 \alias{ingoing_lambert}
 \alias{outgoing_lambert}
-\alias{ingoing_null_arrow}
+\alias{ingoing_null_arrow_schwarz}
 \alias{ingoing_trajectory}
 \alias{inward_trajectory}
 \alias{ingoing_light}
 \alias{null_geodesics}
-\alias{outgoing_null_arrow}
+\alias{outgoing_null_arrow_schwarz}
 \alias{outward_inside_trajectory}
 \alias{raindrop}
 \alias{raindrop_arrow}

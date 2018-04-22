@@ -51,26 +51,26 @@ if(draw_infalling_drops){
 
 ## draw arrows on some null curves:
 
-outgoing_null_arrow(0.56,2,colours=colours)
-outgoing_null_arrow(0.40,2,colours=colours)
+outgoing_null_arrow_schwarz(0.56,2,colours=colours)
+outgoing_null_arrow_schwarz(0.40,2,colours=colours)
 
-outgoing_null_arrow(0.56,3,colours=colours)
-outgoing_null_arrow(0.40,3,colours=colours)
+outgoing_null_arrow_schwarz(0.56,3,colours=colours)
+outgoing_null_arrow_schwarz(0.40,3,colours=colours)
 
-outgoing_null_arrow(2.50, 0,colours=colours)
-outgoing_null_arrow(1.50, 0,colours=colours)
-outgoing_null_arrow(1.10, 5,colours=colours)
-outgoing_null_arrow(3.76,-1,colours=colours)
+outgoing_null_arrow_schwarz(2.50, 0,colours=colours)
+outgoing_null_arrow_schwarz(1.50, 0,colours=colours)
+outgoing_null_arrow_schwarz(1.10, 5,colours=colours)
+outgoing_null_arrow_schwarz(3.76,-1,colours=colours)
 
-ingoing_null_arrow(0.56,1,colours=colours)
-ingoing_null_arrow(0.40,1,colours=colours)
+ingoing_null_arrow_schwarz(0.56,1,colours=colours)
+ingoing_null_arrow_schwarz(0.40,1,colours=colours)
 
-ingoing_null_arrow(0.56,2,colours=colours)
-ingoing_null_arrow(0.40,2,colours=colours)
+ingoing_null_arrow_schwarz(0.56,2,colours=colours)
+ingoing_null_arrow_schwarz(0.40,2,colours=colours)
 
-ingoing_null_arrow(1.81,3,colours=colours)
-ingoing_null_arrow(1.45,3,colours=colours)
-ingoing_null_arrow(3.76,8,colours=colours)
+ingoing_null_arrow_schwarz(1.81,3,colours=colours)
+ingoing_null_arrow_schwarz(1.45,3,colours=colours)
+ingoing_null_arrow_schwarz(3.76,8,colours=colours)
 
 
 par(xpd=FALSE)
