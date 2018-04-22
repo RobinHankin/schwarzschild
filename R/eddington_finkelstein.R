@@ -68,15 +68,22 @@ eddington <- function(colours=standard_colours, ...){
     text(3.5,3.85,expression('t'['s']==3),col=colours$t,srt=jjang)
 
     par(xpd=TRUE)
+
+    legend(
+        x=2.1, y=n-1.1,
+        bg='white',
+        lwd=5, col=c(colours$singularity,colours$horizon),
+        legend=c("singularity","horizon")
+    )
+    
     legend(
         x=2.1,y=n-0.3,lty=1,bg='white',
         col = c(colours$ingoing_light,colours$outgoing_light,colours$r,colours$t),
         legend=c(
             "ingoing light",
             "outgoing light",
-            "lines of constant Schwarzschild r",
-            "lines of constant Schwarzschild t")
+            "lines of constant r",
+            expression("lines of constant t"["schwarz"]))
     )
-
 }
 
