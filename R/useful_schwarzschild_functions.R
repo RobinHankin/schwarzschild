@@ -99,9 +99,8 @@
   function(r,offset, colours=standard_colours, ...){
     delta <- 0.001
     jjy <- -r + offset
-    print(c(r,jjy))
-    arrows(
 
+    arrows(
         x0 = r,
         x1 = r - delta,
         y0 = jjy,
