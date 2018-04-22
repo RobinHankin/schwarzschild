@@ -39,6 +39,7 @@ vignettes/jss.ins
 inst/*.pdf
 inst/*.svg
 inst/*.Rout
+inst/.Rdata
 
 tests/*.R~
 man/*.Rd~
