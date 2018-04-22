@@ -50,10 +50,12 @@ abline(v=0,lwd=5,col=colours$singularity)
     ingoing_null_arrow_eddington_outgoing_coords(1.81,3)
     ingoing_null_arrow_eddington_outgoing_coords(3.4,6)
 
+    ingoing_null_arrow_eddington_outgoing_coords(0.62,1)
+
     outgoing_null_arrow_eddington_outgoing_coords(0.6,3)
     outgoing_null_arrow_eddington_outgoing_coords(0.6,2)
     outgoing_null_arrow_eddington_outgoing_coords(3.4,-3)
-    outgoing_null_arrow_eddington_outgoing_coords(1.23,4)
+
 
   
 cf_exterior <- function(x,y=1){cone(x,y,atan(1/(1+2/(x-1))),atan(1))}
