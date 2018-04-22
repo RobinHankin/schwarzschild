@@ -34,7 +34,8 @@ eddington <- function(colours=standard_colours, ...){
         points(jj,type='l',col=colours$outgoing_light)
     }
 
-
+    ## ingoing light makes straight lines; need to separate lower
+    ## diagonal lines from upper:
     for(i in seq_len(n)){
         segments(x0=0,y0=i,x1=i,y1=0,col=colours$ingoing_light)
         segments(x0=4,y0=i,x1=4-20,y1=i+20,col=colours$ingoing_light) 
@@ -42,6 +43,15 @@ eddington <- function(colours=standard_colours, ...){
     points(cbind(2,0:5),pch=16)
     abline(v=1,lwd=5,col=colours$horizon)
     abline(v=0,lwd=5,col=colours$singularity)
+
+    ingoing_null_arrow_eddington_ingoing_coords(2.35,3)
+    ingoing_null_arrow_eddington_ingoing_coords(0.75,1)
+    ingoing_null_arrow_eddington_ingoing_coords(0.55,3)
+
+    outgoing_null_arrow_eddington_ingoing_coords(0.6,3)
+    outgoing_null_arrow_eddington_ingoing_coords(0.6,2)
+    outgoing_null_arrow_eddington_ingoing_coords(3.4,-3)
+    outgoing_null_arrow_eddington_ingoing_coords(1.23,4)
 
     cf_exterior <- function(x,y=1){cone(x,y,atan(1),atan(1/(1+2/(x-1))))} # lightcone
     cf_exterior(1.001)

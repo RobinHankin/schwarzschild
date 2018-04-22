@@ -95,3 +95,70 @@
       ...)
 }
 
+`ingoing_null_arrow_eddington_ingoing_coords` <-
+  function(r,offset, colours=standard_colours, ...){
+    delta <- 0.001
+    jjy <- -r + offset
+    print(c(r,jjy))
+    arrows(
+
+        x0 = r,
+        x1 = r - delta,
+        y0 = jjy,
+        y1 = jjy +  delta,
+        angle = 15, 
+        length=0.15,
+        col=colours$ingoing_light,
+        ...)
+  }
+
+`outgoing_null_arrow_eddington_ingoing_coords` <-
+  function(r, offset, interior, colours=standard_colours, ...){
+    
+    delta <- 0.001
+    if(r<1){delta <- -delta}
+    jjy <- offset+r+2*log(abs(r-1))
+    
+    arrows(
+        x0 = r,
+        x1 = r + delta,
+        y0 = jjy,
+        y1 = jjy + abs(delta*(1+2/(r-1))),
+        angle = 15, 
+        length=0.15,
+        col=colours$outgoing_light,
+        ...)
+  }
+
+`ingoing_null_arrow_eddington_outgoing_coords` <-
+  function(r, offset, colours=standard_colours, ...){
+    delta <- 0.001
+    if(r>1){delta <- -delta}
+    jjy <- offset-r-2*log(abs(r-1))
+
+    arrows(
+        x0 = r,
+        x1 = r + delta,
+        y0 = jjy,
+        y1 = jjy + abs(delta*(1+2/(r-1))),
+        angle = 15, 
+        length=0.15,
+        col=colours$ingoing_light,
+        ...)
+  }
+
+`outgoing_null_arrow_eddington_outgoing_coords` <-
+  function(r, offset, colours=standard_colours, ...){
+    delta <- 0.001
+    jjy <- r
+    arrows(
+        x0 = r,
+        x1 = r + delta,
+        y0 = jjy + offset,
+        y1 = jjy + offset +  delta,
+        angle = 15, 
+        length=0.15,
+        col=colours$outgoing_light,
+        ...)
+  }
+
