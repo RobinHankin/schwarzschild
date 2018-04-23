@@ -112,7 +112,7 @@
   }
 
 `outgoing_null_arrow_eddington_ingoing_coords` <-
-  function(r, offset, interior, colours=standard_colours, ...){
+  function(r, offset, colours=standard_colours, ...){
     
     delta <- 0.001
     if(r<1){delta <- -delta}
@@ -134,7 +134,6 @@
     delta <- 0.001
     if(r>1){delta <- -delta}
     jjy <- offset-r-2*log(abs(r-1))
-
     arrows(
         x0 = r,
         x1 = r + delta,
