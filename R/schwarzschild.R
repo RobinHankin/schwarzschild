@@ -37,15 +37,15 @@ offset <- -6:9
 
 if(draw_infalling_drops){
 
-  for(i in offset){points(r_inside  ,raindrop(r_inside)+i, type='l',lty=2) }
-  for(i in offset){points(r_outside ,raindrop(r_outside)-raindrop(2)+i, type='l',lty=2) }
+  for(i in offset){points(r_inside  ,raindrop(r_inside)+i, type='l',lty=5) }
+  for(i in offset){points(r_outside ,raindrop(r_outside)-raindrop(2)+i, type='l',lty=5) }
 
-  raindrop_arrow(0.4,-0.01,2)  # negative because inside SR
-  raindrop_arrow(0.6,-0.01,2)  # negative because inside SR
-  raindrop_arrow(0.8,-0.01,2)  # negative because inside SR
+  raindrop_arrow(0.4,2)  
+  raindrop_arrow(0.6,2)  
+  raindrop_arrow(0.8,2)  
 
-  raindrop_arrow(1.5,-0.001,1-raindrop(2))  # "1-" because object passes through (2,1)
-  raindrop_arrow(1.5,-0.001,2-raindrop(2))  # "1-" because object passes through (2,1)
+  raindrop_arrow(1.5, 1-raindrop(2))  # "1-" because object passes through (2,1)
+  raindrop_arrow(1.5, 2-raindrop(2))  # "1-" because object passes through (2,1)
 }
 
 
@@ -96,7 +96,7 @@ legend(
 )
       
 if(draw_infalling_drops){
-    legend(x=2.2, y=n-0.1, lty=c(1,1,1,1,2), bg='white',
+    legend(x=2.2, y=n-0.1, lty=c(1,1,1,1,5), bg='white',
            col=c(
                colours$ingoing_light,
                colours$outgoing_light,

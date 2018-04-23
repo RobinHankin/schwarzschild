@@ -59,14 +59,15 @@
   -2/3*sqrt(r)^3*(3/r+1) + log(abs((1+sqrt(r))/(1-sqrt(r))))
 }
 
-`raindrop_arrow` <- function(r,delta,offset=0,...){
-  ## draws an arrow on a raindrop worldline
-  
+`raindrop_arrow` <- function(r,offset=0,...){
+  ## draws an arrow on a raindrop worldline; cannot use usual offset trick as is it too difficult to differentiate raindrop()
+  delta <- 0.001
+
   arrows(
       x0 = r,
-      x1 = r+delta,
+      x1 = r-abs(delta),
       y0 = offset+raindrop(r),
-      y1 = offset+raindrop(r+delta),
+      y1 = offset+raindrop(r-abs(delta)),
       angle=15, length=0.15, ...)
 }
 
