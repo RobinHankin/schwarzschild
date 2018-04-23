@@ -3,6 +3,7 @@
 
 
 `thrower` <- function(logaxes,legpos="topleft", colours=standard_colours, ...){
+    par(lend=1)
     plot(c(0,4),c(0.01,40),
          type='n',xlim=c(0.1,10),ylim=c(0.5,50),
          log=logaxes, xlab='Schwarzschild r',ylab='Schwarzschild t',
@@ -52,6 +53,7 @@
 }
 
 `thrower_asp1`  <- function(colours=standard_colours, ...){
+    par(lend=1)
     plot(c(0,4),c(0.01,40),
          type='n',xlim=c(0,5),ylim=c(0,15),asp=1,axes=FALSE,
          xlab='Schwarzschild r',ylab='Schwarzschild t', ...)
