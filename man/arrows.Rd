@@ -1,7 +1,5 @@
 \name{arrows}
 \alias{arrows}
-\alias{RT}
-\alias{TX}
 \alias{ingoing_null_arrow_schwarz}
 \alias{outgoing_null_arrow_schwarz}
 \alias{raindrop_arrow}
@@ -16,7 +14,7 @@ Helper functions that plot arrows on worldlines and null geodesics, with
 functionality to make sure that the arrows are in the right direction
 }
 \usage{
-raindrop_arrow(r,delta,offset=0, ...)
+raindrop_arrow(r,offset=0, ...)
 ingoing_null_arrow_eddington_ingoing_coords(r, offset, colours=standard_colours, ...)
 ingoing_null_arrow_eddington_outgoing_coords(r, offset, colours=standard_colours, ...)
 outgoing_null_arrow_eddington_ingoing_coords(r, offset, colours=standard_colours, ...)
