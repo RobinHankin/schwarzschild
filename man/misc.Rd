@@ -10,15 +10,12 @@
 \alias{outgoing}
 \alias{ingoing_lambert}
 \alias{outgoing_lambert}
-\alias{ingoing_null_arrow_schwarz}
 \alias{ingoing_trajectory}
 \alias{inward_trajectory}
 \alias{ingoing_light}
 \alias{null_geodesics}
-\alias{outgoing_null_arrow_schwarz}
 \alias{outward_inside_trajectory}
 \alias{raindrop}
-\alias{raindrop_arrow}
 \alias{trajectory}
 \title{Miscellaneous helper functions}
 \description{
@@ -30,7 +27,6 @@ TX(rt,exterior)
 cone(x, y, leftangle, rightangle, size = 0.2, colours=standard_colours, ...)
 lightcone(x, y, size, colours = standard_colours) 
 raindrop(r)  
-raindrop_arrow(r,delta,offset=0, ...)
 ingoing(r,rzero,tzero=0)
 outgoing(r,rzero,tzero=0)
 ingoing_lambert(t,rzero,tzero=0)
