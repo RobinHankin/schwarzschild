@@ -71,8 +71,8 @@
       angle=15, length=0.15, ...)
 }
 
-`outgoing_null_arrow_schwarz` <- function(r,offset,delta=0.001, colours=standard_colours, ...){
-
+`outgoing_null_arrow_schwarz` <- function(r,offset, colours=standard_colours, ...){
+  delta <- 0.001
   arrows(
       x0 = r,
       x1 = r + sign(r-1)*delta,
@@ -84,7 +84,8 @@
       ...)
 }
 
-`ingoing_null_arrow_schwarz` <- function(r,offset,delta=0.001, colours=standard_colours, ...){
+`ingoing_null_arrow_schwarz` <- function(r,offset, colours=standard_colours, ...){
+  delta <- 0.001
   arrows(
       x0 = r,
       x1 = r - delta,
@@ -97,7 +98,7 @@
 }
 
 `ingoing_null_arrow_eddington_ingoing_coords` <-
-  function(r,offset, colours=standard_colours, ...){
+  function(r, offset, colours=standard_colours, ...){
     delta <- 0.001
     jjy <- -r + offset
 
