@@ -28,7 +28,7 @@ for(i in 1:4){
     for(tz in  0:10){points(r_inside, outgoing(r_inside ,rzero=2,tzero=tz),type='l',lwd=0.5,col=colours$outgoing_light)}
     
     
-offset <- -6:9
+
 
 
 
@@ -129,7 +129,8 @@ lightcone(0.8,1,size=0.1)
 lightcone(0.5,1,size=0.1)
 lightcone(0.2,1,size=0.1)
 
-points(cbind(2,offset),pch=16)
+
+points(cbind(2,0:4),pch=16)
 
 }
 
