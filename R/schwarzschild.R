@@ -2,33 +2,30 @@ schwarzschild <- function(draw_infalling_drops=FALSE, colours=standard_colours,.
 
 n <- 4  # size of plot
 
+par(lend=1)
 
-par(xpd=TRUE)
-clip(0,n,0,n)
-
-plot(0:n,0:n,xlim=c(0,n),ylim=c(0,n),asp=1,type='n',xlab='',ylab='',axes=FALSE, main='Schwarzschild coordinates', ...)
+plot(0:n,0:n,xlim=c(0,n+0.1),ylim=c(0,n+0.1),asp=1,type='n',ylab='Schwarzschild t',axes=FALSE, main='Schwarzschild coordinates', xlab='Schwarzschild r',...)
 axis(1,pos=0,at=0:n)
 axis(2,pos=0,at=0:n)
 
-par(xpd=TRUE)
-text(2,-0.5,'Schwarzschild r')
-text(-0.5,2,'Schwarzschild t',srt=90)
+segments(x0=0,y0=0,y1=n, col=colours$singularity,lwd=5)
+  
+clip(0,n,0,n)
 
-for(i in 0:3){
+for(i in 1:4){
   segments(x0=i,y0=0,y1=n,col=colours$r,lwd=0.5,lty=1)  # horizontal lines; lines of constant r
   segments(x0=0,x1=n,y0=i,col=colours$t,lwd=0.5,lty=1)  # vertical lines; lines of constant t
 }
 
-par(xpd=FALSE)
 
     r_inside <- seq(from=0.0001,to=0.999,len=1000)
     r_outside <- seq(from=1.0001,to=n,len=1000)
 
     ## ingoing outside, then outgoing outside, then ingoing inside, then outgoing inside:
-    for(tz in  0:14){points(r_outside, ingoing(r_outside,rzero=2,tzero=tz),type='l',col=colours$ingoing_light )}
-    for(tz in -3:14){points(r_outside,outgoing(r_outside,rzero=2,tzero=tz),type='l',col=colours$outgoing_light)}
-    for(tz in  0:12){points(r_inside,  ingoing(r_inside ,rzero=2,tzero=tz),type='l',col=colours$ingoing_light )}
-    for(tz in  0:10){points(r_inside, outgoing(r_inside ,rzero=2,tzero=tz),type='l',col=colours$outgoing_light)}
+    for(tz in  0:14){points(r_outside, ingoing(r_outside,rzero=2,tzero=tz),type='l',lwd=0.5,col=colours$ingoing_light )}
+    for(tz in -3:14){points(r_outside,outgoing(r_outside,rzero=2,tzero=tz),type='l',lwd=0.5,col=colours$outgoing_light)}
+    for(tz in  0:12){points(r_inside,  ingoing(r_inside ,rzero=2,tzero=tz),type='l',lwd=0.5,col=colours$ingoing_light )}
+    for(tz in  0:10){points(r_inside, outgoing(r_inside ,rzero=2,tzero=tz),type='l',lwd=0.5,col=colours$outgoing_light)}
     
     
 offset <- -6:9
@@ -37,8 +34,8 @@ offset <- -6:9
 
 if(draw_infalling_drops){
 
-  for(i in offset){points(r_inside  ,raindrop(r_inside)+i, type='l',lty=5) }
-  for(i in offset){points(r_outside ,raindrop(r_outside)-raindrop(2)+i, type='l',lty=5) }
+  for(i in -2:4){points(r_inside  ,raindrop(r_inside)+i, type='l',lty=5) }
+  for(i in -7:9){points(r_outside ,raindrop(r_outside)-raindrop(2)+i, type='l',lty=5) }
 
   raindrop_arrow(0.4,2)  
   raindrop_arrow(0.6,2)  
@@ -73,7 +70,7 @@ ingoing_null_arrow_schwarz(1.45,3,colours=colours)
 ingoing_null_arrow_schwarz(3.76,8,colours=colours)
 
 
-par(xpd=FALSE)
+
 abline(v=1,lwd=5,col=colours$horizon,par(lend=1))
 
 polygon(x=c(0,0,n+1,n+1),y=c(n,n+1,n+1,n),border=NA,lwd=7,col='white')
@@ -84,9 +81,9 @@ polygon(x=c(0,0,n+1,n+1),y=c(n,n+1,n+1,n),border=NA,lwd=7,col='white')
 #  points(r_outgoing_inside ,t_outgoing_inside +i+0.5, type='l',col=colours$outgoing_light,lwd=0.3)
 #  points(r_outgoing_outside,t_outgoing_outside+i+0.5, type='l',col=colours$outgoing_light,lwd=0.3)
 
-segments(x0=0,y0=0,y1=n, col=colours$singularity,lwd=5)
+
     
-par(xpd=TRUE)
+
 
 legend(
     x=2.2, y=n-1.1,
