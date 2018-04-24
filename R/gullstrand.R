@@ -1,5 +1,5 @@
 gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, ...){
-
+    par(lend=1)
     cone_function <- function(x,y=1){cone(x,y,-atan(-1-sqrt(1/x)),atan(+1-sqrt(1/x)))}
     n <- 4  # size of plot
 
@@ -70,7 +70,6 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
 
     cone_function(0.7,1.7535)
 
-
     jjang <- 32
     text(3.7,0.77,expression('t'['s']==0),col=colours$t,srt=jjang)
     text(3.7,1.77,expression('t'['s']==1),col=colours$t,srt=jjang)
@@ -80,7 +79,8 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
     par(xpd=TRUE)
 
     if(draw_infalling_drops){
-        legend(x=2.1,y=n-0.35,lty=c(1,1,1,1,2),bg="white",
+      legend(x=2.1,y=n-0.35,lty=c(1,1,1,1,2), lwd=c(0.5,0.5,0.5,0.5,1),
+             bg="white",
                col=c(
                    colours$ingoing_light,
                    colours$outgoing_light,
@@ -89,20 +89,20 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
                    colours$raindrop),
                legend=c("ingoing light",
                         "outgoing light",
-                        "lines of constant Schwarzschild r",
-                        "lines of constant Schwarzschild t",
+                        expression("lines of constant r"["schwarz"]),
+                        expression("lines of constant t"["schwarz"]),
                         "world lines of infalling drops"
                         ))
     } else {
-        legend(x=2.1,y=n-0.4,lty=1,bg="white",
+        legend(x=2.1,y=n-0.4,lty=1,bg="white",lwd=c(0.5,0.5,0.5,0.5,1),
                col=c(colours$ingoing_light,
                      colours$outgoing_light,
                      colours$r,
                      colours$t),
                legend=c("ingoing light",
                         "outgoing light",
-                        "lines of constant Schwarzschild r",
-                        "lines of constant Schwarzschild t"
+                        expression("lines of constant r"["schwarz"]),
+                        expression("lines of constant t"["schwarz"])
                         ))
     }
 
