@@ -1,7 +1,10 @@
 eddington <- function(colours=standard_colours, ...){
     n <- 4  # size of plot
     
-    plot(NULL,xlim=c(0,n),ylim=c(0,n),ylab='',xlab='',axes=FALSE,asp=1,main="Eddington-Finkelstein coordinates (ingoing)")
+    plot(NULL,
+         xlim=c(0,n),ylim=c(0,n),ylab='',xlab='',
+         axes=FALSE,asp=1,
+         main="Eddington-Finkelstein coordinates (ingoing)")
 
     axis(1,pos=0,at=0:4)
     axis(2,pos=0)
