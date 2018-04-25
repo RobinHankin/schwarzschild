@@ -1,6 +1,5 @@
 gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, ...){
     par(lend=1)
-    cone_function <- function(x,y=1){cone(x,y,-atan(-1-sqrt(1/x)),atan(+1-sqrt(1/x)))}
     n <- 4  # size of plot
 
     plot(NULL,xlim=c(0,n),ylim=c(0,n),ylab=expression(t[d]),xlab='Schwarzschild r',axes=FALSE,asp=1,main='Gullstrand coordinates')
