@@ -1,12 +1,6 @@
 lemaitre <- function(draw_schwarzschild=FALSE, colours=standard_colours, ...){
 
-    taufun <- function(r){  2*(sqrt(r)-Re(atanh(0i+sqrt(r)))) }
-    rhofun <- function(r){  2/3*sqrt(r)*(r+3)-2*Re(atanh(0i+sqrt(r))) }
-
     n <- 2
-
-    rin <- seq(from=0.0000,to=0.999999,len=100)
-    rout <- seq(from=1.0001,to=3.9,len=100)
 
     par(pty='s')
     par(xpd=FALSE)
@@ -20,14 +14,19 @@ lemaitre <- function(draw_schwarzschild=FALSE, colours=standard_colours, ...){
     ## singularity interior:
     polygon(x=c(-n,n,-n),y=c(-n,n,n),col=colours$singularity_interior,border=NA)
 
-
     ## event horizon:
     segments(-4/3,-2,3,7/3,lwd=5,col=colours$horizon)
     text(1.6,1.05,'event horizon, r=1',srt=45,col=colours$horizon)
 
     if(draw_schwarzschild){
-        
+
         ## lines of constant t:
+        rhofun <- function(r){ 2/3*sqrt(r)*(r+3)-2*Re(atanh(0i+sqrt(r))) }
+        taufun <- function(r){ 2*(sqrt(r)-Re(atanh(0i+sqrt(r)))) }
+
+        rin <- seq(from=0.0000,to=0.999999,len=100)
+        rout <- seq(from=1.0001,to=3.9,len=100)
+
         points(rhofun(rin),taufun(rin)+0,type='l',col=colours$t)
         points(rhofun(rout),taufun(rout)+0,type='l',col=colours$t)
         
