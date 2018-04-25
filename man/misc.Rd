@@ -43,9 +43,6 @@ outgoing_lambert(t,rzero,tzero=0)
   \item{rzero,tzero}{In functions \code{ingoing()} and
     \code{outgoing()}, arguments \code{tzero} and \code{rzero} specify
     an event through which the null geodesic passes}
-  \item{delta,offset}{In functions \code{raindrop()} and
-    \code{raindrop_arrow()}, details of the position of the line and the
-    arrow}
 }
 \details{
   \itemize{
