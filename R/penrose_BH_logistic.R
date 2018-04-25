@@ -104,7 +104,6 @@ segments(x0=1,y0=0,x1=0.5,y1=-0.5,lwd=1,col=colours$singularity)
 
 ## last thing, draw the horizons
 
-size <- 33
 ## do the horizons last:
 segments(x0=-0.5,y0=0.5,x1=0.5,y1=-0.5, col=colours$horizon,lwd=5)
 segments(x0=-0,y0=0,x1=0.5,y1=0.5, col=colours$horizon,lwd=5)
@@ -144,12 +143,18 @@ text(-0.08,0.35,labels=paste("r = ",r_values_inside[2],sep=""),col=colours$r,srt
 
 legend(
     x=-0.5,y=-0.2,lty=1,lwd=c(1,1,0.5,0.5,5,5),
-    col=c(colours$ingoing_light, colours$outgoing_light,
-          colours$r, colours$t,colours$singularity, colours$horizon),
-    legend=c("ingoing light","outgoing light",
-             "constant Schwarzschild r","constant Schwarzschild t",
-             "singularity","horizon")
+    col=c(
+        colours$ingoing_light,
+        colours$outgoing_light,
+        colours$r,
+        colours$t,
+        colours$singularity,
+        colours$horizon),
+    legend=c(
+        "ingoing light",
+        "outgoing light",
+        "constant Schwarzschild r",
+        "constant Schwarzschild t",
+        "singularity","horizon")
 )
-
-
 }

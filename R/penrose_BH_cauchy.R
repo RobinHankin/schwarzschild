@@ -3,10 +3,10 @@ penrose_BH_cauchy <- function(colours=standard_colours, ...){
 ## This file creates penrose_BH_cauchy.pdf
 ## plots a Penrose diagram of the whole universe, including a black hole.
 
-## NB cauchy (previously known as 'tan') is the
-## only one that looks good---the others
-## suck---compare penrose.R where norm looks
-## good.
+## NB:  cauchy (previously known as 'tan') is the
+## only one that looks good: the others all
+## suck.  Compare penrose.R [i.e. no black hole], where "norm" is the good one.
+
 
 
 penrose <- penrose_transform("cauchy")
@@ -17,12 +17,9 @@ constant_t_exterior <- colours$t
 constant_r_interior <- colours$t
 constant_t_interior <- colours$r
 
-
-
 # set up axes
 jj <- c(-0.5,1)
 plot(jj,jj,asp=1,type='n',axes=FALSE,xlab='',ylab='',main='Penrose diagram, black hole, Cauchy transformation')
-
 
 ## First curves of constant Schwarzschild t, exterior
 rt_ext <- as.matrix(expand.grid(
@@ -89,35 +86,34 @@ segments(x0=1,y0=0,x1=0.5,y1=-0.5,lwd=1,col=colours$singularity)
 
 ## last thing, draw the horizons
 
-size <- 33
 ## do the horizons last:
 segments(x0=-0.5,y0=0.5,x1=0.5,y1=-0.5, col=colours$horizon,lwd=5)
 segments(x0=-0,y0=0,x1=0.5,y1=0.5, col=colours$horizon,lwd=5)
 
 ## some cones
 
-cone(0.1,0.2,pi/4,pi/4,0.05)
-cone(0.5,0.2,pi/4,pi/4,0.05)
-cone(0.5,-0.2,pi/4,pi/4,0.05)
-cone(-0.2,0.4,pi/4,pi/4,0.05)
+cone(+0.1,+0.2,pi/4,pi/4,0.05)
+cone(+0.5,+0.2,pi/4,pi/4,0.05)
+cone(+0.5,-0.2,pi/4,pi/4,0.05)
+cone(-0.2,+0.4,pi/4,pi/4,0.05)
 
 ## label some constant-r [timelike] curves on the exterior
 text(0.33,-0.22,labels=paste("r = ",r_values[1],sep=""),col=colours$r,srt=-60)
 text(0.45,-0.27,labels=paste("r = ",r_values[2],sep=""),col=colours$r,srt=-77)
-text(0.53,-0.35,labels=paste("r = ",r_values[4],sep=""),col=colours$r,srt=70)
-text(0.64,-0.28,labels=paste("r = ",r_values[5],sep=""),col=colours$r,srt=54)
-text(0.83,-0.10,labels=paste("r = ",r_values[6],sep=""),col=colours$r,srt=54)
+text(0.53,-0.35,labels=paste("r = ",r_values[4],sep=""),col=colours$r,srt=+70)
+text(0.64,-0.28,labels=paste("r = ",r_values[5],sep=""),col=colours$r,srt=+54)
+text(0.83,-0.10,labels=paste("r = ",r_values[6],sep=""),col=colours$r,srt=+54)
 
 ## label some constant-t [spacelike] curves on the exterior
-text(0.52,-0.024,labels="t=0" ,col=colours$t,srt=0)
+text(0.52,-0.024,labels="t=0" ,col=colours$t,srt=00)
 text(0.68,-0.100,labels="t=-1",col=colours$t,srt=16)
-text(0.53,-0.250,labels="t=-3",col=colours$t,srt=9)
+text(0.53,-0.250,labels="t=-3",col=colours$t,srt=09)
 
 
 ## now some constant t [spacelike] curves on the interior
 text( 0.020,0.120,labels="t=0" ,col=colours$t,srt=-90)
 text(-0.044,0.150,labels="t=-1",col=colours$t,srt=-70)
-text( 0.200,0.330,labels="t=2" ,col=colours$t,srt=60)
+text( 0.200,0.330,labels="t=2" ,col=colours$t,srt=+60)
 text(-0.120,0.200,labels="t=-2",col=colours$t,srt=-58)
 
 text(-0.22,0.33,labels=paste("r = ",r_values_inside[1],sep=""),col=colours$r,srt=-27)
@@ -125,9 +121,17 @@ text(-0.08,0.4,labels=paste("r = ",r_values_inside[2],sep=""),col=colours$r,srt=
 
 
 legend(x=-0.5,y=-0.2,lty=1,lwd=c(1,1,0.5,0.5,5,5),
-       col=c(colours$ingoing_light,colours$outgoing_light,colours$r,colours$t,colours$singularity,colours$horizon),
-       legend=c("ingoing light","outgoing light","constant Schwarzschild r","constant Schwarzschild t","singularity","horizon"))
-
-
-
+       col=c(
+           colours$ingoing_light,
+           colours$outgoing_light,
+           colours$r,colours$t,
+           colours$singularity,
+           colours$horizon),
+       legend=c(
+           "ingoing light",
+           "outgoing light",
+           "constant Schwarzschild r",
+           "constant Schwarzschild t",
+           "singularity","horizon")
+       )
 }
