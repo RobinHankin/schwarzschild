@@ -75,8 +75,6 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
     text(3.7,2.77,expression('t'['s']==2),col=colours$t,srt=jjang)
     text(3.7,3.77,expression('t'['s']==3),col=colours$t,srt=jjang)
 
-    par(xpd=TRUE)
-
     if(draw_infalling_drops){
       legend(x=2.1,y=n-0.35,lty=c(1,1,1,1,2), lwd=c(0.5,0.5,0.5,0.5,1),
              bg="white",
