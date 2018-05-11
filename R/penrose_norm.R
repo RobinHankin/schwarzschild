@@ -85,5 +85,5 @@ for(i in thingvec){
   ), col=colours$photon,type='l')
 }
 ## plot the AUT logo:
-if(!isFALSE(getOption("AUTlogo"))){logo(x=0.78,y=0.08, width=0.1)}  
+    if(!isFALSE(getOption("AUTlogo"))){logo(x=0.85,y=0.20, width=0.1)}  
 }
