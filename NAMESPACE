@@ -6,7 +6,7 @@ importFrom("graphics", "abline", "arrows", "axis", "clip", "legend",
 importFrom("stats", "plogis", "pnorm", "qlogis", "qnorm")  # used for Penrose transform
 
 importFrom("gsl", "lambert_W0")
-
 importFrom("deSolve", "ode")
-
 importFrom("animation","ani.record","ani.options","ani.replay")
+importFrom("grImport", "grid.picture", "readPicture")
+importFrom("magrittr", "%>%")

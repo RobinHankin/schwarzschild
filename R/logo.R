@@ -1,3 +1,6 @@
 `logo` <- function(...){
-  grid.picture(readPicture(system.file("AUT-logo-block.ps.xml",package="schwarzschild")), ...)
+    "AUT-logo-block.ps.xml"                  %>%
+        system.file(package="schwarzschild") %>%
+        readPicture                          %>%
+        grid.picture(...)
 }
