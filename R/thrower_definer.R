@@ -50,6 +50,11 @@
            col=c("red","orange","yellow","green","blue","purple",colours$horizon),
            legend=c("inward throw","outward throw, bounded","critical","unbounded",
                     "interior inward","interior outward","event horizon"))
+
+
+## plot the AUT logo:
+if(!isFALSE(getOption("AUTlogo"))){logo(x=0.78,y=0.08, width=0.1)}  
+
 }
 
 `thrower_asp1`  <- function(colours=standard_colours, ...){
