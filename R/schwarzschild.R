@@ -1,4 +1,4 @@
-schwarzschild <- function(draw_infalling_drops=FALSE, colours=standard_colours, logo=TRUE, ...){
+schwarzschild <- function(draw_infalling_drops=FALSE, colours=standard_colours, ...){
 
 n <- 4  # size of plot
 
@@ -132,6 +132,6 @@ lightcone(0.2,1,size=0.1)
 
 points(cbind(2,0:4),pch=16)
 
-if(logo){ logo(x=0.78,y=0.08, width=0.1) }  
+if(!isFALSE(getOption("AUTlogo"))){logo(x=0.78,y=0.08, width=0.1)}  
 }
 
