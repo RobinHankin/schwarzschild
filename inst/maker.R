@@ -1,20 +1,20 @@
-## creates all the svg files and all the pdf files; type
-##
-##   R CMD BATCH svg_maker.R
-##
-## at the command line, or in an R session, type
-##
-##  source("maker.R")
+## Creates all the svg files and all the pdf files, correctly sized;
+## type either 'make' or ' R CMD BATCH maker.R'
+## at the command line.  Alternatively, in an R session, type
+## 'source("maker.R")'
 
+## The AUT logo is included by default.  To switch it off, uncomment
+## the line below:
 
-
-## Function do() is just a convenience wrapper to create both a .pdf
-## and a .svg file from the same set of commands.  
+## options(AUTlogo = FALSE)
 
 
 library(schwarzschild)
 
 `do` <- function(basename, command){
+    ## Function do() is just a convenience wrapper to create both a
+    ## .pdf and a .svg file from the same set of commands.
+    
     pdf(file=paste(basename,"pdf",sep="."), height=9,width=9)
     eval(parse(text=command))
     dev.off()
