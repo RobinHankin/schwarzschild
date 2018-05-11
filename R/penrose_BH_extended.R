@@ -156,4 +156,8 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
     ## do the horizons last:
     segments(x0=-0.5,y0=0.5,x1=0.5,y1=-0.5, col=colours$horizon,lwd=5)
     segments(x0=-0.5,y0=-0.5,x1=0.5,y1=0.5, col=colours$horizon,lwd=5)
+
+    ## plot the AUT logo:
+    if(!isFALSE(getOption("AUTlogo"))){logo(x=0.78,y=0.08, width=0.1)}  
+
 }

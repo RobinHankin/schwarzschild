@@ -158,4 +158,7 @@ legend(x=-0.5,y=-0.2,lty=1,lwd=c(1,1,0.5,0.5,5,5),
            "constant Schwarzschild r",
            "singularity","horizon")
        )
+## plot the AUT logo:
+if(!isFALSE(getOption("AUTlogo"))){logo(x=0.78,y=0.08, width=0.1)}  
+
 }
