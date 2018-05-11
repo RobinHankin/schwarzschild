@@ -215,4 +215,7 @@ size <- 33
 ## do the horizons last:
 segments(0,0,size,size,col=colours$horizon,lwd=5)
 segments(size,-size,-size,size,col=colours$horizon,lwd=5)
+
+    ## plot the AUT logo:
+if(!isFALSE(getOption("AUTlogo"))){logo(x=0.84,y=0.08, width=0.1)}  
 }
