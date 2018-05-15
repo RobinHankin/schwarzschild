@@ -1,4 +1,5 @@
 kruskal_extended <- function(colours = standard_colours, ...){
+    op <- par()
 
 
 # NB: everything here is (space,time).  This is because it is easier to plot in R
@@ -184,6 +185,11 @@ segments(size,-size,-size,size,col=colours$horizon,lwd=5)
 
 ## plot the AUT logo:
 if(!isFALSE(getOption("AUTlogo"))){logo(x=0.84,y=0.08, width=0.1)}
+
+  par(family="mono")
+  text(-2.4,-2.4,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+  par(op)  
+
 
 ## plot commands end
 
