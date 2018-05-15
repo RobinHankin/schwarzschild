@@ -11,10 +11,15 @@
 
 library(schwarzschild)
 
-`do` <- function(basename, command){
+`do` <- function(command, basename){
     ## Function do() is just a convenience wrapper to create both a
     ## .pdf and a .svg file from the same set of commands.
-    
+
+
+  if(missing(basename)){
+    basename <- sub('\\(.$','',command)  # up to but not including first bracket
+}
+
     pdf(file=paste(basename,"pdf",sep="."), height=9,width=9)
     eval(parse(text=command))
     dev.off()
@@ -24,38 +29,40 @@ library(schwarzschild)
     dev.off()
 }
 
-do("schwarzschild", "schwarzschild()")
-do("schwarzschild_with_drops", "schwarzschild(draw_infalling_drops = TRUE)")
-do("gullstrand", "gullstrand(draw_infalling_drops = FALSE)")
-do("gullstrand_with_drops", "gullstrand(draw_infalling_drops = TRUE)")
-do("eddington", "eddington()")
-do("eddington_outgoing", "eddington_outgoing()")
-do("kruskal", "kruskal()")
-do("kruskal_with_throw", "kruskal_with_throw(draw_schwarzschild = FALSE)")
-do("kruskal_extended", "kruskal_extended(draw_constant_schwarzschild = TRUE)")
-do("kruskal_inverted", "kruskal_inverted()")
-do("lemaitre", "lemaitre(draw_schwarzschild=FALSE)")
-do("lemaitre_with_schwarzschild", "lemaitre(draw_schwarzschild=TRUE)")
-do("penrose_cauchy", "penrose_cauchy()")
-do("penrose_laplace", "penrose_laplace()")
-do("penrose_logistic", "penrose_logistic()")
-do("penrose_norm", "penrose_norm()")
-do("penrose_BH_cauchy", "penrose_BH_cauchy()")
-do("penrose_BH_laplace", "penrose_BH_laplace()")
-do("penrose_BH_logistic", "penrose_BH_logistic()")
-do("penrose_BH_norm", "penrose_BH_norm()")
-do("penrose_BH_extended", "penrose_BH_extended()")
-do("thrower", "thrower('','topright')")
-do("thrower_x", "thrower('x')")
-do("thrower_y", "thrower('y','bottomright')")
-do("thrower_xy", "thrower('xy')")
+do("schwarzschild()")
+do("schwarzschild(draw_infalling_drops = TRUE)", "schwarzschild_with_drops")
+do("gullstrand(draw_infalling_drops = FALSE)","gullstrand")
+do("gullstrand(draw_infalling_drops = TRUE)", "gullstrand_with_drops")
+do("eddington()")
+do("eddington_outgoing()")
+do("kruskal()")
+do("kruskal_with_throw(draw_schwarzschild = FALSE)")
+do("kruskal_extended(draw_constant_schwarzschild = TRUE)")
+do("kruskal_inverted()")
+do("lemaitre(draw_schwarzschild=FALSE)")
+do("lemaitre(draw_schwarzschild=TRUE)","lemaitre_with_schwarzschild")
+do("penrose_cauchy()")
+do("penrose_laplace()")
+do("penrose_logistic()")
+do("penrose_norm()")
+do("penrose_BH_cauchy()")
+do("penrose_BH_laplace()")
+do("penrose_BH_logistic()")
+do("penrose_BH_norm()")
+do("penrose_BH_extended()")
+do("thrower('','topright')", "thrower")
+do("thrower('x')","thrower_x")
+do("thrower('y','bottomright')","thrower_y")
+do("thrower('xy')","thrower_xy")
 
-do("thrower_asp1", command="
+do(
+    command="
 thrower_asp1()
 par(xpd=TRUE)
 text(5,-1.2,'Schwarzschild r')
 text(-1,7.5,'Schwarzschild t',srt=90)
-")
+",
+basename="thrower_asp1")
 
 
 pdf(file="allplots.pdf",height=9,width=9)
