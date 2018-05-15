@@ -1,5 +1,6 @@
 lemaitre <- function(draw_schwarzschild=FALSE, colours=standard_colours, ...){
 
+    op <- par()   # Remember the options and reset at the end of the function
     n <- 2
 
     par(pty='s')
@@ -89,4 +90,10 @@ lemaitre <- function(draw_schwarzschild=FALSE, colours=standard_colours, ...){
 
     ## plot the AUT logo:
     if(!isFALSE(getOption("AUTlogo"))){logo(x=0.78,y=0.08, width=0.1)}  
+
+  par(family="mono")
+  text(-0.8,-0.7,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+  par(op)  
+
+
 }

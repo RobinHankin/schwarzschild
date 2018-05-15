@@ -1,6 +1,6 @@
 kruskal <- function(colours=standard_colours, ...){
 
-
+    op <- par()
     ## NB: everything here is (space,time).  This is because it is easier to plot in R
 
     constant_r_exterior <- colours$r
@@ -145,5 +145,12 @@ kruskal <- function(colours=standard_colours, ...){
     ## plot commands end
 
 ## plot the AUT logo:
-if(!isFALSE(getOption("AUTlogo"))){logo(x=0.84,y=0.08, width=0.1)}  
+  if(!isFALSE(getOption("AUTlogo"))){logo(x=0.84,y=0.08, width=0.1)}
+
+
+  par(family="mono")
+  text(-0.8,-0.7,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+  par(op)  
+
+
 }
