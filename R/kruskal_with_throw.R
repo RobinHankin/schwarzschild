@@ -220,7 +220,7 @@ segments(size,-size,-size,size,col=colours$horizon,lwd=5)
 if(!isFALSE(getOption("AUTlogo"))){logo(x=0.84,y=0.08, width=0.1)}  
 
 par(family="mono")
-text(-2,-2,'https://github.com/RobinHankin/schwarzschild.git', pos=4, cex=0.6)
+git(-2,-2)
 par(op)  
 
 }

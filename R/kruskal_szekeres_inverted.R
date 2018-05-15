@@ -55,7 +55,7 @@ kruskal_inverted <- function(colours=standard_colours, ...){
 
 
   par(family="mono")
-text(-0.8,-0.7,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+git(-0.8,-0.7)
 par(op)  
 
 }

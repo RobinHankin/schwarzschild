@@ -88,7 +88,7 @@ for(i in thingvec){
 ## plot the AUT logo:
     if(!isFALSE(getOption("AUTlogo"))){logo(x=0.85,y=0.20, width=0.1)}
 par(family="mono")
-text(-1.2,-1.1,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+git(-1.2,-1.1)
 par(op)  
 
     

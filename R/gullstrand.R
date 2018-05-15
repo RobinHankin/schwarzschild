@@ -108,7 +108,7 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
 if(!isFALSE(getOption("AUTlogo"))){logo(x=0.8,y=0.06, width=0.1)}  
 
 par(family="mono")
-text(-0.8,-0.7,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+git(-0.8,-0.7)
 par(op)  
 
 
