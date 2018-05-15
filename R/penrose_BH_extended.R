@@ -1,11 +1,11 @@
 penrose_BH_extended <- function(colours = standard_colours, ...){
-    
+        
     ## This file creates penrose_BH_extended.pdf
     ## plots a Penrose diagram of the whole universe, including a black hole
 
     penrose <- penrose_transform("cauchy")
 
-
+    op <- par()
     constant_r_exterior <- colours$r
     constant_t_exterior <- colours$t
 
@@ -159,5 +159,6 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
 
     ## plot the AUT logo:
     if(!isFALSE(getOption("AUTlogo"))){logo(x=0.90,y=0.30, width=0.1)}  
-
+git(-0.9,-0.7)
+par(op)  
 }
