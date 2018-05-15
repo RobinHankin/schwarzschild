@@ -15,9 +15,8 @@ library(schwarzschild)
     ## Function do() is just a convenience wrapper to create both a
     ## .pdf and a .svg file from the same set of commands.
 
-
   if(missing(basename)){
-    basename <- sub('\\(.$','',command)  # up to but not including first bracket
+    basename <- sub('\\(.*$','',command)  # up to but not including first bracket
 }
 
     pdf(file=paste(basename,"pdf",sep="."), height=9,width=9)
