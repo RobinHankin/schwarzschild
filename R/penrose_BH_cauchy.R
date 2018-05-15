@@ -8,7 +8,8 @@ penrose_BH_cauchy <- function(colours=standard_colours, ...){
 ## suck.  Compare penrose.R [i.e. no black hole], where "norm" is the good one.
 
 
-
+    op <- par()
+    
 penrose <- penrose_transform("cauchy")
 
 constant_r_exterior <- colours$r
@@ -136,5 +137,7 @@ legend(x=-0.5,y=-0.2,lty=1,lwd=c(1,1,0.5,0.5,5,5),
        )
 ## plot the AUT logo:
     if(!isFALSE(getOption("AUTlogo"))){logo(x=0.85,y=0.16, width=0.1)}  
-
+par(family="mono")
+text(-1.2,-1.1,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+par(op)  
 }

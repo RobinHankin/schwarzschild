@@ -1,5 +1,6 @@
 penrose_BH_laplace <- function(colours=standard_colours, ...){
 
+    op <- par()
 
 ## This file creates penrose_BH_cauchy.pdf
 ## plots a Penrose diagram of the whole universe, including a black hole.
@@ -160,5 +161,7 @@ legend(x=-0.5,y=-0.2,lty=1,lwd=c(1,1,0.5,0.5,5,5),
        )
 ## plot the AUT logo:
     if(!isFALSE(getOption("AUTlogo"))){logo(x=0.85,y=0.16, width=0.1)}  
-
+par(family="mono")
+text(-1.2,-1.1,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+par(op)  
 }

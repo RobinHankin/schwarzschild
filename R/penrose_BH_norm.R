@@ -8,7 +8,7 @@ penrose_BH_norm <- function(colours=standard_colours, ...){
 ## only one that looks good---the others
 ## suck---compare penrose.R where norm looks
 ## good.
-
+op <- par()
 
 penrose <- penrose_transform("norm")
 
@@ -158,5 +158,7 @@ legend(x=-0.5,y=-0.2,lty=1,lwd=c(1,1,0.5,0.5,5,5),
        )
 ## plot the AUT logo:
     if(!isFALSE(getOption("AUTlogo"))){logo(x=0.85,y=0.16, width=0.1)}  
-
+par(family="mono")
+text(-1.2,-1.1,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+par(op)  
 }

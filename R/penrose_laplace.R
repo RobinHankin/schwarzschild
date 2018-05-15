@@ -3,9 +3,9 @@ penrose_laplace <- function(colours=standard_colours, ...){
 ## plots a Penrose diagram of the whole universe.  
 penrose <- penrose_transform("laplace")
 
-
 ## NB: norm looks good and tan sucks; cf penrose_black_hole
 
+  op <- par()   # Remember the options and reset at the end of the function
 
 
 # set up axes
@@ -89,4 +89,9 @@ for(i in thingvec){
 }
 ## plot the AUT logo:
     if(!isFALSE(getOption("AUTlogo"))){logo(x=0.85,y=0.20, width=0.1)}  
+
+par(family="mono")
+text(-1.2,-1.1,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+par(op)  
+
 }
