@@ -6,7 +6,7 @@ Date: 2017-10-24
 Author: Robin K. S. Hankin
 Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
 Description: Diagrams of various spacetimes including black holes and gravitational waves.
-Depends: gsl,deSolve,animation,grImport
+Depends: gsl,deSolve,animation,grImport,magrittr
 License: GPL (>= 2)
 Suggests: knitr, rmarkdown
 LazyLoad: yes
