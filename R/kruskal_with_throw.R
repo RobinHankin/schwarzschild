@@ -1,5 +1,5 @@
 kruskal_with_throw <- function(draw_schwarzschild = FALSE, label_curves = FALSE, colours=standard_colours){
-
+  op <- par()   # Remember the options and reset at the end of the function
 
 ## set the two arguments to TRUE to give more detail (but these give a
 ## very cluttered diagram)
@@ -218,4 +218,9 @@ segments(size,-size,-size,size,col=colours$horizon,lwd=5)
 
     ## plot the AUT logo:
 if(!isFALSE(getOption("AUTlogo"))){logo(x=0.84,y=0.08, width=0.1)}  
+
+par(family="mono")
+text(-0.8,-0.7,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+par(op)  
+
 }
