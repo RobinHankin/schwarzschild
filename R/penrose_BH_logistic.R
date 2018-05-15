@@ -161,7 +161,7 @@ legend(
     if(!isFALSE(getOption("AUTlogo"))){logo(x=0.85,y=0.16, width=0.1)}  
 
 par(family="mono")
-text(-1.2,-1.1,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+text(-0.6,-0.7,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
 par(op)  
 }
 
