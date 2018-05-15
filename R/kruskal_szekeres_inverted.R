@@ -1,5 +1,5 @@
 kruskal_inverted <- function(colours=standard_colours, ...){
-
+  op <- par()   # Remember the options and reset at the end of the function
     n <- 4 # size of plot
     par(xpd=FALSE)
     clip(0,n,0,n)
@@ -51,5 +51,11 @@ kruskal_inverted <- function(colours=standard_colours, ...){
     segments(x0=1,y0=0,y1=5,lwd=5,lend=1,col=colours$horizon)
 
 ## plot the AUT logo:
-if(!isFALSE(getOption("AUTlogo"))){logo(x=0.84,y=0.08, width=0.1)}      
+  if(!isFALSE(getOption("AUTlogo"))){logo(x=0.84,y=0.08, width=0.1)}
+
+
+  par(family="mono")
+text(-0.8,-0.7,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+par(op)  
+
 }
