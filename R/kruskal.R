@@ -26,7 +26,7 @@ kruskal <- function(colours=standard_colours, ...){
         t = seq(from=-4,to=4,len=9)
     ))
 
-    text(0,-1.9,"NB: lines of constant Schwarzchild r are timelike outside and spacelike inside")
+    text(0,-1.9,"NB: lines of constant Schwarzschild r are timelike outside and spacelike inside")
     ## plot curves of constant Schwarzschild r on the exterior:
     jj <- TX(rt_ext,exterior=TRUE)
     points(jj,type='l',lty=1,lwd=0.5,col=constant_t_exterior)  # spacelike
