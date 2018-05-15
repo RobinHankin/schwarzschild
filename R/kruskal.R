@@ -149,7 +149,7 @@ kruskal <- function(colours=standard_colours, ...){
 
 
   par(family="mono")
-  text(-0.8,-0.7,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
+  text(-2.8,-2.7,'https://github.com/RobinHankin/schwarzschild.git',pos=4,cex=0.6)
   par(op)  
 
 
