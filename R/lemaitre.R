@@ -69,7 +69,7 @@ lemaitre <- function(draw_schwarzschild=FALSE, colours=standard_colours, ...){
                    colours$horizon, colours$singularity),
                legend = c(
                    "ingoing light","outgoing light","raindrop worldline",
-                   "constant Schwarzschild r","constant Schwartzschild t",
+                   "constant Schwarzschild r","constant Schwarzschild t",
                    "event horizon", "singularity"),
                lty=c(1,1,2,1,1,1,1),
                lwd=c(1,1,1,1,1,1,5),
