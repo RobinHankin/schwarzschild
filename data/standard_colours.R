@@ -1,5 +1,4 @@
 standard_colours <-
-
   list(
       ingoing_light   = "red",
       outgoing_light  = "blue",
