@@ -1,8 +1,8 @@
 Package: schwarzschild
 Type: Package
 Title: Black Hole Diagrams
-Version: 1.0
-Date: 2017-10-24
+Version: 1.0-1
+Date: 2018-08-04
 Author: Robin K. S. Hankin
 Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
 Description: Mathematically correct diagrams of various spacetimes including black holes and gravitational waves.
