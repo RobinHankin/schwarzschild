@@ -1,18 +1,27 @@
 \name{schwarzschild-package}
 \alias{schwarzschild-package}
 \docType{package}
-\title{Diagrams of various spacetimes including black holes}
+\title{
+\packageTitle{schwarzschild}
+}
 \description{
-A collection of routines to draw mathematically correct diagrams of the
-spacetime near a black hole; also some visualization of gravitational
-waves
+\packageDescription{schwarzschild}
 }
 \details{
+The DESCRIPTION file:
+\packageDESCRIPTION{schwarzschild}
+
 Most of the package functionality is the definition of functions such as
-\code{schwarzschild()} which create mathematically precise diagrams of
-black holes.
+\code{schwarzschild()} which are intended to be called by
+\code{inst/maker.R} which produces correctly-sized PDF files.
+
+\packageIndices{schwarzschild}
 }
-\author{Robin K. S. Hankin}
+\author{
+\packageAuthor{schwarzschild}
+
+Maintainer: \packageMaintainer{schwarzschild}
+}
 \keyword{ package }
 \examples{
 schwarzschild()
