@@ -75,11 +75,11 @@ eddington <- function(colours=standard_colours, ...){
     cf_interior(0.5,2.113)
     cf_interior(0.15)
 
-    jjang <- 21
-    text(3.5,0.85,expression('t'['s']==0),col=colours$t,srt=jjang)
-    text(3.5,1.85,expression('t'['s']==1),col=colours$t,srt=jjang)
-    text(3.5,2.85,expression('t'['s']==2),col=colours$t,srt=jjang)
-    text(3.5,3.85,expression('t'['s']==3),col=colours$t,srt=jjang)
+    jj_angle <- 21
+    text(3.5,0.85,expression('t'['s']==0),col=colours$t,srt=jj_angle)
+    text(3.5,1.85,expression('t'['s']==1),col=colours$t,srt=jj_angle)
+    text(3.5,2.85,expression('t'['s']==2),col=colours$t,srt=jj_angle)
+    text(3.5,3.85,expression('t'['s']==3),col=colours$t,srt=jj_angle)
 
     par(xpd=TRUE)
     par(lend=1)
