@@ -1,11 +1,11 @@
 penrose_BH_logistic <- function(colours=standard_colours, ...){
-## This file creates penrose_BH_logistic.pdf
-## plots a Penrose diagram of the whole universe, including a black hole.
 
-## NB cauchy (previously known as 'tan') is the
-## only one that looks good---the others
-## suck---compare penrose.R where norm looks
-## good.
+## This file plots a Penrose diagram of the whole universe, including
+## a black hole, using a logistic transform.
+
+## NB: cauchy (previously known as 'tan') is the only one that looks
+## good: the others all suck.  Compare penrose_foo() [i.e. no black
+## hole], where "norm" is the good one.
 
 op <- par()
 penrose <- penrose_transform("logistic")

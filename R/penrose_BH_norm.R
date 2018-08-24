@@ -1,8 +1,8 @@
 penrose_BH_norm <- function(colours=standard_colours, ...){
 
 
-## This file creates penrose_BH_norm.pdf
-## plots a Penrose diagram of the whole universe, including a black hole.
+## This file plots a Penrose diagram of the whole universe, including
+## a black hole.
 
 ## NB cauchy (previously known as 'tan') is the
 ## only one that looks good---the others

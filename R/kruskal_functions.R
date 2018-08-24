@@ -19,14 +19,14 @@ library(gsl)
 
 
 ## RT() takes XT coords and returns Schwarzschild (r,t)
-`RT` <- function(TX){   # reverse function, here for completeness
+`RT` <- function(TX){   # used by kruskal_szekeres_inverted.R and kruskal_with_throw()
   T <- TX[,2,drop=TRUE]
   X <- TX[,1,drop=TRUE]
 
   out <- cbind(X,T) + NA   
   r <- 1+lambert_W0((X^2-T^2)/exp(1))
 
-  wanted <- T^2 < 1+X^2 # corresponds to r>0
+  wanted <- T^2 < 1+X^2 # logical; corresponds to r>0
 
   T <- T[wanted]
   X <- X[wanted]

@@ -2,13 +2,12 @@ penrose_BH_laplace <- function(colours=standard_colours, ...){
 
     op <- par()
 
-## This file creates penrose_BH_cauchy.pdf
-## plots a Penrose diagram of the whole universe, including a black hole.
+## This file plots a Penrose diagram of the whole universe, including
+## a black hole using a Laplace distribution transform.
 
-## NB cauchy (previously known as 'tan') is the
-## only one that looks good---the others
-## suck---compare penrose.R where norm looks
-## good.
+## NB: cauchy (previously known as 'tan') is the only one that looks
+## good: the others all suck.  Compare penrose_foo() [i.e. no black
+## hole], where "norm" is the good one.
 
 
 penrose <- penrose_transform("laplace")
