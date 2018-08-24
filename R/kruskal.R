@@ -66,7 +66,7 @@ kruskal <- function(colours=standard_colours, ...){
 
     l <- 10
     for(i in r_emitting){
-        X <-  sqrt(i-1)*exp(i/2)  # KS coordinate 'X'
+        X <- sqrt(i-1)*exp(i/2)  # KS coordinate 'X'
         segments(x0=X,y0=0,  # start point
                  x1 = 0.5*(X-1/X), y1=-0.5*(-X-1/X), col=colours$ingoing_light)  # ingoing
         segments(x0=X,y0=0,  # start point
@@ -74,17 +74,17 @@ kruskal <- function(colours=standard_colours, ...){
     }
 
     ## label some timelike curves on the exterior
-    text(0.53,-0.22,labels=paste("r = ",r_emitting[1],sep=""),col=colours$r,srt=-60)
-    text(1.33,-0.3,labels=paste("r = ",round(r_emitting[2],2),sep=""),col=colours$r,srt=-80)
-    text(2.05,-0.3,labels=paste("r = ",round(r_emitting[3],2),sep=""),col=colours$r,srt=-82)
+    text(0.53,-0.22,labels=paste("r = ",r_emitting[1]         ,sep=""),col=colours$r,srt=-60)
+    text(1.33,-0.30,labels=paste("r = ",round(r_emitting[2],2),sep=""),col=colours$r,srt=-80)
+    text(2.05,-0.30,labels=paste("r = ",round(r_emitting[3],2),sep=""),col=colours$r,srt=-82)
 
     ## label some spacelike curves on the exterior
-    text(0.7,0.06,labels=paste("t = ",0,sep=""),col=colours$t,srt=0)
-    text(0.8,-0.3,labels=paste("t = ",-1,sep=""),col=colours$t,srt=-25)
+    text(0.7, 0.06,labels=paste("t = ",0 ,sep=""),col=colours$t,srt= 00)
+    text(0.8,-0.30,labels=paste("t = ",-1,sep=""),col=colours$t,srt=-25)
     text(1.1,-0.75,labels=paste("t = ",-2,sep=""),col=colours$t,srt=-35)
     text(1.7,-1.45,labels=paste("t = ",-3,sep=""),col=colours$t,srt=-40)
-    text(1,0.53,labels=paste("t = ",1,sep=""),col=colours$t,srt=25)
-    text(1.1,0.9,labels=paste("t = ",2,sep=""),col=colours$t,srt=35)
+    text(1.0, 0.53,labels=paste("t = ",1 ,sep=""),col=colours$t,srt= 25)
+    text(1.1, 0.90,labels=paste("t = ",2 ,sep=""),col=colours$t,srt= 35)
 
 
     ## label some spacelike curves on the interior (constant t [sic])
@@ -93,9 +93,9 @@ kruskal <- function(colours=standard_colours, ...){
     text(0.60,0.9,labels=paste("t = ",2,sep=""),col=colours$t,srt=52)
 
     ## label some timelike curves on the interior (constant t [sic])
-    text(-0.39,0.6,labels=paste("r = ",0.95,sep=""),col=colours$r,srt=-35)
-    text(-0.1,0.74,labels=paste("r = ",0.8,sep=""),col=colours$r,srt=-10)
-    text(-0.4,0.9,labels=paste("r = ",0.6,sep=""),col=colours$r,srt=-22)
+    text(-0.39,0.60,labels=paste("r = ",0.95,sep=""),col=colours$r,srt=-35)
+    text(-0.10,0.74,labels=paste("r = ",0.80,sep=""),col=colours$r,srt=-10)
+    text(-0.40,0.90,labels=paste("r = ",0.60,sep=""),col=colours$r,srt=-22)
 
 
     points(TX(cbind(r_emitting,0),exterior=TRUE),pch=16)
