@@ -1,5 +1,4 @@
-## This is used by ./kruskal/kruskal.R and ./penrose_black_hole/pbr.R
-
+## This is used by kruskal suite and the penrose_BH suite.
 
 library(gsl)
 
