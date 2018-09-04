@@ -1,41 +1,44 @@
-kruskal <- function(colours=standard_colours, ...){
-
-    op <- par()
-    ## NB: everything here is (space,time).  This is because it is easier to plot in R
-
+kruskal <- function(colours=standard_colours, ...){op <- par() ## NB: everything here is (space,time).  This is because it is easier to plot in R
+    
     constant_r_exterior <- colours$r
     constant_t_exterior <- colours$t
-
+    
     constant_r_interior <- colours$t
     constant_t_interior <- colours$r
+    
+    ## points from which to emit a ray of light (and draw spacelike
+    ## curves of constant Schwarzchild r from):
 
-    ## points from which to emit a ray of light  (and draw spacelike curves of constant Schwarzchild r from)
     r_emitting <-  seq(from=1.05,len=4,to=2)
-
+    
     size <- 2
     par(pty='s')
-    plot(NULL,type='n',asp=1,xlim=c(-size,size),ylim=c(-size,size),axes=FALSE,xlab="",ylab="",main="Kruskal-Szekeres coordinates")
+    plot(NULL, type='n', asp=1,
+         xlim=c(-size,size), ylim=c(-size,size),
+         axes=FALSE, xlab="",ylab="",
+         main="Kruskal-Szekeres coordinates")
     clip(-2,2,-2,2)
-
+    
     par(xpd=FALSE)
-
 
     ## First spacelike curves, exterior:
     rt_ext <- as.matrix(expand.grid(
         r = c(NA,seq(from=1,to=40,len=100)),   # the NA is so we can just use plot(...,type='l')
         t = seq(from=-4,to=4,len=9)
     ))
-
+    
     text(0,-1.9,"NB: lines of constant Schwarzschild r are timelike outside and spacelike inside")
     ## plot curves of constant Schwarzschild r on the exterior:
     jj <- TX(rt_ext,exterior=TRUE)
     points(jj,type='l',lty=1,lwd=0.5,col=constant_t_exterior)  # spacelike
-
-                                        # Now curves of constant Schwarzschild t, exterior:
+    
+    ## Now curves of constant Schwarzschild t, exterior:
     rt_ext <- as.matrix(expand.grid(
         t = c(NA,seq(from=-4,to=4,len=1000)),
         r = r_emitting
-    ))[,2:1]
+    ))
+
+    [,2:1]
     points(TX(rt_ext,exterior=TRUE),type='l',lwd=0.5,lty=1,col=constant_r_exterior)  # timelike
 
 
@@ -56,11 +59,6 @@ kruskal <- function(colours=standard_colours, ...){
     ))[,2:1]
 
     points(TX(rt_int,exterior=FALSE),type='l',lty=1,lwd=0.5,col=constant_t_interior)
-
-                                        # Now the antisingularity; the other square root:
-                                        #jj[,2]<- -jj[,2]  
-                                        #points(jj      ,type='l',col='black',lwd=8)
-
 
     ## light curves:
 
@@ -144,13 +142,11 @@ kruskal <- function(colours=standard_colours, ...){
     segments(size,-size,-size,size,col=colours$horizon,lwd=5)
     ## plot commands end
 
-## plot the AUT logo:
-  if(!isFALSE(getOption("AUTlogo"))){logo(x=0.84,y=0.08, width=0.1)}
+    ## plot the AUT logo:
+    if(!isFALSE(getOption("AUTlogo"))){logo(x=0.84,y=0.08, width=0.1)}
 
-
-  par(family="mono")
-git(-2.8,-2.7)
-  par(op)  
-
+    par(family="mono")
+    git(-2.8,-2.7)
+    par(op)  
 
 }
