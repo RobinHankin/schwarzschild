@@ -52,8 +52,10 @@ trajectory <- function(t0,r0,epsilon,sign,n=100){
 }
 
 bounded_outward_trajectory <- function(t0,r0,epsilon,n=100){  # sign>0,
-  ## 0<epsilon<1 This function simulates the trajectory from (t0,r0),
-  ## to (t_max,rmax) [apoapsis?]
+
+    ## 0<epsilon<1.  This function simulates the trajectory from (t0,r0),
+    ## to (t_max,rmax) [apoapsis?]
+
     SMALL <- 1e-3
   stopifnot(epsilon>0)
   if(epsilon>1){
