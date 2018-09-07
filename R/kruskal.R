@@ -36,9 +36,7 @@ kruskal <- function(colours=standard_colours, ...){op <- par() ## NB: everything
     rt_ext <- as.matrix(expand.grid(
         t = c(NA,seq(from=-4,to=4,len=1000)),
         r = r_emitting
-    ))
-
-    [,2:1]
+    ))[,2:1]
     points(TX(rt_ext,exterior=TRUE),type='l',lwd=0.5,lty=1,col=constant_r_exterior)  # timelike
 
 
