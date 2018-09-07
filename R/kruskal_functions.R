@@ -1,9 +1,7 @@
 ## This is used by kruskal suite and the penrose_BH suite.
-
-library(gsl)
-
 ## TX() effects the transformation from the Schwarzschild coordinates
 ## (r,t) to KS coordinates (X,T):
+
 `TX` <- function(rt,exterior){
   r <- rt[,1,drop=TRUE]
   t <- rt[,2,drop=TRUE]
