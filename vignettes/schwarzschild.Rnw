@@ -27,7 +27,7 @@
   sets of coordinates.}
 
 \Keywords{Black holes, general relativity, Schwarzschild metric,
-  Eddington coordinates Lemaitre coordinates, Gullstrand coordinates,
+  Eddingon coordinates Lemaitre coordinates, Gullstrand coordinates,
   \proglang{R}}
 
 \Plainkeywords{Black holes, general relativity, Schwarzschild metric,
@@ -82,9 +82,8 @@ require(schwarzschild)
 The \pkg{schwarzschild} package creates high-quality PDFs that
 illustrate different aspects of physics near a spherically symmetric
 black hole.  Although the {\em raison d'\^{e}tre} of the package is
-the PDF images themselves, this vignette presents a discussion of the
-physics underlying the Schwarzschild black hole, as illustrated by the
-various diagrams.
+the PDF images themselves, the physics underlying the Schwarzschild
+black hole is illustrated by the R functionality.
 
 \section{Schwarzschild coordinates}
 
@@ -110,6 +109,18 @@ to~$\theta=0$, giving
 \begin{equation}
   ds^2 = -\left(1-1/r\right)dt^2 + \frac{dr^2}{1-1/r}
   \end{equation}
+
+In general relativity, Schwarzschild coordinates for a black hole have
+desirable properties such as asymptotic matching with flat-space
+spherical coordinates; but other coordinate systems can be used which
+have other advantages.  The \pkg{schwarzschild} package furnishes
+plots which use a variety of coordinates including Kruskal-Szekeres,
+Eddington-Finkelstein ingoing and outgoing, Gullstrand-Painleve,
+Lema\^{i}tre, and various Penrose transforms.  These are described in
+many undergraduate GR textbooks.  This vignette shows some, but not
+all, of the included functionality.
+
+For special relativity, see the \pkg{lorentz} package.
 
 \begin{figure}[p]
   \begin{center}
@@ -178,17 +189,6 @@ kruskal()
 
 \begin{figure}[p]
   \begin{center}
-<<kruskal_with_throw,fig=TRUE,height=9,width=9>>=
-kruskal_with_throw()
-@
-\caption[Kruskal-Szekeres coordinates with throw]{Space near a black hole,
-  using\label{kruskal_szekeres} Kruskal-Szekeres coordinates, together with a thrown
-  object}
-\end{center}
-\end{figure}
-
-\begin{figure}[p]
-  \begin{center}
 <<kruskal_with_throw_plus,fig=TRUE,height=9,width=9>>=
 kruskal_with_throw(draw_schwarzschild=TRUE)
 @
@@ -239,16 +239,6 @@ penrose_norm()
 @
 \caption[Penrose diagram, Gaussian transform]{The universe in compact
   presentation using a \label{penrose_norm} Gaussian Penrose transform}
-\end{center}
-\end{figure}
-
-\begin{figure}[p]
-  \begin{center}
-<<penrose_cauchy,fig=TRUE,height=9,width=9>>=
-penrose_cauchy()
-@
-\caption[Penrose diagram, Cauchy transform]{The universe in compact
-  presentation using a \label{penrose_norm} Cauchy Penrose transform}
 \end{center}
 \end{figure}
 
