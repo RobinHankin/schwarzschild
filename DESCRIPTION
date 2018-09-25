@@ -5,7 +5,7 @@ Version: 1.0-1
 Date: 2018-08-04
 Author: Robin K. S. Hankin
 Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
-Description: Mathematically correct diagrams of various spacetimes including black holes and gravitational waves.
+Description: Mathematically correct diagrams of reasons including black holes and gravitational waves.  For special relativity, see the lorentz package.
 Depends: gsl,deSolve,animation,grImport,magrittr
 License: GPL (>= 2)
 Suggests: knitr, rmarkdown
