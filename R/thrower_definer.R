@@ -52,8 +52,8 @@
                     "interior inward","interior outward","event horizon"))
 
 
-## plot the AUT logo:
-if(!isFALSE(getOption("AUTlogo"))){logo(x=0.83,y=0.04, width=0.1)}  
+    ## plot the AUT logo:
+    if(!isFALSE(getOption("AUTlogo"))){logo(x=0.83,y=0.04, width=0.1)}  
 
 }
 
@@ -106,6 +106,6 @@ if(!isFALSE(getOption("AUTlogo"))){logo(x=0.83,y=0.04, width=0.1)}
            legend=c("inward throw","outward throw, bounded","critical","unbounded",
                     "interior inward","interior outward","event horizon"))
 
-## plot the AUT logo:
-if(!isFALSE(getOption("AUTlogo"))){logo(x=0.83,y=0.04, width=0.1)}  
+    ## plot the AUT logo:
+    if(!isFALSE(getOption("AUTlogo"))){logo(x=0.83,y=0.04, width=0.1)}  
 }

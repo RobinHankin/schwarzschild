@@ -50,12 +50,11 @@ kruskal_inverted <- function(colours=standard_colours, ...){
     segments(x0=0,y0=0,y1=5,lwd=5,lend=1,col=colours$singularity)
     segments(x0=1,y0=0,y1=5,lwd=5,lend=1,col=colours$horizon)
 
-## plot the AUT logo:
+  ## plot the AUT logo:
   if(!isFALSE(getOption("AUTlogo"))){logo(x=0.84,y=0.08, width=0.1)}
 
 
   par(family="mono")
-git(-0.8,-0.7)
-par(op)  
-
+  git(-0.8,-0.7)
+  par(op)  
 }

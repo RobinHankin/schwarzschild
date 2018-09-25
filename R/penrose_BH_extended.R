@@ -159,6 +159,6 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
 
     ## plot the AUT logo:
     if(!isFALSE(getOption("AUTlogo"))){logo(x=0.90,y=0.30, width=0.1)}  
-git(-0.9,-0.7)
-par(op)  
+  git(-0.9,-0.7)
+  par(op)  
 }
