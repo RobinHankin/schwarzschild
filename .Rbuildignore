@@ -1,6 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 .gitignore
-^pdf$
-^svg$
+inst\*.pdf$
+inst\*.svg$
 ^.*\.Rout$ 
