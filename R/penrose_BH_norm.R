@@ -1,13 +1,12 @@
 penrose_BH_norm <- function(colours=standard_colours, ...){
 
-
 ## This file plots a Penrose diagram of the whole universe, including
-## a black hole.
+## a black hole, using a normal (Gaussian) transform.
 
-## NB cauchy (previously known as 'tan') is the
-## only one that looks good---the others
-## suck---compare penrose.R where norm looks
-## good.
+## NB cauchy (previously known as 'tan') is the only one that looks
+## good---the others suck---compare penrose.R [no black hole], where
+## norm looks good.
+
 op <- par()
 
 penrose <- penrose_transform("norm")
