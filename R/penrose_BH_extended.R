@@ -4,6 +4,9 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
     ## plots a Penrose diagram of the whole universe, including a black hole
 
     penrose <- penrose_transform("cauchy")
+    ## in principle we could have an extended diagram for the other
+    ## Penrose transforms but frankly there would be very little
+    ## point.
 
     op <- par()
     constant_r_exterior <- colours$r
