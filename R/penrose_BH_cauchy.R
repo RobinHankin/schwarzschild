@@ -3,6 +3,11 @@ penrose_BH_cauchy <- function(colours=standard_colours, ...){
   ## This function plots a Penrose diagram of the whole universe,
   ## including a black hole using a Cauchy transform.
 
+  ## There are three functions in this series: penrose_BH_cauchy(),
+  ## penrose_BH_laplace(), penrose_BH_norm(), and
+  ## penrose_BH_logistic().  These use different transforms to
+  ## translate an infinite universe into a finite area.
+    
   ## NB: cauchy (previously known as 'tan') is the only one that looks
   ## good: the others all suck.  Compare penrose_foo() [i.e. no black
   ## hole], where "norm" is the good one.
