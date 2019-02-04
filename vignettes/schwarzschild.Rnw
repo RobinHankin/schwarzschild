@@ -27,14 +27,12 @@
   sets of coordinates.}
 
 \Keywords{Black holes, general relativity, Schwarzschild metric,
-  Eddingon coordinates Lemaitre coordinates, Gullstrand coordinates,
+  Eddingon coordinates, Lemaitre coordinates, Gullstrand coordinates,
   \proglang{R}}
 
 \Plainkeywords{Black holes, general relativity, Schwarzschild metric,
   Eddington coordinates Lemaitre coordinates, Gullstrand coordinates,
   R}
-
-
 
 %% publication information
 %% NOTE: This needs to filled out ONLY IF THE PAPER WAS ACCEPTED.
@@ -83,7 +81,11 @@ The \pkg{schwarzschild} package creates high-quality PDFs that
 illustrate different aspects of physics near a spherically symmetric
 black hole.  Although the {\em raison d'\^{e}tre} of the package is
 the PDF images themselves, the physics underlying the Schwarzschild
-black hole is illustrated by the R functionality.
+black hole is illustrated by the \proglang{R} functionality. 
+
+
+
+
 
 \section{Schwarzschild coordinates}
 
