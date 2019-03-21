@@ -6,7 +6,7 @@
 ## The AUT logo is included by default.  To switch it off, uncomment
 ## the line below:
 
-## options(AUTlogo = FALSE)
+## options("AUTlogo" = FALSE)
 
 
 library(schwarzschild)

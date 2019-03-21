@@ -26,6 +26,14 @@ git(x,y,...)
   using \code{PostScriptTrace()}.  The logo is plotted unless option
   \code{AUTlogo} is \code{FALSE}.
 
+  In most plotting functions in the package, the appearance of the logo
+  is controlled by \code{options("AUTlogo")}, the default being to
+  include the logo.  Use
+
+  \code{options("AUTlogo" = FALSE)}
+
+  to suppress the logo.
+
   Function \code{git()} uses \code{text()} to show the github repo URL.
   
 }
