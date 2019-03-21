@@ -2,8 +2,10 @@ penrose_BH_laplace <- function(colours=standard_colours, ...){
 
   op <- par()
 
-  ## This file plots a Penrose diagram of the whole universe, including
-  ## a black hole using a Laplace distribution transform.
+  ## This file plots a Penrose diagram of the whole universe,
+  ## including a black hole using a Laplace distribution transform.
+  ## This function can be called from the commandline but is intended
+  ## to be called by inst/maker.R which creates a PDF image.
  
   ## More documentation is given in penrose_BH_cauchy.R
 

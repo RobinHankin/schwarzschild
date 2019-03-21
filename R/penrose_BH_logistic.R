@@ -1,7 +1,9 @@
 penrose_BH_logistic <- function(colours=standard_colours, ...){
 
-  ## This file plots a Penrose diagram of the whole universe, including
-  ## a black hole, using a logistic transform.
+  ## This file plots a Penrose diagram of the whole universe,
+  ## including a black hole, using a logistic transform.  This
+  ## function can be called from the commandline but is intended to be
+  ## called by inst/maker.R which creates a PDF image.
 
   ## More documentation is given in penrose_BH_cauchy.R
 

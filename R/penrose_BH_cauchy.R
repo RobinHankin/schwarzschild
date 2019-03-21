@@ -1,7 +1,9 @@
 penrose_BH_cauchy <- function(colours=standard_colours, ...){
 
   ## This function plots a Penrose diagram of the whole universe,
-  ## including a black hole using a Cauchy transform.
+  ## including a black hole using a Cauchy transform.  This function
+  ## can be called from the commandline but is intended to be called
+  ## by inst/maker.R which creates a PDF image.
 
   ## There are three functions in this series: penrose_BH_cauchy(),
   ## penrose_BH_laplace(), penrose_BH_norm(), and
