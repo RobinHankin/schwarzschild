@@ -1,4 +1,6 @@
-kruskal <- function(colours=standard_colours, ...){op <- par() ## NB: everything here is (space,time).  This is because it is easier to plot in R
+kruskal <- function(colours=standard_colours, ...){## NB: everything here is (space,time).  This is because it is easier to plot in R
+
+    op <- par() 
     
     constant_r_exterior <- colours$r
     constant_t_exterior <- colours$t
