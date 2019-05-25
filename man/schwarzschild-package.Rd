@@ -12,8 +12,9 @@ The DESCRIPTION file:
 \packageDESCRIPTION{schwarzschild}
 
 Most of the package functionality is the definition of functions such as
-\code{schwarzschild()} which are intended to be called by
-\code{inst/maker.R} which produces correctly-sized PDF files.
+\code{schwarzschild()} which produce spacetimes diagrams.  The functions
+are intended to be called by\code{inst/maker.R} which produces annotated
+and correctly-sized PDF files.
 
 \packageIndices{schwarzschild}
 }

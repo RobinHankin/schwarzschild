@@ -30,7 +30,7 @@ thrower_asp1(colours=standard_colours, ...)
   \item{draw_infalling_drops, label_curves, draw_schwarzschild}{Boolean,
     with \code{TRUE} meaning to plot the thing, and default
     \code{FALSE} meaning to omit the lines (resulting in a tidier and
-    less cluttered diagram).  }
+    less cluttered diagram)}
   \item{colours}{List of colours}
   \item{legpos}{Passed to \code{thrower()} and \code{thrower_asp1()}
     specifying the position of the legend}

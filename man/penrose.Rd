@@ -15,12 +15,10 @@
 \alias{penrose_transform_forward}
 \alias{penrose_transform_inverse}
 \alias{penrose_transform_inverted}
-\title{
-Penrose transforms of the universe to a compact diagram.
-}
+\title{Penrose diagrams}
 \description{
-Penrose transforms of the universe to a compact diagram.  The
-\dQuote{BH} forms include a black hole.
+Penrose diagrams of the universe either with or without a black hole,
+using different transforms.
 }
 \usage{
 penrose_cauchy(colours=standard_colours, ...)
@@ -54,12 +52,21 @@ function (CDF) \eqn{F(\cdot)}{F(.)}, but because the CDF maps to
 \eqn{(0,1)} rather than the desired \eqn{(-1,1)} it maps \eqn{x} to
 \eqn{2F(x)-1}.  The backward transform uses the distribution's quantile
 function \eqn{Q(\cdot)}{Q(.)}, mapping \eqn{x} to \eqn{Q((x+1)/2)}.
+
+If the name of a function includes \dQuote{\code{_BH_}}, for example
+\code{penrose_BH_norm()}, then the diagram includes a black hole.
+
 }
 \value{
   Functions \code{penrose_foo()} and \code{penrose_BH_foo()} are
   executed for the side-effect of plotting a graph.  Function
   \code{penrose_transformation()} returns a function which gives the
   appropriate Penrose transform.
+
+  Although these functions can be called directly, they are designed to
+  be called by \code{inst/maker.R}, which produces correctly-sized an
+  annotated PDF diagrams.
+
 }
 \author{Robin K. S. Hankin}
 \examples{
