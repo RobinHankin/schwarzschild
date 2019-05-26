@@ -24,7 +24,7 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
     ))
 
     ## plot curves of constant Schwarzschild t [ie spacelike curves] on the exterior:
-    jj <- penrose(TX(rt_ext,exterior=TRUE))   # penrose() defined in ../penrose_transform_chooser.R
+    jj <- penrose(TX(rt_ext,exterior=TRUE)) # penrose() defined in penrose_transform_chooser.R and TX() defined in kruskal_functions.R
     points(jj,type='l',lty=1,lwd=0.5,col=colours$t)  # spacelike
     jj[,1] <- -jj[,1]
     points(jj,type='l',lty=1,lwd=0.5,col=colours$t)  # spacelike
@@ -94,14 +94,14 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
     segments(x0=-0.5,y0=-0.5,x1=0.5,lwd=5,col=colours$singularity)
 
 
-    ## draw the boundary of the universe
+    ## draw the boundary of the universe:
     segments(x0=0.5,y0=0.5,x1=1,y1=0,lwd=1,col=colours$singularity)
     segments(x0=1,y0=0,x1=0.5,y1=-0.5,lwd=1,col=colours$singularity)
     segments(x0=-0.5,y0=-0.5,x1=-1,y1=0,lwd=1,col=colours$singularity)
     segments(x0=-1,y0=0,x1=-0.5,y1=0.5,lwd=1,col=colours$singularity)
 
 
-    ## draw light paths; functions are named for the origin of the light
+    ## draw light paths (functions are named for the origin of the light):
     universe <- function(x,y,left=TRUE,right=TRUE, ...){
         if(right){segments(x0=x, y0=y, x1=(1+x-y)/2, y1=(1-x+y)/2,col=colours$outgoing_light, ...)}
         if(left){segments(x0=x, y0=y, x1=(-0.5+x+y), y1=1/2,col=colours$ingoing_light, ...)}
@@ -132,7 +132,7 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
     whitehole(0.3,-0.4)
     
 
-    ## Label the areas
+    ## Label the areas:
     text(0.5,0.1,"universe")
     text(-0.7,0.1,"antiuniverse")
     text(0,0.3,"black hole")
