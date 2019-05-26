@@ -75,12 +75,11 @@ schwarzschild <- function(draw_infalling_drops=FALSE, colours=standard_colours, 
 
   polygon(x=c(0,0,n+1,n+1),y=c(n,n+1,n+1,n),border=NA,lwd=7,col='white')
 
-                                        #  points(r_ingoing_inside ,t_ingoing_inside +i+0.5, type='l',col=colours$ingoing_light,lwd=0.3)
-                                        #  points(r_ingoing_outside,t_ingoing_outside+i+0.5, type='l',col=colours$ingoing_light,lwd=0.3)
-
-                                        #  points(r_outgoing_inside ,t_outgoing_inside +i+0.5, type='l',col=colours$outgoing_light,lwd=0.3)
-                                        #  points(r_outgoing_outside,t_outgoing_outside+i+0.5, type='l',col=colours$outgoing_light,lwd=0.3)
-
+  ##  points(r_ingoing_inside ,t_ingoing_inside +i+0.5, type='l',col=colours$ingoing_light,lwd=0.3)
+  ##  points(r_ingoing_outside,t_ingoing_outside+i+0.5, type='l',col=colours$ingoing_light,lwd=0.3)
+  ##  points(r_outgoing_inside ,t_outgoing_inside +i+0.5, type='l',col=colours$outgoing_light,lwd=0.3)
+  ##  points(r_outgoing_outside,t_outgoing_outside+i+0.5, type='l',col=colours$outgoing_light,lwd=0.3)
+  
 
   
 
