@@ -2,11 +2,10 @@ Package: schwarzschild
 Type: Package
 Title: Black Holes in R
 Version: 1.0-1
-Date: 2018-09-28
 Author: Robin K. S. Hankin
 Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
 Description:
-  Routines for visual display of the physics of Einstein's general
+  Visual display of the physics of Einstein's general
   theory of relativity.  Provides R functionality to illustrate
   Schwarzschild black holes in a range of coordinate systems using
   mathematically accurate plotting routines; also creates animations
