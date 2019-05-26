@@ -10,7 +10,7 @@ penrose_laplace <- function(colours=standard_colours, ...){
 
                                         # set up axes
   jj <- c(-1,1)
-  plot(jj,jj,asp=1,type='n',axes=FALSE,xlab='',ylab='',main='Cauchy transform')
+  plot(jj,jj,asp=1,type='n',axes=FALSE,xlab='',ylab='',main='Laplace transform')
 
   ## plot 'boundary' of universe
 
