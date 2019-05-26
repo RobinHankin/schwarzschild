@@ -62,11 +62,11 @@ If the name of a function includes \dQuote{\code{_BH_}}, for example
   executed for the side-effect of plotting a graph.  Function
   \code{penrose_transformation()} returns a function which gives the
   appropriate Penrose transform.
-
+}
+\note{
   Although these functions can be called directly, they are designed to
-  be called by \code{inst/maker.R}, which produces correctly-sized an
+  be called by \code{inst/maker.R}, which produces correctly-sized and
   annotated PDF diagrams.
-
 }
 \author{Robin K. S. Hankin}
 \examples{
