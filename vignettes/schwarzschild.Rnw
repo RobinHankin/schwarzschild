@@ -187,23 +187,11 @@ kruskal()
 \caption[Kruskal-Szekeres coordinates]{Space near a black hole,
   using\label{kruskal_szekeres} Kruskal-Szekeres coordinates}
 \end{center}
-
 \end{figure}
 
 \begin{figure}[p]
   \begin{center}
-<<kruskal,fig=TRUE,height=9,width=9>>=
-kruskal_extended()
-@
-\caption[Extended Kruskal-Szekeres coordinates]{Space near a black hole,
-  using\label{kruskal_szekeres_extended} Kruskal-Szekeres coordinates
-  with extension showing white hole and antiuniverse}
-\end{center}
-\end{figure}
-
-\begin{figure}[p]
-  \begin{center}
-<<kruskal,fig=TRUE,height=9,width=9>>=
+<<kruskal_inverted,fig=TRUE,height=9,width=9>>=
 kruskal_inverted()
 @
 \caption[Inverted Kruskal-Szekeres coordinates]{Space near a black hole,
