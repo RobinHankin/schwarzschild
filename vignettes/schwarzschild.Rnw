@@ -187,6 +187,28 @@ kruskal()
 \caption[Kruskal-Szekeres coordinates]{Space near a black hole,
   using\label{kruskal_szekeres} Kruskal-Szekeres coordinates}
 \end{center}
+
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<kruskal,fig=TRUE,height=9,width=9>>=
+kruskal_extended()
+@
+\caption[Extended Kruskal-Szekeres coordinates]{Space near a black hole,
+  using\label{kruskal_szekeres_extended} Kruskal-Szekeres coordinates
+  with extension showing white hole and antiuniverse}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<kruskal,fig=TRUE,height=9,width=9>>=
+kruskal_inverted()
+@
+\caption[Inverted Kruskal-Szekeres coordinates]{Space near a black hole,
+  shown using\label{kruskal_szekeres_inverted} inverted Kruskal-Szekeres coordinates} 
+\end{center}
 \end{figure}
 
 \begin{figure}[p]
@@ -194,22 +216,12 @@ kruskal()
 <<kruskal_with_throw_plus,fig=TRUE,height=9,width=9>>=
 kruskal_with_throw(draw_schwarzschild=TRUE)
 @
-\caption[Kruskal-Szekeres coordinates with throw plus lines of  constant Schwarzschild~$t$
+\caption[Kruskal-Szekeres coordinates with throw plus lines of constant Schwarzschild~$t$
  and~$r$]{Space near a black hole,  using\label{kruskal_szekeres} Kruskal-Szekeres coordinates,
    together with a thrown object and including lines of constant Schwarzschild~$t$ and~$r$}
 \end{center}
 \end{figure}
 
-\begin{figure}[p]
-  \begin{center}
-<<kruskal_extended,fig=TRUE,height=9,width=9>>=
-kruskal_extended()
-@
-\caption[Kruskal-Szekeres extended coordinates]{Space near a black hole,
-  using\label{kruskal_szekeres} Kruskal-Szekeres coordinates with extension to
-  white hole and antiuniverse}
-\end{center}
-\end{figure}
 
 \begin{figure}[p]
   \begin{center}
@@ -220,7 +232,6 @@ lemaitre()
   using\label{lemaitre} Lema\^{i}tre coordinates}
 \end{center}
 \end{figure}
-
 
 \begin{figure}[p]
   \begin{center}
@@ -233,6 +244,36 @@ thrower(logaxes='',legpos='topright')
 \end{center}
 \end{figure}
 
+
+\begin{figure}[p]
+  \begin{center}
+<<penrose_cauchy,fig=TRUE,height=9,width=9>>=
+penrose_cauchy()
+@
+\caption[Penrose diagram, Cauchy transform]{The universe in compact
+  presentation using a \label{penrose_cauchy} Cauchy Penrose transform}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<penrose_laplace,fig=TRUE,height=9,width=9>>=
+penrose_laplace()
+@
+\caption[Penrose diagram, Laplace transform]{The universe in compact
+  presentation using a \label{penrose_laplace} Laplace Penrose transform}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<penrose_logistic,fig=TRUE,height=9,width=9>>=
+penrose_logistic()
+@
+\caption[Penrose diagram, logistic transform]{The universe in compact
+  presentation using a \label{penrose_logistic} logistic Penrose transform}
+\end{center}
+\end{figure}
 
 \begin{figure}[p]
   \begin{center}
@@ -256,6 +297,45 @@ penrose_BH_cauchy()
 \end{center}
 \end{figure}
 
+
+\begin{figure}[p]
+  \begin{center}
+<<penrose_BH_laplace,fig=TRUE,height=9,width=9>>=
+penrose_BH_laplace()
+@
+\caption[Penrose diagram of universe with a black hole, Laplace
+         transform]{The universe including a black hole in compact
+           presentation using a \label{penrose_BH_laplace} Laplace
+           transform}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[p]
+  \begin{center}
+<<penrose_BH_logistic,fig=TRUE,height=9,width=9>>=
+penrose_BH_logistic()
+@
+\caption[Penrose diagram of universe with a black hole, logistic
+         transform]{The universe including a black hole in compact
+           presentation using a \label{penrose_BH_logistic} logistic
+           transform}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[p]
+  \begin{center}
+<<penrose_BH_norm,fig=TRUE,height=9,width=9>>=
+penrose_BH_norm()
+@
+\caption[Penrose diagram of universe with a black hole, Gaussian
+         transform]{The universe including a black hole in compact
+           presentation using a \label{penrose_BH_norm} Gaussian
+           transform}
+\end{center}
+\end{figure}
+
 \begin{figure}[p]
   \begin{center}
 <<penrose_BH_extended,fig=TRUE,height=9,width=9>>=
@@ -267,6 +347,8 @@ penrose_BH_extended()
            Cauchy transform}
 \end{center}
 \end{figure}
+
+
 
 
 \end{document}
