@@ -1,12 +1,14 @@
 penrose_BH_extended <- function(colours = standard_colours, ...){
         
-    ## This file creates penrose_BH_extended.pdf
-    ## plots a Penrose diagram of the whole universe, including a black hole
+    ## This file is intended to be run from inst/maker.R; iot creates
+    ## penrose_BH_extended.pdf: a plot of a Penrose diagram of the
+    ## whole universe, including a black hole.
 
-    penrose <- penrose_transform("cauchy")
-    ## in principle we could have an extended diagram for the other
-    ## Penrose transforms but frankly there would be very little
-    ## point.
+    ## This function uses a Cauchy transform.  In principle we could
+    ## have an extended diagram for the other Penrose transforms but
+    ## frankly there would be very little point: they suck.
+
+    penrose <- penrose_transform("cauchy") # penrose_tranform() defined in penrose_transform_chooser.R
 
     op <- par()
     constant_r_exterior <- colours$r
@@ -24,7 +26,7 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
     ))
 
     ## plot curves of constant Schwarzschild t [ie spacelike curves] on the exterior:
-    jj <- penrose(TX(rt_ext,exterior=TRUE)) # penrose() defined in penrose_transform_chooser.R and TX() defined in kruskal_functions.R
+    jj <- penrose(TX(rt_ext,exterior=TRUE))  # TX() defined in kruskal_functions.R
     points(jj,type='l',lty=1,lwd=0.5,col=colours$t)  # spacelike
     jj[,1] <- -jj[,1]
     points(jj,type='l',lty=1,lwd=0.5,col=colours$t)  # spacelike
@@ -162,6 +164,6 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
 
     ## plot the AUT logo:
     if(!isFALSE(getOption("AUTlogo"))){logo(x=0.90,y=0.30, width=0.1)}  
-  git(-0.9,-0.7)
-  par(op)  
-}
+    git(-0.9,-0.7)
+    par(op)  
+}   # penrose_BH_extended() definition closes
