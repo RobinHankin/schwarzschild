@@ -8,11 +8,11 @@ penrose_laplace <- function(colours=standard_colours, ...){
   op <- par()   # Remember the options and reset at the end of the function
 
 
-                                        # set up axes
+  ## set up axes:
   jj <- c(-1,1)
   plot(jj,jj,asp=1,type='n',axes=FALSE,xlab='',ylab='',main='Laplace transform')
 
-  ## plot 'boundary' of universe
+  ## plot 'boundary' of the universe:
 
   segments(x0=c(-1,0,1,0),
            y0=c(0,1,0,-1),
@@ -27,9 +27,9 @@ penrose_laplace <- function(colours=standard_colours, ...){
   text(-1.1,0,'far\n away\n left')
   text(1.1,0,'far\naway\nright')
 
+  ## now a key:
   o <- seq(from=0,to=1,len=5)
 
-  ## now a key:
   for(i in o/10 +0.95){segments(x0=-1.1,x1=-1,y0=i,y1=i,col=colours$spacelike_curve)}
   text(-1,1,"spacelike curves",pos=4)
 
