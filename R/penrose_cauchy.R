@@ -43,7 +43,7 @@ penrose_cauchy <- function(colours=standard_colours, ...){
   jj <- c(-1000,seq(from= -20,to=20, len=1000),1000)
 
   ##thingvec <- seq(from=-18,to=18,by=1)
-  thingvec <- seq(from=-8,to=8,by=0.5)
+  thingvec <- seq(from=-6,to=6,by=0.25)
 
   for(i in thingvec){
     ## first timelike vectors:
