@@ -46,16 +46,16 @@ lemaitre <- function(draw_schwarzschild=FALSE, colours=standard_colours, ...){
     }
 
     ## null geodesics, originating outside event horizon at tau=-2:
-    for(jj in -1:5){ null_geodesics(jj,-2,TRUE,TRUE)} # null_geodesics() defined in lemaitre_functions.R
+    for(jj in -1:5){ null_geodesics_lemaitre(jj,-2,TRUE,TRUE)} # null_geodesics_lemaitre() defined in lemaitre_functions.R
     points(cbind(-1:2,-2),pch=16)
     
     ## outgoing nulls inside 
-    null_geodesics(-1.30,-2,FALSE,TRUE) # just barely escapes
-    null_geodesics(-1.35,-2,FALSE,TRUE) # just barely trapped
-    null_geodesics(-1.50,-2,FALSE,TRUE) # well trapped
+    null_geodesics_lemaitre(-1.30,-2,FALSE,TRUE) # just barely escapes
+    null_geodesics_lemaitre(-1.35,-2,FALSE,TRUE) # just barely trapped
+    null_geodesics_lemaitre(-1.50,-2,FALSE,TRUE) # well trapped
 
     ## lone inward null (this one is on its own, top right):
-    null_geodesics(2.50,0,TRUE,FALSE)
+    null_geodesics_lemaitre(2.50,0,TRUE,FALSE)
 
     ## singularity:
     segments(-2,-2,2,2,lwd=5,col=colours$singularity)

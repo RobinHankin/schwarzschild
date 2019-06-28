@@ -9,7 +9,7 @@ penrose_logistic <- function(colours=standard_colours, ...){
 
   op <- par()
 
-  ## set up axes
+  ## set up axes:
   jj <- c(-1,1)
   plot(jj,jj,asp=1,type='n',axes=FALSE,xlab='',ylab='',main='logistic transform')
 

@@ -12,8 +12,9 @@
 \alias{outgoing_lambert}
 \alias{ingoing_trajectory}
 \alias{inward_trajectory}
-\alias{ingoing_light}
+\alias{ingoing_light_lemaitre}
 \alias{null_geodesics}
+\alias{null_geodesics_lemaitre}
 \alias{outward_inside_trajectory}
 \alias{raindrop}
 \alias{trajectory}

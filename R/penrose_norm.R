@@ -38,6 +38,9 @@ penrose_norm <- function(colours=standard_colours, ...){
   for(i in o/10/sqrt(2)){segments(x0=-1-.05-i,x1=-1.1+0.1+0.05/2-i,y0=0.55+i,y1=0.6+0.05/2+i,col=colours$photon)}
   text(-1,0.6,"null curves",pos=4)
 
+  for(i in o/10/sqrt(2)){segments(x0=-1-.05+i,x1=-1.1-0.05/2+i,y0=0.35+i,y1=0.4+0.05/2+i,col=colours$photon)}
+  text(-1,0.4,"null curves",pos=4)
+
   ## first timelike vectors:
 
   jj <- c(-1000,seq(from= -20,to=20, len=1000),1000)
@@ -77,12 +80,21 @@ penrose_norm <- function(colours=standard_colours, ...){
   end_time <- 100
 
   for(i in thingvec){
+    ## rightward-directed light:
     points(penrose(
         cbind(x=c(start_x,start_x+end_time),
               t=c(i, i+end_time)
               )
         
     ), col=colours$photon,type='l')
+    ## leftward-directed light:
+      points(penrose(
+          cbind(x=c(start_x,start_x-end_time),
+              t=c(i, i+end_time)
+              )
+        
+    ), col=colours$photon,type='l')
+    
   }
   ## plot the AUT logo:
   if(!isFALSE(getOption("AUTlogo"))){logo(x=0.85,y=0.20, width=0.1)}  
