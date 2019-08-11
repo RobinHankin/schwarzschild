@@ -1,4 +1,4 @@
-eddington <- function(colours=standard_colours, ...){
+`eddington` <- function(colours=standard_colours, ...){
   op <- par()
   n <- 4  # size of plot
   
