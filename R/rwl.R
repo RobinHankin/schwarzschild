@@ -5,7 +5,8 @@
 ## bounded outward trajectory turns into an inward trajectory after a
 ## finite time, when it starts falling towards the black hole.
 
-## This file is concerned only with purely radial motion.
+## This file is concerned only with purely radial motion.  Filename
+## 'rwl' stands for 'Radial World Line'.
 
 ## In the work below, epsilon corresponds to 'energy' which is a
 ## conserved quantity in this case; epsilon=1 corresponds to an object
