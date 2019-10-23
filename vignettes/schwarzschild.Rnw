@@ -83,35 +83,6 @@ black hole.  Although the {\em raison d'\^{e}tre} of the package is
 the PDF images themselves, the physics underlying the Schwarzschild
 black hole is illustrated by the \proglang{R} functionality. 
 
-
-
-
-
-\section{Schwarzschild coordinates}
-
-\begin{figure}[p]
-  \begin{center}
-<<schwarzschild,fig=TRUE,height=9,width=9>>=
-schwarzschild()
-@
-\caption[Black hole, Schwarzschild coordinates]{Space near a black
-  hole, using\label{schwarzschild} standard Schwarzschild coordinates}
-  \end{center}
-\end{figure}
-
-The full Schwarzschild metric is
-
-\begin{equation}
-  ds^2 = -\left(1-1/r\right)dt^2 + \frac{dr^2}{1-1/r} + r^2d\theta^2+ r^2\sin^2\theta d\phi^2
-  \end{equation}
-
-\noindent and here we consider only the radial line corresponding
-to~$\theta=0$, giving
-
-\begin{equation}
-  ds^2 = -\left(1-1/r\right)dt^2 + \frac{dr^2}{1-1/r}
-  \end{equation}
-
 In general relativity, Schwarzschild coordinates for a black hole have
 desirable properties such as asymptotic matching with flat-space
 spherical coordinates; but other coordinate systems can be used which
@@ -122,7 +93,64 @@ Lema\^{i}tre, and various Penrose transforms.  These are described in
 many undergraduate GR textbooks.  This vignette shows some, but not
 all, of the included functionality.
 
+The diagrams use a consistent colouring system which is user-definable but the default is:
+
+\begin{itemize}
+\item Singularity
+\item Event horizon
+\item Ingoing null geodesics
+\item Outgoing null geodesics
+\item Lines of constant Schwarzschild $t$
+\item Lines of constant Schwarzschild $r$
+\item local light cones
+\end{itemize}
+
+
+
+
+
 For special relativity, see the \pkg{lorentz} package.
+
+\section{Schwarzschild coordinates}
+
+
+The full Schwarzschild metric is
+
+\begin{equation}
+  ds^2 = -\left(1-1/r\right)dt^2 + \frac{dr^2}{1-1/r} + r^2d\theta^2+ r^2\sin^2\theta d\phi^2
+  \end{equation}
+
+\noindent and here we consider only a radial line corresponding to~$\theta, \phi$ constant, giving
+
+\begin{equation}
+  ds^2 = -\left(1-1/r\right)dt^2 + \frac{dr^2}{1-1/r}
+\end{equation}
+
+These coordinates may be plotted in two dimensional space, as shown in
+figures~\ref{schwarzschild} and~\ref{schwarzschild_drops}.
+
+See how the light cones morph discontinuously as the event horizon is
+crossed; also note how the angle subtended by the inward and outward
+light approaches zero at the singularity.  Ingoing null geodesics do
+not cross the event horizon, which might be interpreted as saying that
+nothing passes the event horizon (see also
+figure~\ref{schwarzschild_drops} which demonstrates that ingoing
+massive particles do not cross the event horozon).  
+
+Ingoing and outgoing null geodesics are marked with arrows which show
+the direction of travel of a light path.  Observe how ingoing light
+travels backward in Schwarzschild time.
+
+
+\begin{figure}[p]
+\begin{center}
+<<schwarzschild,fig=TRUE,height=9,width=9>>=
+schwarzschild()
+@
+\caption[Black hole, Schwarzschild coordinates]{Space near a black
+  hole, using\label{schwarzschild} standard Schwarzschild coordinates}
+  \end{center}
+\end{figure}
 
 \begin{figure}[p]
   \begin{center}
@@ -136,6 +164,31 @@ schwarzschild(draw_infalling_drops=TRUE)
            dotted lines}
   \end{center}
 \end{figure}
+
+
+
+
+\clearpage
+\section{Eddington-Finkelstein coordinates}
+
+Eddington-Finkelstein coordinates use the same radial coordinate as
+Schwarzschild diagrams above but replace $t$ with
+$t'=t+r+2GM\left|\frac{r}{2GM}-1\right|$.  In this system, ingoing
+null geodesics have a slope $45^\circ$ and pass through the event
+horizon and outgoing null geodesics do not cross the event horizon;
+see figure~\ref{eddington}.  See how neither light cones nor ingoing
+null geodesics suffer any rupture as the event horizon is crossed;
+however, the light cones tip over as the event horizon is approached
+and inside the Schwarzschild radius the light cone points entirely
+inwards.  Note however that the angle subtended by the inward and
+outward paths approaches zero at the singularity.
+
+It is possible to use $t'=t-r-2GM\left|\frac{r}{2GM}-1\right|$
+instead, and this has the effect of forcing outgoing null geodesics to
+have a slope of $45^\circ$ (figure~\ref{eddingtonoutgoing}).  In this
+case ingoing light becomes tangential to the event horizon close to
+the event horizon.
+
 
 \begin{figure}[p]
   \begin{center}
@@ -153,11 +206,28 @@ eddington()
 eddington_outgoing()
 @
 \caption[Eddington-Finkelstein outgoing]{Space near a black hole,
-  using\label{eddington} Eddington-Finkelstein outgoing coordinates}
+  using\label{eddingtonoutgoing} Eddington-Finkelstein outgoing coordinates}
 \end{center}
 \end{figure}
 
 
+\clearpage
+\section{Gullstrand-Painleve coordinates}
+
+Gullstrand-Painleve coordinates introduce a time coordinate $t_r$ with
+
+\begin{equation}
+t_r = t - 2GM\left(-\sqrt{\frac{2r}{GM}} + \log\left(\frac{\sqrt{\frac{r}{2GM}}+1}{\sqrt{\frac{r}{2GM}}-1}\right)\right)
+\end{equation}
+                    
+See figures~\ref{gullstrand_painleve}
+and~\ref{gullstrand_painleve_drops}.  Similarly to
+Eddington-Finkelstein coordinates, ingoing null geodesics pass through
+the event horizon unimpeded while outgoing null geodesics are
+tangential.  World lines for freely falling raindrops are shown in
+figure \label{gullstrand_painleve_drops}.
+  
+  
 \begin{figure}[p]
   \begin{center}
 <<gullstrand_painleve,fig=TRUE,height=9,width=9>>=
@@ -174,10 +244,15 @@ gullstrand()
 gullstrand(draw_infalling_drops=TRUE)
 @
 \caption[Gullstrand-Painleve coordinates]{Space near a black hole,
-  using\label{gullstrand_painleve} Gullstrand-Painleve coordinates, with infalling
+  using\label{gullstrand_painleve_drops} Gullstrand-Painleve coordinates, with infalling
   raindrops shown as dotted lines}
 \end{center}
 \end{figure}
+
+
+\clearpage
+\section{Lema\^{i}tre coordinates}
+
 
 \begin{figure}[p]
   \begin{center}
@@ -209,6 +284,11 @@ kruskal_with_throw(draw_schwarzschild=TRUE)
    together with a thrown object and including lines of constant Schwarzschild~$t$ and~$r$}
 \end{center}
 \end{figure}
+
+\clearpage
+\section{Lema\^{i}tre coordinates}
+
+
 
 
 \begin{figure}[p]
