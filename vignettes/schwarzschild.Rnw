@@ -214,19 +214,25 @@ eddington_outgoing()
 \clearpage
 \section{Gullstrand-Painleve coordinates}
 
+
+
 Gullstrand-Painleve coordinates introduce a time coordinate $t_r$ with
 
 \begin{equation}
 t_r = t - 2GM\left(-\sqrt{\frac{2r}{GM}} + \log\left(\frac{\sqrt{\frac{r}{2GM}}+1}{\sqrt{\frac{r}{2GM}}-1}\right)\right)
 \end{equation}
                     
-See figures~\ref{gullstrand_painleve}
-and~\ref{gullstrand_painleve_drops}.  Similarly to
-Eddington-Finkelstein coordinates, ingoing null geodesics pass through
-the event horizon unimpeded while outgoing null geodesics are
-tangential.  World lines for freely falling raindrops are shown in
-figure \label{gullstrand_painleve_drops}.
-  
+In this coordinate system, the ingoing coordinates are such that the
+time coordinate is (up to a constant) the proper time of a
+free-falling observer who starts from far away at zero velocity; see
+figures~\ref{gullstrand_painleve} and~\ref{gullstrand_painleve_drops}.
+The metric tensor is not diagonal, which complicates matters.
+However, similarly to Eddington-Finkelstein coordinates, ingoing null
+geodesics pass through the event horizon unimpeded while outgoing null
+geodesics are tangential.  World lines for freely falling raindrops
+are shown in figure \label{gullstrand_painleve_drops}.  Again we see
+that, in these coordinates, infalling raindrops pass through the event
+horizon.
   
 \begin{figure}[p]
   \begin{center}
@@ -251,8 +257,38 @@ gullstrand(draw_infalling_drops=TRUE)
 
 
 \clearpage
-\section{Lema\^{i}tre coordinates}
+\section{Kruskal-Szekeres coordinates}
 
+\begin{eqnarray}
+T &=& \left(\frac{r}{2GM} - 1\right)^{1/2}e^{r/4GM}\sinh\left(\frac{t}{4GM}\right)\\
+X &=& \left(\frac{r}{2GM} - 1\right)^{1/2}e^{r/4GM}\cosh\left(\frac{t}{4GM}\right)
+\end{eqnarray}
+for the exterior region $r>2GM$ outside the event horizon and:
+\begin{eqnarray}
+T &=& \left(1 - \frac{r}{2GM}\right)^{1/2}e^{r/4GM}\cosh\left(\frac{t}{4GM}\right)\\
+X &=& \left(1 - \frac{r}{2GM}\right)^{1/2}e^{r/4GM}\sinh\left(\frac{t}{4GM}\right)
+\end{eqnarray}
+for the interior region $0<r<2GM$; see figure~\ref{kruskal_szekeres}
+which also shows white hole and antiuniverse regions.  In this
+representation, the singularity appears as a black hyperbola and the
+event horizon is a set of $45\circ$ lines.  Ingoing and outgoing null
+geodesics are lines at $45^\circ$, which shows that objects inside the
+black hole cannot escape.  Figure~\ref{kruskal_szekeres_throw}
+also shows worldlines of some moving objects.
+
+
+\begin{figure}[p]
+  \begin{center}
+<<kruskal_with_throw_plus,fig=TRUE,height=9,width=9>>=
+kruskal_with_throw(draw_schwarzschild=TRUE)
+@
+\caption[Kruskal-Szekeres coordinates with throw plus lines of
+  constant Schwarzschild~$t$ and~$r$]{Space near a black hole,
+  using\label{kruskal_szekeres_throw} Kruskal-Szekeres coordinates,
+  together with a thrown object and including lines of constant
+  Schwarzschild~$t$ and~$r$}
+\end{center}
+\end{figure}
 
 \begin{figure}[p]
   \begin{center}
@@ -266,6 +302,19 @@ kruskal()
 
 \begin{figure}[p]
   \begin{center}
+<<kruskal,fig=TRUE,height=9,width=9>>=
+kruskal_extended()
+@
+\caption[Extended Kruskal-Szekeres coordinates]{Space near a black hole,
+  using\label{kruskal_szekeres_extended} extended Kruskal-Szekeres coordinates}
+\end{center}
+\end{figure}
+
+
+\clearpage
+\subsection*{Inverted Kruskal-Szekeres coordinates}
+\begin{figure}[p]
+  \begin{center}
 <<kruskal_inverted,fig=TRUE,height=9,width=9>>=
 kruskal_inverted()
 @
@@ -274,16 +323,6 @@ kruskal_inverted()
 \end{center}
 \end{figure}
 
-\begin{figure}[p]
-  \begin{center}
-<<kruskal_with_throw_plus,fig=TRUE,height=9,width=9>>=
-kruskal_with_throw(draw_schwarzschild=TRUE)
-@
-\caption[Kruskal-Szekeres coordinates with throw plus lines of constant Schwarzschild~$t$
- and~$r$]{Space near a black hole,  using\label{kruskal_szekeres} Kruskal-Szekeres coordinates,
-   together with a thrown object and including lines of constant Schwarzschild~$t$ and~$r$}
-\end{center}
-\end{figure}
 
 \clearpage
 \section{Lema\^{i}tre coordinates}
