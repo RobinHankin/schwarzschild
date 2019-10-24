@@ -50,7 +50,7 @@
     legend(legpos,lty=1,lwd=c(rep(lthick,6),6),
            col=c("red","orange","yellow","green","blue","purple",colours$horizon),
            legend=c("inward throw","outward throw, bounded","critical","unbounded",
-                    "interior inward","interior outward","event horizon"))
+                    "interior outward","interior inward","event horizon"))
 
 
     ## plot the AUT logo:
