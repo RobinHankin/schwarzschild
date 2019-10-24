@@ -113,7 +113,6 @@ For special relativity, see the \pkg{lorentz} package.
 
 \section{Schwarzschild coordinates}
 
-
 The full Schwarzschild metric is
 
 \begin{equation}
@@ -139,7 +138,12 @@ massive particles do not cross the event horozon).
 
 Ingoing and outgoing null geodesics are marked with arrows which show
 the direction of travel of a light path.  Observe how ingoing light
-travels backward in Schwarzschild time.
+travels backward in Schwarzschild time. 
+
+Worldlines of freely falling objects may be calculated and plotted on
+Schwarzschild coordinates (figure~\label{schwarzschild_throw}) or
+logarithmic Schwarzschild coordinates
+(figure~\label{schwarzschild_throw_logx}).
 
 
 \begin{figure}[p]
@@ -165,6 +169,28 @@ schwarzschild(draw_infalling_drops=TRUE)
   \end{center}
 \end{figure}
 
+\begin{figure}[p]
+  \begin{center}
+<<schwarzschild_with_throw,fig=TRUE,height=9,width=9>>=
+thrower(logaxes='',legpos='topright')
+@
+\caption[Schwarzschild coordinates, with throw]{Space near a black
+  hole, using\label{schwarzshild_throw} Schwarzschild coordinates,
+  together with worldlines of thrown objects} 
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<schwarzschild_with_throw_logx,fig=TRUE,height=9,width=9>>=
+thrower(logaxes='x',legpos='topright')
+@
+\caption[Schwarzschild coordinates, with throw]{Space near a black
+  hole, using\label{schwarzshild_throw_logx} Schwarzschild
+  coordinates, together with worldlines of thrown objects ($x$-axis
+  logarithmic)}
+\end{center}
+\end{figure}
 
 
 
@@ -230,7 +256,7 @@ The metric tensor is not diagonal, which complicates matters.
 However, similarly to Eddington-Finkelstein coordinates, ingoing null
 geodesics pass through the event horizon unimpeded while outgoing null
 geodesics are tangential.  World lines for freely falling raindrops
-are shown in figure \label{gullstrand_painleve_drops}.  Again we see
+are shown in figure \ref{gullstrand_painleve_drops}.  Again we see
 that, in these coordinates, infalling raindrops pass through the event
 horizon.
   
@@ -268,27 +294,25 @@ for the exterior region $r>2GM$ outside the event horizon and:
 T &=& \left(1 - \frac{r}{2GM}\right)^{1/2}e^{r/4GM}\cosh\left(\frac{t}{4GM}\right)\\
 X &=& \left(1 - \frac{r}{2GM}\right)^{1/2}e^{r/4GM}\sinh\left(\frac{t}{4GM}\right)
 \end{eqnarray}
-for the interior region $0<r<2GM$; see figure~\ref{kruskal_szekeres}
-which also shows white hole and antiuniverse regions.  In this
-representation, the singularity appears as a black hyperbola and the
-event horizon is a set of $45\circ$ lines.  Ingoing and outgoing null
-geodesics are lines at $45^\circ$, which shows that objects inside the
-black hole cannot escape.  Figure~\ref{kruskal_szekeres_throw}
-also shows worldlines of some moving objects.
 
+for the interior region $0<r<2GM$; see figure~\ref{kruskal_szekeres}.
+In this representation, the singularity appears as a black hyperbola
+and the event horizon is a set of $45^\circ$ lines.  Ingoing and
+outgoing null geodesics are lines at $45^\circ$, which shows that
+objects inside the black hole cannot escape (that is, events below the
+singularity and above the pink event horizon) cannot escape.  This
+diagram also includes lines of constant Schwarzschild $r$ and $t$,
+showing that inside the event horizon, $r$ is a timelike coordinate
+and $t$ a spacelike coordinate.
 
-\begin{figure}[p]
-  \begin{center}
-<<kruskal_with_throw_plus,fig=TRUE,height=9,width=9>>=
-kruskal_with_throw(draw_schwarzschild=TRUE)
-@
-\caption[Kruskal-Szekeres coordinates with throw plus lines of
-  constant Schwarzschild~$t$ and~$r$]{Space near a black hole,
-  using\label{kruskal_szekeres_throw} Kruskal-Szekeres coordinates,
-  together with a thrown object and including lines of constant
-  Schwarzschild~$t$ and~$r$}
-\end{center}
-\end{figure}
+Figure~\ref{kruskal_szekeres_throw} also shows worldlines of some
+moving objects, and figure~\ref{kruskal_szekeres_extended} shows
+extended coordinate system in which the antiuniverse and white hole
+are visible.  The possibility of causal connection between universe
+and antiuniverse is indicated by the crossing of ingoing null
+geodesics from the universe intersecting with outgoing (?) null
+geodesics from the antiuniverse.
+
 
 \begin{figure}[p]
   \begin{center}
@@ -302,7 +326,21 @@ kruskal()
 
 \begin{figure}[p]
   \begin{center}
-<<kruskal,fig=TRUE,height=9,width=9>>=
+<<kruskal_with_throw,fig=TRUE,height=9,width=9>>=
+kruskal_with_throw(draw_schwarzschild=TRUE)
+@
+\caption[Kruskal-Szekeres coordinates with throw plus lines of
+  constant Schwarzschild~$t$ and~$r$]{Space near a black hole,
+  using\label{kruskal_szekeres_throw} Kruskal-Szekeres coordinates,
+  together with a thrown object and including lines of constant
+  Schwarzschild~$t$ and~$r$}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[p]
+  \begin{center}
+<<kruskal_extended,fig=TRUE,height=9,width=9>>=
 kruskal_extended()
 @
 \caption[Extended Kruskal-Szekeres coordinates]{Space near a black hole,
@@ -312,7 +350,11 @@ kruskal_extended()
 
 
 \clearpage
-\subsection*{Inverted Kruskal-Szekeres coordinates}
+\subsection{Inverted Kruskal-Szekeres coordinates}
+
+It is possible to plot lines of equal $X,T$ on a Schwarzschild
+lattice, figure~\ref{kruskal_szekeres_inverted}.
+
 \begin{figure}[p]
   \begin{center}
 <<kruskal_inverted,fig=TRUE,height=9,width=9>>=
@@ -327,8 +369,31 @@ kruskal_inverted()
 \clearpage
 \section{Lema\^{i}tre coordinates}
 
+Lema\^{i}tre coordinates are another way of removing the coordinate
+singularity at the event horizon.  The relationship between
+Lema\^{i}tre coordinates $\tau,\rho$ and Schwarzschild $r,t$ is most
+easily expressed in differential form:
 
+\begin{eqnarray}
+d\tau &=& dt +\sqrt{\frac{2GM}{r}}\left(1-\frac{2GM}{r}\right)^{-1}\\
+d\rho &=& dt +\sqrt{\frac{r}{2GM}}\left(1-\frac{2GM}{r}\right)^{-1}\\
+\end{eqnarray}
 
+Freely falling particles at rest at infinity follow trajectories with
+constant $\rho$, with $\tau$ measuring their proper time.  Lines of
+constant $\rho$ are It can be shown that
+$r^3=2GM\left[3(\rho-\tau)/2\right]^2$; the metric becomes
+\begin{equation}
+  dx^2= -d\tau^2 + \frac{2GM}{r}d\rho^2
+  \end{equation}
+
+So null geodesics obey 
+
+\[
+\frac{d\tau}{dr}=\frac{1}{\pm 1-\sqrt{2GM/r}}
+\]
+
+and these are shown in figure~\ref{lemaitre}.
 
 \begin{figure}[p]
   \begin{center}
@@ -340,16 +405,6 @@ lemaitre()
 \end{center}
 \end{figure}
 
-\begin{figure}[p]
-  \begin{center}
-<<schwarzschild_with_throw,fig=TRUE,height=9,width=9>>=
-thrower(logaxes='',legpos='topright')
-@
-\caption[Schwarzschild coordinates, with throw]{Space near a black hole,
-  using\label{schwarzshild_throw} Schwarzschild coordinates, together with worldlines of thrown
-  objects} 
-\end{center}
-\end{figure}
 
 
 \begin{figure}[p]
