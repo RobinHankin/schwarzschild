@@ -16,7 +16,8 @@
     t_start_inside <- 2.0
 
     lthick <- 2
-    
+
+    ## trajectory() defined in rwl.R
     points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.82,sign=-1)       ,type='l',lwd=lthick,col='red'   )
     points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.82,sign=+1)       ,type='l',lwd=lthick,col='orange')
     points(trajectory(t0=t_start_outside, r0=r_start_outside, 0.89,sign=+1,n=1000),type='l',lwd=lthick,col='orange')
