@@ -92,6 +92,10 @@ penrose_BH_cauchy <- function(colours=standard_colours, ...){
   segments(x0=1,y0=0,x1=0.5,y1=-0.5,lwd=1,col=colours$singularity)
 
 
+  ## label the universe and antiuniverse:
+  text(0.5,-0.07,"universe")
+  text(0.0, 0.32,"antiuniverse")
+
   ## last thing, draw the horizons
 
   ## do the horizons last:
