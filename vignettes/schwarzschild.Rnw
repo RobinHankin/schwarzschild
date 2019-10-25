@@ -440,14 +440,14 @@ and these are shown in figure~\ref{lemaitre}.
 lemaitre()
 @
 \caption[Space near a black hole, using Lema\^{i}tre
-  coordinates]{Space near a black hole, using Lema\^{i}tre
-  coordinates~$(\rho,\tau$).  Ingoing light (red) crosses the event
-  horizon but outgoing light (blue) does not.  The singularity is
-  represented as a $45^\circ$ black line, the gray above being
-  meaningless.  The event horizon (fuschia) and the fact that interior
-  null geodesics have a slope $>45^\circ$ show that interior light
-  cannot escape to infinity.  Infalling raindrops, with zero speed at
-  infinity, are shown as vertical dotted lines}
+  coordinates]{Space near a black hole, using
+  Lema\^{i}tre\label{lemaitre} coordinates~$(\rho,\tau$).  Ingoing
+  light (red) crosses the event horizon but outgoing light (blue) does
+  not.  The singularity is represented as a $45^\circ$ black line, the
+  gray above being meaningless.  The event horizon (fuschia) and the
+  fact that interior null geodesics have a slope $>45^\circ$ show that
+  interior light cannot escape to infinity.  Infalling raindrops, with
+  zero speed at infinity, are shown as vertical dotted lines}
 \end{center}
 \end{figure}
 
