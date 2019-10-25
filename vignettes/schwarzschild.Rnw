@@ -382,7 +382,9 @@ kruskal_with_throw(draw_schwarzschild=TRUE)
 kruskal_extended()
 @
 \caption[Extended Kruskal-Szekeres coordinates]{Space near a black hole,
-  using\label{kruskal_szekeres_extended} extended Kruskal-Szekeres coordinates}
+  \label{kruskal_szekeres_extended} as for figure~\ref{kruskal_szekeres} but
+  using extended Kruskal-Szekeres coordinates.  The black and white
+  holes, and universe and antiuniverse, are labelled}
 \end{center}
 \end{figure}
 
@@ -390,7 +392,7 @@ kruskal_extended()
 \clearpage
 \subsection{Inverted Kruskal-Szekeres coordinates}
 
-It is possible to plot contour lines of equal $X,T$ on aSchwarzschild
+It is possible to plot contour lines of equal $X,T$ on Schwarzschild
 coordinates, figure~\ref{kruskal_szekeres_inverted}.
 
 \begin{figure}[p]
@@ -402,7 +404,7 @@ kruskal_inverted()
   showing contour lines of equal Kruskal-Szekeres $X,T$]{Space near a
   black hole using\label{kruskal_szekeres_inverted} Schwarzschild
   coordinates, showing lines of equal Kruskal-Szekeres coordinate $X$
-  (blue) and $T$ (brown)}
+  (blue) and $T$ (brown), neither of which cross the event horizon}
 \end{center}
 \end{figure}
 
@@ -539,26 +541,35 @@ figure~\ref{penrose_BH_cauchy}.
 penrose_BH_cauchy()
 @
 \caption[Penrose diagram of universe with a black hole, Cauchy
-         transform]{The universe including a black hole in compact
-           presentation using a \label{penrose_BH_cauchy} Cauchy
-           transform}
+  transform]{The universe including a black hole in compact
+  presentation using a \label{penrose_BH_cauchy} Cauchy transform.
+  Universe and interior of black hole labelled.  Ingoing light (red)
+  and outgoing light (red) shown as $45^\circ$ lines; escape from the
+  black hole is impossible as the event horizons (fuschia) have a
+  slope of $45^\circ$, and collision with the singularity (horizontal
+  black line) is unavoidable.  Lines of constant Schwarzschild time
+  (orange) and constant Schwarzschild radius (green) are shown; see
+  how the lines of constant radius are spacelike, and lines of
+  constant Schwarzschild time are timelike, inside the event horizon}
 \end{center}
 \end{figure}
 
 
-%\begin{figure}[p]
-%\begin{center}
-%<<penrose_BH_laplace,fig=TRUE,height=9,width=9>>=
-%penrose_BH_laplace()
-%@
-%\caption[Penrose diagram of universe with a black hole, Laplace
-%         transform]{The universe including a black hole in compact
-%           presentation using a \label{penrose_BH_laplace} Laplace
-%           transform}
-%\end{center}
-%\end{figure}
-%
-%
+\begin{figure}[p]
+\begin{center}
+<<penrose_BH_laplace,fig=TRUE,height=9,width=9>>=
+penrose_BH_laplace()
+@
+\caption[Penrose diagram of universe with a black hole, Laplace
+  transform]{The universe including a black hole in compact
+  presentation as for figure~\ref{penrose_BH_cauchy} but using
+  a \label{penrose_BH_laplace} Laplace transformation instead of a
+  Cauchy; the singularity becomes a curved line and the lines of equal
+  Schwarzschild radius become distorted curves}
+\end{center}
+\end{figure}
+
+
 %\begin{figure}[p]
 %  \begin{center}
 %<<penrose_BH_logistic,fig=TRUE,height=9,width=9>>=
@@ -585,17 +596,20 @@ penrose_BH_cauchy()
 %\end{figure}
 
 
-
-
 \begin{figure}[p]
   \begin{center}
 <<penrose_BH_extended,fig=TRUE,height=9,width=9>>=
 penrose_BH_extended()
 @
 \caption[Extended Penrose diagram of the universe with a black hole,
-         Cauchy transform]{The extended universe, with a black hole,
-           in compact presentation using a \label{penrose_BH_extended}
-           Cauchy transform}
+  Cauchy transform]{The extended universe, with a black hole, in
+  compact presentation using a \label{penrose_BH_extended} Cauchy
+  transform.  Universe, antiuniverse, black hole and white hole
+  labelled, separated by event horizons (fuschia).  Rightward (blue)
+  and leftward (red) light appears in all four regions as $45^\circ$
+  lines.  See how leftward light originating from the universe can
+  interact with rigthward light originating from the antiuniverse in
+  the black hole}
 \end{center}
 \end{figure}
 
