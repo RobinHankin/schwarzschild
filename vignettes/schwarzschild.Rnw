@@ -141,9 +141,9 @@ the direction of travel of a light path.  Observe how ingoing light
 travels backward in Schwarzschild time. 
 
 Worldlines of freely falling objects may be calculated and plotted on
-Schwarzschild coordinates (figure~\label{schwarzschild_throw}) or
+Schwarzschild coordinates (figure~\ref{schwarzschild_throw}) or
 logarithmic Schwarzschild coordinates
-(figure~\label{schwarzschild_throw_logx}).  See how outward-directed
+(figure~\ref{schwarzschild_throw_logx}).  See how outward-directed
 objects on the interior of the black hole travels backward in
 Schwarzschild time, as for null geodesics.  Also see how all world
 lines, whether inward or outward directed, have zero slope as the
@@ -156,7 +156,14 @@ singularity is approached.
 schwarzschild()
 @
 \caption[Black hole, Schwarzschild coordinates]{Space near a black
-  hole, using\label{schwarzschild} standard Schwarzschild coordinates}
+  hole, using\label{schwarzschild} standard Schwarzschild coordinates.
+  Neither ingoing light (red) nor outgoing light (blue) crosses the
+  event horizon (fuschia); inside the black hole, ingoing light
+  travels backwards in Schwarzschild time but nears the singularity.
+  As the event horizon is approached from the outside, the light cones
+  (gray) close up but as the event horizon is crossed, they become
+  everted.  As the singularity is approached, ingoing and outgoing
+  light converge and meet the singularity horizontally}
   \end{center}
 \end{figure}
 
@@ -165,11 +172,14 @@ schwarzschild()
 <<schwarzschild_drops,fig=TRUE,height=9,width=9>>=
 schwarzschild(draw_infalling_drops=TRUE)
 @
-\caption[Black hole, Schwarzschild coordinates, with infalling drops shown
-         as dotted lines]{Space near a black hole,
-           using\label{schwarzschild_drops} standard Schwarzschild
-           coordinates, with worldlines of infalling drops shown as
-           dotted lines}
+\caption[Black hole, Schwarzschild coordinates, with infalling drops
+  shown as dotted lines]{Space near a black hole, as for
+  figure~\ref{schwarzschild}, but \label{schwarzschild_drops} with
+  worldlines of infalling drops shown as dotted lines.  Drops are
+  released with zero speed infinity and fall freely.  The world lines
+  of the drops do not cross the event horizon; inside the event
+  horizon they travel backwards in Schwarzschild time and meet the
+  singularity horizontally}
   \end{center}
 \end{figure}
 
@@ -179,8 +189,13 @@ schwarzschild(draw_infalling_drops=TRUE)
 thrower(logaxes='',legpos='topright')
 @
 \caption[Schwarzschild coordinates, with throw]{Space near a black
-  hole, using\label{schwarzshild_throw} Schwarzschild coordinates,
-  together with worldlines of thrown objects} 
+  hole, using\label{schwarzschild_throw} Schwarzschild coordinates,
+  together with worldlines of freely falling objects released with
+  various speeds from outside and inside the event horizon at radii
+  $r=2r_s=4GM$ and $r=0.9r_s=1.8GM$ respectively.  Objects outside the
+  event horizon do not cross it; objects inside the event horizon,
+  whatever their initial speed, touch the singularity after a finite
+  amount of proper time}
 \end{center}
 \end{figure}
 
@@ -190,13 +205,10 @@ thrower(logaxes='',legpos='topright')
 thrower(logaxes='x',legpos='topright')
 @
 \caption[Schwarzschild coordinates, with throw]{Space near a black
-  hole, using\label{schwarzshild_throw_logx} Schwarzschild
-  coordinates, together with worldlines of thrown objects ($x$-axis
-  logarithmic)}
+hole, as for figure~\ref{schwarzschild_throw}
+\label{schwarzschild_throw_logx} but with logarithmic axes}
 \end{center}
 \end{figure}
-
-
 
 \clearpage
 \section{Eddington-Finkelstein coordinates}
@@ -226,7 +238,14 @@ the event horizon.
 eddington()
 @
 \caption[Eddington-Finkelstein ingoing]{Space near a black hole,
-  using\label{eddington} Eddington-Finkelstein ingoing coordinates}
+  using\label{eddington} Eddington-Finkelstein ingoing coordinates.
+  Ingoing light (red) passes through the event horizon (fuschia)
+  unimpeded; neither outgoing light (blue) nor lines of equal
+  Schwarzschild time (orange) cross the event horizon.  As the
+  singularity is approached, light cones (grey) tip over and at the
+  singularity are closed.  Ingoing and outgoing light meet the
+  singularity at $45^\circ$ (compare Schwarzschild coordinates where
+  the angle is $0^\circ$)}
 \end{center}
 \end{figure}
 
@@ -235,8 +254,11 @@ eddington()
 <<eddington_outgoing,fig=TRUE,height=9,width=9>>=
 eddington_outgoing()
 @
-\caption[Eddington-Finkelstein outgoing]{Space near a black hole,
-  using\label{eddingtonoutgoing} Eddington-Finkelstein outgoing coordinates}
+\caption[Eddington-Finkelstein outgoing]{Space near a black
+  hole, \label{eddingtonoutgoing}, as for figure~\ref{eddington} but
+  using Eddington-Finkelstein {\em outgoing} coordinates.  Outgoing
+  light (blue) passes through the event horizon (fuschia) unimpeded
+  but ingoing light (red) does not cross the event horizon}
 \end{center}
 \end{figure}
 
@@ -413,18 +435,39 @@ lemaitre()
 \section{Penrose diagrams}
 
 Penrose diagrams are a way of describing the entire universe (reduced
-to one spatial dimension plus time) in a compact region.  A
+to one spatial dimension plus time) in a compact region.  The usual
 transformation law is
 
 \begin{equation}
 \tan\left(u\pm v\right)=x\pm t\qquad\longleftrightarrow\qquad u\pm v=\arctan\left(x\pm t\right)
 \end{equation}
 
-However, here we observe that any function that maps the real line to
-the unit interval~$\left(-\pi,\pi\right)$ then
+and we observe that $\arctan(\cdot)$ maps the real line to the
+interval~$\left(-\pi,\pi\right)$.  However, it is more convenient to
+consider maps from the real line to the unit interval $(0,1)$ and in
+this case we would have
 
+\begin{equation}
+u\pm v=\frac{1}{2} +\frac{\arctan\left(x\pm t\right)}{\pi}
+\end{equation}
 
+and we recognise that~$\frac{1}{2} +\frac{\arctan\left(x\pm
+  t\right)}{\pi}$ is the distribution function of the Cauchy
+  distribution.  This gives a diagram as shown in
+  figure~\ref{penrose_cauchy}.  However, the image is visually
+  displeasing and it aesthetically preferable to use a logistic or
+  Gaussian transform (figures~\ref{penrose_logistic}
+  and~\ref{penrose_norm}) which are more commonly used.
 
+\begin{figure}[p]
+  \begin{center}
+<<penrose_cauchy,fig=TRUE,height=9,width=9>>=
+penrose_cauchy()
+@
+\caption[Penrose diagram, Cauchy transform]{The universe in compact
+  presentation using a \label{penrose_cauchy} Cauchy Penrose transform}
+\end{center}
+\end{figure}
 
 \begin{figure}[p]
   \begin{center}
@@ -446,8 +489,23 @@ penrose_norm()
 \end{center}
 \end{figure}
 
-\begin{figure}[p]
-  \begin{center}
+
+\clearpage
+\section{Penrose diagrams with black holes}
+
+Similar techniques can be used to present the spacetime surrounding
+black holes, although in this case only the Cauchy transform produces
+pleasing output (figure~\ref{penrose_BH_cauchy}).  The {\tt
+schwarzschild} package can produce these diagrams for Laplace,
+logistic, and Gaussian transforms, but in each case the event horizon
+has an ugly and uninformative shape).
+
+In the case of the Cauchy transformation it is possible to extend the
+diagram conformally and show, in addition to the universe and the
+black hole the antiuniverse and a white hole,
+figure~\ref{penrose_BH_cauchy}.
+
+\begin{figure}[p] \begin{center}
 <<penrose_BH_cauchy,fig=TRUE,height=9,width=9>>=
 penrose_BH_cauchy()
 @
@@ -459,43 +517,46 @@ penrose_BH_cauchy()
 \end{figure}
 
 
-\begin{figure}[p]
-  \begin{center}
-<<penrose_BH_laplace,fig=TRUE,height=9,width=9>>=
-penrose_BH_laplace()
-@
-\caption[Penrose diagram of universe with a black hole, Laplace
-         transform]{The universe including a black hole in compact
-           presentation using a \label{penrose_BH_laplace} Laplace
-           transform}
-\end{center}
-\end{figure}
+%\begin{figure}[p]
+%\begin{center}
+%<<penrose_BH_laplace,fig=TRUE,height=9,width=9>>=
+%penrose_BH_laplace()
+%@
+%\caption[Penrose diagram of universe with a black hole, Laplace
+%         transform]{The universe including a black hole in compact
+%           presentation using a \label{penrose_BH_laplace} Laplace
+%           transform}
+%\end{center}
+%\end{figure}
+%
+%
+%\begin{figure}[p]
+%  \begin{center}
+%<<penrose_BH_logistic,fig=TRUE,height=9,width=9>>=
+%penrose_BH_logistic()
+%@
+%\caption[Penrose diagram of universe with a black hole, logistic
+%         transform]{The universe including a black hole in compact
+%           presentation using a \label{penrose_BH_logistic} logistic
+%           transform}
+%\end{center}
+%\end{figure}
+%
+%
+%\begin{figure}[p]
+%  \begin{center}
+%<<penrose_BH_norm,fig=TRUE,height=9,width=9>>=
+%penrose_BH_norm()
+%@
+%\caption[Penrose diagram of universe with a black hole, Gaussian
+%         transform]{The universe including a black hole in compact
+%           presentation using a \label{penrose_BH_norm} Gaussian
+%           transform}
+%\end{center}
+%\end{figure}
 
 
-\begin{figure}[p]
-  \begin{center}
-<<penrose_BH_logistic,fig=TRUE,height=9,width=9>>=
-penrose_BH_logistic()
-@
-\caption[Penrose diagram of universe with a black hole, logistic
-         transform]{The universe including a black hole in compact
-           presentation using a \label{penrose_BH_logistic} logistic
-           transform}
-\end{center}
-\end{figure}
 
-
-\begin{figure}[p]
-  \begin{center}
-<<penrose_BH_norm,fig=TRUE,height=9,width=9>>=
-penrose_BH_norm()
-@
-\caption[Penrose diagram of universe with a black hole, Gaussian
-         transform]{The universe including a black hole in compact
-           presentation using a \label{penrose_BH_norm} Gaussian
-           transform}
-\end{center}
-\end{figure}
 
 \begin{figure}[p]
   \begin{center}
