@@ -171,6 +171,14 @@ kruskal_extended <- function(colours = standard_colours, ...){
     text(0,+1.6,expression(r<0),cex=1.6)
     text(0,-1.6,expression(r<0),cex=1.6)
 
+
+    ## label the universe, antiuniverse, black hole, white hole:
+
+    text(0,-0.6,"white hole")
+    text(0,+0.6,"black hole")
+    text(-1.6,0.1,"antiuniverse")
+    text(1.6,0.1,"universe")
+    
     size <- 33
     ## do the horizons last:
     segments(-size,-size,size,size,col=colours$horizon,lwd=5)
