@@ -143,7 +143,11 @@ travels backward in Schwarzschild time.
 Worldlines of freely falling objects may be calculated and plotted on
 Schwarzschild coordinates (figure~\label{schwarzschild_throw}) or
 logarithmic Schwarzschild coordinates
-(figure~\label{schwarzschild_throw_logx}).
+(figure~\label{schwarzschild_throw_logx}).  See how outward-directed
+objects on the interior of the black hole travels backward in
+Schwarzschild time, as for null geodesics.  Also see how all world
+lines, whether inward or outward directed, have zero slope as the
+singularity is approached.
 
 
 \begin{figure}[p]
@@ -405,27 +409,22 @@ lemaitre()
 \end{center}
 \end{figure}
 
+\clearpage
+\section{Penrose diagrams}
+
+Penrose diagrams are a way of describing the entire universe (reduced
+to one spatial dimension plus time) in a compact region.  A
+transformation law is
+
+\begin{equation}
+\tan\left(u\pm v\right)=x\pm t\qquad\longleftrightarrow\qquad u\pm v=\arctan\left(x\pm t\right)
+\end{equation}
+
+However, here we observe that any function that maps the real line to
+the unit interval~$\left(-\pi,\pi\right)$ then
 
 
-\begin{figure}[p]
-  \begin{center}
-<<penrose_cauchy,fig=TRUE,height=9,width=9>>=
-penrose_cauchy()
-@
-\caption[Penrose diagram, Cauchy transform]{The universe in compact
-  presentation using a \label{penrose_cauchy} Cauchy Penrose transform}
-\end{center}
-\end{figure}
 
-\begin{figure}[p]
-  \begin{center}
-<<penrose_laplace,fig=TRUE,height=9,width=9>>=
-penrose_laplace()
-@
-\caption[Penrose diagram, Laplace transform]{The universe in compact
-  presentation using a \label{penrose_laplace} Laplace Penrose transform}
-\end{center}
-\end{figure}
 
 \begin{figure}[p]
   \begin{center}
