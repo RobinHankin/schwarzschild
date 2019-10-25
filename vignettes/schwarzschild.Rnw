@@ -255,7 +255,7 @@ eddington()
 eddington_outgoing()
 @
 \caption[Eddington-Finkelstein outgoing]{Space near a black
-  hole, \label{eddingtonoutgoing}, as for figure~\ref{eddington} but
+  hole, \label{eddingtonoutgoing} as for figure~\ref{eddington} but
   using Eddington-Finkelstein {\em outgoing} coordinates.  Outgoing
   light (blue) passes through the event horizon (fuschia) unimpeded
   but ingoing light (red) does not cross the event horizon}
@@ -265,8 +265,6 @@ eddington_outgoing()
 
 \clearpage
 \section{Gullstrand-Painleve coordinates}
-
-
 
 Gullstrand-Painleve coordinates introduce a time coordinate $t_r$ with
 
@@ -292,7 +290,12 @@ horizon.
 gullstrand()
 @
 \caption[Gullstrand-Painleve coordinates]{Space near a black hole,
-  using\label{gullstrand_painleve} Gullstrand-Painleve coordinates}
+  using\label{gullstrand_painleve} Gullstrand-Painleve coordinates.
+  Ingoing light (red) passes through the event horizon (fuschia), but
+  outgoing light (blue) does not cross the event horizon.  Light cones
+  (gray) tip over and close up as the singularity is approached.
+  Lines of equal Schwarzschild time are shown in orange
+}
 \end{center}
 \end{figure}
 
@@ -302,8 +305,9 @@ gullstrand()
 gullstrand(draw_infalling_drops=TRUE)
 @
 \caption[Gullstrand-Painleve coordinates]{Space near a black hole,
-  using\label{gullstrand_painleve_drops} Gullstrand-Painleve coordinates, with infalling
-  raindrops shown as dotted lines}
+  using\label{gullstrand_painleve_drops} Gullstrand-Painleve
+  coordinates, as for figure~\ref{gullstrand_painleve} but with
+  infalling raindrops shown as dotted lines}
 \end{center}
 \end{figure}
 
@@ -346,7 +350,16 @@ geodesics from the antiuniverse.
 kruskal()
 @
 \caption[Kruskal-Szekeres coordinates]{Space near a black hole,
-  using\label{kruskal_szekeres} Kruskal-Szekeres coordinates}
+  using\label{kruskal_szekeres} Kruskal-Szekeres coordinates.  Ingoing
+  light (red) and outgoing light (blue) are represented as $45^\circ$
+  lines.  The event horizon (fuschia) is shown as a set of $45^\circ$
+  lines which show that neither ingoing nor outgoing light can escape
+  the black hole and the singularity unavoidable (the singularity is
+  shown as a black hyperbola with non-meaningful grey above).  Lines
+  of constant Schwarzschild time are shown in orange and constant
+  Schwarzschild radius in green; see how the lines of constant radius
+  are spacelike, and lines of constant Schwarzschild time are
+  timelike, inside the event horizon}
 \end{center}
 \end{figure}
 
@@ -355,14 +368,12 @@ kruskal()
 <<kruskal_with_throw,fig=TRUE,height=9,width=9>>=
 kruskal_with_throw(draw_schwarzschild=TRUE)
 @
-\caption[Kruskal-Szekeres coordinates with throw plus lines of
-  constant Schwarzschild~$t$ and~$r$]{Space near a black hole,
-  using\label{kruskal_szekeres_throw} Kruskal-Szekeres coordinates,
-  together with a thrown object and including lines of constant
-  Schwarzschild~$t$ and~$r$}
+\caption[Black hole, Kruskal-Szekeres coordinates with free falling
+  object worldlines]{Space near a black hole,
+ \label{kruskal_szekeres_throw} as for figure~\ref{kruskal_szekeres},
+  together with the worldlines of a number of freely falling objects}
 \end{center}
 \end{figure}
-
 
 \begin{figure}[p]
   \begin{center}
@@ -378,19 +389,21 @@ kruskal_extended()
 \clearpage
 \subsection{Inverted Kruskal-Szekeres coordinates}
 
-It is possible to plot lines of equal $X,T$ on a Schwarzschild
-lattice, figure~\ref{kruskal_szekeres_inverted}.
+It is possible to plot contour lines of equal $X,T$ on aSchwarzschild
+coordinates, figure~\ref{kruskal_szekeres_inverted}.
 
 \begin{figure}[p]
   \begin{center}
 <<kruskal_inverted,fig=TRUE,height=9,width=9>>=
 kruskal_inverted()
 @
-\caption[Inverted Kruskal-Szekeres coordinates]{Space near a black hole,
-  shown using\label{kruskal_szekeres_inverted} inverted Kruskal-Szekeres coordinates} 
+\caption[Space near a black hole using Schwarzschild coordinates,
+  showing contour lines of equal Kruskal-Szekeres $X,T$]{Space near a
+  black hole using\label{kruskal_szekeres_inverted} Schwarzschild
+  coordinates, showing lines of equal Kruskal-Szekeres coordinate $X$
+  (blue) and $T$ (brown)}
 \end{center}
 \end{figure}
-
 
 \clearpage
 \section{Lema\^{i}tre coordinates}
@@ -426,8 +439,15 @@ and these are shown in figure~\ref{lemaitre}.
 <<lemaitre,fig=TRUE,height=9,width=9>>=
 lemaitre()
 @
-\caption[Lema\^{i}tre coordinates]{Space near a black hole,
-  using\label{lemaitre} Lema\^{i}tre coordinates}
+\caption[Space near a black hole, using Lema\^{i}tre
+  coordinates]{Space near a black hole, using Lema\^{i}tre
+  coordinates~$(\rho,\tau$).  Ingoing light (red) crosses the event
+  horizon but outgoing light (blue) does not.  The singularity is
+  represented as a $45^\circ$ black line, the gray above being
+  meaningless.  The event horizon (fuschia) and the fact that interior
+  null geodesics have a slope $>45^\circ$ show that interior light
+  cannot escape to infinity.  Infalling raindrops, with zero speed at
+  infinity, are shown as vertical dotted lines}
 \end{center}
 \end{figure}
 
@@ -465,7 +485,10 @@ and we recognise that~$\frac{1}{2} +\frac{\arctan\left(x\pm
 penrose_cauchy()
 @
 \caption[Penrose diagram, Cauchy transform]{The universe in compact
-  presentation using a \label{penrose_cauchy} Cauchy Penrose transform}
+  presentation using a \label{penrose_cauchy} Cauchy Penrose
+  transform.  Right-moving light paths are shown in red, all emanating
+  from the same point in space.  The edges of the diagram are ugly and
+  uninformative}
 \end{center}
 \end{figure}
 
@@ -475,7 +498,10 @@ penrose_cauchy()
 penrose_logistic()
 @
 \caption[Penrose diagram, logistic transform]{The universe in compact
-  presentation using a \label{penrose_logistic} logistic Penrose transform}
+  presentation using a \label{penrose_logistic} logistic Penrose
+  transform.  Right-moving light paths are shown in red, all emanating
+  from the same point in space.  The edges of this graph are visually
+  pleasing}
 \end{center}
 \end{figure}
 
@@ -485,7 +511,9 @@ penrose_logistic()
 penrose_norm()
 @
 \caption[Penrose diagram, Gaussian transform]{The universe in compact
-  presentation using a \label{penrose_norm} Gaussian Penrose transform}
+  presentation using a \label{penrose_norm} Gaussian Penrose
+  transform.  Left- and right-moving light paths are shown in red, all
+  emanating from the same point in space.  The diagram is pleasing}
 \end{center}
 \end{figure}
 
