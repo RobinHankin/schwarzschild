@@ -31,7 +31,7 @@
   a range of coordinate systems.}
 
 \Keywords{Black holes, general relativity, Schwarzschild metric,
-  Eddingon coordinates, Lema\^{i}tre coordinates, Gullstrand
+  Eddington coordinates, Lema\^{i}tre coordinates, Gullstrand
   coordinates, Penrose transforms, \proglang{R}}
 
 \Plainkeywords{Black holes, general relativity, Schwarzschild metric,
@@ -138,7 +138,7 @@ light approaches zero at the singularity.  Ingoing null geodesics do
 not cross the event horizon, which might be interpreted as saying that
 nothing passes the event horizon (see also
 figure~\ref{schwarzschild_drops} which demonstrates that ingoing
-massive particles do not cross the event horozon).  
+massive particles do not cross the event horizon).  
 
 Ingoing and outgoing null geodesics are marked with arrows which show
 the direction of travel of a light path.  Observe how ingoing light
@@ -612,7 +612,7 @@ penrose_BH_extended()
   labelled, separated by event horizons (fuschia).  Rightward (blue)
   and leftward (red) light appears in all four regions as $45^\circ$
   lines.  See how leftward light originating from the universe can
-  interact with rigthward light originating from the antiuniverse in
+  interact with rightward light originating from the antiuniverse in
   the black hole}
 \end{center}
 \end{figure}
@@ -627,8 +627,8 @@ diagrams are mathematically accurate which makes the suitable for
 educational purposes.  The source code for producing the diagrams is
 written in the R programming language and is freely available under
 the General Public License.  A variety of coordinate transforms of
-Schwarzschild spacetime may be displayed, incuding Schwarzschild
-coordinates, Eddingon coordinates, Lema\^{i}tre coordinates,
+Schwarzschild spacetime may be displayed, including Schwarzschild
+coordinates, Eddington coordinates, Lema\^{i}tre coordinates,
 Gullstrand coordinates, and a number of Penrose transforms.  Further
 work might include illustration of the Kerr or Reissner-Nordstr\"{o}
 metrics.
