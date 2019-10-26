@@ -22,17 +22,21 @@
 \Shorttitle{Black holes in \proglang{R}}
 
 %% an abstract and keywords
-\Abstract{This short paper presents some \proglang{R} code that
-  produces camera-ready diagrams of black holes, shown using different
-  sets of coordinates.}
+\Abstract{In the teaching of numerical subjects such as physics,
+  mathematical accuracy is an important requirement for informative
+  diagrams.  However, in the case of general relativity,
+  mathematically accurate diagrams do not seem to be available under a
+  free license.  This short paper introduces software, available under
+  the GPL, that creates camera-ready PDF diagrams of black holes using
+  a range of coordinate systems.}
 
 \Keywords{Black holes, general relativity, Schwarzschild metric,
-  Eddingon coordinates, Lemaitre coordinates, Gullstrand coordinates,
-  \proglang{R}}
+  Eddingon coordinates, Lema\^{i}tre coordinates, Gullstrand
+  coordinates, Penrose transforms, \proglang{R}}
 
 \Plainkeywords{Black holes, general relativity, Schwarzschild metric,
   Eddington coordinates Lemaitre coordinates, Gullstrand coordinates,
-  R}
+  Penrose transforms, R}
 
 %% publication information
 %% NOTE: This needs to filled out ONLY IF THE PAPER WAS ACCEPTED.
@@ -532,8 +536,8 @@ logistic, and Gaussian transforms, but in each case the event horizon
 has an ugly and uninformative shape).
 
 In the case of the Cauchy transformation it is possible to extend the
-diagram conformally and show, in addition to the universe and the
-black hole the antiuniverse and a white hole,
+diagram conformally and include---in addition to the universe and the
+black hole---the antiuniverse and a white hole, shown in
 figure~\ref{penrose_BH_cauchy}.
 
 \begin{figure}[p] \begin{center}
@@ -614,8 +618,20 @@ penrose_BH_extended()
 \end{figure}
 
 
+\clearpage
+\section{Conclusions}
 
-
+The {\tt schwarzschild} R package makes publication-quality PDF
+diagrams of black holes available under an open-source license.  These
+diagrams are mathematically accurate which makes the suitable for
+educational purposes.  The source code for producing the diagrams is
+written in the R programming language and is freely available under
+the General Public License.  A variety of coordinate transforms of
+Schwarzschild spacetime may be displayed, incuding Schwarzschild
+coordinates, Eddingon coordinates, Lema\^{i}tre coordinates,
+Gullstrand coordinates, and a number of Penrose transforms.  Further
+work might include illustration of the Kerr or Reissner-Nordstr\"{o}
+metrics.
 \end{document}
 
 
