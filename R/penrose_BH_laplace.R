@@ -158,7 +158,7 @@ penrose_BH_laplace <- function(colours=standard_colours, ...){
              "singularity","horizon")
          )
   ## plot the AUT logo:
-  if(!isFALSE(getOption("AUTlogo"))){logo(x=0.85,y=0.16, width=0.1)}  
+  if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.85,y=0.16, width=0.1)}  
   par(family="mono")
   git(-0.6,-0.7)
   par(op)  

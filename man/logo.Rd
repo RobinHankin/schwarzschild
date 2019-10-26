@@ -27,16 +27,21 @@ git(x,y,...)
   \code{AUTlogo} is \code{FALSE}.
 
   In most plotting functions in the package, the appearance of the logo
-  is controlled by \code{options("AUTlogo")}, the default being to
-  include the logo.  Use
-
-  \code{options("AUTlogo" = FALSE)}
-
-  to suppress the logo.
+  is controlled by \code{options("schwarzschild_logo")} which is
+  interpreted as the filename of an \code{xml} file in the \code{inst/}
+  directory.  There are a few special values: default \code{NULL} means
+  to include a fivefold symmetrical ornamental knot
+  (\dQuote{\code{orn20.ps.xml}}), and \code{FALSE} means to plot
+  nothing.  Passing \code{AUT-logo-block.ps.xml} plots the AUT logo.
 
   Function \code{git()} uses \code{text()} to show the github repo URL.
-  
+
+  The plotting functions documented here are designed to be used to plot
+  \code{PDF} diagrams with \code{pdf(..., height=9,width=9)}; changing
+  this could adversely affect the appearance (for example, the logo
+  might appear in a suboptimal place).
 }
+
 \author{Robin K. S. Hankin}
 \examples{
 schwarzschild()

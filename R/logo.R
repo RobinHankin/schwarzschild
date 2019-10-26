@@ -1,14 +1,11 @@
-`logo` <- function(..., knot=TRUE){
-  if(knot){
-    image <- "orn20.ps.xml"
-  } else {
-    image <- "AUT-logo-block.ps.xml"
-  }
+`logo` <- function(...){
+    image <- getOption("schwarzschild_logo")
+    if(is.null(image)){ image <- "orn20.ps.xml" }
   
-  image                                  %>%
-    system.file(package="schwarzschild") %>%
-    readPicture                          %>%
-    grid.picture(...)
+    image                                  %>%
+        system.file(package="schwarzschild") %>%
+        readPicture                          %>%
+        grid.picture(...)
 }
 
 `git` <- function(x,y,...){

@@ -163,7 +163,7 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
     segments(x0=-0.5,y0=-0.5,x1=0.5,y1=0.5, col=colours$horizon,lwd=5)
 
     ## plot the AUT logo:
-    if(!isFALSE(getOption("AUTlogo"))){logo(x=0.90,y=0.30, width=0.1)}  
+    if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.90,y=0.30, width=0.1)}  
     git(-0.9,-0.7)
     par(op)  
 }   # penrose_BH_extended() definition closes

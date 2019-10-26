@@ -101,7 +101,7 @@
   )
 
   ## plot the AUT logo:
-  if(!isFALSE(getOption("AUTlogo"))){logo(x=0.8,y=0.08, width=0.1)}  
+  if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.8,y=0.08, width=0.1)}  
 
   par(family="mono")
   git(-0.8,-0.7)

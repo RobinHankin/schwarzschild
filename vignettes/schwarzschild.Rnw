@@ -74,6 +74,7 @@
 <<load.library,echo=FALSE,print=FALSE>>=
 <<results=hide>>=
 require(schwarzschild)
+# options("schwarzschild_logo" = "AUT-logo-block.ps.xml")
 @ 
 
 

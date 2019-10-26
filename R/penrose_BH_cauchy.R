@@ -147,7 +147,7 @@ penrose_BH_cauchy <- function(colours=standard_colours, ...){
              "singularity","horizon")
          )
   ## plot the AUT logo:
-  if(!isFALSE(getOption("AUTlogo"))){logo(x=0.85,y=0.16, width=0.1)}  
+  if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.85,y=0.16, width=0.1)}  
   git(-0.6,-0.7)
   par(op)  
 }

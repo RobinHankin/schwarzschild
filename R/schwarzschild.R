@@ -131,7 +131,7 @@ schwarzschild <- function(draw_infalling_drops=FALSE, colours=standard_colours, 
 
   points(cbind(2,0:4),pch=16)
   ## plot the AUT logo:
-  if(!isFALSE(getOption("AUTlogo"))){logo(x=0.78,y=0.08, width=0.1)}
+  if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.78,y=0.08, width=0.1)}
 
 
   git(-0.8,-0.7)

@@ -186,7 +186,7 @@ kruskal_extended <- function(colours = standard_colours, ...){
 
 
     ## plot the AUT logo:
-    if(!isFALSE(getOption("AUTlogo"))){logo(x=0.84,y=0.08, width=0.1)}
+    if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.84,y=0.08, width=0.1)}
 
     par(family="mono")
     git(-2.4,-2.4)
