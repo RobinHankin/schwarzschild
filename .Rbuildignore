@@ -3,4 +3,5 @@
 .gitignore
 inst\*.pdf$
 inst\*.svg$
+vignettes\*.pdf$
 ^.*\.Rout$ 
