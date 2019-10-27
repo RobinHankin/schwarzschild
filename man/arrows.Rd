@@ -27,28 +27,36 @@ outgoing_null_arrow_eddington_outgoing_coords(r, offset, colours=standard_colour
   \item{...}{Further arguments, passed to \code{arrows()}}
 }
 \details{
-  
-  These functions take an \code{offset} argument that makes it easy to
-  place several arrows on the same null geodesic (or worldline in the
-  case of \code{raindrop()}).
+
+  An arrow is drawn at event \eqn{(r,t)} where Schwarzschild \eqn{r} is
+  specified by argument \code{r}.  The functions take an \code{offset}
+  argument that ensures that ingoing or outgoing null geodesics reach
+  the singularity at \code{tdash=offset}.  This makes it easy to place
+  several arrows on the same null geodesic (or worldline in the case of
+  \code{raindrop()}).
     
   The idea is that
 
   \itemize{
-    \item\code{ingoing_null_arrow_eddington_outgoing_coords(r=2, offset=3)}
-    \item\code{ingoing_null_arrow_eddington_outgoing_coords(r=2, offset=4)}
-    \item\code{ingoing_null_arrow_eddington_outgoing_coords(r=2, offset=5)}
+    \item\code{ingoing_null_arrow_eddington_ingoing_coords(r=2, offset=3)}
+    \item\code{ingoing_null_arrow_eddington_ingoing_coords(r=2, offset=4)}
+    \item\code{ingoing_null_arrow_eddington_ingoing_coords(r=2, offset=5)}
   }
   
-  give arrows which are vertically aligned at \eqn{r=2}; while:
+  (executed while the output of \code{eddington()} is active the active
+  device), plot arrows which are vertically aligned at \eqn{r=2} and are
+  placed on ingoing null geodesics which reach the singularity at
+  \code{tdash=3:5}.  Conversely:
 
   \itemize{
-    \item\code{ingoing_null_arrow_eddington_outgoing_coords(r=2.0, offset=3)}
+    \item\code{ingoing_null_arrow_eddington_outgoing_coords(r=2.0, offset=4)}
     \item\code{ingoing_null_arrow_eddington_outgoing_coords(r=2.3, offset=4)}
-    \item\code{ingoing_null_arrow_eddington_outgoing_coords(r=2.6, offset=5)}
+    \item\code{ingoing_null_arrow_eddington_outgoing_coords(r=2.6, offset=4)}
   }
   
-  will give arrows which are all on the same null geodesic.
+  will give arrows which are all on the same null geodesic
+  (specifically, the one that reaches the singularity at \code{tdash=4}.
+
 }
 \author{Robin K. S. Hankin}
 \examples{
