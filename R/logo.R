@@ -2,10 +2,12 @@
     image <- getOption("schwarzschild_logo")
     if(is.null(image)){ image <- "orn20.ps.xml" }
   
-    image                                  %>%
-        system.file(package="schwarzschild") %>%
-        readPicture                          %>%
-        grid.picture(...)
+#    image                                  %>%
+#        system.file(package="schwarzschild") %>%
+#        readPicture                          %>%
+#        grid.picture(...)
+
+    grid.picture(readPicture(system.file(image,package="schwarzschild")),...)
 }
 
 `git` <- function(x,y,...){

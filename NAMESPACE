@@ -9,4 +9,4 @@ importFrom("gsl", "lambert_W0")
 importFrom("deSolve", "ode")
 importFrom("animation","ani.record","ani.options","ani.replay")
 importFrom("grImport", "grid.picture", "readPicture")
-importFrom("magrittr", "%>%")
+
