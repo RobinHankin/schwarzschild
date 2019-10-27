@@ -18,7 +18,7 @@ git(x,y,...)
   \item{\dots}{In function \code{logo()}, further arguments passed to
     \code{grid.picture()}, and in function \code{git()} passed to
     \code{text()}}
-  \item{x,y}{In function \code{git()}, the coordiates of the position to
+  \item{x,y}{In function \code{git()}, the coordinates of the position to
     put the github repo URL}
 }
 \note{
