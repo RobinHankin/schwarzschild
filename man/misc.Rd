@@ -71,4 +71,5 @@ outgoing_lambert(t,rzero,tzero=0)
     Lambert W function (of the \pkg{gsl} package) to take \code{t} and
     return \code{r}}
 }
+\keyword{aplot}
 \author{Robin K. S. Hankin}

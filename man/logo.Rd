@@ -43,6 +43,7 @@ git(x,y,...)
 }
 
 \author{Robin K. S. Hankin}
+\keyword{aplot}
 \examples{
 schwarzschild()
 logo(x=0.5,y=0.5,width=0.5)  # a bit big...
