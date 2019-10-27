@@ -6,9 +6,6 @@ penrose_logistic <- function(colours=standard_colours, ...){
 
   ## NB: norm looks good and tan sucks; cf penrose_black_hole
 
-
-  op <- par()
-
   ## set up axes:
   jj <- c(-1,1)
   plot(jj,jj,asp=1,type='n',axes=FALSE,xlab='',ylab='',main='logistic transform')
@@ -92,6 +89,5 @@ penrose_logistic <- function(colours=standard_colours, ...){
 
   par(family="mono")
   git(-1.2,-1.1)
-  par(op)  
 
 }

@@ -5,9 +5,6 @@ penrose_laplace <- function(colours=standard_colours, ...){
 
   ## NB: norm looks good and tan sucks; cf penrose_black_hole
 
-  op <- par()   # Remember the options and reset at the end of the function
-
-
   ## set up axes:
   jj <- c(-1,1)
   plot(jj,jj,asp=1,type='n',axes=FALSE,xlab='',ylab='',main='Laplace transform')
@@ -91,6 +88,5 @@ penrose_laplace <- function(colours=standard_colours, ...){
 
   par(family="mono")
   git(-1.2,-1.1)
-  par(op)  
 
 }

@@ -1,7 +1,5 @@
 penrose_BH_laplace <- function(colours=standard_colours, ...){
 
-  op <- par()
-
   ## This file plots a Penrose diagram of the whole universe,
   ## including a black hole using a Laplace distribution transform.
   ## This function can be called from the commandline but is intended
@@ -161,5 +159,5 @@ penrose_BH_laplace <- function(colours=standard_colours, ...){
   if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.85,y=0.16, width=0.1)}  
   par(family="mono")
   git(-0.6,-0.7)
-  par(op)  
+
 }

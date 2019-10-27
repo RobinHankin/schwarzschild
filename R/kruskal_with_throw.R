@@ -1,5 +1,4 @@
 `kruskal_with_throw` <- function(draw_schwarzschild = FALSE, label_curves = FALSE, colours=standard_colours){
-  op <- par()   # Remember the options and reset at the end of the function
 
   ## set the two arguments to TRUE to give more detail (but these give a
   ## very cluttered diagram)
@@ -220,6 +219,5 @@
 
   par(family="mono")
   git(-2,-2)
-  par(op)  
 
 }

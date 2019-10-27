@@ -1,6 +1,5 @@
 lemaitre <- function(draw_schwarzschild=FALSE, colours=standard_colours, ...){
 
-    op <- par()   # Remember the options and reset at the end of the function
     n <- 2
 
     par(pty='s')
@@ -93,7 +92,5 @@ lemaitre <- function(draw_schwarzschild=FALSE, colours=standard_colours, ...){
 
   par(family="mono")
   git(-2.5,-2.5)
-  par(op)  
-
 
 }

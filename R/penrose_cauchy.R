@@ -1,7 +1,7 @@
 penrose_cauchy <- function(colours=standard_colours, ...){
 
   ## plots a Penrose diagram of the whole universe.  We can choose colours
-  op <- par()   # Remember the options and reset at the end of the function
+
   penrose <- penrose_transform("cauchy")
 
   ## NB: norm looks good and tan sucks; cf penrose_black_hole
@@ -89,7 +89,5 @@ penrose_cauchy <- function(colours=standard_colours, ...){
   if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.85,y=0.20, width=0.1)}
   par(family="mono")
   git(-1.2,-1.1)
-  par(op)  
-
   
 }

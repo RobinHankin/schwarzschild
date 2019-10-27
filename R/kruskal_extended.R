@@ -1,5 +1,4 @@
 kruskal_extended <- function(colours = standard_colours, ...){
-    op <- par()
 
     ## NB: everything here is (space,time).  This is because it is easier to plot in R
 
@@ -190,10 +189,5 @@ kruskal_extended <- function(colours = standard_colours, ...){
 
     par(family="mono")
     git(-2.4,-2.4)
-    par(op)  
-
-
-    ## plot commands end
-
 
 }

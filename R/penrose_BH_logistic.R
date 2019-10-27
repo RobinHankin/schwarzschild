@@ -7,8 +7,6 @@ penrose_BH_logistic <- function(colours=standard_colours, ...){
 
   ## More documentation is given in penrose_BH_cauchy.R
 
-
-  op <- par()
   penrose <- penrose_transform("logistic")
 
   constant_r_exterior <- colours$r
@@ -163,6 +161,6 @@ penrose_BH_logistic <- function(colours=standard_colours, ...){
 
   par(family="mono")
   git(-0.6,-0.7)
-  par(op)  
+
 }
 

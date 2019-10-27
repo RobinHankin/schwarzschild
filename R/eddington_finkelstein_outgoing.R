@@ -1,5 +1,5 @@
 eddington_outgoing <-  function(colours=standard_colours, ...){
-  op <- par()   # Remember the options and reset at the end of the function
+
   n <- 4  # size of plot
 
   ## plot commands start
@@ -109,9 +109,6 @@ eddington_outgoing <-  function(colours=standard_colours, ...){
 
   par(family="mono")
   git(-0.8,-0.7)
-  par(op)  
-
-
 
 }
 

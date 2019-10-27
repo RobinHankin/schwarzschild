@@ -14,9 +14,6 @@ penrose_BH_cauchy <- function(colours=standard_colours, ...){
   ## good: the others all suck.  Compare penrose_foo() [i.e. no black
   ## hole], where "norm" is the good one.
 
-
-  op <- par()
-  
   penrose <- penrose_transform("cauchy")
 
   constant_r_exterior <- colours$r
@@ -149,5 +146,5 @@ penrose_BH_cauchy <- function(colours=standard_colours, ...){
   ## plot the AUT logo:
   if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.85,y=0.16, width=0.1)}  
   git(-0.6,-0.7)
-  par(op)  
+
 }

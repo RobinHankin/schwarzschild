@@ -1,5 +1,5 @@
 gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, ...){
-    op <- par()
+
     par(lend=1)
     n <- 4  # size of plot
 
@@ -109,8 +109,5 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
     
     par(family="mono")
     git(-0.8,-0.7)
-    par(op)  
     
 }
-
-

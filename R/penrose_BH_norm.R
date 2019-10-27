@@ -7,8 +7,6 @@ penrose_BH_norm <- function(colours=standard_colours, ...){
 
   ## More documentation is given in penrose_BH_cauchy.R
 
-  op <- par()
-
   penrose <- penrose_transform("norm")
 
   outgoing_null <- colours$outgoing_light
@@ -159,5 +157,5 @@ penrose_BH_norm <- function(colours=standard_colours, ...){
   if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.85,y=0.16, width=0.1)}  
   par(family="mono")
   git(-0.6,-0.7)
-  par(op)  
+
 }

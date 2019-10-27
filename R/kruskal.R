@@ -1,7 +1,4 @@
 kruskal <- function(colours=standard_colours, ...){## NB: everything here is (space,time).  This is because it is easier to plot in R
-
-    op <- par() 
-    
     constant_r_exterior <- colours$r
     constant_t_exterior <- colours$t
     
@@ -147,6 +144,5 @@ kruskal <- function(colours=standard_colours, ...){## NB: everything here is (sp
 
     par(family="mono")
     git(-2.8,-2.7)
-    par(op)  
 
 }
