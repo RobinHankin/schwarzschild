@@ -96,54 +96,39 @@ plots which use a variety of coordinates including Kruskal-Szekeres,
 Eddington-Finkelstein ingoing and outgoing, Gullstrand-Painleve,
 Lema\^{i}tre, and various Penrose transforms.  These are described in
 many undergraduate GR textbooks.  This vignette shows some, but not
-all, of the included functionality.
-
-The diagrams use a consistent colouring system which is user-definable but the default is:
-
-\begin{itemize}
-\item Singularity
-\item Event horizon
-\item Ingoing null geodesics
-\item Outgoing null geodesics
-\item Lines of constant Schwarzschild $t$
-\item Lines of constant Schwarzschild $r$
-\item local light cones
-\end{itemize}
-
-
-
-
-
-For special relativity, see the \pkg{lorentz} package.
+all, of the included functionality.  The diagrams use a consistent
+colouring system which is user-settable.  For special relativity, see
+the \pkg{lorentz} package.
 
 \section{Schwarzschild coordinates}
 
 The full Schwarzschild metric is
 
 \begin{equation}
-  ds^2 = -\left(1-1/r\right)dt^2 + \frac{dr^2}{1-1/r} + r^2d\theta^2+ r^2\sin^2\theta d\phi^2
+  ds^2 = -\left(1-2MG/r\right)dt^2 + \frac{dr^2}{1-2MG/r} + r^2d\theta^2+ r^2\sin^2\theta d\phi^2
   \end{equation}
 
-\noindent and here we consider only a radial line corresponding to~$\theta, \phi$ constant, giving
+\noindent and here we consider only a radial line corresponding
+to~$\theta, \phi$ constant, giving
 
 \begin{equation}
-  ds^2 = -\left(1-1/r\right)dt^2 + \frac{dr^2}{1-1/r}
+  ds^2 = -\left(1-2MG/r\right)dt^2 + \frac{dr^2}{1-2MG/r}
 \end{equation}
 
 These coordinates may be plotted in two dimensional space, as shown in
-figures~\ref{schwarzschild} and~\ref{schwarzschild_drops}.
-
+figures~\ref{schwarzschild} and~\ref{schwarzschild_drops} which use
+standard Schwarzschild coordinates with the unit of distance being the
+Schwarzschild radius $r_s=2MG$ and the unit of time being $t_s=2MG/c$.
 See how the light cones morph discontinuously as the event horizon is
 crossed; also note how the angle subtended by the inward and outward
 light approaches zero at the singularity.  Ingoing null geodesics do
 not cross the event horizon, which might be interpreted as saying that
 nothing passes the event horizon (see also
 figure~\ref{schwarzschild_drops} which demonstrates that ingoing
-massive particles do not cross the event horizon).  
-
-Ingoing and outgoing null geodesics are marked with arrows which show
-the direction of travel of a light path.  Observe how ingoing light
-travels backward in Schwarzschild time. 
+massive particles do not cross the event horizon).  Ingoing and
+outgoing null geodesics are marked with arrows which show the
+direction of travel of a light path.  Observe how ingoing light
+travels backward in Schwarzschild time.
 
 Worldlines of freely falling objects may be calculated and plotted on
 Schwarzschild coordinates (figure~\ref{schwarzschild_throw}) or
