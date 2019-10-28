@@ -102,7 +102,11 @@ the \pkg{lorentz} package.
 
 \section{Schwarzschild coordinates}
 
-The full Schwarzschild metric is
+The Schwarzschild solution describes spacetime in the vicinity of a
+black hole.  It was the first known nontrivial solution to the
+Einstien field equations and was discovered in 1916 by Karl
+Schwarzschild~\citep{schwarzschild1916}.  The full Schwarzschild metric
+is
 
 \begin{equation}
   ds^2 = -\left(1-2MG/r\right)dt^2 + \frac{dr^2}{1-2MG/r} + r^2d\theta^2+ r^2\sin^2\theta d\phi^2
@@ -618,6 +622,8 @@ coordinates, Eddington coordinates, Lema\^{i}tre coordinates,
 Gullstrand coordinates, and a number of Penrose transforms.  Further
 work might include illustration of the Kerr or Reissner-Nordstr\"{o}
 metrics.
+
+\bibliography{schwarzschild}
 \end{document}
 
 
