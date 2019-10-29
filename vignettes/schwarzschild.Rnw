@@ -109,20 +109,18 @@ Schwarzschild~\citep{schwarzschild1916}.  The full Schwarzschild metric
 is
 
 \begin{equation}
-  ds^2 = -\left(1-2MG/r\right)dt^2 + \frac{dr^2}{1-2MG/r} + r^2d\theta^2+ r^2\sin^2\theta d\phi^2
+  ds^2 = -\left(1-2M/r\right)dt^2 + \frac{dr^2}{1-2M/r} + r^2d\theta^2+ r^2\sin^2\theta d\phi^2
   \end{equation}
 
-\noindent and here we consider only a radial line corresponding
-to~$\theta, \phi$ constant, giving
+\noindent where geometrized units ($G=c=1$) are used and $M$ is the mass of the black hole.  Here we consider only a radial line corresponding to~$\theta, \phi$ constant, giving
 
 \begin{equation}
-  ds^2 = -\left(1-2MG/r\right)dt^2 + \frac{dr^2}{1-2MG/r}
+  ds^2 = -\left(1-2M/r\right)dt^2 + \frac{dr^2}{1-2M/r}.
 \end{equation}
 
 These coordinates may be plotted in two dimensional space, as shown in
-figures~\ref{schwarzschild} and~\ref{schwarzschild_drops} which use
-standard Schwarzschild coordinates with the unit of distance being the
-Schwarzschild radius $r_s=2MG$ and the unit of time being $t_s=2MG/c$.
+figures~\ref{schwarzschild} and~\ref{schwarzschild_drops}, in which
+the unit of distance and of time is the Schwarzschild radius~$2M$.
 See how the light cones morph discontinuously as the event horizon is
 crossed; also note how the angle subtended by the inward and outward
 light approaches zero at the singularity.  Ingoing null geodesics do
@@ -186,7 +184,7 @@ thrower(logaxes='',legpos='topright')
   hole, using\label{schwarzschild_throw} Schwarzschild coordinates,
   together with worldlines of freely falling objects released with
   various speeds from outside and inside the event horizon at radii
-  $r=2r_s=4GM$ and $r=0.9r_s=1.8GM$ respectively.  Objects outside the
+  $r=2r_s=4M$ and $r=0.9r_s=1.8M$ respectively.  Objects outside the
   event horizon do not cross it; objects inside the event horizon,
   whatever their initial speed, touch the singularity after a finite
   amount of proper time}
@@ -209,7 +207,7 @@ hole, as for figure~\ref{schwarzschild_throw}
 
 Eddington-Finkelstein coordinates use the same radial coordinate as
 Schwarzschild diagrams above but replace $t$ with
-$t'=t+r+2GM\left|\frac{r}{2GM}-1\right|$.  In this system, ingoing
+$t'=t+r+2M\left|\frac{r}{2M}-1\right|$.  In this system, ingoing
 null geodesics have a slope $45^\circ$ and pass through the event
 horizon and outgoing null geodesics do not cross the event horizon;
 see figure~\ref{eddington}.  See how neither light cones nor ingoing
@@ -219,7 +217,7 @@ and inside the Schwarzschild radius the light cone points entirely
 inwards.  Note however that the angle subtended by the inward and
 outward paths approaches zero at the singularity.
 
-It is possible to use $t'=t-r-2GM\left|\frac{r}{2GM}-1\right|$
+It is possible to use $t'=t-r-2M\left|\frac{r}{2M}-1\right|$
 instead, and this has the effect of forcing outgoing null geodesics to
 have a slope of $45^\circ$ (figure~\ref{eddingtonoutgoing}).  In this
 case ingoing light becomes tangential to the event horizon close to
@@ -263,20 +261,26 @@ eddington_outgoing()
 Gullstrand-Painleve coordinates introduce a time coordinate $t_r$ with
 
 \begin{equation}
-t_r = t - 2GM\left(-\sqrt{\frac{2r}{GM}} + \log\left(\frac{\sqrt{\frac{r}{2GM}}+1}{\sqrt{\frac{r}{2GM}}-1}\right)\right)
+t_r = t - 2M\left(-\sqrt{\frac{2r}{M}} + \log\left(\frac{\sqrt{\frac{r}{2M}}+1}{\sqrt{\frac{r}{2M}}-1}\right)\right)
 \end{equation}
                     
 In this coordinate system, the ingoing coordinates are such that the
 time coordinate is (up to a constant) the proper time of a
 free-falling observer who starts from far away at zero velocity; see
 figures~\ref{gullstrand_painleve} and~\ref{gullstrand_painleve_drops}.
-The metric tensor is not diagonal, which complicates matters.
-However, similarly to Eddington-Finkelstein coordinates, ingoing null
-geodesics pass through the event horizon unimpeded while outgoing null
-geodesics are tangential.  World lines for freely falling raindrops
-are shown in figure \ref{gullstrand_painleve_drops}.  Again we see
-that, in these coordinates, infalling raindrops pass through the event
-horizon.
+The metric tensor becomes: 
+
+\begin{equation}
+ds^2=\left(1-\frac{2M}{r} \right)dt_r^2- 2\sqrt{\frac{2M}{r}} dr dt_r -dr^2.
+\end{equation}
+
+Note that this is not diagonal, and this complicates matters although
+null geodesics may be found by factorising the metric.  Similarly to
+Eddington-Finkelstein coordinates, ingoing null geodesics pass through
+the event horizon unimpeded while outgoing null geodesics are
+tangential.  World lines for freely falling raindrops are shown in
+figure \ref{gullstrand_painleve_drops}.  Again we see that, in these
+coordinates, infalling raindrops pass through the event horizon.
   
 \begin{figure}[p]
   \begin{center}
@@ -310,16 +314,16 @@ gullstrand(draw_infalling_drops=TRUE)
 \section{Kruskal-Szekeres coordinates}
 
 \begin{eqnarray}
-T &=& \left(\frac{r}{2GM} - 1\right)^{1/2}e^{r/4GM}\sinh\left(\frac{t}{4GM}\right)\\
-X &=& \left(\frac{r}{2GM} - 1\right)^{1/2}e^{r/4GM}\cosh\left(\frac{t}{4GM}\right)
+T &=& \left(\frac{r}{2M} - 1\right)^{1/2}e^{r/4M}\sinh\left(\frac{t}{4M}\right)\\
+X &=& \left(\frac{r}{2M} - 1\right)^{1/2}e^{r/4M}\cosh\left(\frac{t}{4M}\right)
 \end{eqnarray}
-for the exterior region $r>2GM$ outside the event horizon and:
+for the exterior region $r>2M$ outside the event horizon and:
 \begin{eqnarray}
-T &=& \left(1 - \frac{r}{2GM}\right)^{1/2}e^{r/4GM}\cosh\left(\frac{t}{4GM}\right)\\
-X &=& \left(1 - \frac{r}{2GM}\right)^{1/2}e^{r/4GM}\sinh\left(\frac{t}{4GM}\right)
+T &=& \left(1 - \frac{r}{2M}\right)^{1/2}e^{r/4M}\cosh\left(\frac{t}{4M}\right)\\
+X &=& \left(1 - \frac{r}{2M}\right)^{1/2}e^{r/4M}\sinh\left(\frac{t}{4M}\right)
 \end{eqnarray}
 
-for the interior region $0<r<2GM$; see figure~\ref{kruskal_szekeres}.
+for the interior region $0<r<2M$; see figure~\ref{kruskal_szekeres}.
 In this representation, the singularity appears as a black hyperbola
 and the event horizon is a set of $45^\circ$ lines.  Ingoing and
 outgoing null geodesics are lines at $45^\circ$, which shows that
@@ -411,22 +415,22 @@ Lema\^{i}tre coordinates $\tau,\rho$ and Schwarzschild $r,t$ is most
 easily expressed in differential form:
 
 \begin{eqnarray}
-d\tau &=& dt +\sqrt{\frac{2GM}{r}}\left(1-\frac{2GM}{r}\right)^{-1}\\
-d\rho &=& dt +\sqrt{\frac{r}{2GM}}\left(1-\frac{2GM}{r}\right)^{-1}\\
+d\tau &=& dt +\sqrt{\frac{2M}{r}}\left(1-\frac{2M}{r}\right)^{-1}\\
+d\rho &=& dt +\sqrt{\frac{r}{2M}}\left(1-\frac{2M}{r}\right)^{-1}\\
 \end{eqnarray}
 
 Freely falling particles at rest at infinity follow trajectories with
 constant $\rho$, with $\tau$ measuring their proper time.  Lines of
 constant $\rho$ are It can be shown that
-$r^3=2GM\left[3(\rho-\tau)/2\right]^2$; the metric becomes
+$r^3=2M\left[3(\rho-\tau)/2\right]^2$; the metric becomes
 \begin{equation}
-  dx^2= -d\tau^2 + \frac{2GM}{r}d\rho^2
+  dx^2= -d\tau^2 + \frac{2M}{r}d\rho^2
   \end{equation}
 
 So null geodesics obey 
 
 \[
-\frac{d\tau}{dr}=\frac{1}{\pm 1-\sqrt{2GM/r}}
+\frac{d\tau}{dr}=\frac{1}{\pm 1-\sqrt{2M/r}}
 \]
 
 and these are shown in figure~\ref{lemaitre}.
@@ -620,7 +624,7 @@ the General Public License.  A variety of coordinate transforms of
 Schwarzschild spacetime may be displayed, including Schwarzschild
 coordinates, Eddington coordinates, Lema\^{i}tre coordinates,
 Gullstrand coordinates, and a number of Penrose transforms.  Further
-work might include illustration of the Kerr or Reissner-Nordstr\"{o}
+work might include illustration of the Kerr or Reissner-Nordstr\"{o}m
 metrics.
 
 \bibliography{schwarzschild}
