@@ -617,7 +617,7 @@ penrose_BH_extended()
 
 The {\tt schwarzschild} R package makes publication-quality PDF
 diagrams of black holes available under an open-source license.  These
-diagrams are mathematically accurate which makes the suitable for
+diagrams are mathematically accurate which makes them suitable for
 educational purposes.  The source code for producing the diagrams is
 written in the R programming language and is freely available under
 the General Public License.  A variety of coordinate transforms of
