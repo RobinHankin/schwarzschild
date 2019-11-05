@@ -472,13 +472,13 @@ this case we would have
 u\pm v=\frac{1}{2} +\frac{\arctan\left(x\pm t\right)}{\pi}
 \end{equation}
 
-and we recognise that~$\frac{1}{2} +\frac{\arctan\left(x\pm
-  t\right)}{\pi}$ is the distribution function of the Cauchy
-  distribution.  This gives a diagram as shown in
-  figure~\ref{penrose_cauchy}.  However, the image is visually
-  displeasing and it aesthetically preferable to use a logistic or
-  Gaussian transform (figures~\ref{penrose_logistic}
-  and~\ref{penrose_norm}) which are more commonly used.
+and we recognise that~$\frac{1}{2}
++\frac{\arctan\left(\cdot\right)}{\pi}$ is the cumulative distribution
+function of a Cauchy random variable.  This gives a diagram as shown
+in figure~\ref{penrose_cauchy}.  However, the image is visually
+displeasing and it aesthetically preferable to replace the Cauchy with
+a logistic or Gaussian transform (figures~\ref{penrose_logistic}
+and~\ref{penrose_norm}) which are more commonly used.
 
 \begin{figure}[p]
   \begin{center}
@@ -545,10 +545,11 @@ penrose_BH_cauchy()
   and outgoing light (red) shown as $45^\circ$ lines; escape from the
   black hole is impossible as the event horizons (fuschia) have a
   slope of $45^\circ$, and collision with the singularity (horizontal
-  black line) is unavoidable.  Lines of constant Schwarzschild time
-  (orange) and constant Schwarzschild radius (green) are shown; see
-  how the lines of constant radius are spacelike, and lines of
-  constant Schwarzschild time are timelike, inside the event horizon}
+  black line) is unavoidable for objects inside the event horizon.
+  Lines of constant Schwarzschild time (orange) and constant
+  Schwarzschild radius (green) are shown; see how the lines of
+  constant radius are spacelike, and lines of constant Schwarzschild
+  time are timelike, inside the event horizon}
 \end{center}
 \end{figure}
 
@@ -607,7 +608,8 @@ penrose_BH_extended()
   and leftward (red) light appears in all four regions as $45^\circ$
   lines.  See how leftward light originating from the universe can
   interact with rightward light originating from the antiuniverse in
-  the black hole}
+  the black hole, but no timelike path connects the universe with the
+  antiuniverse}
 \end{center}
 \end{figure}
 
