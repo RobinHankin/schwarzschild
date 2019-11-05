@@ -29,11 +29,12 @@ desirable properties such as asymptotic matching with flat-space
 spherical coordinates; but other coordinate systems can be used which
 have other advantages.  The schwarzschild package furnishes plots
 which use a variety of coordinates including Kruskal-Szekeres
-[@kruskal1960;@szekeres1960], Eddington-Finkelstein ingoing and
-outgoing, Gullstrand-Painleve [@painleve1921; @gullstrand1922],
-Lema\{^}itre [@lemaitre1933], and various Penrose diagrams with or
-without a black hole [@hawking1973].  These are described in many
-undergraduate GR textbooks such as [@schutz2009] and [@carroll2019].
+[@kruskal1960;@szekeres1960], Eddington-Finkelstein
+[@eddington1924;@finkelstein1958], Gullstrand-Painleve [@painleve1921;
+@gullstrand1922], Lema\^{i}tre [@lemaitre1933], and various Penrose
+diagrams with or without a black hole [@hawking1973].  These are
+described in many undergraduate GR textbooks such as [@schutz2009] and
+[@carroll2019].
 
 
 # Statement of Need
