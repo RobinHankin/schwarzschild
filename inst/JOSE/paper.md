@@ -25,9 +25,6 @@ affiliations:
 # Introduction
 
 
-\newcommand[1]{\wrap}{#1}
-
-
 In general relativity, Schwarzschild coordinates for a black hole have
 desirable properties such as asymptotic matching with flat-space
 spherical coordinates; but other coordinate systems can be used which
@@ -35,7 +32,7 @@ have other advantages.  The schwarzschild package furnishes plots
 which use a variety of coordinates including Kruskal-Szekeres
 [@kruskal1960;@szekeres1960], Eddington-Finkelstein
 [@eddington1924;@finkelstein1958], Gullstrand-Painleve [@painleve1921;
-@gullstrand1922], Lema\wrap{\^{i}}tre [@lemaitre1933], and various Penrose
+@gullstrand1922], Lemaitre [@lemaitre1933], and various Penrose
 diagrams with or without a black hole [@hawking1973].  These are
 described in many undergraduate GR textbooks such as [@schutz2009] and
 [@carroll2019].
