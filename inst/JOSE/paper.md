@@ -68,9 +68,10 @@ which as of 2019 has over 48000 views and 770 subscribers.
 
 The ``schwarzschild`` package presents heavily documented and
 structured R code that demonstrates different aspects of physics near
-a spherically symmetric black hole.  Spacetime near a Schwarzschild
-black hole is simulated by the R functionality of the package; one
-side-effect is the the creation of usable PDF images.
+a spherically symmetric black hole.  Physical processes such as null
+geodesics and freely falling objects are simulated near a
+Schwarzschild black hole by the R functionality of the package; one
+side-effect is the the creation of usable and accurate PDF images.
 
 The package defines over twenty functions that are called for their
 side-effect of plotting a diagram of spacetime in the vicinity of a
