@@ -20,6 +20,8 @@ tags:
 affiliations:
 - index: 1
   name: Auckland University of Technology
+nocite: |
+@schutz2009, @carroll2019
 ---
 
 # Introduction
@@ -34,8 +36,8 @@ which use a variety of coordinates including Kruskal-Szekeres
 [@eddington1924;@finkelstein1958], Gullstrand-Painleve [@painleve1921;
 @gullstrand1922], Lemaitre [@lemaitre1933], and various Penrose
 diagrams with or without a black hole [@hawking1973].  These are
-described in many undergraduate GR textbooks such as `[@schutz2009]`
-and `[@carroll2019]`.
+described in many undergraduate GR textbooks such as Schutz (2009) and
+Carroll (2019).
 
 
 # Statement of Need
@@ -52,7 +54,8 @@ The images have been used in two general relativity teaching contexts:
 firstly, as resources for my own astrophysics lectures at AUT, and
 secondly to support my ``Trin Tragula'' YouTube channel [General
 relativity step by
-step](https://www.youtube.com/watch?v=JzCX3FqDIOc&list=PL9_n3Tqzq9iWtgD8POJFdnVUCZ_zw6OiB).
+step](https://www.youtube.com/watch?v=JzCX3FqDIOc&list=PL9_n3Tqzq9iWtgD8POJFdnVUCZ_zw6OiB)
+which as of 2019 has over 48000 views and 770 subscribers.
 
 # Functionality and usage
 
