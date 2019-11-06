@@ -34,8 +34,8 @@ which use a variety of coordinates including Kruskal-Szekeres
 [@eddington1924;@finkelstein1958], Gullstrand-Painleve [@painleve1921;
 @gullstrand1922], Lemaitre [@lemaitre1933], and various Penrose
 diagrams with or without a black hole [@hawking1973].  These are
-described in many undergraduate GR textbooks such as `@schutz2009` and
-`@carroll2019`.
+described in many undergraduate GR textbooks such as `[@schutz2009]`
+and `[@carroll2019]`.
 
 
 # Statement of Need
@@ -48,6 +48,11 @@ license.  The `schwarzschild` package, available under the GPL, fills
 this need by creating camera-ready PDF diagrams of black holes using a
 range of coordinate systems.
 
+The images have been used in two general relativity teaching contexts:
+firstly, as resources for my own astrophysics lectures at AUT, and
+secondly to support my ``Trin Tragula'' YouTube channel [General
+relativity step by
+step](https://www.youtube.com/watch?v=JzCX3FqDIOc&list=PL9_n3Tqzq9iWtgD8POJFdnVUCZ_zw6OiB).
 
 # Functionality and usage
 
