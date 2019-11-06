@@ -1,4 +1,4 @@
-schwarzschild <- function(draw_infalling_drops=FALSE, colours=standard_colours, ...){
+`schwarzschild` <- function(draw_infalling_drops=FALSE, colours=standard_colours, ...){
 
   n <- 4  # size of plot
 
@@ -17,7 +17,6 @@ schwarzschild <- function(draw_infalling_drops=FALSE, colours=standard_colours, 
     segments(x0=0,x1=n,y0=i,col=colours$t,lwd=0.5,lty=1)  # vertical lines; lines of constant t
   }
 
-
   r_inside <- seq(from=0.0001,to=0.999,len=1000)
   r_outside <- seq(from=1.0001,to=n,len=1000)
 
@@ -26,11 +25,7 @@ schwarzschild <- function(draw_infalling_drops=FALSE, colours=standard_colours, 
   for(tz in -3:14){points(r_outside,outgoing(r_outside,rzero=2,tzero=tz),type='l',lwd=0.5,col=colours$outgoing_light)}
   for(tz in  0:12){points(r_inside,  ingoing(r_inside ,rzero=2,tzero=tz),type='l',lwd=0.5,col=colours$ingoing_light )}
   for(tz in  0:10){points(r_inside, outgoing(r_inside ,rzero=2,tzero=tz),type='l',lwd=0.5,col=colours$outgoing_light)}
-  
-  
-
-
-
+ 
 
   if(draw_infalling_drops){
 
@@ -79,10 +74,7 @@ schwarzschild <- function(draw_infalling_drops=FALSE, colours=standard_colours, 
   ##  points(r_ingoing_outside,t_ingoing_outside+i+0.5, type='l',col=colours$ingoing_light,lwd=0.3)
   ##  points(r_outgoing_inside ,t_outgoing_inside +i+0.5, type='l',col=colours$outgoing_light,lwd=0.3)
   ##  points(r_outgoing_outside,t_outgoing_outside+i+0.5, type='l',col=colours$outgoing_light,lwd=0.3)
-  
-
-  
-
+ 
 
   legend(
       x=2.2, y=n-1.1,
