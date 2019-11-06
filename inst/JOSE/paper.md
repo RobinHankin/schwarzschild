@@ -21,7 +21,7 @@ affiliations:
 - index: 1
   name: Auckland University of Technology
 nocite: |
-@schutz2009, @carroll2019
+  @schutz2009, @carroll2019
 ---
 
 # Introduction
