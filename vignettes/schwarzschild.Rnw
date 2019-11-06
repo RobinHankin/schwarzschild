@@ -84,9 +84,10 @@ require(schwarzschild)
 
 The \pkg{schwarzschild} package creates high-quality PDFs that
 illustrate different aspects of physics near a spherically symmetric
-black hole.  Although the {\em raison d'\^{e}tre} of the package is
+black hole.  The software is maintainable and extensively
+customisable.  Although the {\em raison d'\^{e}tre} of the package is
 the PDF images themselves, the physics underlying the Schwarzschild
-black hole is illustrated by the \proglang{R} functionality. 
+black hole is illustrated by the \proglang{R} functionality.
 
 In general relativity, Schwarzschild coordinates for a black hole have
 desirable properties such as asymptotic matching with flat-space
