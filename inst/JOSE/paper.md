@@ -17,6 +17,7 @@ tags:
 - Kruskal-Szekeres coordinates
 - Gullstrand-Painleve coordinates
 - Penrose diagram
+- Software infrastructure
 affiliations:
 - index: 1
   name: Auckland University of Technology
@@ -29,15 +30,15 @@ nocite: |
 In general relativity, Schwarzschild coordinates for a black hole have
 desirable properties such as asymptotic matching with flat-space
 spherical coordinates; but other coordinate systems can be used which
-have other advantages.  The schwarzschild package furnishes plots
-which use a variety of coordinates including Kruskal-Szekeres
+have other advantages such as removing the non-physical coordinate
+singularity at the event horizon.  The software presented here uses a
+variety of coordinates including Kruskal-Szekeres
 [@kruskal1960;@szekeres1960], Eddington-Finkelstein
 [@eddington1924;@finkelstein1958], Gullstrand-Painleve [@painleve1921;
 @gullstrand1922], Lemaitre [@lemaitre1933], and various Penrose
-diagrams with or without a black hole [@hawking1973].  These are
+transforms with or without a black hole [@hawking1973].  These are
 described in many undergraduate GR textbooks such as Schutz (2009) and
 Carroll (2019).
-
 
 # Statement of Need
 
@@ -47,8 +48,10 @@ However, in this context a diagram should be viewed as the _end_ of a
 process of a calculation, not an object in its own right; in computer
 terminology one would need the source code as well as the final image.
 The `schwarzschild` R package, available under the GPL, fills this
-need by making code available that creates camera-ready PDF diagrams
-of black holes using a range of coordinate systems.
+need by making such code available.  A number of camera-ready PDF
+diagrams of black holes using a range of coordinate systems are
+presented as examples of the software's functionality; the software is
+extensively configurable to users' requirements.
 
 The software has been used in two general relativity teaching
 contexts: firstly, as resources for my own astrophysics lectures at
@@ -60,11 +63,10 @@ which as of 2019 has over 48000 views and 770 subscribers.
 # Functionality and usage
 
 The ``schwarzschild`` package presents heavily documented and
-structured code that creates high-quality PDFs which illustrate
-different aspects of physics near a spherically symmetric black hole.
-Although the most visible feature of the package is the creation of
-the PDF images themselves, the physics underlying the Schwarzschild
-black hole is illustrated by the R functionality.
+structured R code that demonstrates different aspects of physics near
+a spherically symmetric black hole.  Spacetime near a Schwarzschild
+black hole is simulated by the R functionality of the package; one
+side-effect is the the creation of usable PDF images.
 
 The package defines over twenty functions that are called for their
 side-effect of plotting a diagram of spacetime in the vicinity of a
