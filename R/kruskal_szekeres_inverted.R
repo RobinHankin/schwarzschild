@@ -1,16 +1,16 @@
 kruskal_inverted <- function(colours=standard_colours, ...){
 
     n <- 4 # size of plot
-    par(xpd=FALSE)
-    clip(0,n,0,n)
     plot(NULL,xlim=c(0,n),ylim=c(0,n),asp=1,type="n",axes=FALSE,
          xlab='Schwarzschild r',ylab='Schwarzschild t',main="Inverted Kruskal-Szekeres coordinates")
     
     axis(1,pos=0,at=0:n)
     axis(2,pos=0,at=0:n)
     
-    for(i in 0:4){ segments(x0=0,x1=n+1,y0=i,col=colours$t)}
-    for(i in 0:4){ segments(x0=i,y0=0,y1=n+1,col=colours$r)}
+    for(i in 0:4){ segments(x0=0,x1=n,y0=i,col=colours$t)}
+    for(i in 0:4){ segments(x0=i,y0=0,y1=n,col=colours$r)}
+
+    clip(0,n,0,n)
     
     ## Tval and Xval are Kruskal X,T.
     
