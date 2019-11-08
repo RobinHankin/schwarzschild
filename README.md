@@ -35,4 +35,4 @@ provided.
 
 For more detail, see the package vignette
 
-    vignette("lorentz")
+    vignette("schwarzschild")
