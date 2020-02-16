@@ -155,7 +155,7 @@ penrose_BH_norm <- function(colours=standard_colours, ...){
          )
   ## plot the AUT logo:
   if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.85,y=0.16, width=0.1)}  
-  par(family="mono")
+
   git(-0.6,-0.7)
 
 }

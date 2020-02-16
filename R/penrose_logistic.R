@@ -87,7 +87,6 @@ penrose_logistic <- function(colours=standard_colours, ...){
   ## plot the AUT logo:
   if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.85,y=0.20, width=0.1)}
 
-  par(family="mono")
   git(-1.2,-1.1)
 
 }

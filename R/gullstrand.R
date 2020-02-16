@@ -107,7 +107,6 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
     ## plot the AUT logo:
     if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.8,y=0.06, width=0.1)}  
     
-    par(family="mono")
     git(-0.8,-0.7)
     
 }

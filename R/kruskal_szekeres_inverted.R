@@ -54,7 +54,6 @@ kruskal_inverted <- function(colours=standard_colours, ...){
   if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.84,y=0.08, width=0.1)}
 
 
-  par(family="mono")
   git(-0.8,-0.7)
 
 }

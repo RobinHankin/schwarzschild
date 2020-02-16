@@ -90,7 +90,6 @@ lemaitre <- function(draw_schwarzschild=FALSE, colours=standard_colours, ...){
     ## plot the AUT logo:
     if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.78,y=0.08, width=0.1)}  
 
-  par(family="mono")
   git(-2.5,-2.5)
 
 }
