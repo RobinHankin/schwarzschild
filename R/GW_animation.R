@@ -1,4 +1,4 @@
-`GW` <- function(plus=0.03, cross=0, lattice=TRUE, frames=20, n=11, center=c(0,0)){
+`GW` <- function(plus=0.03, cross=0, lattice=TRUE, frames=20, n=11, center=c(0,0),...){
     
     jj <- seq(from= -1,to= 1,len=n)
 
@@ -30,7 +30,7 @@
         plot(NULL,xlim=c(-1,1),ylim=c(-1,1),xlab='',ylab='',asp=1,axes=FALSE,type='n')
 #        axis(1,pos=-1.1)
 #        axis(2,pos=-1.1)
-        points(p+Re(plus_perturb + cross_perturb), type='p')
+        points(p+Re(plus_perturb + cross_perturb), type='p',...)
     } #  plot commands end
         
         animation::ani.record()  # record the current frame

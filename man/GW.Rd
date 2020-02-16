@@ -7,7 +7,7 @@
   through an array of test particles, perpendicular to the plane of the
   plot}
 \usage{
-GW(plus = 0.03, cross = 0, lattice = TRUE, frames = 20, n = 11, center = c(0, 0))
+GW(plus = 0.03, cross = 0, lattice = TRUE, frames = 20, n = 11, center =c(0,0), ...)
 }
 \arguments{
   \item{plus,cross}{(Complex) amplitudes for the plus and cross polarizations}
@@ -17,6 +17,7 @@ GW(plus = 0.03, cross = 0, lattice = TRUE, frames = 20, n = 11, center = c(0, 0)
     are \eqn{n} particles arranged in a circle}
   \item{center}{Coordinates of point which appears to be at rest (but
     note that, in reality, all the particles are at rest)}
+  \item{...}{Further arguments, passed to \code{points()}}
 }
 \details{
   Does what it says on the tin, basically.  Creates a looped animation of
