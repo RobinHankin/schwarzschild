@@ -51,7 +51,7 @@
     fun_backward <- function(x){tan(x*pi/2)}
   } else if(choice == "norm"){
     alpha <- 0.2
-    fun_backward <- function(x){alpha*qnorm((x+1)/2)}
+    fun_backward <- function(x){qnorm((x+1)/2)/alpha}
   } else if(choice == "logistic"){
     alpha <- 1
     fun_backward <- function(x){alpha*qlogis((x+1)/2)}
