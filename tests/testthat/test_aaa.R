@@ -2,7 +2,7 @@
 
 test_that("Test suite aaa.R",{
 
-  schwarzschild())
+  schwarzschild()
   schwarzschild(draw_infalling_drops=TRUE)
   eddington()
 
