@@ -52,11 +52,14 @@ However, in this context a diagram should be viewed as the _end_ of a
 process of calculation, not an object in its own right.  In computer
 terminology one would need the source code as well as the final image
 and such source code is not currently available.  The `schwarzschild`
-R package [@rcore2019], available under the GPL, fills this need.  A
-number of camera-ready PDF diagrams of black holes using a range of
-coordinate systems are presented as examples of the software's
-functionality; the software is extensively configurable to users'
-requirements.
+R package [@rcore2019], available under the GPL, fills this need.  
+
+The package is intended as a resource for lecturers of general
+relativity and it is envisaged that the diagrams be used as visual
+teaching aids for understanding the Schwarzchild metric.  A number of
+camera-ready PDF diagrams of black holes using a range of coordinate
+systems are presented as examples of the software's functionality; the
+software is extensively configurable to users' requirements.
 
 The software has been used in two general relativity teaching
 contexts: firstly, as resources for my own astrophysics lectures at
