@@ -70,16 +70,27 @@ which as of October 2020 has over 150000 views and 1200 subscribers.
 
 # Functionality and usage
 
-The `schwarzschild` package presents heavily documented and
-structured R code that demonstrates different aspects of physics near
-a spherically symmetric black hole.  Physical processes such as null
-geodesics and freely falling objects are simulated near a
-Schwarzschild black hole by the R functionality of the package; one
-side-effect is the the creation of usable and accurate PDF images.
+The `schwarzschild` package presents structured R code with extensive
+inline documentation as part of an educational resource package.  The
+package creates mathematically accurate diagrams illustrating
+different aspects of physics near a spherically symmetric black hole.
+Physical processes such as null geodesics and freely falling objects
+are simulated near a Schwarzschild black hole by the R functionality
+of the package; one side-effect is the the creation of usable and
+accurate PDF images.
+
+
+\newcommand\latexcode[1]{#1}
 
 The package defines over twenty functions that are called for their
 side-effect of plotting a diagram of spacetime in the vicinity of a
-black hole.  The code itself is maintainable, extensible, and makes
+black hole.  The principal such function would be `schwarzschild()`,
+which shows a spacetime diagram near a non-spinning stationary black
+hole using Schwarzschild coordinates but many other coordinate systems
+are available including Kruskal-Szekeres (`kruskal()` and variants),
+\latexcode{Lema\^{\i}tre} coordinates (`lemaitre()`) and others.
+
+The code itself is maintainable, extensible, and makes
 the connection between physics and plotted diagram explicit.  The
 package is written to behave well in the wider ecology of R software.
 
