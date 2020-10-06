@@ -27,6 +27,7 @@ nocite: |
 
 # Introduction
 
+
 In general relativity, Schwarzschild coordinates for a black hole have
 desirable properties such as asymptotic matching with flat-space
 spherical coordinates; but other coordinate systems can be used which
@@ -78,6 +79,39 @@ side-effect of plotting a diagram of spacetime in the vicinity of a
 black hole.  The code itself is maintainable, extensible, and makes
 the connection between physics and plotted diagram explicit.  The
 package is written to behave well in the wider ecology of R software.
+
+# Examples
+
+Two example images from the 19 in the package vignette are shown below
+in low-resolution jpg format.  For vectorized PDF, see the package
+vignette.
+
+
+
+![Low resolution image of Space near a black
+  hole, using standard Schwarzschild coordinates.
+  Neither ingoing light (red) nor outgoing light (blue) crosses the
+  event horizon (fuschia); inside the black hole, ingoing light
+  travels backwards in Schwarzschild time but nears the singularity.
+  As the event horizon is approached from the outside, the light cones
+  (gray) close up but as the event horizon is crossed, they become
+  everted.  As the singularity is approached, ingoing and outgoing
+  light converge and meet the singularity horizontally.  For
+  vectorized PDF version, see the package vignette](schwarzschild.jpg)
+
+![Low resolution image of maximally extended space near a black hole,
+  using Kruskal-Szekeres coordinates.  Ingoing light (red) and
+  outgoing light (blue) are represented as $45^\circ$ lines.  The
+  event horizon (fuschia) is shown as a set of $45^\circ$ lines which
+  show that neither ingoing nor outgoing light can escape the black
+  hole and the singularity (thick black line) is unavoidable; the gray
+  area above the singularity is meaningless.  Lines of constant
+  Schwarzschild time are shown in orange and constant Schwarzschild
+  radius in green; see how the lines of constant radius are spacelike,
+  and lines of constant Schwarzschild time are timelike, inside the
+  event horizon.  For vectorized PDF version, see the package
+  vignette](penrose_BH_extended.jpg)
+
 
 
 # References
