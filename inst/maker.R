@@ -26,6 +26,13 @@ library(schwarzschild)
     svg(file=paste(basename,"svg",sep="."), height=9,width=9)
     eval(parse(text=command))
     dev.off()
+
+    jpeg(file=paste(basename,"jpg",sep="."), height=9,width=9,units="in",res=300)
+    eval(parse(text=command))
+    dev.off()
+
+
+
 }
 
 do("schwarzschild()")
