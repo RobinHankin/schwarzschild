@@ -66,7 +66,7 @@ contexts: firstly, as resources for my own astrophysics lectures at
 AUT, and secondly to support my _Trin Tragula_ YouTube channel
 [General relativity step by
 step](https://www.youtube.com/watch?v=JzCX3FqDIOc&list=PL9_n3Tqzq9iWtgD8POJFdnVUCZ_zw6OiB)
-which as of 2019 has over 48000 views and 770 subscribers.
+which as of October 2020 has over 150000 views and 1200 subscribers.
 
 # Functionality and usage
 
