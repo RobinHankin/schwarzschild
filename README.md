@@ -28,7 +28,7 @@ And then to load the package use `library()`:
 library("schwarzschild")
 ```
 
-The PDF diagrams are created by `inst/maker.R` and a Makefile is
+All PDF diagrams are created by `inst/maker.R` and a Makefile is
 provided.
 
 # Further information

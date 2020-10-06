@@ -25,27 +25,26 @@ knitr::opts_chunk$set(
 # Overview
 
 
-The ```schwarzschild``` package creates a series of high-quality PDF
+The `schwarzschild` package creates a series of high-quality PDF
 images showing different aspects of the physics of black holes.
 
 
 
 # Installation
 
-The package is not yet on CRAN.  To install the current development version use ```devtools```:
+The package is not yet on CRAN.  To install the current development version use `devtools`:
 
 ```
 R> devtools::install_github("RobinHankin/schwarzschild")
 ```
 
-And then to load the package use ```library()```:
-
+And then to load the package use `library()`:
 
 ```{r,message=FALSE}
 library("schwarzschild")
 ```
 
-The PDF diagrams are created by ```inst/maker.R``` and a Makefile is
+All PDF diagrams are created by `inst/maker.R` and a Makefile is
 provided.
 
 
