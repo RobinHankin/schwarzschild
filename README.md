@@ -20,7 +20,7 @@ showing different aspects of the physics of black holes.
 The package is not yet on CRAN. To install the current development
 version use `devtools`:
 
-    R> devtools::install_github("RobinHankin/schwarzschild")
+    R> devtools::install_github("RobinHankin/schwarzschild", build_vignettes=TRUE)
 
 And then to load the package use `library()`:
 
