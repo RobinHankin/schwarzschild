@@ -66,7 +66,7 @@ which as of 2019 has over 48000 views and 770 subscribers.
 
 # Functionality and usage
 
-The ``schwarzschild`` package presents heavily documented and
+The `schwarzschild` package presents heavily documented and
 structured R code that demonstrates different aspects of physics near
 a spherically symmetric black hole.  Physical processes such as null
 geodesics and freely falling objects are simulated near a
