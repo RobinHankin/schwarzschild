@@ -7,4 +7,6 @@ inst\*.svg$
 inst\*.jpg$
 inst/.RData$
 vignettes\*.pdf$
-^.*\.Rout$ 
+^.*\.Rout$
+contributing.md
+LICENSE
