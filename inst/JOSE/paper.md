@@ -28,6 +28,8 @@ nocite: |
 # Introduction
 
 
+
+
 In general relativity, Schwarzschild coordinates for a black hole have
 desirable properties such as asymptotic matching with flat-space
 spherical coordinates; but other coordinate systems can be used which
@@ -126,6 +128,12 @@ vignette.
   event horizon.  For vectorized PDF version, see the package
   vignette](penrose_BH_extended.jpg)
 
+
+# Downloads
+
+The resulting PDF images are available at
+
+[https://autuni-my.sharepoint.com/:f:/g/personal/rhankin_aut_ac_nz/EgX_IANsoOJDmTiH2i9_P20B6ksn9CMHf_TM31w5K3aITg?e=dPxAcp](https://autuni-my.sharepoint.com/:f:/g/personal/rhankin_aut_ac_nz/EgX_IANsoOJDmTiH2i9_P20B6ksn9CMHf_TM31w5K3aITg?e=dPxAcp)
 
 
 # References
