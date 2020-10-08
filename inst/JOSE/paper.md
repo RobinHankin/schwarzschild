@@ -104,7 +104,7 @@ vignette.
 
 
 
-![Low resolution image of Space near a black
+![Low resolution image of space near a black
   hole, using standard Schwarzschild coordinates.
   Neither ingoing light (red) nor outgoing light (blue) crosses the
   event horizon (fuschia); inside the black hole, ingoing light
