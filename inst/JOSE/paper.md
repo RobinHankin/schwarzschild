@@ -113,7 +113,8 @@ vignette.
   (gray) close up but as the event horizon is crossed, they become
   everted.  As the singularity is approached, ingoing and outgoing
   light converge and meet the singularity horizontally.  For
-  vectorized PDF version, see the package vignette](schwarzschild.jpg)
+  vectorized PDF version, see the package vignette or click the link
+  below](schwarzschild.jpg)
 
 ![Low resolution image of maximally extended space near a black hole,
   using Kruskal-Szekeres coordinates.  Ingoing light (red) and
@@ -126,7 +127,7 @@ vignette.
   radius in green; see how the lines of constant radius are spacelike,
   and lines of constant Schwarzschild time are timelike, inside the
   event horizon.  For vectorized PDF version, see the package
-  vignette](penrose_BH_extended.jpg)
+  vignette or click the link below](penrose_BH_extended.jpg)
 
 
 # Downloads
