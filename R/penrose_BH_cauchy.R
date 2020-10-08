@@ -11,7 +11,7 @@ penrose_BH_cauchy <- function(colours=standard_colours, ...){
   ## translate an infinite universe into a finite area.
     
   ## NB: cauchy (previously known as 'tan') is the only one that looks
-  ## good: the others all suck.  Compare penrose_foo() [i.e. no black
+  ## good: the others all look bad.  Compare penrose_foo() [i.e. no black
   ## hole], where "norm" is the good one.
 
   penrose <- penrose_transform("cauchy")

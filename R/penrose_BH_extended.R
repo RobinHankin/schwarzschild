@@ -6,7 +6,7 @@ penrose_BH_extended <- function(colours = standard_colours, ...){
 
     ## This function uses a Cauchy transform.  In principle we could
     ## have an extended diagram for the other Penrose transforms but
-    ## frankly there would be very little point: they suck.
+    ## frankly there would be very little point: they look bad.
 
     penrose <- penrose_transform("cauchy") # penrose_tranform() defined in penrose_transform_chooser.R
 
