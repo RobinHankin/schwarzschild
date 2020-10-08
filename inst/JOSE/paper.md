@@ -119,15 +119,23 @@ vignette.
 ![Low resolution image of maximally extended space near a black hole,
   using Kruskal-Szekeres coordinates.  Ingoing light (red) and
   outgoing light (blue) are represented as $45^\circ$ lines.  The
-  event horizon (fuschia) is shown as a set of $45^\circ$ lines which
-  show that neither ingoing nor outgoing light can escape the black
-  hole and the singularity (thick black line) is unavoidable; the gray
-  area above the singularity is meaningless.  Lines of constant
-  Schwarzschild time are shown in orange and constant Schwarzschild
-  radius in green; see how the lines of constant radius are spacelike,
-  and lines of constant Schwarzschild time are timelike, inside the
-  event horizon.  For vectorized PDF version, see the package
-  vignette or click the link below](penrose_BH_extended.jpg)
+  event horizon (fuschia) is shown as a set of $45^\circ$ lines.  
+  Neither ingoing nor outgoing light emitted from an object inside the
+  event horizon can escape the black hole and the singularity (thick
+  black line) is unavoidable; the area above the singularity is
+  meaningless.  Lines of constant Schwarzschild time are shown in
+  orange and constant Schwarzschild radius in green; see how the lines
+  of constant radius are spacelike, and lines of constant
+  Schwarzschild time are timelike, inside the event horizon.  The
+  extended coordinates admit two new regions: an antiuniverse on the
+  left and a white hole below the black hole.  The only way that
+  objects in the universe can have a causal link with objects in the
+  antiuniverse is via the interior of the black hole and examples of
+  intersecting null geodesics are shown.  The white hole is a region
+  from which escape is inevitable; outgoing null geodesics may emerge
+  in either the universe or the antiuniverse.  For a vectorized PDF
+  image, see the package vignette or click the link
+  below](penrose_BH_extended.jpg)
 
 
 # Downloads

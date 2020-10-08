@@ -382,8 +382,22 @@ kruskal_extended()
 @
 \caption[Extended Kruskal-Szekeres coordinates]{Space near a black hole,
   \label{kruskal_szekeres_extended} as for figure~\ref{kruskal_szekeres} but
-  using extended Kruskal-Szekeres coordinates.  The black and white
-  holes, and universe and antiuniverse, are labelled}
+  using extended Kruskal-Szekeres coordinates.  Ingoing light (red) and
+  outgoing light (blue) are represented as $45^\circ$ lines.  The
+  event horizon (fuschia) is shown as a set of $45^\circ$ lines.  
+  Neither ingoing nor outgoing light emitted from an object inside the
+  event horizon can escape the black hole and the singularity (thick
+  black line) is unavoidable; the gray area above the singularity is
+  meaningless.  Lines of constant Schwarzschild time are shown in
+  orange and constant Schwarzschild radius in green; see how the lines
+  of constant radius are spacelike, and lines of constant
+  Schwarzschild time are timelike, inside the event horizon.  The
+  extended coordinates admit two new regions: an antiuniverse on the
+  left and a white hole below the black hole.  The only way that
+  objects in the universe can have a causal link with objects in the
+  antiuniverse is via the interior of the black hole and examples of
+  intersecting null geodesics are shown.  The white hole is a region
+  from which escape is inevitable}
 \end{center}
 \end{figure}
 
