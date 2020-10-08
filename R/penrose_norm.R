@@ -4,7 +4,7 @@ penrose_norm <- function(colours=standard_colours, ...){
 
   penrose <- penrose_transform("norm")
 
-  ## NB: norm looks good and tan sucks; cf penrose_black_hole
+  ## NB: norm looks good and tan does not; cf penrose_black_hole
 
   ## set up axes
   jj <- c(-1,1)

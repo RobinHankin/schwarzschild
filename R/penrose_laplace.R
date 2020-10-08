@@ -3,7 +3,7 @@ penrose_laplace <- function(colours=standard_colours, ...){
   ## plots a Penrose diagram of the whole universe.  
   penrose <- penrose_transform("laplace")
 
-  ## NB: norm looks good and tan sucks; cf penrose_black_hole
+  ## NB: norm looks good; cf penrose_black_hole
 
   ## set up axes:
   jj <- c(-1,1)

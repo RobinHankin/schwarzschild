@@ -4,9 +4,7 @@ penrose_cauchy <- function(colours=standard_colours, ...){
 
   penrose <- penrose_transform("cauchy")
 
-  ## NB: norm looks good and tan sucks; cf penrose_black_hole
-
-                                        # set up axes
+  ## set up axes
   jj <- c(-1,1)
   plot(jj,jj,asp=1,type='n',axes=FALSE,xlab='',ylab='',main='Cauchy transform')
 
