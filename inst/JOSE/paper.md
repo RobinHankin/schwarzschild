@@ -58,7 +58,7 @@ R package [@rcore2019], available under the GPL, fills this need.
 
 The package is intended as a resource for lecturers of general
 relativity and it is envisaged that the diagrams be used as visual
-teaching aids for understanding the Schwarzchild metric.  A number of
+teaching aids for understanding the Schwarzschild metric.  A number of
 camera-ready PDF diagrams of black holes using a range of coordinate
 systems are presented as examples of the software's functionality; the
 software is extensively configurable to users' requirements.
