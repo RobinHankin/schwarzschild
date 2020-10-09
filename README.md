@@ -13,7 +13,15 @@ status](https://www.r-pkg.org/badges/version/schwarzschild)](https://cran.r-proj
 # Overview
 
 The `schwarzschild` package creates a series of high-quality PDF images
-showing different aspects of the physics of black holes.
+showing different aspects of the physics of black holes. The software is
+available under the GPL and runs under the R programming language.
+
+The package is intended as a resource for lecturers of general
+relativity and it is envisaged that the diagrams be used as visual
+teaching aids for understanding the Schwarzschild metric. A number of
+camera-ready PDF diagrams of black holes using a range of coordinate
+systems are presented as examples of the software’s functionality; the
+software is extensively configurable to users’ requirements.
 
 # Installation
 
@@ -29,10 +37,12 @@ library("schwarzschild")
 ```
 
 All PDF diagrams are created by `inst/maker.R` and a Makefile is
-provided.
+provided; altnernatively, the resulting PDF images are available at
+
+<https://autuni-my.sharepoint.com/:f:/g/personal/rhankin_aut_ac_nz/EgX_IANsoOJDmTiH2i9_P20B6ksn9CMHf_TM31w5K3aITg?e=dPxAcp>
 
 # Further information
 
-For more detail, see the package vignette
+For more detail, see the package vignette; at the R prompt, type
 
     vignette("schwarzschild")
