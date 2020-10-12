@@ -64,9 +64,9 @@ systems are presented as examples of the software's functionality; the
 software is extensively configurable to users' requirements.
 
 The software has been used in two general relativity teaching
-contexts: firstly, as resources for my own astrophysics lectures at
-AUT, and secondly to support my _Trin Tragula_ YouTube channel
-[General relativity step by
+contexts: firstly, as resources for astrophysics lectures at Auckland
+University of Technology; and secondly to support the _Trin Tragula_
+YouTube channel [General relativity step by
 step](https://www.youtube.com/watch?v=JzCX3FqDIOc&list=PL9_n3Tqzq9iWtgD8POJFdnVUCZ_zw6OiB)
 which as of October 2020 has over 150000 views and 1200 subscribers.
 
