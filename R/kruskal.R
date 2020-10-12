@@ -6,7 +6,7 @@ kruskal <- function(colours=standard_colours, ...){## NB: everything here is (sp
     constant_t_interior <- colours$r
     
     ## points from which to emit a ray of light (and draw spacelike
-    ## curves of constant Schwarzchild r from):
+    ## curves of constant Schwarzschild r from):
 
     r_emitting <-  seq(from=1.05,len=4,to=2)
     

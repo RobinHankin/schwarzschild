@@ -9,7 +9,7 @@ kruskal_extended <- function(colours = standard_colours, ...){
     constant_t_interior <- colours$r
 
     ## points from which to emit a ray of light (and draw spacelike
-    ## curves of constant Schwarzchild r from):
+    ## curves of constant Schwarzschild r from):
     
     r_emitting <-  seq(from=1.05,len=4,to=2)
 
@@ -39,7 +39,7 @@ kruskal_extended <- function(colours = standard_colours, ...){
     jj[,1] <- -jj[,1]
     points(jj,type='l',lty=1,lwd=0.5,col=constant_r_exterior)  # spacelike
 
-    text(0,-2,"NB: lines of constant Schwarzchild r are timelike outside and spacelike inside")
+    text(0,-2,"NB: lines of constant Schwarzschild r are timelike outside and spacelike inside")
 
     ## Now curves of constant Schwarzschild t, exterior:
     rt_ext <- as.matrix(expand.grid(
