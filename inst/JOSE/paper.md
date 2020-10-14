@@ -28,8 +28,6 @@ nocite: |
 # Introduction
 
 
-
-
 In general relativity, Schwarzschild coordinates for a black hole have
 desirable properties such as asymptotic matching with flat-space
 spherical coordinates; but other coordinate systems can be used which
@@ -45,6 +43,10 @@ of the Schwarzschild metric.  These include: Kruskal-Szekeres
 transforms with or without a black hole [@hawking1973].  These are
 described in many undergraduate GR textbooks such as Schutz (2009) and
 Carroll (2019).
+
+The `schwarzschild` package is a suite of visualization routines for
+the coordinate systems mentioned above.  It creates a large number of
+mathematically accurate diagrams using the R programming language.
 
 # Statement of Need
 
