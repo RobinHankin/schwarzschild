@@ -182,23 +182,24 @@ and integration gives us
 \right)
   \end{equation}
 
-which is implemented inthe package as function \code{raindrop()}. 
+which is implemented in the package as function \code{raindrop()}. 
 
-\subsection{Package graphics}
+\section{Package graphics: Schwarzschild coordinates}
 
 Null- and spacelike geodesics may be plotted in any coordinate system;
-figure~\ref{schwarzschild}, in which the unit of distance and of time
-is the Schwarzschild radius~$2M$ shows ingoing and outgoing null
-geodesics according to equation See how the light cones morph
-discontinuously as the event horizon is crossed; also note how the
-angle subtended by the inward and outward light approaches zero at the
-singularity.  Ingoing null geodesics do not cross the event horizon,
-which might be interpreted as saying that nothing passes the event
-horizon (see also figure~\ref{schwarzschild_drops} which demonstrates
-that ingoing massive particles do not cross the event horizon).
-Ingoing and outgoing null geodesics are marked with arrows which show
-the direction of travel of a light path.  Observe how ingoing light
-travels backward in Schwarzschild time.
+in this section we use Schwarzschild coordinates in which the unit of
+distance and of time is the Schwarzschild radius~$2M$.
+Figure~\ref{schwarzschild} shows ingoing and outgoing null geodesics
+according to equation~\ref{nullgeodesic}.  See how the light cones
+morph discontinuously as the event horizon is crossed; also note how
+the angle subtended by the inward and outward light approaches zero at
+the singularity.  Ingoing null geodesics do not cross the event
+horizon, which might be interpreted as saying that nothing passes the
+event horizon (see also figure~\ref{schwarzschild_drops} which
+demonstrates that ingoing massive particles do not cross the event
+horizon).  Ingoing and outgoing null geodesics are marked with arrows
+which show the direction of travel of a light path.  Observe how
+ingoing light travels backward in Schwarzschild time.
 
 Worldlines of freely falling objects may be calculated and plotted on
 Schwarzschild coordinates (figure~\ref{schwarzschild_throw}) or
