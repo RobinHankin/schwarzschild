@@ -190,22 +190,30 @@ Null- and spacelike geodesics may be plotted in any coordinate system;
 in this section we use Schwarzschild coordinates in which the unit of
 distance and of time is the Schwarzschild radius~$2M$.
 Figure~\ref{schwarzschild} shows ingoing and outgoing null geodesics
-according to equation~\ref{nullgeodesic}.  See how the light cones
-morph discontinuously as the event horizon is crossed; also note how
-the angle subtended by the inward and outward light approaches zero at
-the singularity.  Ingoing null geodesics do not cross the event
-horizon, which might be interpreted as saying that nothing passes the
-event horizon (see also figure~\ref{schwarzschild_drops} which
-demonstrates that ingoing massive particles do not cross the event
-horizon).  Ingoing and outgoing null geodesics are marked with arrows
-which show the direction of travel of a light path.  Observe how
-ingoing light travels backward in Schwarzschild time.
+according to equation~\ref{nullgeodesic}.  This figure contains a
+wealth of physical insight, made clearer by the fact that it is
+mathematically precise.  For example, ingoing null geodesics do not
+cross the event horizon, which might be interpreted as saying that
+nothing passes the event horizon (see also
+figure~\ref{schwarzschild_drops} which demonstrates that ingoing
+massive particles do not cross the event horizon).  Ingoing and
+outgoing null geodesics are marked with arrows which show the
+direction of travel of a light path.  Observe how ingoing light
+travels backward in Schwarzschild time inside the event horizon; and
+note how the angle subtended by the inward and outward light
+approaches zero at the singularity.
+
+Further, see how the light cones (gray) morph discontinuously as the
+event horizon is crossed.  This pathology is not physical: it is
+purely a manifestation of the coordinate singularity at $r=2M$ and it
+is possible to use other coordinate systems, shown below, that do not
+exhibit this phenomenon.
 
 Worldlines of freely falling objects may be calculated and plotted on
 Schwarzschild coordinates (figure~\ref{schwarzschild_throw}) or
 logarithmic Schwarzschild coordinates
 (figure~\ref{schwarzschild_throw_logx}).  See how outward-directed
-objects on the interior of the black hole travels backward in
+objects on the interior of the black hole travel backward in
 Schwarzschild time, as for null geodesics.  Also see how all world
 lines, whether inward or outward directed, have zero slope as the
 singularity is approached.
