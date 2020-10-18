@@ -113,24 +113,91 @@ is
   ds^2 = -\left(1-2M/r\right)dt^2 + \frac{dr^2}{1-2M/r} + r^2d\theta^2+ r^2\sin^2\theta d\phi^2
   \end{equation}
 
-\noindent where geometrized units ($G=c=1$) are used and $M$ is the mass of the black hole.  Here we consider only a radial line corresponding to~$\theta, \phi$ constant, giving
+\noindent where geometrized units ($G=c=1$) are used and $M$ is the
+mass of the black hole.  Thus coordinate $t$ matches time as measured
+by a distant observer, and $r$ has the property that a circle of
+radius $r$ has circumference $\int_{\phi=0}^{2\pi}ds=2\pi r$.
 
-\begin{equation}
+Here we consider only a radial line
+corresponding to~$\theta, \phi$ constant, giving
+
+\begin{equation}\label{schwarz_radial}
   ds^2 = -\left(1-2M/r\right)dt^2 + \frac{dr^2}{1-2M/r}.
 \end{equation}
 
-These coordinates may be plotted in two dimensional space, as shown in
-figures~\ref{schwarzschild} and~\ref{schwarzschild_drops}, in which
-the unit of distance and of time is the Schwarzschild radius~$2M$.
-See how the light cones morph discontinuously as the event horizon is
-crossed; also note how the angle subtended by the inward and outward
-light approaches zero at the singularity.  Ingoing null geodesics do
-not cross the event horizon, which might be interpreted as saying that
-nothing passes the event horizon (see also
-figure~\ref{schwarzschild_drops} which demonstrates that ingoing
-massive particles do not cross the event horizon).  Ingoing and
-outgoing null geodesics are marked with arrows which show the
-direction of travel of a light path.  Observe how ingoing light
+\subsection{Null geodesics}
+Null geodesics, paths for which $ds=0$, follow $dr=\pm(1-2M/r)dt$ (the
+positive sign for outgoing light and negative for outgoing light);
+integrating, we have
+
+\begin{equation}\label{nullgeodesic}
+C\pm t=r+\log\left|r-2M\right|
+\end{equation}
+
+where $C$ is a constant of integration; this is implemented in package
+idiom by functions \code{ingoing()} and \code{outgoing()}
+respectively.
+
+\subsection{Geodesic paths}
+
+Spacelike geodesics for objects in freefall may be determined
+similarly.  The general geodesic equation reads
+
+\begin{equation}\label{geodesic}
+  \frac{d}{d\tau}\left(g_{\mu\nu}\frac{dx^\nu}{d\tau}\right)-\frac{1}{2}\partial_\mu g_{\alpha\beta}\frac{dx^\alpha}{d\tau}\frac{dx^\beta}{d\tau}
+\end{equation}
+
+where $\tau$ is proper time for an object.  Using the fact that the
+Schwarzschild metric~\ref{schwarz_radial} is time-independent and
+diagonal, the $\mu=t$ component of equation~\ref{geodesic} for a
+radial path simplifies to
+$\frac{d}{d\tau}\left(g_{tt}\frac{dt}{d\tau}\right)=0 $, and
+substituting $g_{tt}=-(1-2M/r)$ gives us that
+$(1-2M/r)\frac{dt}{d\tau}=e$, a constant.  Considering an object at a
+distance large compared with $M$ from the black hole allows us to
+identify $e$ with the (relativistic) energy per unit mass at infinity.
+Recalling that $g_{\mu\nu}u^\mu u^\nu=-1$, radial Schwarzschild paths
+tell us that $ g_{tt}\left(\frac{dt}{d\tau}\right)^2 +
+g_{rr}\left(\frac{dr}{d\tau}\right)^2 = -1 $, and substituting from
+the Schwarzschild metric we find that
+$1+(dr/d\tau)^2=(1-2M/r)^2(dt/d\tau)^2$; the energy equation gives us
+
+\begin{equation}
+  \left(\frac{dr}{d\tau}\right)^2=e(1-2M/r)-1
+\end{equation}
+
+Elementary calculus then gives us the useful equation
+
+\begin{equation}
+\frac{dr}{dt} = (1-2M/r)\sqrt{(1-2M/r)-1/e}
+  \end{equation}
+
+and integration gives us
+
+\begin{equation}
+\pm t = C+2M\left(
+ \frac{2}{3}\left(\frac{r}{2M}\right)^\frac{3}{2}
++2\sqrt{\frac{r}{2M}}
++\log\frac{\left|\sqrt{\frac{r}{2M}}-1\right|}{\sqrt{\frac{r}{2M}}+1}
+\right)
+  \end{equation}
+
+which is implemented inthe package as function \code{raindrop()}. 
+
+\subsection{Package graphics}
+
+Null- and spacelike geodesics may be plotted in any coordinate system;
+figure~\ref{schwarzschild}, in which the unit of distance and of time
+is the Schwarzschild radius~$2M$ shows ingoing and outgoing null
+geodesics according to equation See how the light cones morph
+discontinuously as the event horizon is crossed; also note how the
+angle subtended by the inward and outward light approaches zero at the
+singularity.  Ingoing null geodesics do not cross the event horizon,
+which might be interpreted as saying that nothing passes the event
+horizon (see also figure~\ref{schwarzschild_drops} which demonstrates
+that ingoing massive particles do not cross the event horizon).
+Ingoing and outgoing null geodesics are marked with arrows which show
+the direction of travel of a light path.  Observe how ingoing light
 travels backward in Schwarzschild time.
 
 Worldlines of freely falling objects may be calculated and plotted on

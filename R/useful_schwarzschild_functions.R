@@ -55,7 +55,7 @@
   cone(x,y,leftangle=leftangle,rightangle=rightangle,size=size, colours=colours)
 }
 
-`raindrop` <- function(r){  # gives Schwarzschild t as a function of r for freely falling raindrops
+`raindrop` <- function(r){  # gives Schwarzschild t as a function of r for freely falling raindrops; see vignette.
   -2/3*sqrt(r)^3*(3/r+1) + log(abs((1+sqrt(r))/(1-sqrt(r))))
 }
 
