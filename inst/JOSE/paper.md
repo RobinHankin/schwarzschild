@@ -101,7 +101,7 @@ package is written to behave well in the wider ecology of R software.
 # Examples
 
 Two example images from the 19 in the package vignette are shown below
-in low-resolution jpg format.  For vectorized PDF, see the package
+in low-resolution JPG format.  For vectorized PDF, see the package
 vignette.
 
 
