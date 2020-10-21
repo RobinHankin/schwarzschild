@@ -97,11 +97,12 @@ The code itself is maintainable, extensible, and makes
 the connection between physics and plotted diagram explicit.  The
 package is written to behave well in the wider ecology of R software.
 
-# Examples
+# Downloads
 
-Two example images from the 19 in the package vignette are shown below
-in low-resolution JPG format.  For vectorized PDF, see the package
-vignette.
+Two example images are shown below in low-resolution JPG format.  All
+nineteen vectorized PDF images can be seen in the package vignette or
+online through [Microsoft
+Sharepoint](https://autuni-my.sharepoint.com/:f:/g/personal/rhankin_aut_ac_nz/EgX_IANsoOJDmTiH2i9_P20B6ksn9CMHf_TM31w5K3aITg?e=dPxAcp).
 
 
 
@@ -137,13 +138,6 @@ vignette.
   in either the universe or the antiuniverse.  For a vectorized PDF
   image, see the package vignette or click the link
   below](penrose_BH_extended.jpg)
-
-
-# Downloads
-
-The resulting PDF images are available at
-
-[https://autuni-my.sharepoint.com/:f:/g/personal/rhankin_aut_ac_nz/EgX_IANsoOJDmTiH2i9_P20B6ksn9CMHf_TM31w5K3aITg?e=dPxAcp](https://autuni-my.sharepoint.com/:f:/g/personal/rhankin_aut_ac_nz/EgX_IANsoOJDmTiH2i9_P20B6ksn9CMHf_TM31w5K3aITg?e=dPxAcp)
 
 
 # References
