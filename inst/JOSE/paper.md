@@ -87,13 +87,13 @@ accurate PDF images.
 
 \newcommand\latexcode[1]{#1}
 
-The package defines over twenty functions that are called for their
-side-effect of plotting a diagram of spacetime in the vicinity of a
-black hole.  The principal such function would be `schwarzschild()`,
-which shows a spacetime diagram near a non-spinning stationary black
-hole using Schwarzschild coordinates but many other coordinate systems
-are available, including Kruskal-Szekeres (`kruskal()` and variants),
-\latexcode{Lema\^{\i}tre} coordinates (`lemaitre()`) and others.
+The package defines over twenty functions that plot diagrams of
+spacetime in the vicinity of a black hole.  The principal such
+function would be `schwarzschild()`, which shows a spacetime diagram
+near a non-spinning stationary black hole using Schwarzschild
+coordinates but many other coordinate systems are available, including
+Kruskal-Szekeres (`kruskal()` and variants), \latexcode{Lema\^{\i}tre}
+coordinates (`lemaitre()`) and others.
 
 The code itself is maintainable, extensible, and makes
 the connection between physics and plotted diagram explicit.  The
