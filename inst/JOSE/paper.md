@@ -116,7 +116,7 @@ Sharepoint](https://autuni-my.sharepoint.com/:f:/g/personal/rhankin_aut_ac_nz/Eg
   everted.  As the singularity is approached, ingoing and outgoing
   light converge and meet the singularity horizontally.  For
   vectorized PDF version, see the package vignette or click the link
-  below](schwarzschild.jpg)
+  under Downloads](schwarzschild.jpg)
 
 ![Low resolution image of maximally extended space near a black hole,
   using Kruskal-Szekeres coordinates.  Ingoing light (red) and
@@ -136,8 +136,8 @@ Sharepoint](https://autuni-my.sharepoint.com/:f:/g/personal/rhankin_aut_ac_nz/Eg
   intersecting null geodesics are shown.  The white hole is a region
   from which escape is inevitable; outgoing null geodesics may emerge
   in either the universe or the antiuniverse.  For a vectorized PDF
-  image, see the package vignette or click the link
-  below](penrose_BH_extended.jpg)
+  image, see the package vignette or click the link under
+  Downloads](penrose_BH_extended.jpg)
 
 
 # References
