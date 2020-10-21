@@ -52,12 +52,12 @@ mathematically accurate diagrams using the R programming language.
 
 In the teaching of numerical subjects such as physics, mathematical
 accuracy is an important requirement for informative diagrams.
-However, in this context a diagram should be viewed as the _end_ of a
-process of calculation, not an object in its own right.  In computer
-terminology one would need the source code as well as the final image
-and such source code is not currently available.  The `schwarzschild`
-R package [@rcore2019], available under the General Public License,
-fills this need.
+However, many users of such diagrams will want the ability to
+customise or otherwise modify them.  In computer terminology one would
+need the source code as well as the final image and such source code
+is not currently available.  The `schwarzschild` R package
+[@rcore2019], available under the General Public License, fills this
+need.
 
 The package is intended as a resource for lecturers of general
 relativity and it is envisaged that the diagrams be used as visual
