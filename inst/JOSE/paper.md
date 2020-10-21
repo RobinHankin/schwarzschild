@@ -53,7 +53,7 @@ mathematically accurate diagrams using the R programming language.
 In the teaching of numerical subjects such as physics, mathematical
 accuracy is an important requirement for informative diagrams.
 However, many users of such diagrams will want the ability to
-customise or otherwise modify them.  In computer terminology one would
+customise or otherwise modify them.  In computer terminology, one would
 need the source code as well as the final image and such source code
 is not currently available.  The `schwarzschild` R package
 [@rcore2019], available under the General Public License, fills this
@@ -71,7 +71,7 @@ contexts: firstly, as resources for astrophysics lectures at Auckland
 University of Technology; and secondly to support the _Trin Tragula_
 YouTube channel [General relativity step by
 step](https://www.youtube.com/watch?v=JzCX3FqDIOc&list=PL9_n3Tqzq9iWtgD8POJFdnVUCZ_zw6OiB)
-which as of October 2020 has over 150000 views and 1200 subscribers.
+which, as of October 2020 has over 150000 views and 1200 subscribers.
 
 # Functionality and usage
 
@@ -92,7 +92,7 @@ side-effect of plotting a diagram of spacetime in the vicinity of a
 black hole.  The principal such function would be `schwarzschild()`,
 which shows a spacetime diagram near a non-spinning stationary black
 hole using Schwarzschild coordinates but many other coordinate systems
-are available including Kruskal-Szekeres (`kruskal()` and variants),
+are available, including Kruskal-Szekeres (`kruskal()` and variants),
 \latexcode{Lema\^{\i}tre} coordinates (`lemaitre()`) and others.
 
 The code itself is maintainable, extensible, and makes
