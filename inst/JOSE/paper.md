@@ -80,10 +80,8 @@ inline documentation as part of an educational resource package.  The
 package creates mathematically accurate diagrams illustrating
 different aspects of physics near a spherically symmetric black hole.
 Physical processes such as null geodesics and freely falling objects
-are simulated near a Schwarzschild black hole by the R functionality
-of the package; one side-effect is the the creation of usable and
-accurate PDF images.
-
+near a Schwarzschild black hole are simulated in R and plotted as
+usable and accurate PDF images.
 
 \newcommand\latexcode[1]{#1}
 
