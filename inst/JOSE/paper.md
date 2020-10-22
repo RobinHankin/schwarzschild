@@ -97,7 +97,7 @@ The code itself is maintainable, extensible, and makes
 the connection between physics and plotted diagram explicit.  The
 package is written to behave well in the wider ecology of R software.
 
-# Downloads
+# Examples
 
 Two example images are shown below in low-resolution JPG format.  All
 nineteen vectorized PDF images can be seen in the package vignette or
