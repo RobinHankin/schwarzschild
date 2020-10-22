@@ -114,9 +114,7 @@ Sharepoint](https://autuni-my.sharepoint.com/:f:/g/personal/rhankin_aut_ac_nz/Eg
   As the event horizon is approached from the outside, the light cones
   (gray) close up but as the event horizon is crossed, they become
   everted.  As the singularity is approached, ingoing and outgoing
-  light converge and meet the singularity horizontally.  For
-  vectorized PDF version, see the package vignette or click the link
-  under Downloads](schwarzschild.jpg)
+  light converge and meet the singularity horizontally](schwarzschild.jpg)
 
 ![Low resolution image of maximally extended space near a black hole,
   using Kruskal-Szekeres coordinates.  Ingoing light (red) and
@@ -135,9 +133,7 @@ Sharepoint](https://autuni-my.sharepoint.com/:f:/g/personal/rhankin_aut_ac_nz/Eg
   antiuniverse is via the interior of the black hole and examples of
   intersecting null geodesics are shown.  The white hole is a region
   from which escape is inevitable; outgoing null geodesics may emerge
-  in either the universe or the antiuniverse.  For a vectorized PDF
-  image, see the package vignette or click the link under
-  Downloads](penrose_BH_extended.jpg)
+  in either the universe or the antiuniverse](penrose_BH_extended.jpg)
 
 
 # References
