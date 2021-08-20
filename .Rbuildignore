@@ -1,4 +1,5 @@
 ^README\.Rmd
+CITATION.cff
 ^.*\.Rproj$
 ^\.Rproj\.user$
 .gitignore

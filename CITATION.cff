@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Hankin"
+  given-names: "Robin K. S."
+  orcid: "https://orcid.org/0000-0001-5982-0415"
+title: "The schwarzschild R package"
+version: 2.0-1
+url: "https://github.com/RobinHankin/schwarzschild"
+doi: 10.5281/zenodo.4782758
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Hankin"
+    given-names: "Robin K. S."
+    orcid: "https://orcid.org/0000-0001-5982-0415"
+  doi: "10.21105/jose.00091"
+  journal: "Journal of Open Source Education"
+  month: December
+  start: 1
+  end: 5
+  title: "General relativity in R: visual representation of Schwarzschild space using different coordinate systems"
+  issue: 4
+  volume: 39
+  year: 2021
