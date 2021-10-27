@@ -16,5 +16,5 @@ License: GPL (>= 2)
 Suggests: knitr, rmarkdown, testthat
 LazyLoad: yes
 VignetteBuilder: knitr
-URL: https://github.com/RobinHankin/schwarzschild.git
+URL: https://github.com/RobinHankin/schwarzschild
 BugReports: https://github.com/RobinHankin/schwarzschild/issues
