@@ -63,8 +63,8 @@ provided; altnernatively, the resulting PDF images are available at
 
 For more detail, see the package vignette; at the R prompt, type
 
-```
+`
 vignette("schwarzschild")
-```
+`
  
 
