@@ -245,7 +245,7 @@ schwarzschild(draw_infalling_drops=TRUE)
   shown as dotted lines]{Space near a black hole, as for
   figure~\ref{schwarzschild}, but \label{schwarzschild_drops} with
   worldlines of infalling drops shown as dotted lines.  Drops are
-  released with zero speed infinity and fall freely.  The world lines
+  released with zero speed at infinity and fall freely.  The world lines
   of the drops do not cross the event horizon; inside the event
   horizon they travel backwards in Schwarzschild time and meet the
   singularity horizontally}
@@ -616,9 +616,9 @@ penrose_norm()
 Similar techniques can be used to present the spacetime surrounding
 black holes, although in this case only the Cauchy transform produces
 pleasing output (figure~\ref{penrose_BH_cauchy}).  The {\tt
-schwarzschild} package can produce these diagrams for Laplace,
-logistic, and Gaussian transforms, but in each case the event horizon
-has an ugly and uninformative shape).
+  schwarzschild} package can produce these diagrams for Laplace,
+logistic, and Gaussian transforms, but in each of these three cases
+the singularity has an ugly and uninformative shape).
 
 In the case of the Cauchy transformation it is possible to extend the
 diagram conformally and include---in addition to the universe and the
