@@ -1,0 +1,61 @@
+---
+title: "Black holes with string coordinates"
+author: "Robin KS Hankin"
+date: "10/04/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+set.seed(1)
+knitr::opts_chunk$set(echo = TRUE)
+library("schwarzschild")
+```
+
+We present a new form of coordinates for a black hole.
+
+```{r,label=testthisthing}
+f <- function(r){
+  A <- sqrt(r)
+  B <- sqrt(r-1)
+  A*B + log((A+B)/(A-B))/2
+}
+
+f_inv_single <- function(s){uniroot(function(x){f(x)-s},c(1,61))$root}
+f_inv <- function(s){sapply(s,f_inv_single)}
+fdash <- function(r,dr=1e-6){ # df/dr
+(f(r+dr/2)-f(r-dr/2))/dr
+}
+
+r <- seq(from=0,to=10,by=0.1)
+par(pty="s")
+plot(r,f(r),asp=1,xlab="Schwarzschild r",ylab="string length",
+xlim=c(0,10),ylim=c(0,10))
+```
+
+```{r}
+s <- seq(from=0,to=10,by=0.1)
+par(pty="s")
+plot(s,f_inv(s),asp=1,ylab="Schwarzschild r",xlab="string length")
+```
+
+```{r}
+df <- 0.01
+string <- seq(from=0.04, to=6,by=df)
+```
+
+```{r}
+r <- f_inv(string)
+tee <- df*cumsum(fdash(r) * (1-1/r))
+par(pty="s")
+plot(string,tee,asp=1,xlim=c(0,4),ylim=c(0,4),type="n")
+for(i in -6:6){
+points(string,i+tee,type="l",col="red")  # ingoing
+points(string,i-tee,type="l",col="blue") # outgoing
+}
+```
+
+
+$$
+\frac{1}{1+2}
+$$
+
