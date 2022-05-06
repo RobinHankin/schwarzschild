@@ -1,4 +1,4 @@
-`schwarz_stringcoords` <- function(draw_infalling_drops=FALSE, func=u1, colours=standard_colours, ...){
+`schwarz_stringcoords` <- function(draw_infalling_drops=FALSE,  colours=standard_colours, ...){
 
   n <- 4  # size of plot
 
@@ -17,7 +17,7 @@
 
   r_outside <- seq(from=1.0001,to=n,len=1000) # "r" is Schwarzschild r
 
-    xcoord <- func(r_outside)
+    xcoord <- u1(r_outside)
     ycoord <- ingoing(r_outside,rzero=0)
 
     ## Now ensure that (1,0) .... or ap(1) = 0
@@ -27,8 +27,8 @@
   for(tz in  -3:14){points(xcoord,tz-ycoord,type='l',lwd=0.5,col=colours$outgoing_light )}
  
   if(draw_infalling_drops){
-      xcoord <- func(r_outside)
-      ycoord <- raindrop(r_outside)-raindrop(func_inv(1))
+      xcoord <- u1(r_outside)
+      ycoord <- raindrop(r_outside)-raindrop(u1_inv(1))
     for(i in -10:15){
       points(xcoord,ycoord+i, type='l',lty=5)
     }

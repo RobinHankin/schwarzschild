@@ -72,6 +72,8 @@ basename="thrower_asp1")
 
 
 pdf(file="allplots.pdf",height=9,width=9)
+schwarz_stringcoords()
+schwarz_stringcoords(draw_infalling_drops = TRUE)
 schwarzschild()
 schwarzschild(draw_infalling_drops = TRUE)
 gullstrand(draw_infalling_drops = FALSE)
