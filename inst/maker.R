@@ -36,9 +36,17 @@ library(schwarzschild)
 }
 
 do("schwarzschild()")
-do("schwarzschild(draw_infalling_drops = TRUE)", "schwarzschild_with_drops")
+do("schwarzschild(draw_infalling_drops = TRUE)", "schwarzschildstring_with_drops")
+
+do("schwarzschild_stringcoords()")
+do("schwarzschild_stringcoords(draw_infalling_drops = TRUE)", "schwarzschildstring_with_drops")
+
 do("gullstrand(draw_infalling_drops = FALSE)","gullstrand")
 do("gullstrand(draw_infalling_drops = TRUE)", "gullstrand_with_drops")
+
+do("gullstrand_stringcoords(draw_infalling_drops = FALSE)","gullstrand_stringcoords")
+do("gullstrand_stringcoords(draw_infalling_drops = TRUE)", "gullstrand_stringcoodrs_with_drops")
+
 do("eddington()")
 do("eddington_outgoing()")
 do("kruskal()")
@@ -78,6 +86,8 @@ schwarzschild()
 schwarzschild(draw_infalling_drops = TRUE)
 gullstrand(draw_infalling_drops = FALSE)
 gullstrand(draw_infalling_drops = TRUE)
+gullstrand_stringcoords(draw_infalling_drops = FALSE)
+gullstrand_stringcoords(draw_infalling_drops = TRUE)
 eddington()
 eddington_outgoing()
 kruskal()
