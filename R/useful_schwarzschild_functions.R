@@ -162,3 +162,9 @@
         ...)
   }
 
+
+shifter <- function(x,w=1){
+    x[,2] <- x[,2] - approxfun(x[,1],x[,2])(w)
+    return(x)
+}
+

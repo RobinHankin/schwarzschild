@@ -27,11 +27,6 @@ gullstrand_stringcoords <- function(draw_infalling_drops = TRUE, colours=standar
     null_outward <- function(r){r*(2/sqrt(r)+1) + log(r) +2*log(abs(1/sqrt(r)-1))}
     null_inward  <- function(r){r*(2/sqrt(r)-1) - log(r) -2*log(abs(1/sqrt(r)+1))}
 
-    shifter <- function(x,w=1){
-        x[,2] <- x[,2] - approxfun(x[,1],x[,2])(w)
-        return(x)
-    }
-
     points_outward <- cbind(u=u1(rout),t=null_outward(rout))
     points_inward  <- cbind(u=u1(rout),t=null_inward(rout))
 
