@@ -49,6 +49,8 @@ do("gullstrand_stringcoords(draw_infalling_drops = TRUE)", "gullstrand_stringcoo
 
 do("eddington()")
 do("eddington_outgoing()")
+
+do("eddington_stringcoords()")
 do("kruskal()")
 do("kruskal_with_throw(draw_schwarzschild = FALSE)")
 do("kruskal_extended(draw_constant_schwarzschild = TRUE)")
@@ -90,6 +92,8 @@ gullstrand_stringcoords(draw_infalling_drops = FALSE)
 gullstrand_stringcoords(draw_infalling_drops = TRUE)
 eddington()
 eddington_outgoing()
+eddington_stringcoords()
+
 kruskal()
 kruskal_with_throw(draw_schwarzschild = FALSE)
 kruskal_extended(draw_constant_schwarzschild = TRUE)
