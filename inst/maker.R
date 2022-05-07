@@ -45,7 +45,7 @@ do("gullstrand(draw_infalling_drops = FALSE)","gullstrand")
 do("gullstrand(draw_infalling_drops = TRUE)", "gullstrand_with_drops")
 
 do("gullstrand_stringcoords(draw_infalling_drops = FALSE)","gullstrand_stringcoords")
-do("gullstrand_stringcoords(draw_infalling_drops = TRUE)", "gullstrand_stringcoodrs_with_drops")
+do("gullstrand_stringcoords(draw_infalling_drops = TRUE)", "gullstrand_stringcoords_with_drops")
 
 do("eddington()")
 do("eddington_outgoing()")
