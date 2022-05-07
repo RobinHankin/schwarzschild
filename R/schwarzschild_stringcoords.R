@@ -1,4 +1,4 @@
-`schwarz_stringcoords` <- function(draw_infalling_drops=FALSE,  colours=standard_colours, ...){
+`schwarzschild_stringcoords` <- function(draw_infalling_drops=FALSE,  colours=standard_colours, ...){
 
   n <- 4  # size of plot
 
