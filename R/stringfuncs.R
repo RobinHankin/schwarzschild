@@ -11,7 +11,7 @@
   sqrt(2*(int-K))
 }	
 
-`u3` <- function(r,K=0){  # equal (annular) areas
+`u3` <- function(r,K=0){  # equal volumes
   jj <- sqrt((r-1)/r)
   int <- r^3*(15*jj^(5/2) - 40*jj^(3/2) + 33*jj)/24 + (5/16)*log((1+jj)/(1-jj))
   (3*(int-K))^(1/3)	  
