@@ -2,7 +2,6 @@ library("hexSticker")
 library("schwarzschild")
 
 
-
 penrose_BH_extended_sticker <- function(...){
         
     ## Modified version of penrose_BH_extended.R, designed to make a sticker.
@@ -25,9 +24,9 @@ penrose_BH_extended_sticker <- function(...){
 
     ## plot curves of constant Schwarzschild t [ie spacelike curves] on the exterior:
     jj <- penrose(TX(rt_ext,exterior=TRUE))  # TX() defined in kruskal_functions.R
-    points(jj,type='l',lty=1,lwd=0.5,col="black")  # spacelike
+    points(jj,type='l',lty=1,lwd=1,col="black")  # spacelike
     jj[,1] <- -jj[,1]
-    points(jj,type='l',lty=1,lwd=0.5,col="black")  # spacelike
+    points(jj,type='l',lty=1,lwd=1,col="black")  # spacelike
 
 
     ## Now curves of constant t (which are timelike (sic!)) curves on the
@@ -42,11 +41,11 @@ penrose_BH_extended_sticker <- function(...){
 
 
     ## lines of constant t (timelike curves [sic]) inside the white hole:
-    points(jj,type='l',lty=1,lwd=0.5,col="black")
+    points(jj,type='l',lty=1,lwd=1,col="black")
     jj[,2] <- -jj[,2]
 
     ## lines of constant t (timelike curves [sic]) inside the white hole:
-    points(jj,type='l',lty=1,lwd=0.5,col="black")
+    points(jj,type='l',lty=1,lwd=1,col="black")
 
     r_values <- c(1.05,1.2,1+lambert_W0(exp(-1))+NA,1.5,2,3)
 
@@ -65,11 +64,11 @@ penrose_BH_extended_sticker <- function(...){
     jj <- penrose(TX(rt_exterior,exterior=TRUE))
 
     # lines of constant r (timelike curves) in the universe:
-    points(jj,type='l',lty=1,lwd=0.5,col=constant_t_interior)
+    points(jj,type='l',lty=1,lwd=1,col=constant_t_interior)
     jj[,1] <- -jj[,1]
 
     ##  lines of constant r (timelike curves) in the antiuniverse:
-    points(jj,type='l',lty=1,lwd=0.5,col=constant_t_interior)
+    points(jj,type='l',lty=1,lwd=1,col=constant_t_interior)
 
   
     ## plot curves of constant Schwarzschild r inside the EH.
@@ -82,11 +81,11 @@ penrose_BH_extended_sticker <- function(...){
 
     ## lines of constant r (spacelike curves, interior of the black hole):
     jj <- penrose(TX(rt_int,exterior=FALSE))
-    points(jj,type='l',lty=1,lwd=0.5,col=constant_t_interior)
+    points(jj,type='l',lty=1,lwd=1,col=constant_t_interior)
 
     ## lines of constant r (spacelike curves, interior of the white hole):
     jj[,2] <- -jj[,2]
-    points(jj,type='l',lty=1,lwd=0.5,col=constant_t_interior)
+    points(jj,type='l',lty=1,lwd=1,col=constant_t_interior)
 
 
     ## plot the singularity:
@@ -148,7 +147,8 @@ pdf(file="schwarzschild_icon.pdf",bg="#7733FF")
 penrose_BH_extended_sticker()
 dev.off()
 
-sticker("schwarzschild_icon.pdf", package="lorentz", p_size=28, s_x=1.3, s_y=1.02,
-s_width=1.3,asp=sqrt(3)/2, white_around_sticker=TRUE, h_fill="#7733FF",
-h_color="#000000", filename="lorentz.png")
+sticker("schwarzschild_icon.pdf", package="schwarzschild", p_size=16,
+        s_x=0.94, s_y=0.8, s_width=1.2,asp=sqrt(3)/2,
+        white_around_sticker=TRUE, h_fill="#7733FF",
+        h_color="#000000", filename="schwarzschild.png")
 
