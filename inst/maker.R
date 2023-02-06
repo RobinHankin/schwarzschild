@@ -50,6 +50,7 @@ do("gullstrand_stringcoords(draw_infalling_drops = TRUE)", "gullstrand_stringcoo
 do("eddington()")
 do("eddington(draw_infalling_drops = TRUE)")
 do("eddington_outgoing()")
+do("eddington_outgoing(draw_infalling_drops = TRUE)")
 
 do("eddington_stringcoords()")
 do("kruskal()")

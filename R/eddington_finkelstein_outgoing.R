@@ -1,4 +1,4 @@
-eddington_outgoing <-  function(colours=standard_colours, ...){
+eddington_outgoing <-  function(draw_infalling_drops=FALSE, colours=standard_colours, ...){
 
   n <- 4  # size of plot
 
@@ -31,6 +31,15 @@ eddington_outgoing <-  function(colours=standard_colours, ...){
     
     jj <- cbind(rout,tdash = i-rout-2*log(abs(rout-1)))
     points(jj,type='l',col=colours$ingoing_light)
+
+    if(draw_infalling_drops){
+      
+      jj <- cbind(rout,tdash = i+raindrop(rout) - log(abs(rout-1)))
+      points(jj,type='l',lty=2)
+      
+      jj <- cbind(rin,tdash = i+raindrop(rin) - log(abs(rin-1)))
+      points(jj,type='l',lty=2)
+    }
   }
 
   ## outgoing light
@@ -88,23 +97,44 @@ eddington_outgoing <-  function(colours=standard_colours, ...){
 
   par(xpd=TRUE)
   par(lend=1)
-  legend(
-      x=2.1, y=n-0.9,
-      bg='white',
-      lwd=5, col=c(colours$singularity,colours$horizon),
-      legend=c("singularity","horizon")
-  )
-
-  legend(
-      x=2.1,y=3.9,lty=1,bg='white',
-      col = c(colours$ingoing_light,colours$outgoing_light,colours$r,colours$t),
-      legend=c(
-          "ingoing light",
-          "outgoing light",
-          "lines of constant r",
-          expression("lines of constant t"["schwarz"]))
-  )
-  ## plot the AUT logo:
+  if(draw_infalling_drops){
+    legend(
+        x=2.1, y=n-0.9,
+        bg='white',
+        lwd=5, col=c(colours$singularity,colours$horizon),
+        legend=c("singularity","horizon")
+    )
+    
+    legend(
+        x=2.1,y=3.9,lty=c(1,1,1,1,2),bg='white',
+        col = c(colours$ingoing_light,colours$outgoing_light,colours$r,colours$t),
+        legend=c(
+            "ingoing light",
+            "outgoing light",
+            "lines of constant r",
+            expression("lines of constant t"["schwarz"]),
+            "infalling raindrops")
+    )
+  } else {  # do not draw infalling drops
+    legend(
+        x=2.1, y=n-0.9,
+        bg='white',
+        lwd=5, col=c(colours$singularity,colours$horizon),
+        legend=c("singularity","horizon")
+    )
+    
+    legend(
+        x=2.1,y=3.9,lty=1,bg='white',
+        col = c(colours$ingoing_light,colours$outgoing_light,colours$r,colours$t),
+        legend=c(
+            "ingoing light",
+            "outgoing light",
+            "lines of constant r",
+            expression("lines of constant t"["schwarz"]))
+    )
+}
+  
+    ## plot the AUT logo:
   if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.8,y=0.08, width=0.1)}  
 
   git(-0.8,-0.7)
