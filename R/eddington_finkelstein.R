@@ -1,4 +1,4 @@
-`eddington` <- function(colours=standard_colours, ...){
+`eddington` <- function(draw_infalling_drops=FALSE, colours=standard_colours, ...){
 
   n <- 4  # size of plot
   
@@ -36,7 +36,17 @@
     
     jj <- cbind(rout,tdash = i+rout+2*log(abs(rout-1)))
     points(jj,type='l',col=colours$outgoing_light)
+
+    if(draw_infalling_drops){
+      jj <- cbind(rout,tdash = i+raindrop(rout) + log(abs(rout-1)))
+      points(jj,type='l',lty=2)
+      
+      jj <- cbind(rin,tdash = i+raindrop(rin) + log(abs(rin-1)))
+      points(jj,type='l',lty=2)
+    }
   }
+
+
 
   ## ingoing light makes straight lines; need to separate lower
   ## diagonal lines from upper:
@@ -83,22 +93,44 @@
 
   par(xpd=TRUE)
   par(lend=1)
-  legend(
-      x=2.1, y=n-1.1,
-      bg='white',
-      lwd=5, col=c(colours$singularity,colours$horizon),
-      legend=c("singularity","horizon")
-  )
-  
-  legend(
-      x=2.1,y=n-0.3,lty=1,bg='white',
-      col = c(colours$ingoing_light,colours$outgoing_light,colours$r,colours$t),
-      legend=c(
-          "ingoing light",
-          "outgoing light",
-          "lines of constant r",
-          expression("lines of constant t"["schwarz"]))
-  )
+  if(draw_infalling_drops){
+
+    legend(
+        x=2.1, y=n-1.1,
+        bg='white',
+        lwd=5, col=c(colours$singularity,colours$horizon),
+        legend=c("singularity","horizon")
+    )
+
+    legend(
+        x=2.1,y=n-0.3,lty=c(1,1,1,1,2),bg='white',
+        col = c(colours$ingoing_light,colours$outgoing_light,colours$r,colours$t,colours$raindrop),
+        legend=c(
+            "ingoing light",
+            "outgoing light",
+            "lines of constant r",
+            expression("lines of constant t"["schwarz"]),
+            "infalling raindrops")
+    )
+  } else {  # do not draw infalling raindrops
+
+    legend(
+        x=2.1, y=n-1.1,
+        bg='white',
+        lwd=5, col=c(colours$singularity,colours$horizon),
+        legend=c("singularity","horizon")
+    )
+
+    legend(
+        x=2.1,y=n-0.3,lty=1,bg='white',
+        col = c(colours$ingoing_light,colours$outgoing_light,colours$r,colours$t),
+        legend=c(
+            "ingoing light",
+            "outgoing light",
+            "lines of constant r",
+            expression("lines of constant t"["schwarz"]))
+    )
+  }
 
   ## plot the AUT logo:
   if(!isFALSE(getOption("schwarzschild_logo"))){logo(x=0.8,y=0.08, width=0.1)}  

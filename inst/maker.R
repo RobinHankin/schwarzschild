@@ -48,6 +48,7 @@ do("gullstrand_stringcoords(draw_infalling_drops = FALSE)","gullstrand_stringcoo
 do("gullstrand_stringcoords(draw_infalling_drops = TRUE)", "gullstrand_stringcoords_with_drops")
 
 do("eddington()")
+do("eddington(draw_infalling_drops = TRUE)")
 do("eddington_outgoing()")
 
 do("eddington_stringcoords()")
