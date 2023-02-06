@@ -29,10 +29,10 @@
 
   if(draw_infalling_drops){
 
-    for(i in -2:4){points(r_inside  ,raindrop(r_inside)+i, type='l',lty=5) }
+    for(i in -2:4){points(r_inside  ,raindrop(r_inside)+i, type='l',lty=5) }   # raindrop() defined in useful_schwarzschild_functions.R
     for(i in -7:9){points(r_outside ,raindrop(r_outside)-raindrop(2)+i, type='l',lty=5) }
 
-    raindrop_arrow(0.4,2)  
+    raindrop_arrow(0.4,2)      #raindrop_arrow() defined in useful_schwarzschild_functions.R
     raindrop_arrow(0.6,2)  
     raindrop_arrow(0.8,2)  
 
