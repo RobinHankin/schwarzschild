@@ -26,7 +26,7 @@
     r <- seq(from=n,to=1,len=10000)
     t_edd <- n-r  # t_edd is eddington time
 
-    points_ingoing_light <- shifter(cbind(u1(r),t_edd))
+    points_ingoing_light <- shifter(cbind(u1(r),t_edd))  # shifter() defined in useful_schwarzschild_functions.R
     for(i in 0:(2*n+3)){
         jj <- points_ingoing_light
         jj[,2] <- jj[,2] + i
