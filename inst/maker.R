@@ -53,6 +53,7 @@ do("eddington_outgoing()")
 do("eddington_outgoing(draw_infalling_drops = TRUE)")
 
 do("eddington_stringcoords()")
+do("eddington_stringcoords(draw_infalling_drops=TRUE)")
 do("kruskal()")
 do("kruskal_with_throw(draw_schwarzschild = FALSE)")
 do("kruskal_extended(draw_constant_schwarzschild = TRUE)")

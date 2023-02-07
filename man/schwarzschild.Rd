@@ -17,6 +17,7 @@
 schwarzschild(draw_infalling_drops = FALSE, colours=standard_colours, ...)
 eddington(draw_infalling_drops=FALSE, colours=standard_colours, ...)
 eddington_outgoing(draw_infalling_drops=FALSE, colours=standard_colours, ...)
+eddington_stringcoords(draw_infalling_drops=FALSE, colours=standard_colours, ...)
 gullstrand(draw_infalling_drops = FALSE, colours=standard_colours, ...)
 kruskal(colours=standard_colours, ...)
 kruskal_with_throw(draw_schwarzschild=FALSE, label_curves=FALSE, colours=standard_colours)

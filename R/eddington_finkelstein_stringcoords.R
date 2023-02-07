@@ -1,4 +1,4 @@
-`eddington_stringcoords` <- function(colours=standard_colours, ...){
+`eddington_stringcoords` <- function(draw_infalling_drops=FALSE, colours=standard_colours, ...){
 
   n <- 4  # size of plot
   
@@ -6,7 +6,7 @@
        xlim=c(0,n),ylim=c(0,n),ylab='',xlab='',
        axes=FALSE,asp=1,
        main="Eddington-Finkelstein/string coordinates (ingoing)")
-
+  
   axis(1,pos=0,at=0:4)
   axis(2,pos=0)
 
@@ -29,8 +29,16 @@
     points_ingoing_light <- shifter(cbind(u1(r),t_edd))  # shifter() defined in useful_schwarzschild_functions.R
     for(i in 0:(2*n+3)){
         jj <- points_ingoing_light
+
         jj[,2] <- jj[,2] + i
         points(jj,type="l",col=colours$ingoing)
+        
+        if(draw_infalling_drops){
+          jj <- cbind(u1(r), raindrop(r) + (log(abs(r-1))))
+          jj[,2] <- jj[,2] - approxfun(jj[,1],jj[,2])(1)  # ensures drop passes ingoing light pulses emitted from s=1
+          jj[,2] <- jj[,2] + i-3
+          points(jj,type="l",col=colours$raindrop,lty=2)
+        }
     }
 
     ## outgoing light:
