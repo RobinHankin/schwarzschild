@@ -96,6 +96,7 @@ gullstrand_stringcoords(draw_infalling_drops = TRUE)
 eddington()
 eddington_outgoing()
 eddington_stringcoords()
+eddington_stringcoords(draw_infalling_drops = TRUE)
 
 kruskal()
 kruskal_with_throw(draw_schwarzschild = FALSE)
