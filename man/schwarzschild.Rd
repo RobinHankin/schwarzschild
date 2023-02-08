@@ -1,8 +1,11 @@
 \name{schwarzschild}
 \alias{schwarzschild}
+\alias{schwarzschild_stringcoords}
 \alias{eddington}
+\alias{eddington_stringcoords}
 \alias{eddington_outgoing}
 \alias{gullstrand}
+\alias{gullstrand_stringcoords}
 \alias{kruskal}
 \alias{kruskal_extended}
 \alias{kruskal_inverted}
@@ -24,7 +27,7 @@ kruskal_with_throw(draw_schwarzschild=FALSE, label_curves=FALSE, colours=standar
 kruskal_extended(colours=standard_colours, ...)
 kruskal_inverted(colours=standard_colours, ...)
 lemaitre(draw_schwarzschild=FALSE, colours=standard_colours, ...)
-thrower(logaxes,legpos="topleft", colours=standard_colours, ...)
+thrower(logaxes,legpos="topleft", use_stringcoords=FALSE, colours=standard_colours, ...)
 thrower_asp1(colours=standard_colours, ...)
 }
 \arguments{
@@ -35,8 +38,11 @@ thrower_asp1(colours=standard_colours, ...)
   \item{colours}{List of colours}
   \item{legpos}{Passed to \code{thrower()} and \code{thrower_asp1()}
     specifying the position of the legend}
-\item{logaxes}{Passed to \code{thrower()} specifying which axes (if any)
+  \item{logaxes}{Passed to \code{thrower()} specifying which axes (if any)
     are logarithmic}
+  \item{use_stringcoords}{Boolean, with \code{FALSE} meaning to use
+    Schwarzschild circumferential radius \eqn{r} on the horizontal axis,
+    and \code{TRUE} meaning to use string coordinate}
   \item{...}{Further arguments, generally passed to \code{plot()}}
 }
 \author{Robin K. S. Hankin}

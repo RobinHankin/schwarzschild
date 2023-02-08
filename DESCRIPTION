@@ -1,7 +1,7 @@
 Package: schwarzschild
 Type: Package
 Title: General Relativity in R
-Version: 1.0-5
+Version: 1.0-6
 Authors@R: person(given=c("Robin", "K. S."), family="Hankin", role = c("aut","cre"), email="hankin.robin@gmail.com", comment = c(ORCID = "0000-0001-5982-0415"))
 Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
 Description:
@@ -12,9 +12,11 @@ Description:
   of gravitational waves.  For special relativity, see the 'lorentz'
   package.
 Depends: R (>= 3.0),gsl,deSolve,animation,grImport
+Imports: mathjaxr
 License: GPL (>= 2)
 Suggests: knitr, rmarkdown, testthat
 LazyLoad: yes
 VignetteBuilder: knitr
 URL: https://github.com/RobinHankin/schwarzschild
 BugReports: https://github.com/RobinHankin/schwarzschild/issues
+RdMacros: mathjaxr

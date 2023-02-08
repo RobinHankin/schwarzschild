@@ -5,6 +5,7 @@
 \alias{bounded_outward_trajectory}
 \alias{unbounded_outward_trajectory}
 \alias{cone}
+\alias{shifter}
 \alias{lightcone}
 \alias{ingoing}
 \alias{outgoing}
@@ -32,6 +33,7 @@ ingoing(r,rzero,tzero=0)
 outgoing(r,rzero,tzero=0)
 ingoing_lambert(t,rzero,tzero=0)
 outgoing_lambert(t,rzero,tzero=0)
+shifter(x,w=1)
 }
 \arguments{
   \item{TX,rt}{Two-column matrix giving time and space}
@@ -44,6 +46,7 @@ outgoing_lambert(t,rzero,tzero=0)
   \item{rzero,tzero}{In functions \code{ingoing()} and
     \code{outgoing()}, arguments \code{tzero} and \code{rzero} specify
     an event through which the null geodesic passes}
+  \item{w}{Amount to shift horizontally}
 }
 \details{
   \itemize{

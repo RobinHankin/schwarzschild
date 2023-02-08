@@ -4,9 +4,13 @@ importFrom("graphics", "abline", "arrows", "axis", "clip", "legend",
              "par", "plot", "points", "polygon", "segments", "text")
 
 importFrom("stats", "plogis", "pnorm", "qlogis", "qnorm")  # used for Penrose transform
+importFrom("stats", "approxfun") # used in shifter() and for stringcoords
+importFrom("stats", "uniroot") # used in stringfuncs
 
 importFrom("gsl", "lambert_W0")
 importFrom("deSolve", "ode")
 importFrom("animation","ani.record","ani.options","ani.replay")
 importFrom("grImport", "grid.picture", "readPicture")
 
+
+import(mathjaxr)

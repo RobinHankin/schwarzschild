@@ -118,6 +118,9 @@ thrower('x')
 thrower('y','bottomright')
 thrower('xy')
 
+thrower('','topright',use_stringcoords=TRUE) 
+thrower('y','bottomright',use_stringcoords=TRUE) 
+
 thrower_asp1()
 par(xpd=TRUE)
 text(5,-1.2,'Schwarzschild r')
