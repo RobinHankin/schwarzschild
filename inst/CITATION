@@ -1,0 +1,23 @@
+citHeader("To cite in publications use:")
+
+citEntry(entry = "Article",
+	 title = {
+             paste("General relativity in R: visual representation of Schwarzschild space using different coordinate systems")},
+	 author = personList(
+         person(given = c("Robin", "K. S."),
+		family = "Hankin",
+		email="hankin.robin@gmail.com")),
+	 journal = "Journal of Open Source Education",
+         year = "2021",
+	 volume = "4",
+	 issue = "39",
+	 textVersion = {
+             paste("R. K. S. Hankin",
+                   "2021.",
+                   "General relativity in R: visual representation of Schwarzschild space using different coordinate systems",
+	     	   "Journal of Open Source Education",
+		   "4(39)"
+		   )
+         })
+
+
