@@ -3,6 +3,8 @@
 ## at the command line.  Alternatively, in an R session, type
 ## 'source("maker.R")'
 
+## Takes about three minutes to run.
+
 ## The AUT logo is included by default.  To switch it off, uncomment
 ## the line below:
 
