@@ -1,5 +1,6 @@
 \name{schwarzschild}
 \alias{schwarzschild}
+\alias{classical}
 \alias{schwarzschild_stringcoords}
 \alias{eddington}
 \alias{eddington_stringcoords}
@@ -18,6 +19,7 @@
   including Schwarzschild coordinates}
 \usage{
 schwarzschild(draw_infalling_drops = FALSE, colours=standard_colours, ...)
+classical(draw_infalling_drops = FALSE, colours=standard_colours, ...)
 eddington(draw_infalling_drops=FALSE, colours=standard_colours, ...)
 eddington_outgoing(draw_infalling_drops=FALSE, colours=standard_colours, ...)
 eddington_stringcoords(draw_infalling_drops=FALSE, colours=standard_colours, ...)

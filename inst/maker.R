@@ -38,6 +38,9 @@ library(schwarzschild)
 do("schwarzschild()")
 do("schwarzschild(draw_infalling_drops = TRUE)", "schwarzschildstring_with_drops")
 
+do("classical()")
+do("classical(draw_infalling_drops = TRUE)", "classical_with_drops")
+
 do("schwarzschild_stringcoords()")
 do("schwarzschild_stringcoords(draw_infalling_drops = TRUE)", "schwarzschildstring_with_drops")
 

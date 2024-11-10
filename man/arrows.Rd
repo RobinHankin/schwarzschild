@@ -1,8 +1,12 @@
 \name{arrows}
 \alias{arrows}
+\alias{raindrop_arrow}
+\alias{raindrop_classical}
+\alias{raindrop_arrow_classical}
 \alias{ingoing_null_arrow_schwarz}
 \alias{outgoing_null_arrow_schwarz}
-\alias{raindrop_arrow}
+\alias{ingoing_null_arrow_classical}
+\alias{outgoing_null_arrow_classical}
 \alias{ingoing_null_arrow_eddington_ingoing_coords}
 \alias{ingoing_null_arrow_eddington_outgoing_coords}
 \alias{outgoing_null_arrow_eddington_ingoing_coords}

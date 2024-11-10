@@ -257,6 +257,34 @@ schwarzschild(draw_infalling_drops=TRUE)
 \end{figure}
 
 \begin{figure}[p]
+\begin{center}
+<<classical,fig=TRUE,height=9,width=9>>=
+classical()
+@
+\caption[Black hole, classical case]{Space near a black
+  hole, using\label{classical} classical concepts.  Ingoing and
+  outgoing light moves at a constant rate.  Both cross the
+  event horizon (fuschia)}
+  \end{center}
+\end{figure}
+
+\begin{figure}[p]
+  \begin{center}
+<<classical_drops,fig=TRUE,height=9,width=9>>=
+classical(draw_infalling_drops=TRUE)
+@
+\caption[Black hole, classical case]{Space near a black
+  hole, using\label{classical} classical concepts.  Ingoing and
+  outgoing light moves at a constant rate.  Both cross th  event
+  horizon (fuschia).  World lines of raindrops follow classical
+  predictions}
+  \end{center}
+\end{figure}
+
+
+
+
+\begin{figure}[p]
   \begin{center}
 <<schwarzschild_with_throw,fig=TRUE,height=9,width=9>>=
 thrower(logaxes='',legpos='topright')

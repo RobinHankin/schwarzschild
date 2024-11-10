@@ -71,6 +71,20 @@
       angle=15, length=0.15, ...)
 }
 
+`raindrop_classical` <- function(r){ -2/3*r^(3/2)    }
+
+`raindrop_arrow_classical` <- function(r,offset=0,...){
+  ## draws an arrow on a classical raindrop worldline; cannot use usual offset trick as is it too difficult to differentiate raindrop()
+  delta <- 0.001
+
+  arrows(
+      x0 = r,
+      x1 = r-abs(delta),
+      y0 = offset+raindrop_classical(r),
+      y1 = offset+raindrop_classical(r-abs(delta)),
+      angle=15, length=0.15, ...)
+}
+
 `outgoing_null_arrow_schwarz` <- function(r,offset, colours=standard_colours, ...){
   delta <- 0.001
   arrows(
@@ -96,6 +110,34 @@
       col=colours$ingoing_light,
       ...)
 }
+
+`ingoing_null_arrow_classical` <- function(r,offset, colours=standard_colours, ...){
+  delta <- 0.001
+  arrows(
+      x0 =  r,
+      x1 =  r - delta,
+      y0 = -r + offset,   # t
+      y1 = -r + offset + delta,
+      angle = 15, 
+      length=0.15,
+      col=colours$ingoing_light,
+      ...)
+}
+
+`outgoing_null_arrow_classical` <- function(r,offset, colours=standard_colours, ...){
+
+  delta <- 0.001
+  arrows(
+      x0 = r,
+      x1 = r + delta,
+      y0 = r + offset,
+      y1 = r + offset + delta,
+      angle = 15,
+      length = 0.15,
+      col = colours$outgoing_light,
+      ...)
+
+    }
 
 `ingoing_null_arrow_eddington_ingoing_coords` <-
   function(r, offset, colours=standard_colours, ...){
