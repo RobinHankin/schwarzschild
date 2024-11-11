@@ -38,7 +38,7 @@ library(schwarzschild)
 }
 
 do("schwarzschild()")
-do("schwarzschild(draw_infalling_drops = TRUE)", "schwarzschildstring_with_drops")
+do("schwarzschild(draw_infalling_drops = TRUE)", "schwarzschild_with_drops")
 
 do("classical()")
 do("classical(draw_infalling_drops = TRUE)", "classical_with_drops")
