@@ -12,11 +12,11 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
     clip(0,n,0,n)
 
     ## constant Schwarzschild r:
-    abline(v=c(0.5,1,2,3,4),lwd=0.5,col=colours$r)
+    abline(v=c(0.5,1,2,3,4), lwd=0.5, col=colours$r)
 
     small <- 1e-4
-    rin <- seq(from=0,to=1-small,len=1000)
-    rout <- seq(from=1+small,to=n+1,len=1000)
+    rin <- seq(from=0, to=1-small, len=1000)
+    rout <- seq(from=1+small, to=n+1, len=1000)
 
     time <- -20:26
 
@@ -24,38 +24,38 @@ gullstrand <- function(draw_infalling_drops = FALSE, colours=standard_colours, .
         y <- sqrt(r)
         i - (-2*y + log(abs((y+1)/(y-1))))
     }
-    null_outward <- function(r,i){i+r*(2/sqrt(r)+1) + log(r) +2*log(abs(1/sqrt(r)-1))}
-    null_inward  <- function(r,i){i+r*(2/sqrt(r)-1) - log(r) -2*log(abs(1/sqrt(r)+1))}
+    null_outward <- function(r,i){i+r*(2/sqrt(r)+1) + log(r) + 2*log(abs(1/sqrt(r)-1))}
+    null_inward  <- function(r,i){i+r*(2/sqrt(r)-1) - log(r) - 2*log(abs(1/sqrt(r)+1))}
 
     for(i in time){
-        jj <- cbind(r=rout,t=null_outward(rout,i))
-        points(jj,type='l',lwd=1/2,col=colours$outgoing_light)
+        jj <- cbind(r=rout, t=null_outward(rout, i))
+        points(jj, type='l', lwd=1/2, col=colours$outgoing_light)
 
-        jj <- cbind(r=rin,t=null_outward(rin,i))
-        points(jj,type='l',lwd=1/2,col=colours$outgoing_light)
+        jj <- cbind(r=rin, t=null_outward(rin,i))
+        points(jj, type='l', lwd=1/2, col=colours$outgoing_light)
 
         ## do both inside and outside ingoing in one go:
-        jj <- cbind(r=c(rin,rout),t=null_inward(c(rin,rout),i))
-        points(jj,type='l',lwd=1/2,col=colours$ingoing_light)
+        jj <- cbind(r=c(rin,rout), t=null_inward(c(rin,rout),i))
+        points(jj, type='l', lwd=1/2, col=colours$ingoing_light)
 
         ## constant Schwarzschild t, outside:
-        jj <- cbind(r=rout,t=togullstrand(rout,i))
-        points(jj,type='l',lwd=1/2,col=colours$t)
+        jj <- cbind(r=rout, t=togullstrand(rout,i))
+        points(jj,type='l', lwd=1/2,col=colours$t)
 
         ## constant Schwarzschild t, inside:
-        jj <- cbind(r=rin,t=togullstrand(rin,i))
-        points(jj,type='l',lwd=1/2,col=colours$t)
+        jj <- cbind(r=rin, t=togullstrand(rin,i))
+        points(jj, type='l', lwd=1/2, col=colours$t)
 
         ## raindrops:
         if(draw_infalling_drops){
-            jj <- cbind(c(rin,rout),i-2/3*c(rin,rout)^(3/2))
-            points(jj,type='l',lty=2,col=colours$raindrop)
+            jj <- cbind(c(rin,rout), i-2/3*c(rin,rout)^(3/2))
+            points(jj, type='l', lty=2, col=colours$raindrop)
         }
     } # for(i in time) loop closes
 
-    abline(v=1,lwd=5,col=colours$horizon)
+    abline(v=1, lwd=5, col=colours$horizon)
     par(xpd=NA)
-    segments(x0=0,y0=0,y1=n,lwd=5,col=colours$singularity)
+    segments(x0=0, y0=0, y1=n, lwd=5, col=colours$singularity)
     par(xpd=TRUE)
     cone_function <- function(x,y=1){cone(x,y,-atan(-1-sqrt(1/x)),atan(+1-sqrt(1/x)))}
     cone_function(1.001)
