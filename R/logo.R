@@ -1,6 +1,6 @@
 `logo` <- function(...){
     image <- getOption("schwarzschild_logo")
-    if(is.null(image)){ image <- "orn20.ps.xml" }
+    if(is.null(image)){ image <- "primary-logo.eps.xml" }
   
 #    image                                  %>%
 #        system.file(package="schwarzschild") %>%
