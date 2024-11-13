@@ -43,23 +43,12 @@
   outgoing_null_arrow_classical(0.4,2,colours=colours)
   outgoing_null_arrow_classical(1.4,2,colours=colours)
 
-
-
-  abline(v=1,lwd=5,col=colours$horizon,par(lend=1))
-
-
-
-
- 
-
   legend(
       x=2.2, y=n-1.1,
       bg='white',
-      lwd=5, col=c(colours$singularity,colours$horizon),
-      legend=c("singularity",'"horizon"')
+      lwd=5, col=c(colours$singularity),
+      legend=c("singularity")
   )
-
-
   
   if(draw_infalling_drops){
     legend(x=2.2, y=n-0.1, lty=c(1,1,1,1,5), bg='white',
