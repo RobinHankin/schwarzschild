@@ -22,7 +22,8 @@
 \Shorttitle{Black holes in \proglang{R}}
 
 %% an abstract and keywords
-\Abstract{In the teaching of numerical subjects such as physics,
+\Abstract{To cite this work, please use~\citet{hankin2021}.
+  In the teaching of numerical subjects such as physics,
   mathematical accuracy is an important requirement for informative
   diagrams.  However, in the case of general relativity,
   mathematically accurate diagrams do not seem to be available under a
@@ -52,8 +53,8 @@
 %% in the following format:
 \Address{
   Robin K. S. Hankin\\
-  Auckland University of Technology\\
-  Auckland, New Zealand\\
+  University of Stirling\\
+  Scotland\\
   E-mail: \email{hankin.robin@gmail.com}\\
 }
 
