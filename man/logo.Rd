@@ -5,11 +5,13 @@
 \alias{AUT-logo-block.ps}
 \alias{AUT-logo-block.pdf}
 \alias{AUT-logo-block.ps.xml}
+\alias{stirling}
+\alias{stirling-logo}
 \alias{git}
 \alias{github}
 \alias{githublogo}
-\title{Add the AUT logo to an image}
-\description{Add the AUT logo to an image using grImport}
+\title{Add the logo to an image}
+\description{Add the logo to an image using grImport}
 \usage{
 logo(...)
 git(x,y,...)
@@ -22,17 +24,20 @@ git(x,y,...)
     put the github repo URL}
 }
 \note{
-  The logo file in the package is \code{AUT-logo-block.ps.xml}, created
-  using \code{PostScriptTrace()}.  The logo is plotted unless option
-  \code{AUTlogo} is \code{FALSE}.
+
+  The logo file in the package is \code{primary-logo.eps.xml}
+  (previously \code{AUT-logo-block.ps.xml}), created using
+  \code{PostScriptTrace()}.  The logo is plotted unless option
+  \code{schwarzschild_logo} is \code{FALSE}.
 
   In most plotting functions in the package, the appearance of the logo
   is controlled by \code{options("schwarzschild_logo")} which is
   interpreted as the filename of an \code{xml} file in the \code{inst/}
   directory.  There are a few special values: default \code{NULL} means
-  to include a fivefold symmetrical ornamental knot
-  (\dQuote{\code{orn20.ps.xml}}), and \code{FALSE} means to plot
-  nothing.  Passing \code{AUT-logo-block.ps.xml} plots the AUT logo.
+  to use \code{primary-logo.eps.xml} which is the University of Stirling
+  logo, and \code{FALSE} means to plot nothing.  File
+  \code{orn20.ps.xml} may be used, and this depicts a fivefold
+  symmetrical ornamental knot.
 
   Function \code{git()} uses \code{text()} to show the github repo URL.
 
