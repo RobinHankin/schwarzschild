@@ -14,7 +14,7 @@
 \description{Add the logo to an image using grImport}
 \usage{
 logo(...)
-git(x,y,...)
+git(x, y, ...)
 }
 \arguments{
   \item{\dots}{In function \code{logo()}, further arguments passed to
