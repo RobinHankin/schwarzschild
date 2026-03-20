@@ -2,7 +2,7 @@
 \documentclass[nojss]{jss}
 \usepackage{amsfonts}
 \usepackage{wasysym}
-\usepackage{wrapfig2}
+\usepackage{wrapfig}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% declarations for jss.cls %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
