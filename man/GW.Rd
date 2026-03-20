@@ -7,7 +7,7 @@
   through an array of test particles, perpendicular to the plane of the
   plot}
 \usage{
-GW(plus = 0.03, cross = 0, lattice = TRUE, frames = 20, n = 11, center =c(0,0), ...)
+GW(plus = 0.03, cross = 0, lattice = TRUE, frames = 20, n = 11, center = c(0,0), ...)
 }
 \arguments{
   \item{plus, cross}{(Complex) amplitudes for the plus and cross polarizations}
