@@ -1,6 +1,5 @@
 % -*- mode: noweb; noweb-default-code-mode: R-mode; -*-
 \documentclass[nojss]{jss}
-\usepackage{bbm}
 \usepackage{amsfonts}
 \usepackage{wasysym}
 \usepackage{xypic}
