@@ -42,7 +42,7 @@ penrose_transform_backward(choice)
     \item{\dots}{Further arguments, currently ignored}
 }
 \details{
-A Penrose transform uses a map from the real line to the interval
+A \dfn{Penrose transform} uses a map from the real line to the interval
 \eqn{(-1,1)}.  Function \code{penrose_transform()} returns one of several
 Penrose transformations.  The forward transform maps the real line to
 the interval \eqn{(-1,1)} and the backward transform is the inverse of
