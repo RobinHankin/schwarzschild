@@ -2,7 +2,6 @@
 \documentclass[nojss]{jss}
 \usepackage{amsfonts}
 \usepackage{wasysym}
-\usepackage{xypic}
 \usepackage{wrapfig2}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
