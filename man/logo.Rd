@@ -51,7 +51,7 @@ git(x, y, ...)
 \keyword{aplot}
 \examples{
 schwarzschild()
-logo(x=0.5,y=0.5,width=0.5)  # a bit big...
-git(1,1,col='red')
+logo(x=0.5, y=0.5, width=0.5)  # a bit big...
+git(1, 1, col='red')
 
 }
