@@ -23,7 +23,7 @@ u2_inv(u)
 u3_inv(u)
 }
 \arguments{
-  \item{r,K}{In the forward functions, Schwarzschild radius and constant
+  \item{r, K}{In the forward functions, Schwarzschild radius and constant
     of integration respectively}
   \item{u}{String coordinate}
 }
