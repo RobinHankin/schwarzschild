@@ -64,7 +64,7 @@ If the name of a function includes \dQuote{\code{_BH_}}, for example
   appropriate Penrose transform.
 }
 \note{
-  Although these functions can be called directly, they are designed to
+  Although these functions can be called directly, they are intended to
   be called by \code{inst/maker.R}, which produces correctly-sized and
   annotated PDF diagrams.
 }
