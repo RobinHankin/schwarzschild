@@ -67,9 +67,9 @@ outgoing_null_arrow_eddington_outgoing_coords(r, offset, colours=standard_colour
 
 \dontrun{
 eddington()
-outgoing_null_arrow_eddington_ingoing_coords(r=2, offset= -1)
-outgoing_null_arrow_eddington_ingoing_coords(r=2, offset=  0)
-outgoing_null_arrow_eddington_ingoing_coords(r=2, offset= +1)
+outgoing_null_arrow_eddington_ingoing_coords(r=2, offset = -1)
+outgoing_null_arrow_eddington_ingoing_coords(r=2, offset =  0)
+outgoing_null_arrow_eddington_ingoing_coords(r=2, offset = +1)
 }
 }
 
