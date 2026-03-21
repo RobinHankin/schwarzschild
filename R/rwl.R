@@ -29,8 +29,8 @@
 ## The specialized routines use Euler's method which is, I know, inefficient.  
 
 
-trajectory <- function(t0,r0,epsilon,sign,n=100){
-  stopifnot(epsilon>0)
+trajectory <- function(t0, r0, epsilon, sign, n=100){
+  stopifnot(epsilon > 0)
   stopifnot(sign %in% c(-1,1))
 
   if(r0<1){  # inside Schwarzschild radius
