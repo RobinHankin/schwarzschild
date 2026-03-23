@@ -72,10 +72,8 @@
 
 <<load.library,echo=FALSE,print=FALSE>>=
 <<results=hide>>=
-library("pak")
-pak::pak("RobinHankin/schwarzschild")
-library("schwarzschild")
 # options("schwarzschild_logo" = "AUT-logo-block.ps.xml")
+library("schwarzschild")
 @ 
 
 
