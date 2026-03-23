@@ -72,8 +72,8 @@
 
 <<load.library,echo=FALSE,print=FALSE>>=
 <<results=hide>>=
-library("devtools")
-devtools::install_github("RobinHankin/schwarzschild")
+library("pak")
+pak::pak("RobinHankin/schwarzschild")
 library("schwarzschild")
 # options("schwarzschild_logo" = "AUT-logo-block.ps.xml")
 @ 
